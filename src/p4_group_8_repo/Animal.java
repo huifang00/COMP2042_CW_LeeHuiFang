@@ -27,7 +27,7 @@ public class Animal extends Actor {
 	int imgSize = 40;
 	boolean carDeath = false;
 	boolean waterDeath = false;
-	boolean stop = false;
+	//boolean stop = false;	//not really used
 	boolean changeScore = false;
 	int carD = 0;
 	double w = 800;
@@ -133,14 +133,23 @@ public class Animal extends Actor {
 	
 	@Override
 	public void act(long now) {
-		int bounds = 0;
+		//int bounds = 0;	//can remove since bounds is not used
+		
+		// condition for the animal not to exceed the bound
 		if (getY()<0 || getY()>734) {
 			setX(300);
 			setY(679.8+movement);
 		}
+	
 		if (getX()<0) {
 			move(movement*2, 0);
+		}	//move the if x coordinate more than 600 togehter with less than 0
+		else if (getX()>600) {
+			move(-movement*2, 0);
 		}
+		
+		carDeath = setCarDeath(now,carDeath);
+		/*
 		if (carDeath) {
 			noMove = true;
 			if ((now)% 11 ==0) {
@@ -168,7 +177,9 @@ public class Animal extends Actor {
 				}
 			}
 			
-		}
+		}*/
+		waterDeath = setWaterDeath(now,waterDeath);
+		/*
 		if (waterDeath) {
 			noMove = true;
 			if ((now)% 11 ==0) {
@@ -199,22 +210,30 @@ public class Animal extends Actor {
 				}
 			}
 			
-		}
-		
+		}*/
+		/*	move to up with if getX() < 0
 		if (getX()>600) {
 			move(-movement*2, 0);
 		}
+		*/
+		
+		Intersection();	//intersection method
+		/*
 		if (getIntersectingObjects(Obstacle.class).size() >= 1) {
 			carDeath = true;
 		}
+		*/
+		/*
 		if (getX() == 240 && getY() == 82) {
-			stop = true;
+			stop = true;	//not used
 		}
+		*/
+		/*
 		if (getIntersectingObjects(Log.class).size() >= 1 && !noMove) {
 			if(getIntersectingObjects(Log.class).get(0).getLeft())
-				move(-2,0);
+				move(-2,0);	//display as moving together with log moving towards left
 			else
-				move (.75,0);
+				move (.75,0);	//display as moving together with log moving towards right
 		}
 		else if (getIntersectingObjects(Turtle.class).size() >= 1 && !noMove) {
 			move(-1,0);
@@ -245,6 +264,7 @@ public class Animal extends Actor {
 			//setX(300);
 			//setY(679.8+movement);
 		}
+		*/
 	}
 	public boolean getStop() {
 		return end==5;
@@ -263,5 +283,114 @@ public class Animal extends Actor {
 		
 	}
 	
-
+	//newly created setCarDeath method to change the animal photo
+	public boolean setCarDeath(long now,boolean carDeath) {
+		if (carDeath) {
+			noMove = true;
+			if ((now)% 11 ==0) {
+				this.carD++;
+			}
+			if (this.carD==1) {
+				setImage(new Image("file:src/p4_group_8_repo/cardeath1.png", imgSize, imgSize, true, true));
+			}
+			if (this.carD==2) {
+				setImage(new Image("file:src/p4_group_8_repo/cardeath2.png", imgSize, imgSize, true, true));
+			}
+			if (this.carD==3) {
+				setImage(new Image("file:src/p4_group_8_repo/cardeath3.png", imgSize, imgSize, true, true));
+			}
+			if (this.carD == 4) {
+				setY(679.8+movement);
+				carDeath = false;
+				this.carD = 0;
+				setImage(new Image("file:src/p4_group_8_repo/froggerUp.png", imgSize, imgSize, true, true));
+				noMove = false;
+				if (this.points>50) {
+					this.points-=50;
+					this.changeScore = true;
+				}
+			}
+			
+		}
+		return carDeath;
+	}
+	
+	//newly created setWaterDeath method to change the animal photo
+	public boolean setWaterDeath(long now,boolean waterDeath) {
+		if (waterDeath) {
+			noMove = true;
+			if ((now)% 11 ==0) {
+				this.carD++;
+			}
+			if (this.carD==1) {
+				setImage(new Image("file:src/p4_group_8_repo/waterdeath1.png", imgSize,imgSize , true, true));
+			}
+			if (this.carD==2) {
+				setImage(new Image("file:src/p4_group_8_repo/waterdeath2.png", imgSize,imgSize , true, true));
+			}
+			if (this.carD==3) {
+				setImage(new Image("file:src/p4_group_8_repo/waterdeath3.png", imgSize,imgSize , true, true));
+			}
+			if (this.carD == 4) {
+				setImage(new Image("file:src/p4_group_8_repo/waterdeath4.png", imgSize,imgSize , true, true));
+			}
+			if (this.carD == 5) {
+				setX(300);
+				setY(679.8+movement);
+				waterDeath = false;
+				carD = 0;
+				setImage(new Image("file:src/p4_group_8_repo/froggerUp.png", imgSize, imgSize, true, true));
+				noMove = false;
+				if (this.points>50) {
+					this.points-=50;
+					this.changeScore = true;
+				}
+			}
+			
+		}
+		return waterDeath;
+	}
+	
+	//newly created Intersection Method
+	public void Intersection() {
+		if (getIntersectingObjects(Obstacle.class).size() >= 1) {	//intersect with truck
+			this.carDeath = true;
+		}
+		else if (getIntersectingObjects(Log.class).size() >= 1 && !noMove) {	//intersect with log
+			if(getIntersectingObjects(Log.class).get(0).getLeft())
+				move(-2,0);	//display as moving together with log moving towards left
+			else
+				move (.75,0);	//display as moving together with log moving towards right
+		}
+		else if (getIntersectingObjects(Turtle.class).size() >= 1 && !noMove) {	//intersect with turtle
+			move(-1,0);
+		}
+		else if (getIntersectingObjects(WetTurtle.class).size() >= 1) {	//intersect with wet turtle
+			if (getIntersectingObjects(WetTurtle.class).get(0).isSunk()) {
+				this.waterDeath = true;
+			} else {
+				move(-1,0);
+			}
+		}
+		else if (getIntersectingObjects(End.class).size() >= 1) {	//intersect with the end slot
+			inter = (ArrayList<End>) getIntersectingObjects(End.class);
+			if (getIntersectingObjects(End.class).get(0).isActivated()) {	//if the slot is unavailable
+				this.end--;
+				//this.points-=10;	// add code //should not add the 10 points of moving up once if the slot is unavailable
+				this.points-=50;	// for entering the wrong slot -50points
+			}//else	//not sure is the point is for crashing or not
+			this.points+=50;
+			this.changeScore = true;
+			this.w=800;
+			getIntersectingObjects(End.class).get(0).setEnd();
+			this.end++;
+			setX(300);
+			setY(679.8+movement);
+		}
+		else if (getY()<413){	//frog drop into water
+			this.waterDeath = true;
+			//setX(300);
+			//setY(679.8+movement);
+		}
+	}
 }
