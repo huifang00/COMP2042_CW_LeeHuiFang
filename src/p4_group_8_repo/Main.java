@@ -161,6 +161,9 @@ public class Main extends Application {
     
     public void setNumber(int n) {
     	int shift = 0;
+    	if(n < 100) {	//new condition to remove the previous 1 in (300,25)
+    		background.add(new Digit(10, 30, 300, 25));
+    	}
     	while (n > 0) {
     		  int d = n / 10;
     		  int k = n - d * 10;
