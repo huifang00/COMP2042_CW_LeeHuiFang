@@ -11,6 +11,9 @@ public class Digit extends Actor{
 		
 	}
 	
+	/*
+	 * @param imageLink the location of the digit's image
+	 */
 	public Digit(int n, int dim, int x, int y) {
 		im1 = new Image("file:src/p4_group_8_repo/"+n+".png", dim, dim, true, true);
 		setImage(im1);

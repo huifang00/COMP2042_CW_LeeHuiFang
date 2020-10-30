@@ -10,6 +10,9 @@ public class BackgroundImage extends Actor{
 		
 	}
 	
+	/*
+	 * @param imageLink the location of the background's image
+	 */
 	public BackgroundImage(String imageLink) {
 		setImage(new Image(imageLink, 600, 800, false, true));	//set the preserveRatio to false to fit the image within the bounding box
 		

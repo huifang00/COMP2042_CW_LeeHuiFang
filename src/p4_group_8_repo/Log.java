@@ -14,7 +14,11 @@ public class Log extends Actor {
 			setX(700);
 	}
 	
-	public Log(String imageLink, int size, int xpos, int ypos, double s) {
+	/*
+	 * @param imageLink the location of the log's image
+	 */
+	public Log(String imageLink, int size, int xpos, int ypos, double s) {	//set size to two parameter (easier to set width and height in the future)
+		//set the parameter same to each adding photo
 		setImage(new Image(imageLink, size,size, true, true));
 		setX(xpos);
 		setY(ypos);

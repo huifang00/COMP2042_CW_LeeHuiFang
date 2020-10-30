@@ -3,12 +3,26 @@ package p4_group_8_repo;
 import javafx.scene.image.Image;
 
 public class Turtle extends Actor{
-	Image turtle1;
-	Image turtle2;
-	Image turtle3;
-	private int speed;
-	int i = 1;
-	boolean bool = true;
+	private double speed;	//change the speed to double
+	private int w;
+	private int h;
+	private Image turtle1;
+	private Image turtle2;
+	private Image turtle3;
+	
+	//int i = 1;	//not use
+	//boolean bool = true;	//not use
+	
+	public Turtle(String imageLink, int xpos, int ypos, double s, int w, int h) {
+		setImage(new Image(imageLink, w, h, true, true));
+		turtle1 = new Image("file:src/p4_group_8_repo/TurtleAnimation1.png", w, h, true, true);
+		turtle2 = new Image("file:src/p4_group_8_repo/TurtleAnimation2.png", w, h, true, true);
+		turtle3 = new Image("file:src/p4_group_8_repo/TurtleAnimation3.png", w, h, true, true);
+		setX(xpos);
+		setY(ypos);
+		speed = s;
+	}
+	
 	@Override
 	public void act(long now) {
 
@@ -31,7 +45,8 @@ public class Turtle extends Actor{
 		if (getX() < -75 && speed<0)
 			setX(600);
 	}
-	public Turtle(int xpos, int ypos, int s, int w, int h) {
+	/*
+	public Turtle(int xpos, int ypos, double s, int w, int h) {
 		turtle1 = new Image("file:src/p4_group_8_repo/TurtleAnimation1.png", w, h, true, true);
 		turtle2 = new Image("file:src/p4_group_8_repo/TurtleAnimation2.png", w, h, true, true);
 		turtle3 = new Image("file:src/p4_group_8_repo/TurtleAnimation3.png", w, h, true, true);
@@ -40,4 +55,7 @@ public class Turtle extends Actor{
 		speed = s;
 		setImage(turtle2);
 	}
+	*/
+	
+	
 }
