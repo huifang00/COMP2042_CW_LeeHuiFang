@@ -112,7 +112,7 @@ public class Main extends Application {
 		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 500, 490, -5, 50, 50));
 		*/
 		
-		addDigit(background, 0, 30, 360, 25);
+		addDigit(background, 0, 360, 25);
 		/*
 		background.add(new Digit(0, 30, 360, 25));
 		*/
@@ -160,13 +160,13 @@ public class Main extends Application {
     public void setNumber(int n) {
     	int shift = 0;
     	if(n < 100) {	//new condition to remove the previous 1 in (300,25)
-    		background.add(new Digit(10, 30, 300, 25));
+    		addDigit(background, 10, 300, 25);
     	}
     	while (n > 0) {
     		  int d = n / 10;
     		  int k = n - d * 10;
     		  n = d;
-    		  addDigit(background, k, 30, 360 - shift, 25);	//call the method to add the digit
+    		  addDigit(background, k, 360 - shift, 25);	//call the method to add the digit
     		  /*
     		  background.add(new Digit(k, 30, 360 - shift, 25));
     		  */
@@ -294,7 +294,7 @@ public class Main extends Application {
 		background.add(new Obstacle("file:src/p4_group_8_repo/truck2Right.png", 0, 540, 1, 200, 200));
 		background.add(new Obstacle("file:src/p4_group_8_repo/truck2Right.png", 500, 540, 1, 200, 200));
     }
-    public void addDigit(MyStage background, int n, int dim, int x, int y) {
-    	background.add(new Digit(n,dim,x,y));
+    public void addDigit(MyStage background, int n, int x, int y) {
+    	background.add(new Digit(n, x, y));
     }
 }
