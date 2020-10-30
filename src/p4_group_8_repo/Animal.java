@@ -155,6 +155,12 @@ public class Animal extends Actor {
 		carDeath = setCarDeath(now,carDeath);
 		waterDeath = setWaterDeath(now,waterDeath);
 		Intersection();	//intersection method
+		
+		/*	this code is not used 
+		if(getX() == 240 && getY() == 82) {
+			stop = true;
+		}
+		*/
 	}
 	public boolean getStop() {
 		return end==5;

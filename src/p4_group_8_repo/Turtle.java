@@ -3,13 +3,10 @@ package p4_group_8_repo;
 import javafx.scene.image.Image;
 
 public class Turtle extends Actor{
-	private double speed;	//change the speed to double
-	private int w;
-	private int h;
 	private Image turtle1;
 	private Image turtle2;
 	private Image turtle3;
-	
+	private double speed;	//change the speed to double
 	//int i = 1;	//not use
 	//boolean bool = true;	//not use
 	
