@@ -7,14 +7,18 @@ public class Turtle extends Actor{
 	private Image turtle2;
 	private Image turtle3;
 	private double speed;	//change the speed to double
+	private int w = 130; 
+	private int h = 130;
 	//int i = 1;	//not use
 	//boolean bool = true;	//not use
 	
-	public Turtle(String imageLink, int xpos, int ypos, double s, int w, int h) {
-		setImage(new Image(imageLink, w, h, true, true));
+	//public Turtle(String imageLink, int xpos, int ypos, double s, int w, int h) {
+	public Turtle(int xpos, int ypos, double s) {
+		//setImage(new Image(imageLink, w, h, true, true));
 		turtle1 = new Image("file:src/p4_group_8_repo/TurtleAnimation1.png", w, h, true, true);
 		turtle2 = new Image("file:src/p4_group_8_repo/TurtleAnimation2.png", w, h, true, true);
 		turtle3 = new Image("file:src/p4_group_8_repo/TurtleAnimation3.png", w, h, true, true);
+		setImage(turtle2);
 		setX(xpos);
 		setY(ypos);
 		speed = s;

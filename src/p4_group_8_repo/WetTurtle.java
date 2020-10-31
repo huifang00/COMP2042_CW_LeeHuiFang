@@ -8,16 +8,19 @@ public class WetTurtle extends Actor{
 	private Image turtle3;
 	private Image turtle4;
 	private double speed;	//change the dataype to double
+	private int w = 130;
+	private int h = 130;
 	//int i = 1;
 	//boolean bool = true;
 	boolean sunk = false;
 	
-	public WetTurtle(String imageLink, int xpos, int ypos, double s, int w, int h) {
-		setImage(new Image(imageLink, w, h, true, true));
+	//public WetTurtle(String imageLink, int xpos, int ypos, double s, int w, int h) {
+	public WetTurtle(int xpos, int ypos, double s) {
 		turtle1 = new Image("file:src/p4_group_8_repo/TurtleAnimation1.png", w, h, true, true);
 		turtle2 = new Image("file:src/p4_group_8_repo/TurtleAnimation2Wet.png", w, h, true, true);
 		turtle3 = new Image("file:src/p4_group_8_repo/TurtleAnimation3Wet.png", w, h, true, true);
 		turtle4 = new Image("file:src/p4_group_8_repo/TurtleAnimation4Wet.png", w, h, true, true);
+		setImage(turtle2);
 		setX(xpos);
 		setY(ypos);
 		speed = s;

@@ -220,6 +220,7 @@ public class Main extends Application {
     	Turtle turtle1, turtle2;
     	WetTurtle weturtle1, weturtle2, weturtle3, weturtle4;
     	
+    	/*
     	turtle1 = new Turtle("file:src/p4_group_8_repo/TurtleAnimation2.png", 500, 376, -1, 130, 130);
     	background.add(turtle1);
     	turtle2 = new Turtle("file:src/p4_group_8_repo/TurtleAnimation2.png", 300, 376, -1, 130, 130);
@@ -231,6 +232,21 @@ public class Main extends Application {
     	weturtle3 = new WetTurtle("file:src/p4_group_8_repo/TurtleAnimation2Wet.png", 400, 217, -1, 130, 130);
     	background.add(weturtle3);
     	weturtle4 = new WetTurtle("file:src/p4_group_8_repo/TurtleAnimation2Wet.png", 200, 217, -1, 130, 130);
+    	background.add(weturtle4);
+    	*/
+    	//public Turtle(int xpos, int ypos, double s)
+    	// the link and size is set in the class itself rather than a parameter into the constructor
+    	turtle1 = new Turtle(500, 376, -1);
+    	background.add(turtle1);
+    	turtle2 = new Turtle(300, 376, -1);
+    	background.add(turtle2);
+    	weturtle1 = new WetTurtle(700, 376, -1);
+    	background.add(weturtle1);
+    	weturtle2 = new WetTurtle(600, 217, -1);
+    	background.add(weturtle2);
+    	weturtle3 = new WetTurtle(400, 217, -1);
+    	background.add(weturtle3);
+    	weturtle4 = new WetTurtle(200, 217, -1);
     	background.add(weturtle4);
     	
     }
@@ -280,21 +296,36 @@ public class Main extends Application {
     }
     
     public void addCarObstacle(MyStage background) {
-    	background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 100, 597, -1, 50, 50));
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 250, 597, -1, 50, 50));
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 400, 597, -1, 50, 50));
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 550, 597, -1, 50, 50));
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 500, 490, -5, 50, 50));
+    	CarObstacle carobstacle1, carobstacle2, carobstacle3, carobstacle4, carobstacle5;
+    	carobstacle1 = new CarObstacle(100, 597, -1);
+    	background.add(carobstacle1);
+    	carobstacle2 = new CarObstacle(250, 597, -1);
+    	background.add(carobstacle2);
+    	carobstacle3 = new CarObstacle(400, 597, -1);
+    	background.add(carobstacle3);
+    	carobstacle4 = new CarObstacle(550, 597, -1);
+    	background.add(carobstacle4);
+    	carobstacle5 = new CarObstacle(500, 490, -5);
+    	background.add(carobstacle5);
     }
     
     public void addTruckObstacle(MyStage background) {
-    	background.add(new Obstacle("file:src/p4_group_8_repo/truck1"+"Right.png", 0, 649, 1, 120, 120));
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck1"+"Right.png", 300, 649, 1, 120, 120));
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck1"+"Right.png", 600, 649, 1, 120, 120));
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck2Right.png", 0, 540, 1, 200, 200));
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck2Right.png", 500, 540, 1, 200, 200));
+    	TruckObstacle truckobstacle1, truckobstacle2, truckobstacle3, truckobstacle4, truckobstacle5;
+    	truckobstacle1 = new TruckObstacle(1, 0, 649, 1);
+    	background.add(truckobstacle1);
+    	truckobstacle2 = new TruckObstacle(1, 300, 649, 1);
+    	background.add(truckobstacle2);
+    	truckobstacle3 = new TruckObstacle(1, 600, 649, 1);
+    	background.add(truckobstacle3);
+    	truckobstacle4 = new TruckObstacle(2, 0, 540, 1);
+    	background.add(truckobstacle4);
+    	truckobstacle5 = new TruckObstacle(2, 500, 540, 1);
+    	background.add(truckobstacle5);
     }
     public void addDigit(MyStage background, int n, int x, int y) {
-    	background.add(new Digit(n, x, y));
+    	Digit digit;
+    	digit = new Digit(n, x, y);
+    	background.add(digit);
+    	//background.add(new Digit(n, x, y));
     }
 }
