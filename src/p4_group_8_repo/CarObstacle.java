@@ -4,9 +4,10 @@ import javafx.scene.image.Image;
 
 public class CarObstacle extends Obstacle{
 	private double speed;	//change the datatype to double
-	private Image carobstacleL, carobstacleR;
 	private int w = 50;
 	private int h = 50;
+	private Image carobstacleL = new Image("file:src/p4_group_8_repo/car1Left.png", w, h, true, true), 
+				  carobstacleR = new Image("file:src/p4_group_8_repo/car1Right.png", w, h, true, true);
 	@Override
 	public void act(long now) {
 		move(speed , 0);
@@ -21,8 +22,6 @@ public class CarObstacle extends Obstacle{
 	 */
 	//public Obstacle(String imageLink, int xpos, int ypos, double s, int w, int h) {
 	public CarObstacle(int xpos, int ypos, double s) {
-		carobstacleL = new Image("file:src/p4_group_8_repo/car1Left.png", w, h, true, true);
-		carobstacleR = new Image("file:src/p4_group_8_repo/car1Right.png", w, h, true, true);
 		//setImage(new Image(imageLink, w,h, true, true));
 		if(s > 0) {	//moving towards right
 			setImage(carobstacleR);

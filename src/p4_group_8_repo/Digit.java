@@ -5,7 +5,6 @@ import javafx.scene.image.Image;
 public class Digit extends Actor{
 	int dim;
 	Image im1;
-	Image im2;
 	@Override
 	public void act(long now) {
 		// TODO Auto-generated method stub
@@ -22,13 +21,4 @@ public class Digit extends Actor{
 		setX(x);
 		setY(y);
 	}
-	
-	/* new method need to implement more to remove image
-	public Digit(Image image, int n, int dim, int x, int y) {
-		setImage(null);
-		setVisible(false);
-		setX(x);
-		setY(y);
-	}
-	*/
 }

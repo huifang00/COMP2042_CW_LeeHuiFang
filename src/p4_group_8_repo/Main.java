@@ -17,9 +17,10 @@ import javafx.util.Duration;
 public class Main extends Application {
 	private AnimationTimer timer;
 	private MyStage background;
-	private Animal animal;
+	private Animal animal = new Animal();
 	private Scene scene;	
-	private BackgroundImage froggerback;
+	private BackgroundImage froggerback, startback;
+	private Start start;
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -27,9 +28,8 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-	    background = new MyStage();
-	    scene  = new Scene(background,600,800);
-	    
+		background = new MyStage();
+	    Scene scene  = new Scene(background,600,800);
 		//Obstacle obstacle = new Obstacle("file:src/p4_group_8_repo/truck1Right.png", 25, 25, 3);
 		//Obstacle obstacle1 = new Obstacle("file:src/p4_group_8_repo/truck2Right.png", 100, 100,2 );
 		//Obstacle obstacle2 = new Obstacle("file:src/p4_group_8_repo/truck1Right.png",0,  150, 1);
@@ -37,7 +37,10 @@ public class Main extends Application {
 		froggerback = new BackgroundImage("file:src/p4_group_8_repo/iKogsKW_cropped.png");
 		background.add(froggerback);
 		
-		addLog(background);
+		start = new Start(250,350);
+		background.add(start);
+
+		//	addLog(background);
 		/*create log method
 		background.add(new Log("file:src/p4_group_8_repo/log3.png", 150, 0, 166, 0.75));
 		background.add(new Log("file:src/p4_group_8_repo/log3.png", 150, 220, 166, 0.75));
@@ -51,7 +54,7 @@ public class Main extends Application {
 		background.add(new Log("file:src/p4_group_8_repo/log3.png", 150, 490, 329, 0.75));
 		//background.add(new Log("file:src/p4_group_8_repo/log3.png", 150, 570, 329, 0.75));
 		 */
-		addTurtle(background);
+		//	addTurtle(background);
 		/*
 		background.add(new Turtle(500, 376, -1, 130, 130));
 		background.add(new Turtle(300, 376, -1, 130, 130));
@@ -82,7 +85,7 @@ public class Main extends Application {
 		//End end4 = new End();
 		//End end5 = new End();
 		
-		addEnd(background);
+		//	addEnd(background);
 		/*
 		background.add(new End(13,96));
 		background.add(new End(141,96));
@@ -91,13 +94,13 @@ public class Main extends Application {
 		background.add(new End(141 + 141-13+141-13+141-13+3,96));
 		*/
 		
-		addAnimal(background);
+		//	addAnimal(background);
 		/*
 		animal = new Animal("file:src/p4_group_8_repo/froggerUp.png");
 		background.add(animal);
 		*/
 		
-		addObstacle(background);
+		//	addObstacle(background);
 		/*
 		background.add(new Obstacle("file:src/p4_group_8_repo/truck1"+"Right.png", 0, 649, 1, 120, 120));
 		background.add(new Obstacle("file:src/p4_group_8_repo/truck1"+"Right.png", 300, 649, 1, 120, 120));
@@ -112,7 +115,7 @@ public class Main extends Application {
 		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 500, 490, -5, 50, 50));
 		*/
 		
-		addDigit(background, 0, 360, 25);
+		//	addDigit(background, 0, 360, 25);
 		/*
 		background.add(new Digit(0, 30, 360, 25));
 		*/
@@ -126,10 +129,30 @@ public class Main extends Application {
 		primaryStage.show();
 		start();  
 	}
+	
 	public void createTimer() {
         timer = new AnimationTimer() {
             @Override
             public void handle(long now) {
+            	if(start.getGameStart() == true) {
+            		background.remove(start);
+            		start.setGameStart(false);
+            	}
+            	if(start.getPrintGame() == true) {
+            		//start the game work
+            		addLog(background);
+            		addTurtle(background);
+            		addEnd(background);
+            		addAnimal(background);
+            		addObstacle(background);
+            		addDigit(background, 0, 360, 25);
+            		start.setPrintGame(false);
+            	}
+            	/*
+            	if(start.printgame == false){
+            		System.out.println("false");
+            	}
+            	*/
             	if (animal.changeScore()) {
             		setNumber(animal.getPoints());
             	}
@@ -140,7 +163,7 @@ public class Main extends Application {
             		background.stop();
             		Alert alert = new Alert(AlertType.INFORMATION);
             		alert.setTitle("You Have Won The Game!");
-            		alert.setHeaderText("Your High Score: "+animal.getPoints()+"!");
+            		alert.setHeaderText("Your High Score: "+ animal.getPoints()+"!");
             		alert.setContentText("Highest Possible Score: 800");
             		alert.show();
             	}
@@ -188,7 +211,27 @@ public class Main extends Application {
 		background.add(new Log("file:src/p4_group_8_repo/log3.png", 490, 329, 0.75, 150, 150));
 		//background.add(new Log("file:src/p4_group_8_repo/log3.png", 570, 329, 0.75, 150, 150));
 		 */
-    	Log l1, l2, l3, l4, l5, l6, l7, l8;
+    	Log log1, log2, log3, log4, log5, log6, log7, log8;
+    	
+    	
+    	log1 = new Log(2, 0, 166, 0.75);
+    	background.add(log1);
+    	log2 = new Log(2, 220, 166, 0.75);
+    	background.add(log2);
+    	log3 = new Log(2, 440, 166, 0.75);
+    	background.add(log3);
+    	log4 = new Log(1, 0, 276, -2);
+    	background.add(log4);
+    	log5 = new Log(1, 400, 276, -2);
+    	background.add(log5);
+    	log6 = new Log(2, 50, 329, 0.75);
+    	background.add(log6);
+    	log7 = new Log(2, 270, 329, 0.75);
+    	background.add(log7);
+    	log8 = new Log(2, 490, 329, 0.75);
+    	background.add(log8);
+    	
+    	/*
     	l1 = new Log("file:src/p4_group_8_repo/log3.png", 0, 166, 0.75, 150, 150);
     	background.add(l1);
     	l2 = new Log("file:src/p4_group_8_repo/log3.png", 220, 166, 0.75, 150, 150);
@@ -205,7 +248,7 @@ public class Main extends Application {
     	background.add(l7);
     	l8 = new Log("file:src/p4_group_8_repo/log3.png", 490, 329, 0.75, 150, 150);
     	background.add(l8);
-    	
+    	*/
     }
     
     public void addTurtle(MyStage background) {
@@ -219,23 +262,6 @@ public class Main extends Application {
 		*/
     	Turtle turtle1, turtle2;
     	WetTurtle weturtle1, weturtle2, weturtle3, weturtle4;
-    	
-    	/*
-    	turtle1 = new Turtle("file:src/p4_group_8_repo/TurtleAnimation2.png", 500, 376, -1, 130, 130);
-    	background.add(turtle1);
-    	turtle2 = new Turtle("file:src/p4_group_8_repo/TurtleAnimation2.png", 300, 376, -1, 130, 130);
-    	background.add(turtle2);
-    	weturtle1 = new WetTurtle("file:src/p4_group_8_repo/TurtleAnimation2Wet.png", 700, 376, -1, 130, 130);
-    	background.add(weturtle1);
-    	weturtle2 = new WetTurtle("file:src/p4_group_8_repo/TurtleAnimation2Wet.png", 600, 217, -1, 130, 130);
-    	background.add(weturtle2);
-    	weturtle3 = new WetTurtle("file:src/p4_group_8_repo/TurtleAnimation2Wet.png", 400, 217, -1, 130, 130);
-    	background.add(weturtle3);
-    	weturtle4 = new WetTurtle("file:src/p4_group_8_repo/TurtleAnimation2Wet.png", 200, 217, -1, 130, 130);
-    	background.add(weturtle4);
-    	*/
-    	//public Turtle(int xpos, int ypos, double s)
-    	// the link and size is set in the class itself rather than a parameter into the constructor
     	turtle1 = new Turtle(500, 376, -1);
     	background.add(turtle1);
     	turtle2 = new Turtle(300, 376, -1);
@@ -273,7 +299,8 @@ public class Main extends Application {
     }
     
     public void addAnimal(MyStage background) {
-    	animal = new Animal("file:src/p4_group_8_repo/froggerUp.png");
+    	//animal = new Animal("file:src/p4_group_8_repo/froggerUp.png");
+    	animal = new Animal(300, 679.8+(13.3333333*2));
 		background.add(animal);
     }
     

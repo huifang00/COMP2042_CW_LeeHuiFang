@@ -9,9 +9,9 @@ public class TruckObstacle extends Obstacle {
 	private int w2 = 200;
 	private int h2 = 200;
 	private Image truckobstacleL1 = new Image("file:src/p4_group_8_repo/truck1Left.png", w1, h1, true, true), 
-	truckobstacleL2 = new Image("file:src/p4_group_8_repo/truck2Left.png", w2, h2, true, true), 
-	truckobstacleR1 = new Image("file:src/p4_group_8_repo/truck1Right.png", w1, h1, true, true), 
-	truckobstacleR2 = new Image("file:src/p4_group_8_repo/truck2Right.png", w2, h2, true, true);
+				  truckobstacleL2 = new Image("file:src/p4_group_8_repo/truck2Left.png", w2, h2, true, true), 
+				  truckobstacleR1 = new Image("file:src/p4_group_8_repo/truck1Right.png", w1, h1, true, true), 
+				  truckobstacleR2 = new Image("file:src/p4_group_8_repo/truck2Right.png", w2, h2, true, true);
 	@Override
 	public void act(long now) {
 		move(speed , 0);

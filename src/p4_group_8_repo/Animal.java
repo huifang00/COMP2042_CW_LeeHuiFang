@@ -10,6 +10,7 @@ import javafx.scene.input.KeyEvent;
 
 
 public class Animal extends Actor {
+	/*
 	Image imgW1;
 	Image imgA1;
 	Image imgS1;
@@ -18,13 +19,24 @@ public class Animal extends Actor {
 	Image imgA2;
 	Image imgS2;
 	Image imgD2;
+	*/
+	private int width = 40;
+	private int height = 40;
+	private Image imgW1 = new Image("file:src/p4_group_8_repo/froggerUp.png", width, height, true, true),
+	imgA1 = new Image("file:src/p4_group_8_repo/froggerLeft.png", width, height, true, true),
+	imgS1 = new Image("file:src/p4_group_8_repo/froggerDown.png", width, height, true, true),
+	imgD1 = new Image("file:src/p4_group_8_repo/froggerRight.png", width, height, true, true),
+	imgW2 = new Image("file:src/p4_group_8_repo/froggerUpJump.png", width, height, true, true),
+	imgA2 = new Image("file:src/p4_group_8_repo/froggerLeftJump.png", width, height, true, true),
+	imgS2 = new Image("file:src/p4_group_8_repo/froggerDownJump.png", width, height, true, true),
+	imgD2 = new Image("file:src/p4_group_8_repo/froggerRightJump.png", width, height, true, true);
 	int points = 0;
 	int end = 0;
 	private boolean second = false;
 	boolean noMove = false;
 	double movement = 13.3333333*2;
 	double movementX = 10.666666*2;
-	int imgSize = 40;
+	//int imgSize = 40;
 	boolean carDeath = false;
 	boolean waterDeath = false;
 	//boolean stop = false;	//not really used
@@ -33,13 +45,21 @@ public class Animal extends Actor {
 	double w = 800;
 	ArrayList<End> inter = new ArrayList<End>();
 	
+	public Animal() {
+		
+	}
 	/*
 	 * @param imageLink the location of the animal's image
 	 */
-	public Animal(String imageLink) {
-		setImage(new Image(imageLink, imgSize, imgSize, true, true));
-		setX(300);
-		setY(679.8+movement);
+	//public Animal(String imageLink) {
+	public Animal(int xpos, double ypos) {
+		//setImage(new Image(imageLink, imgSize, imgSize, true, true));
+		setImage(imgW1);
+		//setX(300);
+		//setY(679.8+movement);
+		setX(xpos);
+		setY(ypos);
+		/*
 		imgW1 = new Image("file:src/p4_group_8_repo/froggerUp.png", imgSize, imgSize, true, true);
 		imgA1 = new Image("file:src/p4_group_8_repo/froggerLeft.png", imgSize, imgSize, true, true);
 		imgS1 = new Image("file:src/p4_group_8_repo/froggerDown.png", imgSize, imgSize, true, true);
@@ -48,6 +68,7 @@ public class Animal extends Actor {
 		imgA2 = new Image("file:src/p4_group_8_repo/froggerLeftJump.png", imgSize, imgSize, true, true);
 		imgS2 = new Image("file:src/p4_group_8_repo/froggerDownJump.png", imgSize, imgSize, true, true);
 		imgD2 = new Image("file:src/p4_group_8_repo/froggerRightJump.png", imgSize, imgSize, true, true);
+		*/
 		setOnKeyPressed(new EventHandler<KeyEvent>() {
 			public void handle(KeyEvent event){
 				if (noMove) {
@@ -187,19 +208,19 @@ public class Animal extends Actor {
 				this.carD++;
 			}
 			if (this.carD==1) {
-				setImage(new Image("file:src/p4_group_8_repo/cardeath1.png", imgSize, imgSize, true, true));
+				setImage(new Image("file:src/p4_group_8_repo/cardeath1.png", width, height, true, true));
 			}
 			if (this.carD==2) {
-				setImage(new Image("file:src/p4_group_8_repo/cardeath2.png", imgSize, imgSize, true, true));
+				setImage(new Image("file:src/p4_group_8_repo/cardeath2.png", width, height, true, true));
 			}
 			if (this.carD==3) {
-				setImage(new Image("file:src/p4_group_8_repo/cardeath3.png", imgSize, imgSize, true, true));
+				setImage(new Image("file:src/p4_group_8_repo/cardeath3.png", width, height, true, true));
 			}
 			if (this.carD == 4) {
 				setY(679.8+movement);
 				carDeath = false;
 				this.carD = 0;
-				setImage(new Image("file:src/p4_group_8_repo/froggerUp.png", imgSize, imgSize, true, true));
+				setImage(new Image("file:src/p4_group_8_repo/froggerUp.png", width, height, true, true));
 				noMove = false;
 				if (this.points>50) {
 					this.points-=50;
@@ -219,23 +240,23 @@ public class Animal extends Actor {
 				this.carD++;
 			}
 			if (this.carD==1) {
-				setImage(new Image("file:src/p4_group_8_repo/waterdeath1.png", imgSize,imgSize , true, true));
+				setImage(new Image("file:src/p4_group_8_repo/waterdeath1.png", width, height , true, true));
 			}
 			if (this.carD==2) {
-				setImage(new Image("file:src/p4_group_8_repo/waterdeath2.png", imgSize,imgSize , true, true));
+				setImage(new Image("file:src/p4_group_8_repo/waterdeath2.png", width, height , true, true));
 			}
 			if (this.carD==3) {
-				setImage(new Image("file:src/p4_group_8_repo/waterdeath3.png", imgSize,imgSize , true, true));
+				setImage(new Image("file:src/p4_group_8_repo/waterdeath3.png", width, height , true, true));
 			}
 			if (this.carD == 4) {
-				setImage(new Image("file:src/p4_group_8_repo/waterdeath4.png", imgSize,imgSize , true, true));
+				setImage(new Image("file:src/p4_group_8_repo/waterdeath4.png", width, height , true, true));
 			}
 			if (this.carD == 5) {
 				setX(300);
 				setY(679.8+movement);
 				waterDeath = false;
 				carD = 0;
-				setImage(new Image("file:src/p4_group_8_repo/froggerUp.png", imgSize, imgSize, true, true));
+				setImage(new Image("file:src/p4_group_8_repo/froggerUp.png", width, height, true, true));
 				noMove = false;
 				if (this.points>50) {
 					this.points-=50;
