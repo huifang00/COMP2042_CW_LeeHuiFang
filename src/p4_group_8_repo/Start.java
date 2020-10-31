@@ -18,6 +18,10 @@ public class Start extends Actor{
 		
 	}
 	
+	public Start() {
+		//default constructor
+	}
+	
 	public Start(int xpos, int ypos){
 		setImage(start);
 		setX(xpos);
