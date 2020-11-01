@@ -233,7 +233,7 @@ public class Main extends Application {
 	}
     
     public void printAlertEnd() {
-    	//score = level1.getScore() + level2.getScore() + level3.getScore();
+    	score = level1.getScore() + level2.getScore() + level3.getScore();
     	Alert alert = new Alert(AlertType.INFORMATION);
 		alert.setTitle("You Have Won The Game!");
 		//alert.setHeaderText("Your High Score: "+ animal.getPoints()+"!");
