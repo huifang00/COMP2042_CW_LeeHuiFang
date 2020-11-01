@@ -1,6 +1,8 @@
 package p4_group_8_repo;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
@@ -41,6 +43,8 @@ public class Main extends Application {
 	private String username;//
 	private boolean enterUsername = true;//
 	private int score;//
+	private Digit digit;//
+	ArrayList<Digit> ArrayDigit = new ArrayList<Digit>();	//save the actor of Digit
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -90,14 +94,12 @@ public class Main extends Application {
             		start();
             	}
             	else if(level == 2 && getPrintGame()) {	//Level2
-            		level1.setScore(animal.getPoints());	//save the score in level1 class
             		animal.setPoints(0);	//display the score (digit image) as 0
             		level1.remove(background);
             		level2 = new Level2(background, animal);
             		setPrintGame(false);
             	}
             	else if(level == 3 && getPrintGame()) {	//Level3
-            		level2.setScore(animal.getPoints());	//save the score in level2 class
             		animal.setPoints(0);	//display the score (digit image) as 0
             		level2.remove(background);
             		level3 = new Level3(background, animal);
@@ -108,9 +110,15 @@ public class Main extends Application {
             	}
             	if (animal.getStop()) {
             		System.out.print("STOPP:");
+            		if(level == 1) {	//save the score in level1 class
+            			level1.setScore(animal.getPoints());
+            		}
+            		else if(level == 2) {	//save the score in level2 class
+            			level2.setScore(animal.getPoints());
+            		}
             		if(level == 3) {
             			highscore = level * 800;
-            			level3.setScore(animal.getPoints());
+            			level3.setScore(animal.getPoints());	//save the score in level3 class
             			level3.remove(background);
             			level = 0;	//end the game
             		}
@@ -158,23 +166,33 @@ public class Main extends Application {
     public void setNumber(int n) {
     	int shift = 0;
     	if(n == 0) {	//new condition to remove the previous 1 in (300,25)
-    		addDigit(background, 11, 330, 25);
+    		removeDigit(background);
     	}
     	if(n < 100) {	//new condition to remove the previous 1 in (300,25)
-    		addDigit(background, 10, 300, 25);
+    		removeDigit(background);
     	}
     	while (n > 0) {
     		  int d = n / 10;
     		  int k = n - d * 10;
     		  n = d;
-    		  addDigit(background, k, 360 - shift, 25);	//call the method to add the digit
+    		  digit = new Digit(background, k, 360 - shift, 25);
+    		  ArrayDigit.add(digit);
+    		  background.add(digit);
+    		  //addDigit(background, k, 360 - shift, 25);	//call the method to add the digit
     		  shift+=30;
-    		}
+    	}
+    }
+    
+    public void removeDigit(MyStage background) {	//remove all digits from background
+    	for(Digit digit: ArrayDigit) {
+    		background.remove(digit);
+    	}
+    	ArrayDigit.clear();
     }
     
     public void addDigit(MyStage background, int n, int x, int y) {
     	Digit digit;
-    	digit = new Digit(n, x, y);
+    	digit = new Digit(background, n, x, y);
     	background.add(digit);
     }
     
@@ -233,7 +251,9 @@ public class Main extends Application {
 	}
     
     public void printAlertEnd() {
+    	System.out.println(score);
     	score = level1.getScore() + level2.getScore() + level3.getScore();
+    	System.out.println(score);
     	Alert alert = new Alert(AlertType.INFORMATION);
 		alert.setTitle("You Have Won The Game!");
 		//alert.setHeaderText("Your High Score: "+ animal.getPoints()+"!");
