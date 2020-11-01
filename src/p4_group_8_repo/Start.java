@@ -10,7 +10,6 @@ public class Start extends Actor{
 	private int h = 100;
 	private Image start = new Image("file:src/p4_group_8_repo/start.png", w, h, true, true);
 	private boolean gamestart = false;
-	private boolean printgame = false;
 	
 	@Override
 	public void act(long now) {
@@ -31,7 +30,6 @@ public class Start extends Actor{
 			   public void handle(MouseEvent e) { 
 			      System.out.println("START"); 
 			      setGameStart(true);
-			      setPrintGame(true);
 			   }
 			}); 
 			
@@ -43,14 +41,6 @@ public class Start extends Actor{
 	
 	public boolean getGameStart() {
 		return gamestart;
-	}
-	
-	public void setPrintGame(boolean printgame) {
-		this.printgame = printgame;
-	}
-	
-	public boolean getPrintGame() {
-		return printgame;
 	}
 	
 }

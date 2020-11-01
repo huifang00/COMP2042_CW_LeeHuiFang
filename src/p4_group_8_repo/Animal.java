@@ -194,7 +194,7 @@ public class Animal extends Actor {
 	public int getPoints() {
 		return points;
 	}
-	
+
 	public boolean changeScore() {
 		if (changeScore) {
 			changeScore = false;
@@ -305,7 +305,6 @@ public class Animal extends Actor {
 			this.w=800;
 			getIntersectingObjects(End.class).get(0).setEnd();
 			this.end++;
-			System.out.println(end);
 			setX(300);
 			setY(679.8+movement);
 		}

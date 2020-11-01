@@ -8,6 +8,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
@@ -21,7 +22,14 @@ public class Main extends Application {
 	private Scene scene;	
 	private BackgroundImage froggerback;
 	private Start start;
-	private Level level;
+	private int level = 1;//
+	private Level1 level1;//
+	Alert alert = new Alert(AlertType.NONE);//
+	private Level2 level2;//
+	private boolean printGame;//
+	private Level3 level3;//
+	private int highscore;//
+	private boolean nextLevel;//
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -135,51 +143,85 @@ public class Main extends Application {
         timer = new AnimationTimer() {
             @Override
             public void handle(long now) {
-            	if(start.getGameStart() == true) {
-            		background.remove(start);
+            	if(start.getGameStart() == true) {	//Level1
+            		background.remove(start);	//once the button is clicked then remove the button
             		start.setGameStart(false);
-            	}
-            	if(start.getPrintGame() == true) {
-            		//start the game work
-            		/*
-            		addLog(background);
-            		addTurtle(background);
-            		addEnd(background);
-            		addAnimal(background);
-            		addObstacle(background);
             		addDigit(background, 0, 360, 25);
-            		*/
-            		addDigit(background, 0, 360, 25);
-            		level = new Level1(background);
-            		setAnimal(((Level1)level).animal);
-            		start.setPrintGame(false);
+            		level1 = new Level1(background);
+            		setAnimal(level1.animal);
+            		setPrintGame(false);	// to prevent the next second on printing this condition
             		start();
             	}
-            	/*
-            	if(start.printgame == false){
-            		System.out.println("false");
+            	else if(level == 2 && getPrintGame()) {	//Level2
+            		level1.remove(background);
+            		level2 = new Level2(background, animal);
+            		setPrintGame(false);
             	}
-            	*/
+            	else if(level == 3 && getPrintGame()) {	//Level3
+            		level2.remove(background);
+            		level3 = new Level3(background, animal);
+            		setPrintGame(false);
+            	}
             	if (animal.changeScore()) {
             		setNumber(animal.getPoints());
             	}
             	if (animal.getStop()) {
             		System.out.print("STOPP:");
-            		background.stopMusic();
-            		stop();
-            		background.stop();
-            		((Level1)level).remove(background);
+            		//background.stopMusic();
+            		//stop();
+            		//background.stop();
+            		/*
             		Alert alert = new Alert(AlertType.INFORMATION);
             		alert.setTitle("You Have Won The Game!");
             		alert.setHeaderText("Your High Score: "+ animal.getPoints()+"!");
-            		alert.setContentText("Highest Possible Score: 800");
+            		//alert.setContentText("Highest Possible Score: 800");
             		alert.show();
-            		animal.setEnd(0);
-            		
+            		*/
+            		if(level == 3) {
+            			highscore = level * 800;
+            			level = 0;	//end the game
+            		}
+            		else {
+            			highscore = level * 800;
+	            		alert = new Alert(AlertType.NONE);
+	            		alert.getButtonTypes().addAll(ButtonType.YES, ButtonType.NO);
+	            		alert.setTitle("NEXT LEVEL");
+	            		alert.setHeaderText("PROCEED TO NEXT LEVEL?");
+	            		alert.setContentText("Your Score: "+ animal.getPoints()+"!");
+	            		//alert.setContentText("Highest Possible Score: 800");
+	            		alert.show();
+	            		animal.setEnd(0);	//set the end back to 0 to prevent getStop() infinite loop
+	            		setNextLevel(true);	//in order to run the condition for increasing to nextlevel
+            		}
             	}
+            	if (alert.getResult() == ButtonType.YES && getNextLevel()) {
+        			level++;
+        			setPrintGame(true);
+        			setNextLevel(false);	//to prevent the next second on running this condition till the next alert box appear
+        		}
+            	else if (alert.getResult() == ButtonType.NO || level == 0){
+            		background.stopMusic();
+            		stop();
+            		background.stop();
+            		Alert alert = new Alert(AlertType.INFORMATION);
+            		alert.setTitle("You Have Won The Game!");
+            		alert.setHeaderText("Your High Score: "+ animal.getPoints()+"!");
+            		alert.setContentText("Highest Possible Score: " + highscore);
+            		alert.show();
+            	}
+            	
             }
         };
     }
+	protected void setNextLevel(boolean nextLevel) {
+		this.nextLevel = nextLevel;
+		
+	}
+
+	protected boolean getNextLevel() {
+		return nextLevel;
+	}
+
 	public void start() {
 		background.playMusic();
     	createTimer();
@@ -216,5 +258,15 @@ public class Main extends Application {
     public void setAnimal(Animal animal) {
     	this.animal = animal;
     }
-
+    
+    public Animal getAnimal() {
+    	return animal;
+    }
+    public void setPrintGame(boolean printGame) {
+    	this.printGame = printGame;
+    }
+    
+    public boolean getPrintGame() {
+    	return printGame;
+    }
 }
