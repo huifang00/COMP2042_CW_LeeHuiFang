@@ -31,15 +31,16 @@ public class Main extends Application {
 	private BackgroundImage froggerback;
 	private Start start;
 	private int level = 1;//
-	private Level1 level1;//
+	private Level1 level1 = new Level1();//
 	Alert alert = new Alert(AlertType.NONE);//
-	private Level2 level2;//
+	private Level2 level2 = new Level2();//
 	private boolean printGame;//
-	private Level3 level3;//
+	private Level3 level3 = new Level3();//
 	private int highscore;//
 	private boolean nextLevel;//
 	private String username;//
-	private boolean enterUsername = true;
+	private boolean enterUsername = true;//
+	private int score;//
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -89,11 +90,15 @@ public class Main extends Application {
             		start();
             	}
             	else if(level == 2 && getPrintGame()) {	//Level2
+            		level1.setScore(animal.getPoints());	//save the score in level1 class
+            		animal.setPoints(0);	//display the score (digit image) as 0
             		level1.remove(background);
             		level2 = new Level2(background, animal);
             		setPrintGame(false);
             	}
             	else if(level == 3 && getPrintGame()) {	//Level3
+            		level2.setScore(animal.getPoints());	//save the score in level2 class
+            		animal.setPoints(0);	//display the score (digit image) as 0
             		level2.remove(background);
             		level3 = new Level3(background, animal);
             		setPrintGame(false);
@@ -105,11 +110,13 @@ public class Main extends Application {
             		System.out.print("STOPP:");
             		if(level == 3) {
             			highscore = level * 800;
+            			level3.setScore(animal.getPoints());
+            			level3.remove(background);
             			level = 0;	//end the game
             		}
             		else {
             			highscore = level * 800;
-            			printAlertNextLevel();
+            			printAlertNextLevel(animal.getPoints());
 	            		animal.setEnd(0);	//set the end back to 0 to prevent getStop() infinite loop
 	            		setNextLevel(true);	//in order to run the condition for increasing to nextlevel
             		}
@@ -150,6 +157,9 @@ public class Main extends Application {
     
     public void setNumber(int n) {
     	int shift = 0;
+    	if(n == 0) {	//new condition to remove the previous 1 in (300,25)
+    		addDigit(background, 11, 330, 25);
+    	}
     	if(n < 100) {	//new condition to remove the previous 1 in (300,25)
     		addDigit(background, 10, 300, 25);
     	}
@@ -223,9 +233,11 @@ public class Main extends Application {
 	}
     
     public void printAlertEnd() {
+    	//score = level1.getScore() + level2.getScore() + level3.getScore();
     	Alert alert = new Alert(AlertType.INFORMATION);
 		alert.setTitle("You Have Won The Game!");
-		alert.setHeaderText("Your High Score: "+ animal.getPoints()+"!");
+		//alert.setHeaderText("Your High Score: "+ animal.getPoints()+"!");
+		alert.setHeaderText("Your High Score: "+ score +"!");
 		alert.setContentText("Highest Possible Score: " + highscore);
 		// Get the Stage.
 		Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
@@ -235,12 +247,13 @@ public class Main extends Application {
 		alert.show();
     }
     
-    public void printAlertNextLevel() {
+    public void printAlertNextLevel(int score) {
     	alert = new Alert(AlertType.NONE);
 		alert.getButtonTypes().addAll(ButtonType.YES, ButtonType.NO);
 		alert.setTitle("NEXT LEVEL");
 		alert.setHeaderText("PROCEED TO NEXT LEVEL?");
-		alert.setContentText("Level " + level + " Score :"+ animal.getPoints()+"!\n"+"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
+		//alert.setContentText("Level " + level + " Score :"+ animal.getPoints()+"!\n"+"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
+		alert.setContentText("Level " + level + " Score :"+ score +"!\n"+"Highest Possible Score: 800");	//"Highest Possible Score: 800"
 		// Get the Stage.
 		Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
 

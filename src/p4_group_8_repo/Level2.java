@@ -9,6 +9,11 @@ public class Level2{
 	End end1, end2, end3, end4, end5;
 	CarObstacle carobstacle1, carobstacle2, carobstacle3, carobstacle4, carobstacle5, carobstacle6;
 	TruckObstacle truckobstacle1, truckobstacle2, truckobstacle3, truckobstacle4, truckobstacle5;
+	private int score = 0;
+	
+	public Level2() {
+		//default constructor
+	}
 	
 	public Level2(MyStage background, Animal animal) {
 		addLog(background);
@@ -162,5 +167,12 @@ public class Level2{
     	background.remove(truckobstacle5);
     }
  
+    public void setScore(int score) {
+    	this.score = score;
+    }
+    
+    public int getScore() {
+    	return score;
+    }
 }
 
