@@ -2,13 +2,21 @@ package p4_group_8_repo;
 
 import java.io.File;
 import java.util.List;
+import java.util.Optional;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.layout.TilePane;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextInputDialog;
+import javafx.scene.image.Image;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
@@ -30,6 +38,8 @@ public class Main extends Application {
 	private Level3 level3;//
 	private int highscore;//
 	private boolean nextLevel;//
+	private String username;//
+	private boolean enterUsername = true;
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -37,6 +47,9 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		
+		Username();
+		
 		background = new MyStage();
 	    scene  = new Scene(background,600,800);	//remove the datatype since it is declared as global variable
 		//Obstacle obstacle = new Obstacle("file:src/p4_group_8_repo/truck1Right.png", 25, 25, 3);
@@ -47,94 +60,17 @@ public class Main extends Application {
 		background.add(froggerback);
 		
 		start = new Start(250,350);
-		background.add(start);
-
-		//	addLog(background);
-		/*create log method
-		background.add(new Log("file:src/p4_group_8_repo/log3.png", 150, 0, 166, 0.75));
-		background.add(new Log("file:src/p4_group_8_repo/log3.png", 150, 220, 166, 0.75));
-		background.add(new Log("file:src/p4_group_8_repo/log3.png", 150, 440, 166, 0.75));
-		//background.add(new Log("file:src/p4_group_8_repo/log3.png", 150, 0, 166, 0.75));
-		background.add(new Log("file:src/p4_group_8_repo/logs.png", 300, 0, 276, -2));
-		background.add(new Log("file:src/p4_group_8_repo/logs.png", 300, 400, 276, -2));
-		//background.add(new Log("file:src/p4_group_8_repo/logs.png", 300, 800, 276, -2));
-		background.add(new Log("file:src/p4_group_8_repo/log3.png", 150, 50, 329, 0.75));
-		background.add(new Log("file:src/p4_group_8_repo/log3.png", 150, 270, 329, 0.75));
-		background.add(new Log("file:src/p4_group_8_repo/log3.png", 150, 490, 329, 0.75));
-		//background.add(new Log("file:src/p4_group_8_repo/log3.png", 150, 570, 329, 0.75));
-		 */
-		//	addTurtle(background);
-		/*
-		background.add(new Turtle(500, 376, -1, 130, 130));
-		background.add(new Turtle(300, 376, -1, 130, 130));
-		background.add(new WetTurtle(700, 376, -1, 130, 130));
-		background.add(new WetTurtle(600, 217, -1, 130, 130));
-		background.add(new WetTurtle(400, 217, -1, 130, 130));
-		background.add(new WetTurtle(200, 217, -1, 130, 130));
-		*/
+		background.add(start);	//add start/play button
 		
-		
-		//background.add(new Log("file:src/p4_group_8_repo/log2.png", 200, 100, 1));
-		//background.add(new Log("file:src/p4_group_8_repo/log2.png", 0, 100, 1));
-		//background.add(new Log("file:src/p4_group_8_repo/log2.png", 100, 120, -1));
-		//background.add(new Log("file:src/p4_group_8_repo/log2.png", 200, 120, -1));
-		//background.add(new Log("file:src/p4_group_8_repo/log2.png", 100, 140, 1));
-		//background.add(new Log("file:src/p4_group_8_repo/log2.png", 200, 140, 1));
-		//background.add(new Log("file:src/p4_group_8_repo/log2.png", 100, 160, -1));
-		//background.add(new Log("file:src/p4_group_8_repo/log2.png", 300, 160, -1));
-		//background.add(new Log("file:src/p4_group_8_repo/log2.png", 100, 180, 1));
-		//background.add(new Log("file:src/p4_group_8_repo/log2.png", 200, 180, 1));
-		//background.add(new Log("file:src/p4_group_8_repo/log2.png", 100, 200, -1));
-		//background.add(new Log("file:src/p4_group_8_repo/log2.png", 200, 200, -1));
-		//background.add(new Log("file:src/p4_group_8_repo/log2.png", 100, 220, 1));
-		//background.add(new Log("file:src/p4_group_8_repo/log2.png", 200, 220, 1));
-		//background.add(new Log("file:src/p4_group_8_repo/log2.png", 400, 220, 1));
-		//End end2 = new End();
-		//End end3 = new End();
-		//End end4 = new End();
-		//End end5 = new End();
-		
-		//	addEnd(background);
-		/*
-		background.add(new End(13,96));
-		background.add(new End(141,96));
-		background.add(new End(141 + 141-13,96));
-		background.add(new End(141 + 141-13+141-13+1,96));
-		background.add(new End(141 + 141-13+141-13+141-13+3,96));
-		*/
-		
-		//	addAnimal(background);
-		/*
-		animal = new Animal("file:src/p4_group_8_repo/froggerUp.png");
-		background.add(animal);
-		*/
-		
-		//	addObstacle(background);
-		/*
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck1"+"Right.png", 0, 649, 1, 120, 120));
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck1"+"Right.png", 300, 649, 1, 120, 120));
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck1"+"Right.png", 600, 649, 1, 120, 120));
-		//background.add(new Obstacle("file:src/p4_group_8_repo/truck1"+"Right.png", 720, 649, 1, 120, 120));
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 100, 597, -1, 50, 50));
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 250, 597, -1, 50, 50));
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 400, 597, -1, 50, 50));
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 550, 597, -1, 50, 50));
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck2Right.png", 0, 540, 1, 200, 200));
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck2Right.png", 500, 540, 1, 200, 200));
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 500, 490, -5, 50, 50));
-		*/
-		
-		//	addDigit(background, 0, 360, 25);
-		/*
-		background.add(new Digit(0, 30, 360, 25));
-		*/
-		
-		
-		//background.add(obstacle);
-		//background.add(obstacle1);
-		//background.add(obstacle2);
 		background.start();
 		primaryStage.setScene(scene);
+
+		// Set the title for the application
+		primaryStage.setTitle("Frogger");
+		
+		// Add a custom icon.
+		primaryStage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
+
 		primaryStage.show();
 		start();  
 	}
@@ -167,29 +103,13 @@ public class Main extends Application {
             	}
             	if (animal.getStop()) {
             		System.out.print("STOPP:");
-            		//background.stopMusic();
-            		//stop();
-            		//background.stop();
-            		/*
-            		Alert alert = new Alert(AlertType.INFORMATION);
-            		alert.setTitle("You Have Won The Game!");
-            		alert.setHeaderText("Your High Score: "+ animal.getPoints()+"!");
-            		//alert.setContentText("Highest Possible Score: 800");
-            		alert.show();
-            		*/
             		if(level == 3) {
             			highscore = level * 800;
             			level = 0;	//end the game
             		}
             		else {
             			highscore = level * 800;
-	            		alert = new Alert(AlertType.NONE);
-	            		alert.getButtonTypes().addAll(ButtonType.YES, ButtonType.NO);
-	            		alert.setTitle("NEXT LEVEL");
-	            		alert.setHeaderText("PROCEED TO NEXT LEVEL?");
-	            		alert.setContentText("Your Score: "+ animal.getPoints()+"!");
-	            		//alert.setContentText("Highest Possible Score: 800");
-	            		alert.show();
+            			printAlertNextLevel();
 	            		animal.setEnd(0);	//set the end back to 0 to prevent getStop() infinite loop
 	            		setNextLevel(true);	//in order to run the condition for increasing to nextlevel
             		}
@@ -203,11 +123,7 @@ public class Main extends Application {
             		background.stopMusic();
             		stop();
             		background.stop();
-            		Alert alert = new Alert(AlertType.INFORMATION);
-            		alert.setTitle("You Have Won The Game!");
-            		alert.setHeaderText("Your High Score: "+ animal.getPoints()+"!");
-            		alert.setContentText("Highest Possible Score: " + highscore);
-            		alert.show();
+            		printAlertEnd();
             	}
             	
             }
@@ -242,9 +158,6 @@ public class Main extends Application {
     		  int k = n - d * 10;
     		  n = d;
     		  addDigit(background, k, 360 - shift, 25);	//call the method to add the digit
-    		  /*
-    		  background.add(new Digit(k, 30, 360 - shift, 25));
-    		  */
     		  shift+=30;
     		}
     }
@@ -269,4 +182,71 @@ public class Main extends Application {
     public boolean getPrintGame() {
     	return printGame;
     }
+    
+    public void setUsername(String username) {
+    	this.username = username;
+    }
+    
+    public String getUsername() {
+    	return username;
+    }
+    
+    public void setEnter(boolean enterUsername) {
+    	this.enterUsername = enterUsername;
+    }
+    
+    public boolean getEnter() {
+    	return enterUsername;
+    }
+
+    public void Username() {
+		if(getEnter()) {
+    		TextInputDialog dialog = new TextInputDialog("name");
+    		dialog.setTitle("Enter Name");
+    		dialog.setHeaderText("Welcome To Frogger!!!");
+    		dialog.setContentText("Please enter your name:");
+    		
+    		// Get the Stage.
+    		Stage stage = (Stage) dialog.getDialogPane().getScene().getWindow();
+
+    		// Add a custom icon.
+    		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
+    		
+    		// Traditional way to get the response value.
+    		Optional<String> result = dialog.showAndWait();
+    		if (result.isPresent()){
+    			setUsername(result.get());
+    		    System.out.println("Your name: " + getUsername()); 
+    		    setEnter(false);
+    		}
+    	}
+	}
+    
+    public void printAlertEnd() {
+    	Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setTitle("You Have Won The Game!");
+		alert.setHeaderText("Your High Score: "+ animal.getPoints()+"!");
+		alert.setContentText("Highest Possible Score: " + highscore);
+		// Get the Stage.
+		Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+
+		// Add a custom icon.
+		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
+		alert.show();
+    }
+    
+    public void printAlertNextLevel() {
+    	alert = new Alert(AlertType.NONE);
+		alert.getButtonTypes().addAll(ButtonType.YES, ButtonType.NO);
+		alert.setTitle("NEXT LEVEL");
+		alert.setHeaderText("PROCEED TO NEXT LEVEL?");
+		alert.setContentText("Level " + level + " Score :"+ animal.getPoints()+"!\n"+"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
+		// Get the Stage.
+		Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+
+		// Add a custom icon.
+		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
+		alert.show();
+    }
+
 }

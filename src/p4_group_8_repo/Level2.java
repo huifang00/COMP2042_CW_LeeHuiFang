@@ -151,6 +151,7 @@ public class Level2{
     	background.remove(carobstacle3);
     	background.remove(carobstacle4);
     	background.remove(carobstacle5);
+    	background.remove(carobstacle6);
     }
     
     public void removeTruckObstacle(MyStage background) {

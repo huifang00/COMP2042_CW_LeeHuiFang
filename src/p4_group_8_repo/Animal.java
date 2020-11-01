@@ -191,6 +191,10 @@ public class Animal extends Actor {
 		this.end = end;
 	}
 	
+	public int getEnd() {
+		return end;
+	}
+	
 	public int getPoints() {
 		return points;
 	}
