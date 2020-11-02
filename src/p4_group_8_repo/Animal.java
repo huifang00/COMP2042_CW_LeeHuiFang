@@ -44,6 +44,7 @@ public class Animal extends Actor {
 	int carD = 0;
 	double w = 800;
 	ArrayList<End> inter = new ArrayList<End>();
+	private int level = 0;
 	
 	public Animal() {
 		
@@ -184,7 +185,7 @@ public class Animal extends Actor {
 		*/
 	}
 	public boolean getStop() {
-		return end==1;	//return true if end == 5
+		return end==5;	//return true if end == 5
 	}
 	
 	public void setEnd(int end) {
@@ -287,19 +288,75 @@ public class Animal extends Actor {
 			this.carDeath = true;
 		}
 		else if (getIntersectingObjects(Log.class).size() >= 1 && !noMove) {	//intersect with log
-			if(getIntersectingObjects(Log.class).get(0).getLeft())
-				move(-2,0);	//display as moving together with log moving towards left
-			else
-				move (.75,0);	//display as moving together with log moving towards right
+			if(level == 1) {
+				if(getIntersectingObjects(Log.class).get(0).getLeft())	//if the object is moving left
+					move(-2,0);	//display as moving together with log moving towards left
+				else	//else moving right
+					move (.75,0);	//display as moving together with log moving towards right
+			}
+			else if(level == 2) {
+				if(getIntersectingObjects(Log.class).get(0).getLeft())
+					move(-2,0);	//display as moving together with log moving towards left
+				else
+					move (1.25,0);	//display as moving together with log moving towards right
+			}
+			else if(level == 3) {
+				if(getIntersectingObjects(Log.class).get(0).getLeft())
+					move(-2,0);	//display as moving together with log moving towards left
+				else
+					move (.75,0);	//display as moving together with log moving towards right
+			}
 		}
 		else if (getIntersectingObjects(Turtle.class).size() >= 1 && !noMove) {	//intersect with turtle
-			move(-1,0);
+			//move(-1,0);
+			if(level == 1) {
+				if(getIntersectingObjects(Turtle.class).get(0).getLeft())	//if the object is moving left
+					move(-1,0);	//display as moving together with log moving towards left
+				else	//else moving right
+					move(1,0);	//display as moving together with log moving towards right
+			}
+			else if(level == 2) {
+				if(getIntersectingObjects(Turtle.class).get(0).getLeft())
+					move(-1,0);	//display as moving together with log moving towards left
+				else
+					move(1,0);	//display as moving together with log moving towards right
+			}
+			else if(level == 3) {
+				if(getIntersectingObjects(Turtle.class).get(0).getLeft())
+					move(-1,0);	//display as moving together with log moving towards left
+				else
+					move(1,0);	//display as moving together with log moving towards right
+			}
 		}
 		else if (getIntersectingObjects(WetTurtle.class).size() >= 1) {	//intersect with wet turtle
+			/*
 			if (getIntersectingObjects(WetTurtle.class).get(0).isSunk()) {
 				this.waterDeath = true;
 			} else {
 				move(-1,0);
+			}
+			*/
+			if (getIntersectingObjects(WetTurtle.class).get(0).isSunk()) {
+				this.waterDeath = true;
+			} else {
+				if(level == 1) {
+					if(getIntersectingObjects(WetTurtle.class).get(0).getLeft())	//if the object is moving left
+						move(-1,0);	//display as moving together with log moving towards left
+					else	//else moving right
+						move(1,0);	//display as moving together with log moving towards right
+				}
+				else if(level == 2) {
+					if(getIntersectingObjects(WetTurtle.class).get(0).getLeft())
+						move(-1,0);	//display as moving together with log moving towards left
+					else
+						move(1,0);	//display as moving together with log moving towards right
+				}
+				else if(level == 3) {
+					if(getIntersectingObjects(WetTurtle.class).get(0).getLeft())
+						move(-1,0);	//display as moving together with log moving towards left
+					else
+						move(1,0);	//display as moving together with log moving towards right
+				}
 			}
 		}
 		else if (getIntersectingObjects(End.class).size() >= 1) {	//intersect with the end slot
@@ -322,5 +379,9 @@ public class Animal extends Actor {
 			//setX(300);
 			//setY(679.8+movement);
 		}
+	}
+	
+	public void setLevel(int level) {
+		this.level = level;
 	}
 }

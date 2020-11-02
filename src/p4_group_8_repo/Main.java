@@ -91,16 +91,19 @@ public class Main extends Application {
             		level1 = new Level1(background);
             		setAnimal(level1.animal);
             		setPrintGame(false);	// to prevent the next second on printing this condition
+            		animal.setLevel(level);	//set the level in animal class for the speed
             		start();
             	}
             	else if(level == 2 && getPrintGame()) {	//Level2
             		animal.setPoints(0);	//display the score (digit image) as 0
+            		animal.setLevel(level);	//set the level in animal class for the speed
             		level1.remove(background);
             		level2 = new Level2(background, animal);
             		setPrintGame(false);
             	}
             	else if(level == 3 && getPrintGame()) {	//Level3
             		animal.setPoints(0);	//display the score (digit image) as 0
+            		animal.setLevel(level);	//set the level in animal class for the speed
             		level2.remove(background);
             		level3 = new Level3(background, animal);
             		setPrintGame(false);
@@ -165,12 +168,15 @@ public class Main extends Application {
     
     public void setNumber(int n) {
     	int shift = 0;
-    	if(n == 0) {	//new condition to remove the previous 1 in (300,25)
+    	//clear previous digit(s)
+    	if(n == 0 || n < 100) {	//new condition to remove the previous number(digit) at (300,25)
     		removeDigit(background);
     	}
-    	if(n < 100) {	//new condition to remove the previous 1 in (300,25)
+    	/*
+    	if(n < 100) {	//new condition to remove the previous number(digit) at (300,25)
     		removeDigit(background);
     	}
+    	*/
     	while (n > 0) {
     		  int d = n / 10;
     		  int k = n - d * 10;
@@ -183,17 +189,17 @@ public class Main extends Application {
     	}
     }
     
+    public void addDigit(MyStage background, int n, int x, int y) {
+    	Digit digit;
+    	digit = new Digit(background, n, x, y);
+    	background.add(digit);
+    }
+    
     public void removeDigit(MyStage background) {	//remove all digits from background
     	for(Digit digit: ArrayDigit) {
     		background.remove(digit);
     	}
     	ArrayDigit.clear();
-    }
-    
-    public void addDigit(MyStage background, int n, int x, int y) {
-    	Digit digit;
-    	digit = new Digit(background, n, x, y);
-    	background.add(digit);
     }
     
     public void setAnimal(Animal animal) {
@@ -251,9 +257,7 @@ public class Main extends Application {
 	}
     
     public void printAlertEnd() {
-    	System.out.println(score);
     	score = level1.getScore() + level2.getScore() + level3.getScore();
-    	System.out.println(score);
     	Alert alert = new Alert(AlertType.INFORMATION);
 		alert.setTitle("You Have Won The Game!");
 		//alert.setHeaderText("Your High Score: "+ animal.getPoints()+"!");

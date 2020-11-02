@@ -24,36 +24,36 @@ public class Level2{
 	}
 	
 	public void addLog(MyStage background) {
-		log1 = new Log(2, 0, 166, 0.75);	//1.25
+		log1 = new Log(2, 0, 166, 1.25);	//0.75
     	background.add(log1);
-    	log2 = new Log(2, 220, 166, 0.75);
+    	log2 = new Log(2, 220, 166, 1.25);
     	background.add(log2);
-    	log3 = new Log(2, 440, 166, 0.75);
+    	log3 = new Log(2, 440, 166, 1.25);
     	background.add(log3);
     	log4 = new Log(1, 0, 276, -2);
     	background.add(log4);
     	log5 = new Log(1, 400, 276, -2);
     	background.add(log5);
-    	log6 = new Log(2, 50, 329, 0.75);
+    	log6 = new Log(2, 50, 329, 1.25);
     	background.add(log6);
-    	log7 = new Log(2, 270, 329, 0.75);
+    	log7 = new Log(2, 270, 329, 1.25);
     	background.add(log7);
-    	log8 = new Log(2, 490, 329, 0.75);
+    	log8 = new Log(2, 490, 329, 1.25);
     	background.add(log8);
     }
     
     public void addTurtle(MyStage background) {
-    	turtle1 = new Turtle(500, 376, -1);
+    	turtle1 = new Turtle(500, 376, -1);	
     	background.add(turtle1);
     	turtle2 = new Turtle(300, 376, -1);
     	background.add(turtle2);
     	weturtle1 = new WetTurtle(700, 376, -1);
     	background.add(weturtle1);
-    	weturtle2 = new WetTurtle(600, 217, -1);
+    	weturtle2 = new WetTurtle(100, 217, 1);//-1
     	background.add(weturtle2);
-    	weturtle3 = new WetTurtle(400, 217, -1);
+    	weturtle3 = new WetTurtle(400, 217, 1);
     	background.add(weturtle3);
-    	weturtle4 = new WetTurtle(200, 217, -1);
+    	weturtle4 = new WetTurtle(700, 217, 1);
     	background.add(weturtle4);
     	
     }
@@ -82,13 +82,13 @@ public class Level2{
     }
     
     public void addCarObstacle(MyStage background) {
-    	carobstacle1 = new CarObstacle(100, 597, -2);	//previous -1(L1)
+    	carobstacle1 = new CarObstacle(100, 597, -1.5);	//previous -1(L1)
     	background.add(carobstacle1);
-    	carobstacle2 = new CarObstacle(250, 597, -2);
+    	carobstacle2 = new CarObstacle(250, 597, -1.5);
     	background.add(carobstacle2);
-    	carobstacle3 = new CarObstacle(400, 597, -2);
+    	carobstacle3 = new CarObstacle(400, 597, -1.5);
     	background.add(carobstacle3);
-    	carobstacle4 = new CarObstacle(550, 597, -2);
+    	carobstacle4 = new CarObstacle(550, 597, -1.5);
     	background.add(carobstacle4);
     	carobstacle5 = new CarObstacle(500, 490, -5);
     	background.add(carobstacle5);

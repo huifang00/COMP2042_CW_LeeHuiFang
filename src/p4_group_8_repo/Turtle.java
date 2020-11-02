@@ -43,5 +43,7 @@ public class Turtle extends Actor{
 		setY(ypos);
 		speed = s;
 	}
-	
+	public boolean getLeft() {
+		return speed < 0;
+	}
 }

@@ -28,7 +28,7 @@ public class Start extends Actor{
 		setOnMouseClicked(new EventHandler<MouseEvent>(){
 			@Override 
 			   public void handle(MouseEvent e) { 
-			      System.out.println("START"); 
+			      System.out.println("START:"); 
 			      setGameStart(true);
 			   }
 			}); 
