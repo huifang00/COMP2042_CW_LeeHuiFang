@@ -24,21 +24,21 @@ public class Level2{
 	}
 	
 	public void addLog(MyStage background) {
-		log1 = new Log(2, 0, 166, 1.25);	//0.75
+		log1 = new Log(1, 0, 166, 1.25);	//0.75
     	background.add(log1);
-    	log2 = new Log(2, 220, 166, 1.25);
+    	log2 = new Log(1, 220, 166, 1.25);
     	background.add(log2);
-    	log3 = new Log(2, 440, 166, 1.25);
+    	log3 = new Log(1, 440, 166, 1.25);
     	background.add(log3);
-    	log4 = new Log(1, 0, 276, -2);
+    	log4 = new Log(2, 0, 276, -2);
     	background.add(log4);
-    	log5 = new Log(1, 400, 276, -2);
+    	log5 = new Log(2, 400, 276, -2);
     	background.add(log5);
-    	log6 = new Log(2, 50, 329, 1.25);
+    	log6 = new Log(1, 50, 329, 1.25);
     	background.add(log6);
-    	log7 = new Log(2, 270, 329, 1.25);
+    	log7 = new Log(1, 270, 329, 1.25);
     	background.add(log7);
-    	log8 = new Log(2, 490, 329, 1.25);
+    	log8 = new Log(1, 490, 329, 1.25);
     	background.add(log8);
     }
     

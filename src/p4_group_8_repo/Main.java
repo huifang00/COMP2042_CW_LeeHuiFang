@@ -257,32 +257,50 @@ public class Main extends Application {
 	}
     
     public void printAlertEnd() {
+    	String levelmsg;	//variable to save the message of score for each level
     	score = level1.getScore() + level2.getScore() + level3.getScore();
     	Alert alert = new Alert(AlertType.INFORMATION);
 		alert.setTitle("You Have Won The Game!");
 		//alert.setHeaderText("Your High Score: "+ animal.getPoints()+"!");
-		alert.setHeaderText("Your High Score: "+ score +"!");
-		alert.setContentText("Highest Possible Score: " + highscore);
+		alert.setHeaderText("Your Total Score: "+ score +"!");
 		// Get the Stage.
 		Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
 
 		// Add a custom icon.
 		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
+		if(level == 1)
+			alert.setContentText("Level 1: " + score +"!\n"+"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
+		else if(level == 2) {
+			levelmsg = "Level 1: " + level1.getScore() + "!\nLevel 2: " + level2.getScore() + "!\n";
+			alert.setContentText(levelmsg +"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
+		}
+		else if(level == 3) {
+			levelmsg = "Level 1: " + level1.getScore() + "!\nLevel 2: " + level2.getScore() + "!\nLevel 3: " + level3.getScore() + "!\n";
+			alert.setContentText(levelmsg +"Highest Possible Score: " + highscore);
+		}
 		alert.show();
+		System.out.println(score);	//use here to save the score and username
     }
     
     public void printAlertNextLevel(int score) {
+    	String levelmsg;	//variable to save the message of score for each level
     	alert = new Alert(AlertType.NONE);
 		alert.getButtonTypes().addAll(ButtonType.YES, ButtonType.NO);
 		alert.setTitle("NEXT LEVEL");
 		alert.setHeaderText("PROCEED TO NEXT LEVEL?");
 		//alert.setContentText("Level " + level + " Score :"+ animal.getPoints()+"!\n"+"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
-		alert.setContentText("Level " + level + " Score :"+ score +"!\n"+"Highest Possible Score: 800");	//"Highest Possible Score: 800"
 		// Get the Stage.
 		Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
 
 		// Add a custom icon.
 		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
+		
+		if(level == 1)
+			alert.setContentText("Level 1: " + score +"!\n"+"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
+		else if(level == 2) {
+			levelmsg = "Level 1: " + level1.getScore() + "!\nLevel 2: " + level2.getScore() + "!\n";
+			alert.setContentText(levelmsg +"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
+		}
 		alert.show();
     }
 

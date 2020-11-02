@@ -185,7 +185,7 @@ public class Animal extends Actor {
 		*/
 	}
 	public boolean getStop() {
-		return end==5;	//return true if end == 5
+		return end==1;	//return true if end == 5
 	}
 	
 	public void setEnd(int end) {
