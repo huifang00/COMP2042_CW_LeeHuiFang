@@ -1,6 +1,8 @@
 package p4_group_8_repo;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -234,11 +236,19 @@ public class Main extends Application {
     	Optional<String> result = dialog.showAndWait();
     	if (result.isPresent()){	//ok was pressed
     		if(!result.get().isBlank()) {
-    			setPlayerName(result.get());
-    			System.out.println("Your name: " + getPlayerName()); 
+    			if(!isNameUsed(result.get()) && !containSymbol(result.get())) {
+	    			setPlayerName(result.get());
+	    			System.out.println("Your name: " + getPlayerName()); 
+    			}
+    			else if(isNameUsed(result.get())){
+    				playerNameDialog("\n**Name Used By Other Player**");
+    			}
+    			else if(containSymbol(result.get())){
+    				playerNameDialog("\n**Name Cannot Contain Special Characters**");
+    			}
     		}
     		else {
-    			playerNameDialog("\n**NAME CANNOT BE EMPTY**");
+    			playerNameDialog("\n**Name Cannot Be Empty**");
     		}
     	}
     	else {	//cancel is pressed
@@ -292,6 +302,53 @@ public class Main extends Application {
 		alert.show();
     }
 
+    public boolean isNameUsed(String enteredName) {
+    	String line, name = "";  
+    	try  
+    	{  
+    		File file = new File(".\\src\\p4_group_8_repo\\player information.txt");    //creates a new file instance 
+    		if(file.exists()) {
+    			FileReader filereader = new FileReader(file);   //reads the file  
+    			BufferedReader bufferedreader = new BufferedReader(filereader);  //creates a buffering character input stream  
+    		while((line = bufferedreader.readLine())!=null)  {
+    			//String filename = "abc.def.ghi";     // full file name
+    			int index = line.indexOf(":"); //this finds the first occurrence of ":" 
+    			//in string thus giving you the index of where it is in the string
+
+    			// Now index can be -1, if lets say the string had no ":" at all in it i.e. no ":" is found. 
+    			//So check and account for it.
+    			if (index != -1) 
+    			{
+    			    name = line.substring(0 , index); //this will give name before ":"
+    			}
+    			if(name.equals(enteredName)) {
+    				bufferedreader.close();
+    	    		filereader.close();    //closes the stream and release the resources 
+    				return true;
+    			}
+    		}  
+    		bufferedreader.close();
+    		filereader.close();    //closes the stream and release the resources 
+    		return false;
+    		}
+    	}  
+    	catch(IOException e)  {  
+    		e.printStackTrace();  
+    	}
+		return false;  
+    }
+    
+    public boolean containSymbol(String enteredName) {
+    	String specialCharactersString = "!@#$%&*()'+,-./:;<=>?[]^_`{|}";
+        for (int i=0; i < enteredName.length() ; i++)
+        {
+            char ch = enteredName.charAt(i);
+            if(specialCharactersString.contains(Character.toString(ch))) {
+                return true;
+            }    
+        }
+        return false;
+    }
     public void save() {
     	try {
     		//directory of the file
