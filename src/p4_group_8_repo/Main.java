@@ -1,22 +1,18 @@
 package p4_group_8_repo;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.layout.TilePane;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.image.Image;
 import javafx.scene.media.Media;
@@ -32,19 +28,19 @@ public class Main extends Application {
 	private Scene scene;	
 	private BackgroundImage froggerback;
 	private Start start;
-	private int level = 1;//
+	private int level = 1;	//initialized the level to 1
 	private Level1 level1 = new Level1();//
-	Alert alert = new Alert(AlertType.NONE);//
+	private Alert alert = new Alert(AlertType.NONE);//
 	private Level2 level2 = new Level2();//
 	private boolean printGame;//
 	private Level3 level3 = new Level3();//
 	private int highscore;//
 	private boolean nextLevel;//
-	private String username;//
-	private boolean enterUsername = true;//
+	private String playerName;//
 	private int score;//
 	private Digit digit;//
-	ArrayList<Digit> ArrayDigit = new ArrayList<Digit>();	//save the actor of Digit
+	private ArrayList<Digit> ArrayDigit = new ArrayList<Digit>();	//save the actor of Digit
+	private Alert alertEnd = new Alert(AlertType.NONE);
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -53,14 +49,11 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		Username();
+		playerNameDialog("");
 		
 		background = new MyStage();
 	    scene  = new Scene(background,600,800);	//remove the datatype since it is declared as global variable
-		//Obstacle obstacle = new Obstacle("file:src/p4_group_8_repo/truck1Right.png", 25, 25, 3);
-		//Obstacle obstacle1 = new Obstacle("file:src/p4_group_8_repo/truck2Right.png", 100, 100,2 );
-		//Obstacle obstacle2 = new Obstacle("file:src/p4_group_8_repo/truck1Right.png",0,  150, 1);
-
+	    
 		froggerback = new BackgroundImage("file:src/p4_group_8_repo/iKogsKW_cropped.png");
 		background.add(froggerback);
 		
@@ -138,22 +131,14 @@ public class Main extends Application {
         			setNextLevel(false);	//to prevent the next second on running this condition till the next alert box appear
         		}
             	else if (alert.getResult() == ButtonType.NO || level == 0){
-            		background.stopMusic();
-            		stop();
-            		background.stop();
             		printAlertEnd();
+            		background.stopMusic();
+            		stop();	//timer stop
+            		background.stop();	//timer stop
             	}
             	
             }
         };
-    }
-	protected void setNextLevel(boolean nextLevel) {
-		this.nextLevel = nextLevel;
-		
-	}
-
-	protected boolean getNextLevel() {
-		return nextLevel;
 	}
 
 	public void start() {
@@ -217,78 +202,81 @@ public class Main extends Application {
     	return printGame;
     }
     
-    public void setUsername(String username) {
-    	this.username = username;
+    public void setPlayerName(String playerName) {
+    	this.playerName = playerName;
     }
     
-    public String getUsername() {
-    	return username;
-    }
-    
-    public void setEnter(boolean enterUsername) {
-    	this.enterUsername = enterUsername;
-    }
-    
-    public boolean getEnter() {
-    	return enterUsername;
+    public String getPlayerName() {
+    	return playerName;
     }
 
-    public void Username() {
-		if(getEnter()) {
-    		TextInputDialog dialog = new TextInputDialog("name");
-    		dialog.setTitle("Enter Name");
-    		dialog.setHeaderText("Welcome To Frogger!!!");
-    		dialog.setContentText("Please enter your name:");
-    		
-    		// Get the Stage.
-    		Stage stage = (Stage) dialog.getDialogPane().getScene().getWindow();
+	protected void setNextLevel(boolean nextLevel) {
+		this.nextLevel = nextLevel;
+	}
 
-    		// Add a custom icon.
-    		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
+	protected boolean getNextLevel() {
+		return nextLevel;
+	}
+	
+    public void playerNameDialog(String Message) {
+    	TextInputDialog dialog = new TextInputDialog();
+    	dialog.setTitle("Enter Name");
+    	dialog.setHeaderText("Welcome To Frogger!!!" + Message);
+    	dialog.setContentText("Please enter your name:");
     		
-    		// Traditional way to get the response value.
-    		Optional<String> result = dialog.showAndWait();
-    		if (result.isPresent()){
-    			setUsername(result.get());
-    		    System.out.println("Your name: " + getUsername()); 
-    		    setEnter(false);
+    	// Get the Stage.
+    	Stage stage = (Stage) dialog.getDialogPane().getScene().getWindow();
+
+    	// Add a custom icon.
+    	stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
+    		
+    	// To get the response value.
+    	Optional<String> result = dialog.showAndWait();
+    	if (result.isPresent()){	//ok was pressed
+    		if(!result.get().isBlank()) {
+    			setPlayerName(result.get());
+    			System.out.println("Your name: " + getPlayerName()); 
     		}
+    		else {
+    			playerNameDialog("\n**NAME CANNOT BE EMPTY**");
+    		}
+    	}
+    	else {	//cancel is pressed
+    		System.exit(0);	//exit the application
     	}
 	}
     
     public void printAlertEnd() {
     	String levelmsg;	//variable to save the message of score for each level
     	score = level1.getScore() + level2.getScore() + level3.getScore();
-    	Alert alert = new Alert(AlertType.INFORMATION);
-		alert.setTitle("You Have Won The Game!");
-		//alert.setHeaderText("Your High Score: "+ animal.getPoints()+"!");
-		alert.setHeaderText("Your Total Score: "+ score +"!");
+    	this.alertEnd = new Alert(AlertType.INFORMATION);
+		alertEnd.setTitle("You Have Won The Game!");
+		alertEnd.setHeaderText("Your Total Score: "+ score +"!");
 		// Get the Stage.
-		Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+		Stage stage = (Stage) alertEnd.getDialogPane().getScene().getWindow();
 
 		// Add a custom icon.
 		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
 		if(level == 1)
-			alert.setContentText("Level 1: " + score +"!\n"+"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
+			alertEnd.setContentText("Level 1: " + score +"!\n"+"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
 		else if(level == 2) {
 			levelmsg = "Level 1: " + level1.getScore() + "!\nLevel 2: " + level2.getScore() + "!\n";
-			alert.setContentText(levelmsg +"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
+			alertEnd.setContentText(levelmsg +"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
 		}
 		else if(level == 3) {
 			levelmsg = "Level 1: " + level1.getScore() + "!\nLevel 2: " + level2.getScore() + "!\nLevel 3: " + level3.getScore() + "!\n";
-			alert.setContentText(levelmsg +"Highest Possible Score: " + highscore);
+			alertEnd.setContentText(levelmsg +"Highest Possible Score: " + highscore);
 		}
-		alert.show();
-		System.out.println(score);	//use here to save the score and username
+		alertEnd.show();
+		save();	//call the method to save score and player name in file
     }
     
     public void printAlertNextLevel(int score) {
     	String levelmsg;	//variable to save the message of score for each level
-    	alert = new Alert(AlertType.NONE);
+    	this.alert = new Alert(AlertType.NONE);
 		alert.getButtonTypes().addAll(ButtonType.YES, ButtonType.NO);
 		alert.setTitle("NEXT LEVEL");
 		alert.setHeaderText("PROCEED TO NEXT LEVEL?");
-		//alert.setContentText("Level " + level + " Score :"+ animal.getPoints()+"!\n"+"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
 		// Get the Stage.
 		Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
 
@@ -304,4 +292,31 @@ public class Main extends Application {
 		alert.show();
     }
 
+    public void save() {
+    	try {
+    		//directory of the file
+    		File file = new File(".\\src\\p4_group_8_repo\\player information.txt");	
+    		if(!file.exists()) {	//if the file is not created
+    			file.createNewFile();
+    		}
+
+    		//String to be displayed in the file
+    		String content = playerName + ": " + score +"\n";
+    		
+    		//true is to append the content to file
+        	FileWriter filewriter = new FileWriter(file,true);
+        	
+        	//Write the content
+        	filewriter.write(content);
+        	
+        	//Flush the stream
+        	filewriter.flush();
+        	
+        	//Closing BufferedWriter Stream
+        	filewriter.close();	//BufferedWriter close the underlying writer
+       	}
+    	catch(IOException e) {
+    		System.out.println("An error occured");
+    	}
+    }
 }
