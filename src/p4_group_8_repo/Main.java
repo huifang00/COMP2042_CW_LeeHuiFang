@@ -59,7 +59,7 @@ public class Main extends Application {
 		froggerback = new BackgroundImage("file:src/p4_group_8_repo/iKogsKW_cropped.png");
 		background.add(froggerback);
 		
-		start = new Start(250,350);
+		start = new Start(250, 350, 100, 100);
 		background.add(start);	//add start/play button
 		
 		background.start();
@@ -168,7 +168,7 @@ public class Main extends Application {
     		  int d = n / 10;
     		  int k = n - d * 10;
     		  n = d;
-    		  digit = new Digit(background, k, 360 - shift, 25);
+    		  digit = new Digit(background, k, 360 - shift, 25, 30, 30);
     		  ArrayDigit.add(digit);
     		  background.add(digit);
     		  //addDigit(background, k, 360 - shift, 25);	//call the method to add the digit
@@ -178,7 +178,7 @@ public class Main extends Application {
     
     public void addDigit(MyStage background, int n, int x, int y) {
     	Digit digit;
-    	digit = new Digit(background, n, x, y);
+    	digit = new Digit(background, n, x, y, 30, 30);
     	background.add(digit);
     }
     

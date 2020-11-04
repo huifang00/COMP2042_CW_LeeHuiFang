@@ -10,40 +10,23 @@ import javafx.scene.input.KeyEvent;
 
 
 public class Animal extends Actor {
-	/*
-	Image imgW1;
-	Image imgA1;
-	Image imgS1;
-	Image imgD1;
-	Image imgW2;
-	Image imgA2;
-	Image imgS2;
-	Image imgD2;
-	*/
-	private int width = 40;
-	private int height = 40;
-	private Image imgW1 = new Image("file:src/p4_group_8_repo/froggerUp.png", width, height, true, true),
-	imgA1 = new Image("file:src/p4_group_8_repo/froggerLeft.png", width, height, true, true),
-	imgS1 = new Image("file:src/p4_group_8_repo/froggerDown.png", width, height, true, true),
-	imgD1 = new Image("file:src/p4_group_8_repo/froggerRight.png", width, height, true, true),
-	imgW2 = new Image("file:src/p4_group_8_repo/froggerUpJump.png", width, height, true, true),
-	imgA2 = new Image("file:src/p4_group_8_repo/froggerLeftJump.png", width, height, true, true),
-	imgS2 = new Image("file:src/p4_group_8_repo/froggerDownJump.png", width, height, true, true),
-	imgD2 = new Image("file:src/p4_group_8_repo/froggerRightJump.png", width, height, true, true);
-	int points = 0;
-	int end = 0;
+	private double width;
+	private double height;
+	private Image imgW1 ,imgA1, imgS1, imgD1, imgW2, imgA2, imgS2, imgD2;
+	private int points = 0;
+	private int end = 0;
 	private boolean second = false;
-	boolean noMove = false;
-	double movement = 13.3333333*2;
-	double movementX = 10.666666*2;
+	private boolean noMove = false;
+	private double movement = 13.3333333*2;
+	private double movementX = 10.666666*2;
 	//int imgSize = 40;
-	boolean carDeath = false;
-	boolean waterDeath = false;
+	private boolean carDeath = false;
+	private boolean waterDeath = false;
 	//boolean stop = false;	//not really used
-	boolean changeScore = false;
-	int carD = 0;
-	double w = 800;
-	ArrayList<End> inter = new ArrayList<End>();
+	private boolean changeScore = false;
+	private int death = 0;	//int carD = 0;
+	private double w = 800;
+	private ArrayList<End> inter = new ArrayList<End>();	//dont really need can remove
 	private int level = 0;
 	
 	public Animal() {
@@ -53,23 +36,23 @@ public class Animal extends Actor {
 	 * @param imageLink the location of the animal's image
 	 */
 	//public Animal(String imageLink) {
-	public Animal(int xpos, double ypos) {
+	public Animal(int xpos, double ypos, double width, double height) {
 		//setImage(new Image(imageLink, imgSize, imgSize, true, true));
 		setImage(imgW1);
 		//setX(300);
 		//setY(679.8+movement);
 		setX(xpos);
 		setY(ypos);
-		/*
-		imgW1 = new Image("file:src/p4_group_8_repo/froggerUp.png", imgSize, imgSize, true, true);
-		imgA1 = new Image("file:src/p4_group_8_repo/froggerLeft.png", imgSize, imgSize, true, true);
-		imgS1 = new Image("file:src/p4_group_8_repo/froggerDown.png", imgSize, imgSize, true, true);
-		imgD1 = new Image("file:src/p4_group_8_repo/froggerRight.png", imgSize, imgSize, true, true);
-		imgW2 = new Image("file:src/p4_group_8_repo/froggerUpJump.png", imgSize, imgSize, true, true);
-		imgA2 = new Image("file:src/p4_group_8_repo/froggerLeftJump.png", imgSize, imgSize, true, true);
-		imgS2 = new Image("file:src/p4_group_8_repo/froggerDownJump.png", imgSize, imgSize, true, true);
-		imgD2 = new Image("file:src/p4_group_8_repo/froggerRightJump.png", imgSize, imgSize, true, true);
-		*/
+		this.width = width;
+		this.height = height;
+		imgW1 = new Image("file:src/p4_group_8_repo/froggerUp.png", width, height, true, true);
+		imgA1 = new Image("file:src/p4_group_8_repo/froggerLeft.png", width, height, true, true);
+		imgS1 = new Image("file:src/p4_group_8_repo/froggerDown.png", width, height, true, true);
+		imgD1 = new Image("file:src/p4_group_8_repo/froggerRight.png", width, height, true, true);
+		imgW2 = new Image("file:src/p4_group_8_repo/froggerUpJump.png", width, height, true, true);
+		imgA2 = new Image("file:src/p4_group_8_repo/froggerLeftJump.png", width, height, true, true);
+		imgS2 = new Image("file:src/p4_group_8_repo/froggerDownJump.png", width, height, true, true);
+		imgD2 = new Image("file:src/p4_group_8_repo/froggerRightJump.png", width, height, true, true);
 		setOnKeyPressed(new EventHandler<KeyEvent>() {
 			public void handle(KeyEvent event){
 				if (noMove) {
@@ -184,16 +167,34 @@ public class Animal extends Actor {
 		}
 		*/
 	}
-	public boolean getStop() {
-		return end==1;	//return true if end == 5
+	
+	//setter and getter method
+	public double getWidth() {
+		return width;
 	}
 	
-	public void setEnd(int end) {
-		this.end = end;
+	public void setWidth(double width) {
+		this.width = width;
+	}
+	
+	public double getHeight() {
+		return height;
+	}
+	
+	public void setHeight(double height) {
+		this.height = height;
+	}
+	
+	public boolean getStop() {
+		return end==5;	//return true if end == 5
 	}
 	
 	public int getEnd() {
 		return end;
+	}
+	
+	public void setEnd(int end) {
+		this.end = end;
 	}
 	
 	public int getPoints() {
@@ -204,7 +205,31 @@ public class Animal extends Actor {
 		this.points = points;
 		changeScore = true;
 	}
-
+	
+	public int getLevel() {
+		return level;
+	}
+	
+	public void setLevel(int level) {
+		this.level = level;
+	}
+	
+	public int getDeath() {
+		return death;
+	}
+	
+	public void setDeath(int death) {
+		this.death = death;
+	}
+	
+	public boolean getChangeScore() {
+		return changeScore;
+	}
+	
+	public void setChangeScore(boolean changeScore) {
+		this.changeScore = changeScore;
+	}
+	
 	public boolean changeScore() {
 		if (changeScore) {
 			changeScore = false;
@@ -218,22 +243,22 @@ public class Animal extends Actor {
 	public boolean setCarDeath(long now,boolean carDeath) {
 		if (carDeath) {
 			noMove = true;
-			if ((now)% 11 ==0) {
-				this.carD++;
+			if ((now)% 11 == 0) {
+				this.death++;
 			}
-			if (this.carD==1) {
+			if (this.death == 1) {
 				setImage(new Image("file:src/p4_group_8_repo/cardeath1.png", width, height, true, true));
 			}
-			if (this.carD==2) {
+			else if (this.death == 2) {
 				setImage(new Image("file:src/p4_group_8_repo/cardeath2.png", width, height, true, true));
 			}
-			if (this.carD==3) {
+			else if (this.death == 3) {
 				setImage(new Image("file:src/p4_group_8_repo/cardeath3.png", width, height, true, true));
 			}
-			if (this.carD == 4) {
+			else if (this.death == 4) {
 				setY(679.8+movement);
 				carDeath = false;
-				this.carD = 0;
+				this.death = 0;	//reset to 0
 				setImage(new Image("file:src/p4_group_8_repo/froggerUp.png", width, height, true, true));
 				noMove = false;
 				if (this.points>50) {
@@ -241,7 +266,6 @@ public class Animal extends Actor {
 					this.changeScore = true;
 				}
 			}
-			
 		}
 		return carDeath;
 	}
@@ -250,26 +274,26 @@ public class Animal extends Actor {
 	public boolean setWaterDeath(long now,boolean waterDeath) {
 		if (waterDeath) {
 			noMove = true;
-			if ((now)% 11 ==0) {
-				this.carD++;
+			if ((now)% 11 == 0) {
+				this.death++;
 			}
-			if (this.carD==1) {
+			if (this.death == 1) {
 				setImage(new Image("file:src/p4_group_8_repo/waterdeath1.png", width, height , true, true));
 			}
-			if (this.carD==2) {
+			else if (this.death == 2) {
 				setImage(new Image("file:src/p4_group_8_repo/waterdeath2.png", width, height , true, true));
 			}
-			if (this.carD==3) {
+			else if (this.death == 3) {
 				setImage(new Image("file:src/p4_group_8_repo/waterdeath3.png", width, height , true, true));
 			}
-			if (this.carD == 4) {
+			else if (this.death == 4) {
 				setImage(new Image("file:src/p4_group_8_repo/waterdeath4.png", width, height , true, true));
 			}
-			if (this.carD == 5) {
+			else if (this.death == 5) {
 				setX(300);
 				setY(679.8+movement);
 				waterDeath = false;
-				carD = 0;
+				death = 0;
 				setImage(new Image("file:src/p4_group_8_repo/froggerUp.png", width, height, true, true));
 				noMove = false;
 				if (this.points>50) {
@@ -360,7 +384,7 @@ public class Animal extends Actor {
 			}
 		}
 		else if (getIntersectingObjects(End.class).size() >= 1) {	//intersect with the end slot
-			inter = (ArrayList<End>) getIntersectingObjects(End.class);
+			inter = (ArrayList<End>) getIntersectingObjects(End.class);	//dont really need as nothing using this
 			if (getIntersectingObjects(End.class).get(0).isActivated()) {	//if the slot is unavailable
 				this.end--;
 				//this.points-=10;	// add code //should not add the 10 points of moving up once if the slot is unavailable
@@ -381,7 +405,4 @@ public class Animal extends Actor {
 		}
 	}
 	
-	public void setLevel(int level) {
-		this.level = level;
-	}
 }

@@ -4,10 +4,9 @@ import javafx.scene.image.Image;
 
 public class CarObstacle extends Obstacle{
 	private double speed;	//change the datatype to double
-	private int w = 50;
-	private int h = 50;
-	private Image carobstacleL = new Image("file:src/p4_group_8_repo/car1Left.png", w, h, true, true), 
-				  carobstacleR = new Image("file:src/p4_group_8_repo/car1Right.png", w, h, true, true);
+	private double width;
+	private double height;
+	private Image carobstacleL, carobstacleR;
 	@Override
 	public void act(long now) {
 		move(speed , 0);
@@ -21,7 +20,9 @@ public class CarObstacle extends Obstacle{
 	 * @param imageLink the location of the obstacle's image
 	 */
 	//public Obstacle(String imageLink, int xpos, int ypos, double s, int w, int h) {
-	public CarObstacle(int xpos, int ypos, double s) {
+	public CarObstacle(int xpos, int ypos, double s, double width, double height) {
+		carobstacleL = new Image("file:src/p4_group_8_repo/car1Left.png", width, height, true, true); 
+		carobstacleR = new Image("file:src/p4_group_8_repo/car1Right.png", width, height, true, true);
 		//setImage(new Image(imageLink, w,h, true, true));
 		if(s > 0) {	//moving towards right
 			setImage(carobstacleR);
@@ -31,7 +32,34 @@ public class CarObstacle extends Obstacle{
 		}
 		setX(xpos);
 		setY(ypos);
-		speed = s;
+		this.speed = s;
+		this.width = width;
+		this.height = height;
 	}
 
+	public double getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(double speed) {
+		this.speed = speed;
+	}
+	
+	public double getWidth() {
+		return width;
+	}
+
+	public void setWidth(double width) {
+		this.width = width;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
+	}
+	
+	
 }

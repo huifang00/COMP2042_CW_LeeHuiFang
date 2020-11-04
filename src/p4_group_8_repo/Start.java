@@ -6,9 +6,9 @@ import javafx.scene.input.MouseEvent;
 
 public class Start extends Actor{
 
-	private int w = 100;
-	private int h = 100;
-	private Image start = new Image("file:src/p4_group_8_repo/start.png", w, h, true, true);
+	private double width;
+	private double height;
+	private Image start;
 	private boolean gamestart = false;
 	
 	@Override
@@ -21,10 +21,13 @@ public class Start extends Actor{
 		//default constructor
 	}
 	
-	public Start(int xpos, int ypos){
+	public Start(int xpos, int ypos, double width, double height){
+		start = new Image("file:src/p4_group_8_repo/start.png", width, height, true, true);
 		setImage(start);
 		setX(xpos);
 		setY(ypos);
+		this.width = width;
+		this.height = height;
 		setOnMouseClicked(new EventHandler<MouseEvent>(){
 			@Override 
 			   public void handle(MouseEvent e) { 
@@ -41,6 +44,22 @@ public class Start extends Actor{
 	
 	public boolean getGameStart() {
 		return gamestart;
+	}
+
+	public double getWidth() {
+		return width;
+	}
+
+	public void setWidth(double width) {
+		this.width = width;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
 	}
 	
 }

@@ -4,11 +4,10 @@ import javafx.scene.image.Image;
 
 public class BackgroundImage extends Actor{
 
-	private int w = 600;
-	private int h = 800;
+	private double width = 600;
+	private double height = 800;
 	@Override
 	public void act(long now) {
-		
 		
 	}
 	
@@ -16,8 +15,25 @@ public class BackgroundImage extends Actor{
 	 * @param imageLink the location of the background's image
 	 */
 	public BackgroundImage(String imageLink) {
-		setImage(new Image(imageLink, w, h, false, true));	//set the preserveRatio to false to fit the image within the bounding box
-		
+		setImage(new Image(imageLink, width, height, false, true));	//set the preserveRatio to false to fit the image within the bounding box
 	}
+
+	public double getWidth() {
+		return width;
+	}
+
+	public void setWidth(double width) {
+		this.width = width;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
+	}
+	
+	
 
 }

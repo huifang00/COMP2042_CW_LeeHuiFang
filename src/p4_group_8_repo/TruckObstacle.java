@@ -4,14 +4,9 @@ import javafx.scene.image.Image;
 
 public class TruckObstacle extends Obstacle {
 	private double speed;	//change the datatype to double
-	private int w1 = 120;
-	private int h1 = 120;
-	private int w2 = 200;
-	private int h2 = 200;
-	private Image truckobstacleL1 = new Image("file:src/p4_group_8_repo/truck1Left.png", w1, h1, true, true), 
-				  truckobstacleL2 = new Image("file:src/p4_group_8_repo/truck2Left.png", w2, h2, true, true), 
-				  truckobstacleR1 = new Image("file:src/p4_group_8_repo/truck1Right.png", w1, h1, true, true), 
-				  truckobstacleR2 = new Image("file:src/p4_group_8_repo/truck2Right.png", w2, h2, true, true);
+	private double width;
+	private double height;
+	private Image truckobstacleL1, truckobstacleL2, truckobstacleR1, truckobstacleR2;
 	@Override
 	public void act(long now) {
 		move(speed , 0);
@@ -21,8 +16,12 @@ public class TruckObstacle extends Obstacle {
 			setX(600);
 	}
 	
-	public TruckObstacle(int num, int xpos, int ypos, double s) {
-		if(s > 0) {	//moving towards right
+	public TruckObstacle(int num, int xpos, int ypos, double speed, double width, double height) {
+		truckobstacleL1 = new Image("file:src/p4_group_8_repo/truck1Left.png", width, height, true, true);
+		truckobstacleL2 = new Image("file:src/p4_group_8_repo/truck2Left.png", width, height, true, true);
+		truckobstacleR1 = new Image("file:src/p4_group_8_repo/truck1Right.png", width, height, true, true);
+		truckobstacleR2 = new Image("file:src/p4_group_8_repo/truck2Right.png", width, height, true, true);
+		if(speed > 0) {	//moving towards right
 			if(num == 1) {
 				setImage(truckobstacleR1);
 			}
@@ -40,7 +39,34 @@ public class TruckObstacle extends Obstacle {
 		}
 		setX(xpos);
 		setY(ypos);
-		speed = s;
+		this.speed = speed;
+		this.width = width;
+		this.height = height;
 	}
 
+	public double getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(double speed) {
+		this.speed = speed;
+	}
+
+	public double getWidth() {
+		return width;
+	}
+
+	public void setWidth(double width) {
+		this.width = width;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
+	}
+
+	
 }
