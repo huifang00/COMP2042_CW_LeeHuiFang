@@ -67,6 +67,7 @@ public class WetTurtle extends Actor{
 		this.speed = speed;
 	}
 
+	@Override
 	public double getWidth() {
 		return width;
 	}
@@ -75,6 +76,7 @@ public class WetTurtle extends Actor{
 		this.width = width;
 	}
 
+	@Override
 	public double getHeight() {
 		return height;
 	}

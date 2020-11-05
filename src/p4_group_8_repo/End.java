@@ -31,7 +31,8 @@ public class End extends Actor{
 	public boolean isActivated() {
 		return activated;
 	}
-
+	
+	@Override
 	public double getWidth() {
 		return width;
 	}
@@ -40,6 +41,7 @@ public class End extends Actor{
 		this.width = width;
 	}
 
+	@Override
 	public double getHeight() {
 		return height;
 	}

@@ -45,6 +45,7 @@ public class CarObstacle extends Obstacle{
 		this.speed = speed;
 	}
 	
+	@Override
 	public double getWidth() {
 		return width;
 	}
@@ -53,6 +54,7 @@ public class CarObstacle extends Obstacle{
 		this.width = width;
 	}
 
+	@Override
 	public double getHeight() {
 		return height;
 	}

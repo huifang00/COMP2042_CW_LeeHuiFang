@@ -54,6 +54,7 @@ public class Turtle extends Actor{
 		this.speed = speed;
 	}
 
+	@Override
 	public double getWidth() {
 		return width;
 	}
@@ -62,6 +63,7 @@ public class Turtle extends Actor{
 		this.width = width;
 	}
 
+	@Override
 	public double getHeight() {
 		return height;
 	}

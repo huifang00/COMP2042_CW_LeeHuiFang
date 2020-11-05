@@ -6,70 +6,70 @@ import org.junit.Test;
 
 import javafx.embed.swing.JFXPanel;
 
-public class StartTest {
+public class PlayTest {
 	JFXPanel jfxPanel = new JFXPanel();
-	Start start = new Start(5, 17, 22, 24);
+	Play play = new Play(5, 17, 22, 24);
 	
 	@Test
 	public void constructorTest_X(){
-		double x = start.getX();
+		double x = play.getX();
 		assertEquals("constructorTest_X", x, 5, 0);
 	}
 
 	@Test
 	public void constructorTest_Y(){
-		double y = start.getY();
+		double y = play.getY();
 		assertEquals("constructorTest_Y", y, 17, 0);
 	}
 	
 	@Test
 	public void constructorTest_Width(){
-		double width = start.getWidth();
+		double width = play.getWidth();
 		assertEquals("constructorTest_Width", width, 22, 0);
 	}
 
 	@Test
 	public void constructorTest_Height(){
-		double height = start.getHeight();
+		double height = play.getHeight();
 		assertEquals("constructorTest_Height", height, 24, 0);
 	}
 	
 	@Test
-	public void setGameStartTest() {
-		start.setGameStart(true);
-		boolean result = start.getGameStart();
-		assertTrue("setGameStartTest", result);
+	public void setGamePlayTest() {
+		play.setGamePlay(true);
+		boolean result = play.getGamePlay();
+		assertTrue("setGamePlayTest", result);
 	}
 	
 	@Test
-	public void getGameStartTest() {
-		boolean result = start.getGameStart();
-		assertFalse("getGameStartTest", result);
+	public void getGamePlayTest() {
+		boolean result = play.getGamePlay();
+		assertFalse("getGamePlayTest", result);
 	}
 	
 	@Test
 	public void setWidthTest() {
-		start.setWidth(15);
-		double width = start.getWidth();
+		play.setWidth(15);
+		double width = play.getWidth();
 		assertEquals("setWidthTest", 15, width, 0);
 	}
 	
 	@Test
 	public void getWidthTest() {
-		double width = start.getWidth();
+		double width = play.getWidth();
 		assertEquals("getWidthTest", 22, width, 0);
 	}
 	
 	@Test
 	public void setHeightTest() {
-		start.setHeight(17);
-		double height = start.getHeight();
+		play.setHeight(17);
+		double height = play.getHeight();
 		assertEquals("setHeightTest", 17, height, 0);
 	}
 
 	@Test
 	public void getHeightTest() {
-		double height = start.getHeight();
+		double height = play.getHeight();
 		assertEquals("getHeightTest", 24, height, 0);
 	}
 }

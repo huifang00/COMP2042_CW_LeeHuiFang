@@ -18,6 +18,7 @@ public class BackgroundImage extends Actor{
 		setImage(new Image(imageLink, width, height, false, true));	//set the preserveRatio to false to fit the image within the bounding box
 	}
 
+	@Override
 	public double getWidth() {
 		return width;
 	}
@@ -26,6 +27,7 @@ public class BackgroundImage extends Actor{
 		this.width = width;
 	}
 
+	@Override
 	public double getHeight() {
 		return height;
 	}

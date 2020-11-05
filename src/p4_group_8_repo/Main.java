@@ -29,7 +29,7 @@ public class Main extends Application {
 	private Animal animal = new Animal();
 	private Scene scene;	
 	private BackgroundImage froggerback;
-	private Start start;
+	private Play play;
 	private int level = 1;	//initialized the level to 1
 	private Level1 level1 = new Level1();//
 	private Alert alert = new Alert(AlertType.NONE);//
@@ -45,6 +45,8 @@ public class Main extends Application {
 	private Instruction instruction;//Instruction image
 	private ArrayList<Life> ArrayLife = new ArrayList<Life>();	//save the actor of Life
 	private Life lifeImg;
+	//private HowToPlay howtoplay;
+	private Instruction howtoplay;
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -61,11 +63,11 @@ public class Main extends Application {
 		froggerback = new BackgroundImage("file:src/p4_group_8_repo/iKogsKW_cropped.png");
 		background.add(froggerback);
 		
-		start = new Start(250, 350, 100, 100);
-		background.add(start);	//add start/play button
+		play = new Play(230, 350, 120, 120);
+		background.add(play);	//add start/play button
 		
-		instruction = new Instruction(540, 10, 50, 50);
-		background.add(instruction);
+		howtoplay = new Instruction("file:src/p4_group_8_repo/howtoplay.png", 150, 450, 300, 300);
+		background.add(howtoplay);	//addprintinstruction at main page
 		
 		background.start();
 		primaryStage.setScene(scene);
@@ -84,11 +86,13 @@ public class Main extends Application {
         timer = new AnimationTimer() {
             @Override
             public void handle(long now) {
-            	if(start.getGameStart() == true) {	//Level1
-            		background.remove(start);	//once the button is clicked then remove the button
-            		start.setGameStart(false);
-            		background.add(new Digit(background, 0, 360, 25, 30, 30));
-            		//addDigit(background, 0, 360, 25, 30, 30);
+            	if(play.getGamePlay() == true) {	//Level1
+            		background.remove(play);	//once the button is clicked then remove the button
+            		play.setGamePlay(false);
+            		background.remove(howtoplay);	//remove the button
+            		instruction = new Instruction("file:src/p4_group_8_repo/instruction.png", 540, 10, 50, 50);
+            		background.add(instruction);
+            		background.add(new Digit(0, 360, 25, 30, 30));
             		level1 = new Level1(background);
             		setAnimal(level1.animal);
             		setPrintGame(false);	// to prevent the next second on printing this condition
@@ -186,10 +190,9 @@ public class Main extends Application {
     		  int d = n / 10;
     		  int k = n - d * 10;
     		  n = d;
-    		  digit = new Digit(background, k, 360 - shift, 25, 30, 30);
+    		  digit = new Digit(k, 360 - shift, 25, 30, 30);
     		  ArrayDigit.add(digit);
     		  background.add(digit);
-    		  //addDigit(background, k, 360 - shift, 25);	//call the method to add the digit
     		  shift+=30;
     	}
     }
@@ -243,6 +246,7 @@ public class Main extends Application {
 	}
 	
     public void playerNameDialog(String Message) {
+    	//String message = "";
     	TextInputDialog dialog = new TextInputDialog();
     	dialog.setTitle("Enter Name");
     	dialog.setHeaderText("Welcome To Frogger!!!" + Message);
@@ -257,15 +261,19 @@ public class Main extends Application {
     	// To get the response value.
     	Optional<String> result = dialog.showAndWait();
     	if (result.isPresent()){	//ok was pressed
-    		if(!result.get().isBlank()) {
-    			if(!isNameUsed(result.get()) && !containSymbol(result.get())) {
-	    			setPlayerName(result.get());
+    		String input = result.get(); //assigned to a variable easier to use
+    		if(!input.isBlank()) {
+    			if(!isNameUsed(input) && !containSymbol(input) && input.length() <= 18) {
+	    			setPlayerName(input);
 	    			System.out.println("Your name: " + getPlayerName()); 
     			}
-    			else if(isNameUsed(result.get())){
+    			else if(input.length() > 18) {
+    				playerNameDialog("\n**Name Cannot Exceed 18 Characters**");
+    			}
+    			else if(isNameUsed(input)){
     				playerNameDialog("\n**Name Used By Other Player**");
     			}
-    			else if(containSymbol(result.get())){
+    			else if(containSymbol(input)){
     				playerNameDialog("\n**Name Cannot Contain Special Characters**");
     			}
     		}
@@ -395,6 +403,7 @@ public class Main extends Application {
         }
         return false;
     }
+    
     public void save() {
     	try {
     		//directory of the file

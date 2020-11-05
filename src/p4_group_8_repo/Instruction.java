@@ -22,12 +22,9 @@ public class Instruction extends Actor{
 		// TODO Auto-generated method stub
 	}
 	
-	public Instruction() {
-		//default constructor
-	}
-	
-	public Instruction(int xpos, int ypos, double width, double height){
-		instruction = new Image("file:src/p4_group_8_repo/instruction.png", width, height, true, true);
+	public Instruction(String link, int xpos, int ypos, double width, double height){
+		//instruction = new Image("file:src/p4_group_8_repo/instruction.png", width, height, true, true);
+		instruction = new Image(link, width, height, true, true);
 		setImage(instruction);
 		setX(xpos);
 		setY(ypos);
@@ -80,6 +77,7 @@ public class Instruction extends Actor{
 			
 	}
 	
+	@Override
 	public double getWidth() {
 		return width;
 	}
@@ -88,6 +86,7 @@ public class Instruction extends Actor{
 		this.width = width;
 	}
 
+	@Override
 	public double getHeight() {
 		return height;
 	}

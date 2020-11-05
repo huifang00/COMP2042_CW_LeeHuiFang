@@ -21,6 +21,7 @@ public class Life extends Actor{
 		this.height = height;
 	}
 
+	@Override
 	public double getWidth() {
 		return width;
 	}
@@ -29,6 +30,7 @@ public class Life extends Actor{
 		this.width = width;
 	}
 
+	@Override
 	public double getHeight() {
 		return height;
 	}

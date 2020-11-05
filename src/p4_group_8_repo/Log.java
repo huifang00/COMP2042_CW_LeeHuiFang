@@ -59,6 +59,7 @@ public class Log extends Actor {
 		return speed < 0;
 	}
 
+	@Override
 	public double getWidth() {
 		return width;
 	}
@@ -67,6 +68,7 @@ public class Log extends Actor {
 		this.width = width;
 	}
 
+	@Override
 	public double getHeight() {
 		return height;
 	}

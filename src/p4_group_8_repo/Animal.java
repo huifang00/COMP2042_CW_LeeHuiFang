@@ -188,7 +188,7 @@ public class Animal extends Actor {
 	}
 	
 	public boolean getStop() {
-		return end==1;	//return true if end == 5
+		return end==5;	//return true if end == 5
 	}
 	
 	public int getEnd() {
@@ -413,10 +413,10 @@ public class Animal extends Actor {
 			inter = (ArrayList<End>) getIntersectingObjects(End.class);	//dont really need as nothing using this
 			if (getIntersectingObjects(End.class).get(0).isActivated()) {	//if the slot is unavailable
 				this.end--;
-				//this.points-=10;	// add code //should not add the 10 points of moving up once if the slot is unavailable
+				this.points-=10;	// add code //should not add the 10 points of moving up once if the slot is unavailable
 				this.points-=50;	// for entering the wrong slot -50points
 			}//else	//not sure is the point is for crashing or not
-			this.points+=50;
+			this.points+=50;	//so there is no increment or decrement in points if frog enter slot is not available
 			this.changeScore = true;
 			this.w=800;
 			getIntersectingObjects(End.class).get(0).setEnd();

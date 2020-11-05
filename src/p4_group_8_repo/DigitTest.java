@@ -8,7 +8,7 @@ import javafx.embed.swing.JFXPanel;
 
 public class DigitTest {
 	JFXPanel jfxPanel = new JFXPanel();
-	Digit digit = new Digit(null, 1, 10, 20, 30, 30);
+	Digit digit = new Digit(1, 10, 20, 30, 30);
 	
 	@Test
 	public void constructorTest_X() {
