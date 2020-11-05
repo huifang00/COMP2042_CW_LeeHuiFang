@@ -43,6 +43,7 @@ public class Main extends Application {
 	private Digit digit;//
 	private ArrayList<Digit> ArrayDigit = new ArrayList<Digit>();	//save the actor of Digit
 	private Alert alertEnd = new Alert(AlertType.NONE);
+	private Instruction instruction;
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -61,6 +62,9 @@ public class Main extends Application {
 		
 		start = new Start(250, 350, 100, 100);
 		background.add(start);	//add start/play button
+		
+		instruction = new Instruction(540, 10, 50, 50);
+		background.add(instruction);
 		
 		background.start();
 		primaryStage.setScene(scene);
