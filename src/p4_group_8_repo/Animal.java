@@ -28,6 +28,8 @@ public class Animal extends Actor {
 	private double w = 800;
 	private ArrayList<End> inter = new ArrayList<End>();	//dont really need can remove
 	private int level = 0;
+	private int life = 3;
+	private boolean changeLife = false;
 	
 	public Animal() {
 		
@@ -37,14 +39,6 @@ public class Animal extends Actor {
 	 */
 	//public Animal(String imageLink) {
 	public Animal(int xpos, double ypos, double width, double height) {
-		//setImage(new Image(imageLink, imgSize, imgSize, true, true));
-		setImage(imgW1);
-		//setX(300);
-		//setY(679.8+movement);
-		setX(xpos);
-		setY(ypos);
-		this.width = width;
-		this.height = height;
 		imgW1 = new Image("file:src/p4_group_8_repo/froggerUp.png", width, height, true, true);
 		imgA1 = new Image("file:src/p4_group_8_repo/froggerLeft.png", width, height, true, true);
 		imgS1 = new Image("file:src/p4_group_8_repo/froggerDown.png", width, height, true, true);
@@ -53,6 +47,14 @@ public class Animal extends Actor {
 		imgA2 = new Image("file:src/p4_group_8_repo/froggerLeftJump.png", width, height, true, true);
 		imgS2 = new Image("file:src/p4_group_8_repo/froggerDownJump.png", width, height, true, true);
 		imgD2 = new Image("file:src/p4_group_8_repo/froggerRightJump.png", width, height, true, true);
+		//setImage(new Image(imageLink, imgSize, imgSize, true, true));
+		setImage(imgW1);
+		//setX(300);
+		//setY(679.8+movement);
+		setX(xpos);
+		setY(ypos);
+		this.width = width;
+		this.height = height;
 		setOnKeyPressed(new EventHandler<KeyEvent>() {
 			public void handle(KeyEvent event){
 				if (noMove) {
@@ -230,6 +232,18 @@ public class Animal extends Actor {
 		this.changeScore = changeScore;
 	}
 	
+	public int getLife() {
+		return life;
+	}
+	
+	public void setLife(int life) {
+		this.life = life;
+	}
+	
+	public boolean noLife() {
+		return life == 0;
+	}
+	
 	public boolean changeScore() {
 		if (changeScore) {
 			changeScore = false;
@@ -237,6 +251,14 @@ public class Animal extends Actor {
 		}
 		return false;
 		
+	}
+	
+	public boolean changeLife() {
+		if(changeLife) {
+			changeLife = false;
+			return true;
+		}
+		return false;
 	}
 	
 	//newly created setCarDeath method to change the animal photo
@@ -258,6 +280,8 @@ public class Animal extends Actor {
 			else if (this.death == 4) {
 				setY(679.8+movement);
 				carDeath = false;
+				this.life--;	//decrease one life
+				this.changeLife = true;
 				this.death = 0;	//reset to 0
 				setImage(new Image("file:src/p4_group_8_repo/froggerUp.png", width, height, true, true));
 				noMove = false;
@@ -293,7 +317,9 @@ public class Animal extends Actor {
 				setX(300);
 				setY(679.8+movement);
 				waterDeath = false;
-				death = 0;
+				this.life--;	//decrease one life
+				this.changeLife = true;
+				this.death = 0;
 				setImage(new Image("file:src/p4_group_8_repo/froggerUp.png", width, height, true, true));
 				noMove = false;
 				if (this.points>50) {

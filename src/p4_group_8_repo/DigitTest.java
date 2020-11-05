@@ -18,8 +18,8 @@ public class DigitTest {
 	
 	@Test
 	public void constructorTest_Y() {
-		double y = digit.getX();
-		assertEquals("constructorTest_Y", y, 10, 0);
+		double y = digit.getY();
+		assertEquals("constructorTest_Y", y, 20, 0);
 	}
 	
 	@Test

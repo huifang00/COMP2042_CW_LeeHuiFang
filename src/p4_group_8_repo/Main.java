@@ -42,8 +42,9 @@ public class Main extends Application {
 	private int score;//
 	private Digit digit;//
 	private ArrayList<Digit> ArrayDigit = new ArrayList<Digit>();	//save the actor of Digit
-	private Alert alertEnd = new Alert(AlertType.NONE);
-	private Instruction instruction;
+	private Instruction instruction;//Instruction image
+	private ArrayList<Life> ArrayLife = new ArrayList<Life>();	//save the actor of Life
+	private Life lifeImg;
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -86,16 +87,20 @@ public class Main extends Application {
             	if(start.getGameStart() == true) {	//Level1
             		background.remove(start);	//once the button is clicked then remove the button
             		start.setGameStart(false);
-            		addDigit(background, 0, 360, 25);
+            		background.add(new Digit(background, 0, 360, 25, 30, 30));
+            		//addDigit(background, 0, 360, 25, 30, 30);
             		level1 = new Level1(background);
             		setAnimal(level1.animal);
             		setPrintGame(false);	// to prevent the next second on printing this condition
             		animal.setLevel(level);	//set the level in animal class for the speed
+            		setLife(3);
             		start();
             	}
             	else if(level == 2 && getPrintGame()) {	//Level2
             		animal.setPoints(0);	//display the score (digit image) as 0
             		animal.setLevel(level);	//set the level in animal class for the speed
+            		//setLife(3);
+            		//animal.setLife(3);
             		level1.remove(background);
             		level2 = new Level2(background, animal);
             		setPrintGame(false);
@@ -103,6 +108,8 @@ public class Main extends Application {
             	else if(level == 3 && getPrintGame()) {	//Level3
             		animal.setPoints(0);	//display the score (digit image) as 0
             		animal.setLevel(level);	//set the level in animal class for the speed
+            		//setLife(3);
+            		//animal.setLife(3);
             		level2.remove(background);
             		level3 = new Level3(background, animal);
             		setPrintGame(false);
@@ -126,7 +133,7 @@ public class Main extends Application {
             		}
             		else {
             			highscore = level * 800;
-            			printAlertNextLevel(animal.getPoints());
+            			printNextLevel(animal.getPoints());
 	            		animal.setEnd(0);	//set the end back to 0 to prevent getStop() infinite loop
 	            		setNextLevel(true);	//in order to run the condition for increasing to nextlevel
             		}
@@ -137,16 +144,24 @@ public class Main extends Application {
         			setNextLevel(false);	//to prevent the next second on running this condition till the next alert box appear
         		}
             	else if (alert.getResult() == ButtonType.NO || level == 0){
-            		printAlertEnd();
+            		printEnd();
             		background.stopMusic();
             		stop();	//timer stop
             		background.stop();	//timer stop
             	}
-            	
+            	if(animal.changeLife()) {
+            		setLife(animal.getLife());
+            	}
+            	if(animal.noLife()) {
+            		printGameOver(animal.getPoints());
+            		background.stopMusic();
+            		stop();
+            		background.stop();
+            	}
             }
         };
 	}
-
+	    
 	public void start() {
 		background.playMusic();
     	createTimer();
@@ -159,15 +174,14 @@ public class Main extends Application {
     
     public void setNumber(int n) {
     	int shift = 0;
-    	//clear previous digit(s)
-    	if(n == 0 || n < 100) {	//new condition to remove the previous number(digit) at (300,25)
-    		removeDigit(background);
+    	//clear previous digit(s) to save memory space
+    	if(n == 0 || n < 100) {
+    		for(Digit digit: ArrayDigit) {
+        		background.remove(digit);
+        	}
+        	ArrayDigit.clear();
     	}
-    	/*
-    	if(n < 100) {	//new condition to remove the previous number(digit) at (300,25)
-    		removeDigit(background);
-    	}
-    	*/
+    	
     	while (n > 0) {
     		  int d = n / 10;
     		  int k = n - d * 10;
@@ -179,19 +193,23 @@ public class Main extends Application {
     		  shift+=30;
     	}
     }
-    
-    public void addDigit(MyStage background, int n, int x, int y) {
-    	Digit digit;
-    	digit = new Digit(background, n, x, y, 30, 30);
-    	background.add(digit);
-    }
-    
-    public void removeDigit(MyStage background) {	//remove all digits from background
-    	for(Digit digit: ArrayDigit) {
-    		background.remove(digit);
-    	}
-    	ArrayDigit.clear();
-    }
+   
+    public void setLife(int life) {
+		int shift = 0;
+		if(life == 3) {
+			//ArrayLife.clear(); //clear previous level life
+			for(int i = 0; i < 3;i++) {
+				lifeImg = new Life(background, 480 + shift, 65, 35, 35);
+	    		ArrayLife.add(lifeImg);
+	    		background.add(lifeImg);
+				shift += 40;
+			}
+		}
+		else if(life == 2 || life == 1 || life == 0){
+			background.remove(ArrayLife.get(0));
+			ArrayLife.remove(0);
+		}
+	}
     
     public void setAnimal(Animal animal) {
     	this.animal = animal;
@@ -260,10 +278,10 @@ public class Main extends Application {
     	}
 	}
     
-    public void printAlertEnd() {
+    public void printEnd() {
     	String levelmsg;	//variable to save the message of score for each level
-    	score = level1.getScore() + level2.getScore() + level3.getScore();
-    	this.alertEnd = new Alert(AlertType.INFORMATION);
+    	this.score = level1.getScore() + level2.getScore() + level3.getScore();
+    	Alert alertEnd = new Alert(AlertType.INFORMATION);
 		alertEnd.setTitle("You Have Won The Game!");
 		alertEnd.setHeaderText("Your Total Score: "+ score +"!");
 		// Get the Stage.
@@ -285,7 +303,7 @@ public class Main extends Application {
 		save();	//call the method to save score and player name in file
     }
     
-    public void printAlertNextLevel(int score) {
+    public void printNextLevel(int score) {
     	String levelmsg;	//variable to save the message of score for each level
     	this.alert = new Alert(AlertType.NONE);
 		alert.getButtonTypes().addAll(ButtonType.YES, ButtonType.NO);
@@ -305,7 +323,31 @@ public class Main extends Application {
 		}
 		alert.show();
     }
+ 
+    public void printGameOver(int score) {
+    	if(level == 1) {
+    		this.score = score;
+    	}
+    	else if(level == 2) {
+    		this.score = level1.getScore() + score;
+    	}
+    	else if(level == 3) {
+    		this.score = level1.getScore() + level2.getScore() + score;
+    	}
+    	Alert alertGameOver = new Alert(AlertType.INFORMATION);
+		alertGameOver.setTitle("GAME OVER!!!");
+		alertGameOver.setHeaderText("GAME OVER!!!\nYou Have No Life Left");
+		alertGameOver.setContentText("Your Total Score: "+ this.score +"!");
+		// Get the Stage.
+		Stage stage = (Stage) alertGameOver.getDialogPane().getScene().getWindow();
 
+		// Add a custom icon.
+		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
+		
+		alertGameOver.show();
+		save();	//call the method to save score and player name in file
+    }
+    
     public boolean isNameUsed(String enteredName) {
     	String line, name = "";  
     	try  
