@@ -2,7 +2,7 @@ package p4_group_8_repo;
 
 import javafx.scene.image.Image;
 
-public class TruckObstacle extends Obstacle {
+public class TruckObstacle extends Actor{
 	private double speed;	//change the datatype to double
 	private Image truckobstacleL1, truckobstacleL2, truckobstacleR1, truckobstacleR2;
 	@Override

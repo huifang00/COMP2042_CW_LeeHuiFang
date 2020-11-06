@@ -336,7 +336,10 @@ public class Animal extends Actor {
 	public void Intersection() {
 		double speed;	//create this variable to get the speed of the actor intersection with
 		// so the frog can move at the same speed
-		if (getIntersectingObjects(Obstacle.class).size() >= 1) {	//intersect with truck
+		if (getIntersectingObjects(CarObstacle.class).size() >= 1) {	//intersect with truck
+			this.carDeath = true;
+		}
+		else if (getIntersectingObjects(CarObstacle.class).size() >= 1) {	//intersect with truck
 			this.carDeath = true;
 		}
 		else if (getIntersectingObjects(Log.class).size() >= 1 && !noMove) {	//intersect with log
