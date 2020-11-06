@@ -4,8 +4,6 @@ import javafx.scene.image.Image;
 
 public class Turtle extends Actor{
 	private double speed;	//change the speed to double
-	private double width;
-	private double height;
 	private Image turtle1, turtle2, turtle3;
 	//int i = 1;	//not use
 	//boolean bool = true;	//not use
@@ -38,39 +36,10 @@ public class Turtle extends Actor{
 		setX(xpos);
 		setY(ypos);
 		this.speed = speed;
-		this.width = width;
-		this.height = height;
 	}
 	
 	public boolean getLeft() {
 		return speed < 0;
 	}
-
-	public double getSpeed() {
-		return speed;
-	}
-
-	public void setSpeed(double speed) {
-		this.speed = speed;
-	}
-
-	@Override
-	public double getWidth() {
-		return width;
-	}
-
-	public void setWidth(double width) {
-		this.width = width;
-	}
-
-	@Override
-	public double getHeight() {
-		return height;
-	}
-
-	public void setHeight(double height) {
-		this.height = height;
-	}
-	
 	
 }

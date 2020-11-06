@@ -45,7 +45,6 @@ public class Main extends Application {
 	private Instruction instruction;//Instruction image
 	private ArrayList<Life> ArrayLife = new ArrayList<Life>();	//save the actor of Life
 	private Life lifeImg;
-	//private HowToPlay howtoplay;
 	private Instruction howtoplay;
 	
 	public static void main(String[] args) {
@@ -60,7 +59,7 @@ public class Main extends Application {
 		background = new MyStage();
 	    scene  = new Scene(background,600,800);	//remove the datatype since it is declared as global variable
 	    
-		froggerback = new BackgroundImage("file:src/p4_group_8_repo/iKogsKW_cropped.png");
+		froggerback = new BackgroundImage("file:src/p4_group_8_repo/iKogsKW_cropped.png", 600, 800);
 		background.add(froggerback);
 		
 		play = new Play(230, 350, 120, 120);
@@ -193,7 +192,7 @@ public class Main extends Application {
     		  digit = new Digit(k, 360 - shift, 25, 30, 30);
     		  ArrayDigit.add(digit);
     		  background.add(digit);
-    		  shift+=30;
+    		  shift+=30;		
     	}
     }
    

@@ -10,11 +10,7 @@ import javafx.stage.Stage;
 
 public class Instruction extends Actor{
 
-	private double width;
-	private double height;
 	private Image instruction;
-	//private boolean printInstruction = false;
-	//private Alert alert;
 	private static int instructionPage = 1;
 	
 	@Override
@@ -23,13 +19,10 @@ public class Instruction extends Actor{
 	}
 	
 	public Instruction(String link, int xpos, int ypos, double width, double height){
-		//instruction = new Image("file:src/p4_group_8_repo/instruction.png", width, height, true, true);
 		instruction = new Image(link, width, height, true, true);
 		setImage(instruction);
 		setX(xpos);
 		setY(ypos);
-		this.width = width;
-		this.height = height;
 		setOnMouseClicked(new EventHandler<MouseEvent>(){
 			@Override 
 			   public void handle(MouseEvent e) { 
@@ -76,36 +69,5 @@ public class Instruction extends Actor{
 		}); 
 			
 	}
-	
-	@Override
-	public double getWidth() {
-		return width;
-	}
 
-	public void setWidth(double width) {
-		this.width = width;
-	}
-
-	@Override
-	public double getHeight() {
-		return height;
-	}
-
-	public void setHeight(double height) {
-		this.height = height;
-	}
-
-	/*
-	public boolean getPrintInstruction() {
-		return printInstruction;
-	}
-
-	public void setPrintInstruction(boolean printInstruction) {
-		this.printInstruction = printInstruction;
-	}
-	
-	public void setAlert(Alert alert) {
-		this.alert = alert;
-	}
-	*/
 }

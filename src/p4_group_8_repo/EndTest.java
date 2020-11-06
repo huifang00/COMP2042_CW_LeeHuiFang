@@ -42,23 +42,9 @@ public class EndTest {
 	}
 	
 	@Test
-	public void setWidthTest() {
-		end.setWidth(12);
-		double width = end.getWidth();
-		assertEquals("setWidthTest", 12, width, 0);
-	}
-	
-	@Test
 	public void getWidthTest() {
 		double width = end.getWidth();
 		assertEquals("getWidthTest", 20, width, 0);
-	}
-	
-	@Test
-	public void setHeightTest() {
-		end.setHeight(16);
-		double height = end.getHeight();
-		assertEquals("setHeightTest", 16, height, 0);
 	}
 
 	@Test

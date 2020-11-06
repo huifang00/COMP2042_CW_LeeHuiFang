@@ -23,23 +23,9 @@ public class DigitTest {
 	}
 	
 	@Test
-	public void setWidthTest() {
-		digit.setWidth(10.5);
-		double width = digit.getWidth();
-		assertEquals("setWidthTest", 10.5, width, 0);
-	}
-	
-	@Test
 	public void getWidthTest() {
 		double width = digit.getWidth();
 		assertEquals("getWidthTest", 30, width, 0);
-	}
-	
-	@Test
-	public void setHeightTest() {
-		digit.setHeight(25.76);
-		double height = digit.getHeight();
-		assertEquals("setHeightTest", 25.76, height, 0);
 	}
 
 	@Test

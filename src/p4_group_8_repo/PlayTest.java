@@ -48,23 +48,9 @@ public class PlayTest {
 	}
 	
 	@Test
-	public void setWidthTest() {
-		play.setWidth(15);
-		double width = play.getWidth();
-		assertEquals("setWidthTest", 15, width, 0);
-	}
-	
-	@Test
 	public void getWidthTest() {
 		double width = play.getWidth();
 		assertEquals("getWidthTest", 22, width, 0);
-	}
-	
-	@Test
-	public void setHeightTest() {
-		play.setHeight(17);
-		double height = play.getHeight();
-		assertEquals("setHeightTest", 17, height, 0);
 	}
 
 	@Test

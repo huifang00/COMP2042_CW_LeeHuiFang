@@ -23,25 +23,11 @@ public class LifeTest {
 	}
 	
 	@Test
-	public void setWidthTest() {
-		life.setWidth(11);
-		double width = life.getWidth();
-		assertEquals("setWidthTest", 11, width, 0);
-	}
-	
-	@Test
 	public void getWidthTest() {
 		double width = life.getWidth();
 		assertEquals("getWidthTest", 15, width, 0);
 	}
 	
-	@Test
-	public void setHeightTest() {
-		life.setHeight(23.4);
-		double height = life.getHeight();
-		assertEquals("setHeightTest", 23.4, height, 0);
-	}
-
 	@Test
 	public void getHeightTest() {
 		double height = life.getHeight();

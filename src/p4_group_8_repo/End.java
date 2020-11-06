@@ -13,6 +13,7 @@ public class End extends Actor{
 	}
 	
 	public End(int x, int y, double width, double height) {
+		//endSlot = new Image("file:src/p4_group_8_repo/End.png", 60, 60, true, true);
 		endSlot = new Image("file:src/p4_group_8_repo/End.png", width, height, true, true);
 		setX(x);
 		setY(y);
@@ -23,6 +24,7 @@ public class End extends Actor{
 	
 	
 	public void setEnd() {	//no need to set the width and height as it is same as the slot
+		//endFrog = new Image("file:src/p4_group_8_repo/FrogEnd.png", 70, 70, true, true);
 		endFrog = new Image("file:src/p4_group_8_repo/FrogEnd.png", width, height, true, true);
 		setImage(endFrog);
 		activated = true;
@@ -31,24 +33,5 @@ public class End extends Actor{
 	public boolean isActivated() {
 		return activated;
 	}
-	
-	@Override
-	public double getWidth() {
-		return width;
-	}
-
-	public void setWidth(double width) {
-		this.width = width;
-	}
-
-	@Override
-	public double getHeight() {
-		return height;
-	}
-
-	public void setHeight(double height) {
-		this.height = height;
-	}
-	
 	
 }

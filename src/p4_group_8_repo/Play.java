@@ -6,8 +6,6 @@ import javafx.scene.input.MouseEvent;
 
 public class Play extends Actor{
 
-	private double width;
-	private double height;
 	private Image play;
 	private boolean gameplay = false;
 	
@@ -21,8 +19,6 @@ public class Play extends Actor{
 		setImage(play);
 		setX(xpos);
 		setY(ypos);
-		this.width = width;
-		this.height = height;
 		setOnMouseClicked(new EventHandler<MouseEvent>(){
 			@Override 
 			   public void handle(MouseEvent e) { 
@@ -39,24 +35,6 @@ public class Play extends Actor{
 	
 	public boolean getGamePlay() {
 		return gameplay;
-	}
-
-	@Override
-	public double getWidth() {
-		return width;
-	}
-
-	public void setWidth(double width) {
-		this.width = width;
-	}
-
-	@Override
-	public double getHeight() {
-		return height;
-	}
-
-	public void setHeight(double height) {
-		this.height = height;
 	}
 	
 }

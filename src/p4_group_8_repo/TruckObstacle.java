@@ -4,8 +4,6 @@ import javafx.scene.image.Image;
 
 public class TruckObstacle extends Obstacle {
 	private double speed;	//change the datatype to double
-	private double width;
-	private double height;
 	private Image truckobstacleL1, truckobstacleL2, truckobstacleR1, truckobstacleR2;
 	@Override
 	public void act(long now) {
@@ -40,35 +38,6 @@ public class TruckObstacle extends Obstacle {
 		setX(xpos);
 		setY(ypos);
 		this.speed = speed;
-		this.width = width;
-		this.height = height;
 	}
-
-	public double getSpeed() {
-		return speed;
-	}
-
-	public void setSpeed(double speed) {
-		this.speed = speed;
-	}
-
-	@Override
-	public double getWidth() {
-		return width;
-	}
-
-	public void setWidth(double width) {
-		this.width = width;
-	}
-
-	@Override
-	public double getHeight() {
-		return height;
-	}
-
-	public void setHeight(double height) {
-		this.height = height;
-	}
-
 	
 }
