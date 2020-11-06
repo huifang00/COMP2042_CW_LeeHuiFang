@@ -7,8 +7,8 @@ public class Level3{
 	Turtle turtle1, turtle2;
 	WetTurtle weturtle1, weturtle2, weturtle3, weturtle4;
 	End end1, end2, end3, end4, end5;
-	CarObstacle carobstacle1, carobstacle2, carobstacle3, carobstacle4, carobstacle5, carobstacle6;
-	TruckObstacle truckobstacle1, truckobstacle2, truckobstacle3, truckobstacle4, truckobstacle5;
+	CarObstacle carobstacle1, carobstacle2, carobstacle3, carobstacle4, carobstacle5;
+	TruckObstacle truckobstacle1, truckobstacle2, truckobstacle3, truckobstacle4, truckobstacle5, truckobstacle6;
 	private int score = 0;
 	
 	public Level3() {
@@ -16,17 +16,15 @@ public class Level3{
 	}
 	
 	public Level3(MyStage background, Animal animal) {
-	//public Level3(MyStage background) {
 		addLog(background);
 		addTurtle(background);
 		addEnd(background);
-		//addAnimal(background);
 		addAnimal(background, animal);
 		addObstacle(background);
 	}
 	
 	public void addLog(MyStage background) {
-		log1 = new Log(1, 0, 166, 2, 150, 150);	//1.25
+		log1 = new Log(1, 0, 166, 2, 150, 150);
     	background.add(log1);
     	log2 = new Log(1, 220, 166, 2, 150, 150);
     	background.add(log2);
@@ -36,26 +34,26 @@ public class Level3{
     	background.add(log4);
     	log5 = new Log(2, 400, 276, -2.5, 300, 300);
     	background.add(log5);
-    	log6 = new Log(1, 50, 329, 3, 150, 150);	//1.25
+    	log6 = new Log(1, 50, 329, 3, 150, 150);
     	background.add(log6);
     	log7 = new Log(1, 270, 329, 3, 150, 150);
-    	background.add(log7);
-    	log8 = new Log(1, 490, 329, 3, 150, 150);
+    	//background.add(log7);
+    	log8 = new Log(2, 400, 329, 3, 300, 300);
     	background.add(log8);
     }
     
     public void addTurtle(MyStage background) {
-    	turtle1 = new Turtle(500, 376, -1, 130, 130);	
+    	turtle1 = new Turtle(500, 376, -2.5, 130, 130);	
     	background.add(turtle1);
-    	turtle2 = new Turtle(300, 376, -1, 130, 130);
+    	turtle2 = new Turtle(300, 376, -2.5, 130, 130);
     	background.add(turtle2);
-    	weturtle1 = new WetTurtle(700, 376, -1, 130, 130);
+    	weturtle1 = new WetTurtle(700, 376, -2.5, 130, 130);
     	background.add(weturtle1);
-    	weturtle2 = new WetTurtle(100, 217, 1, 130, 130);//-1
+    	weturtle2 = new WetTurtle(100, 217, 1.5, 130, 130);//-1
     	background.add(weturtle2);
-    	weturtle3 = new WetTurtle(400, 217, 1, 130, 130);
+    	weturtle3 = new WetTurtle(400, 217, 1.5, 130, 130);
     	background.add(weturtle3);
-    	weturtle4 = new WetTurtle(700, 217, 1, 130, 130);
+    	weturtle4 = new WetTurtle(700, 217, 1.5, 130, 130);
     	background.add(weturtle4);
     	
     }
@@ -74,9 +72,7 @@ public class Level3{
     }
     
    public void addAnimal(MyStage background, Animal animal) {
-   //public void addAnimal(MyStage background) {
-    	this.animal = animal;
-    	//animal = new Animal(300, 679.8+(13.3333333*2), 40, 40);
+    	this.	animal = animal;
     	background.add(animal);
     }
     
@@ -86,18 +82,16 @@ public class Level3{
     }
     
     public void addCarObstacle(MyStage background) {
-    	carobstacle1 = new CarObstacle(100, 597, -1.5, 50, 50);	//previous -1(L1)
+    	carobstacle1 = new CarObstacle(200, 597, -3, 50, 50);	//previous -1(L1)
     	background.add(carobstacle1);
-    	carobstacle2 = new CarObstacle(250, 597, -1.5, 50, 50);
+    	carobstacle2 = new CarObstacle(400, 597, -3, 50, 50);
     	background.add(carobstacle2);
-    	carobstacle3 = new CarObstacle(400, 597, -1.5, 50, 50);
+    	carobstacle3 = new CarObstacle(600, 597, -3, 50, 50);
     	background.add(carobstacle3);
-    	carobstacle4 = new CarObstacle(550, 597, -1.5, 50, 50);
+    	carobstacle4 = new CarObstacle(500, 490, -5, 50, 50);
     	background.add(carobstacle4);
-    	carobstacle5 = new CarObstacle(500, 490, -5, 50, 50);
+    	carobstacle5 = new CarObstacle(300, 540, 1, 50, 50);
     	background.add(carobstacle5);
-    	carobstacle6 = new CarObstacle(150, 490, -5, 50, 50);	//previous no
-    	background.add(carobstacle6);
     }
     
     public void addTruckObstacle(MyStage background) {
@@ -111,6 +105,8 @@ public class Level3{
     	background.add(truckobstacle4);
     	truckobstacle5 = new TruckObstacle(2, 500, 540, 1, 200, 200);
     	background.add(truckobstacle5);
+    	truckobstacle6 = new TruckObstacle(1, 150, 490, -5, 120, 120);
+    	background.add(truckobstacle6);
     }
     
     public void remove(MyStage background) {
@@ -160,7 +156,6 @@ public class Level3{
     	background.remove(carobstacle3);
     	background.remove(carobstacle4);
     	background.remove(carobstacle5);
-    	background.remove(carobstacle6);
     }
     
     public void removeTruckObstacle(MyStage background) {
@@ -169,6 +164,7 @@ public class Level3{
     	background.remove(truckobstacle3);
     	background.remove(truckobstacle4);
     	background.remove(truckobstacle5);
+    	background.remove(truckobstacle6);
     }
  
     public void setScore(int score) {
