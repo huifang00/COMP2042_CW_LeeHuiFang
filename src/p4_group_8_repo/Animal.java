@@ -334,79 +334,25 @@ public class Animal extends Actor {
 	
 	//newly created Intersection Method
 	public void Intersection() {
+		double speed;	//create this variable to get the speed of the actor intersection with
+		// so the frog can move at the same speed
 		if (getIntersectingObjects(Obstacle.class).size() >= 1) {	//intersect with truck
 			this.carDeath = true;
 		}
 		else if (getIntersectingObjects(Log.class).size() >= 1 && !noMove) {	//intersect with log
-			if(level == 1) {
-				if(getIntersectingObjects(Log.class).get(0).getLeft())	//if the object is moving left
-					move(-2,0);	//display as moving together with log moving towards left
-				else	//else moving right
-					move (.75,0);	//display as moving together with log moving towards right
-			}
-			else if(level == 2) {
-				if(getIntersectingObjects(Log.class).get(0).getLeft())
-					move(-2,0);	//display as moving together with log moving towards left
-				else
-					move (1.25,0);	//display as moving together with log moving towards right
-			}
-			else if(level == 3) {
-				if(getIntersectingObjects(Log.class).get(0).getLeft())
-					move(-2,0);	//display as moving together with log moving towards left
-				else
-					move (.75,0);	//display as moving together with log moving towards right
-			}
+			speed = getIntersectingObjects(Log.class).get(0).getSpeed();
+			move (speed, 0);	//display as moving together with log
 		}
 		else if (getIntersectingObjects(Turtle.class).size() >= 1 && !noMove) {	//intersect with turtle
-			//move(-1,0);
-			if(level == 1) {
-				if(getIntersectingObjects(Turtle.class).get(0).getLeft())	//if the object is moving left
-					move(-1,0);	//display as moving together with log moving towards left
-				else	//else moving right
-					move(1,0);	//display as moving together with log moving towards right
-			}
-			else if(level == 2) {
-				if(getIntersectingObjects(Turtle.class).get(0).getLeft())
-					move(-1,0);	//display as moving together with log moving towards left
-				else
-					move(1,0);	//display as moving together with log moving towards right
-			}
-			else if(level == 3) {
-				if(getIntersectingObjects(Turtle.class).get(0).getLeft())
-					move(-1,0);	//display as moving together with log moving towards left
-				else
-					move(1,0);	//display as moving together with log moving towards right
-			}
+			speed = getIntersectingObjects(Turtle.class).get(0).getSpeed();
+			move(speed, 0);	//display as moving together with turtle
 		}
 		else if (getIntersectingObjects(WetTurtle.class).size() >= 1) {	//intersect with wet turtle
-			/*
+			speed = getIntersectingObjects(WetTurtle.class).get(0).getSpeed();
 			if (getIntersectingObjects(WetTurtle.class).get(0).isSunk()) {
 				this.waterDeath = true;
 			} else {
-				move(-1,0);
-			}
-			*/
-			if (getIntersectingObjects(WetTurtle.class).get(0).isSunk()) {
-				this.waterDeath = true;
-			} else {
-				if(level == 1) {
-					if(getIntersectingObjects(WetTurtle.class).get(0).getLeft())	//if the object is moving left
-						move(-1,0);	//display as moving together with log moving towards left
-					else	//else moving right
-						move(1,0);	//display as moving together with log moving towards right
-				}
-				else if(level == 2) {
-					if(getIntersectingObjects(WetTurtle.class).get(0).getLeft())
-						move(-1,0);	//display as moving together with log moving towards left
-					else
-						move(1,0);	//display as moving together with log moving towards right
-				}
-				else if(level == 3) {
-					if(getIntersectingObjects(WetTurtle.class).get(0).getLeft())
-						move(-1,0);	//display as moving together with log moving towards left
-					else
-						move(1,0);	//display as moving together with log moving towards right
-				}
+				move(speed, 0);	//display as moving together with wetturtle
 			}
 		}
 		else if (getIntersectingObjects(End.class).size() >= 1) {	//intersect with the end slot

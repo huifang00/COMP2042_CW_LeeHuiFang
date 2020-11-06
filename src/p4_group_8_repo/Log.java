@@ -16,7 +16,6 @@ public class Log extends Actor {
 			setX(600);
 		}
 	}
-	
 
 	//public Log(String imageLink, int size, int xpos, int ypos, double s)
 	public Log(int sizeoflog, int xpos, int ypos, double speed, double width, double height) {
@@ -32,9 +31,13 @@ public class Log extends Actor {
 		setY(ypos);
 		this.speed = speed;
 	}
-	
+	/*
 	public boolean getLeft() {
 		return speed < 0;
+	}
+*/
+	public double getSpeed() {
+		return speed;
 	}
 
 }

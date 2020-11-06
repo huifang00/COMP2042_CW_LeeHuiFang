@@ -38,8 +38,8 @@ public class Turtle extends Actor{
 		this.speed = speed;
 	}
 	
-	public boolean getLeft() {
-		return speed < 0;
+	public double getSpeed() {
+		return speed;
 	}
-	
+
 }
