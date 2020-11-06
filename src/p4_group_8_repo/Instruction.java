@@ -43,16 +43,24 @@ public class Instruction extends Actor{
 				
 				//print Instruction
 				switch(instructionPage) {
-					case 1: instruction = "1. Use the key W to move up\n"
-							+ "2. Use the key S to move down\n"
-							+ "3. Use the key A to move left\n"
-							+ "4. Use the key D to move right";break;
-					case 2: instruction = "Help the frog to the empty slot";break;
-					case 3: instruction = "1. Avoid the moving car(s) and truck(s)\n\n"
+					case 1: instruction = "Help the frog \ud83d\udc38 to cross the traffic and river\n"
+							+ "Help the frog to the empty slot\n\n"
+							+ "1. Use the key W to move the frog up \u2b06\n"
+							+ "2. Use the key S to move the frog down \u2b07\n"
+							+ "3. Use the key A to move the frog left \u2b05\n"
+							+ "4. Use the key D to move the frog right \u27a1";break;
+					case 2: instruction = "1. Avoid the moving car(s) \ud83d\ude97 and truck(s) \ud83d\ude9a\n\n"
 							+ "2. Logs of different lengths is to help the frog to cross the river\n"
 							+ "   Jump on the log to avoid the frog from falling into river\n\n"
-							+ "3. Step on the red turtles to avoid the frog from falling into river\n"
-							+ "	  However, green turtles will submerge and cause the frog drown and lose a life\n";break;
+							+ "3. Step on the red turtles \ud83d\udc22 to avoid the frog from falling into river\n"
+							+ "4. Green turtles \ud83d\udc22 will submerge and cause the frog drown";break;
+					case 3: instruction = "Score System & Life System\n\n"
+							+ "1. Every Successful Step + 10\n"
+							+ "2. Every Successful Frog to Empty Slot + 50\n"
+							+ "3. Frog Hit The Obstacle - 50 & -1\u2665\n"
+							+ "4. Frog Falls Into River - 50 & -1\u2665\n\n"
+							+ "*No point is deducted if the current point is less than 50\n"
+							+ "*No point is deducted if the frog enter a non-empty slot BUT the current frog need to start from the initial position again";break;
 				}
 				alert.setContentText(instruction);
 				alert.showAndWait();

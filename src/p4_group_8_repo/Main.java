@@ -11,6 +11,7 @@ import java.util.Optional;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -20,6 +21,7 @@ import javafx.scene.image.Image;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -57,11 +59,12 @@ public class Main extends Application {
 		playerNameDialog("");
 		
 		background = new MyStage();
-	    scene  = new Scene(background,600,800);	//remove the datatype since it is declared as global variable
+	    scene  = new Scene(background, 600, 800);	//remove the datatype since it is declared as global variable
 	    
 		froggerback = new BackgroundImage("file:src/p4_group_8_repo/iKogsKW_cropped.png", 600, 800);
 		background.add(froggerback);
 		
+		//create the menu before the game start
 		play = new Play(230, 350, 120, 120);
 		background.add(play);	//add start/play button
 		
@@ -69,6 +72,19 @@ public class Main extends Application {
 		background.add(howtoplay);	//addprintinstruction at main page
 		
 		background.start();
+		
+		Screen screen = Screen.getPrimary();
+		Rectangle2D bounds = screen.getVisualBounds();
+
+		//set Stage boundaries to visible bounds of the main screen
+		double screen_x = ((bounds.getMinX() + bounds.getMaxX())/2) - 300;
+		double screen_y= bounds.getMinY();
+		primaryStage.setX(screen_x);
+		primaryStage.setY(screen_y);
+		
+		//not allowed to resize the screen/window
+		primaryStage.setResizable(false);
+		
 		primaryStage.setScene(scene);
 
 		// Set the title for the application
