@@ -10,7 +10,8 @@ public class CarObstacle extends Obstacle{
 		move(speed , 0);
 		if (getX() > 600 && speed>0)
 			setX(-200);
-		if (getX() < -50 && speed<0)
+		//if (getX() < -50 && speed<0)
+		if (getX() < -100 && speed<0)
 			setX(600);
 	}
 	
