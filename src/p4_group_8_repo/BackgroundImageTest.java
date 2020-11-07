@@ -13,13 +13,13 @@ public class BackgroundImageTest {
 	@Test
 	public void getWidthTest() {
 		double result = image.getWidth();
-		assertEquals("getWidthTest", 10.5, result, 0);
+		assertEquals("getWidthTest", 600, result, 0);
 	}
 	
 	@Test
-	public void setgetHeightTest() {
+	public void getHeightTest() {
 		double result = image.getHeight();
-		assertEquals("getHeightTest", 25.76, result, 0);
+		assertEquals("getHeightTest", 800, result, 0);
 	}
 }
 

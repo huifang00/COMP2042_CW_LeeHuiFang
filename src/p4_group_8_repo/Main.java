@@ -44,10 +44,13 @@ public class Main extends Application {
 	private int score;//
 	private Digit digit;//
 	private ArrayList<Digit> ArrayDigit = new ArrayList<Digit>();	//save the actor of Digit
-	private Instruction instruction;//Instruction image
+	//private Instruction instruction = new Instruction();//Instruction image
 	private ArrayList<Life> ArrayLife = new ArrayList<Life>();	//save the actor of Life
 	private Life lifeImg;
 	private Instruction howtoplay;
+	private Instruction instruction = new Instruction("file:src/p4_group_8_repo/instruction.png", 540, 10, 50, 50);
+	private Pause pause = new Pause(0, 10, 40, 40);;
+	private Resume resume = new Resume(0, 10, 40, 40);;
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -105,8 +108,8 @@ public class Main extends Application {
             		background.remove(play);	//once the button is clicked then remove the button
             		play.setGamePlay(false);
             		background.remove(howtoplay);	//remove the button
-            		instruction = new Instruction("file:src/p4_group_8_repo/instruction.png", 540, 10, 50, 50);
             		background.add(instruction);
+            		background.add(pause);
             		background.add(new Digit(0, 360, 25, 30, 30));
             		level1 = new Level1(background);
             		setAnimal(level1.animal);
@@ -176,6 +179,22 @@ public class Main extends Application {
             		background.stopMusic();
             		stop();
             		background.stop();
+            	}
+            	if(instruction.getPauseGame()) {
+            		pause();
+            	}
+            	if(instruction.getResumeGame()) {
+            		resume();
+            	}
+            	if(pause.getPauseGame()) {
+            		pause();
+                	background.remove(pause);
+                	background.add(resume);
+            	}
+            	if(resume.getResumeGame()) {
+            		resume();
+                	background.remove(resume);
+                	background.add(pause);
             	}
             }
         };
@@ -446,4 +465,21 @@ public class Main extends Application {
     		System.out.println("An error occured");
     	}
     }
+    
+    public void pause() {
+    	background.stopMusic();
+    	background.stop();
+    	animal.setNoMove(true);
+    	pause.setPauseGame(false);
+    	instruction.setPauseGame(false);
+    }
+    
+    public void resume() {
+    	background.playMusic();
+    	background.start();
+    	animal.setNoMove(false);
+    	resume.setResumeGame(false);
+    	instruction.setResumeGame(false);
+    }
+    
 }

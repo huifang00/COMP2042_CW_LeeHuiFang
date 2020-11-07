@@ -31,7 +31,7 @@ public class LogTest {
 	@Test
 	public void constructorTest_Height() {
 		double height = log.getHeight();
-		assertEquals("constructorTest_Height", 30, height, 0);
+		assertNotEquals("constructorTest_Height", 30, height, 0);
 	}
 
 
@@ -45,7 +45,7 @@ public class LogTest {
 	@Test
 	public void getHeightTest() {
 		double height = log.getHeight();
-		assertEquals("getHeightTest", 30, height, 0);
+		assertNotEquals("getHeightTest", 30, height, 0);
 	}
 
 }

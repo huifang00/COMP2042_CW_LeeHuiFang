@@ -380,4 +380,8 @@ public class Animal extends Actor {
 		}
 	}
 	
+	public void setNoMove(boolean noMove) {
+		this.noMove = noMove;
+	}
+	
 }

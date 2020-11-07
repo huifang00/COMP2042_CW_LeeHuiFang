@@ -31,7 +31,7 @@ public class CarObstacleTest {
 	@Test
 	public void constructorTest_Height() {
 		double height = car.getHeight();
-		assertEquals("constructorTest_Height", 30, height, 0);
+		assertNotEquals("constructorTest_Height", 30, height, 0);
 	}
 	
 	@Test
@@ -43,7 +43,7 @@ public class CarObstacleTest {
 	@Test
 	public void getHeightTest() {
 		double height = car.getHeight();
-		assertEquals("getHeightTest", 30, height, 0);
+		assertNotEquals("getHeightTest", 30, height, 0);
 	}
 	
 }

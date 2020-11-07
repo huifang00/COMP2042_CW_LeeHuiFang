@@ -12,10 +12,17 @@ public class Instruction extends Actor{
 
 	private Image instruction;
 	private static int instructionPage = 1;
+	private boolean printInstruction = false;
+	private boolean resumeGame = false;
+	private boolean pauseGame = false;
 	
 	@Override
 	public void act(long now) {
 		// TODO Auto-generated method stub
+	}
+	
+	public Instruction() {
+		//default constructor
 	}
 	
 	public Instruction(String link, int xpos, int ypos, double width, double height){
@@ -32,8 +39,10 @@ public class Instruction extends Actor{
 			private void InstructionDialog() {
 				String instruction = "";
 				Alert alert = new Alert(AlertType.NONE);
-				alert.getButtonTypes().addAll(ButtonType.NEXT);
+				alert.getButtonTypes().addAll(ButtonType.NEXT, ButtonType.CLOSE);
 				alert.setTitle("INSTRUCTION");
+				setPrintInstruction(true);
+				setPauseGame(true);
 				
 				// Get the Stage.
 				Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
@@ -68,14 +77,45 @@ public class Instruction extends Actor{
 					instructionPage++;
 					if(instructionPage != 4)
 						InstructionDialog();
-					else {
+					else{
 						alert.close();
-						instructionPage = 1;
 					}
+				}
+				else if(alert.getResult() == ButtonType.CLOSE) {
+					alert.close();
+				}
+				if(!alert.isShowing()) {
+					setPauseGame(false);
+					setResumeGame(true);
+					instructionPage = 1;
 				}
 			}
 		}); 
 			
+	}
+
+	public boolean getPrintInstruction() {
+		return printInstruction;
+	}
+
+	public void setPrintInstruction(boolean printInstruction) {
+		this.printInstruction = printInstruction;
+	}
+
+	public boolean getResumeGame() {
+		return resumeGame;
+	}
+
+	public void setResumeGame(boolean resumeGame) {
+		this.resumeGame = resumeGame;
+	}
+
+	public boolean getPauseGame() {
+		return pauseGame;
+	}
+
+	public void setPauseGame(boolean pauseGame) {
+		this.pauseGame = pauseGame;
 	}
 
 }

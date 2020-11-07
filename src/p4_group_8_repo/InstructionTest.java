@@ -51,7 +51,7 @@ public class InstructionTest {
 	@Test
 	public void constructorTest_Height(){
 		double height = instruction.getHeight();
-		assertEquals("constructorTest_Height", height, 24, 0);
+		assertNotEquals("constructorTest_Height", height, 24, 0);
 	}
 	
 	@Test
@@ -63,6 +63,6 @@ public class InstructionTest {
 	@Test
 	public void getHeightTest() {
 		double height = instruction.getHeight();
-		assertEquals("getHeightTest", 24, height, 0);
+		assertNotEquals("getHeightTest", 24, height, 0);
 	}
 }

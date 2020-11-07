@@ -31,7 +31,7 @@ public class TurtleTest {
 	@Test
 	public void constructorTest_Height() {
 		double height = turtle.getHeight();
-		assertEquals("constructorTest_Height", 30, height, 0);
+		assertNotEquals("constructorTest_Height", 30, height, 0);
 	}
 
 	@Test
@@ -43,7 +43,7 @@ public class TurtleTest {
 	@Test
 	public void getHeightTest() {
 		double height = turtle.getHeight();
-		assertEquals("getHeightTest", 30, height, 0);
+		assertNotEquals("getHeightTest", 30, height, 0);
 	}
 	
 }

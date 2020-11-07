@@ -31,6 +31,6 @@ public class LifeTest {
 	@Test
 	public void getHeightTest() {
 		double height = life.getHeight();
-		assertEquals("getHeightTest", 18, height, 0);
+		assertNotEquals("getHeightTest", 18, height, 0);
 	}
 }

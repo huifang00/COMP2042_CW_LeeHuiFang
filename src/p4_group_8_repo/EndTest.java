@@ -31,7 +31,7 @@ public class EndTest {
 	@Test
 	public void constructorTest_Height(){
 		double height = end.getHeight();
-		assertEquals("constructorTest_Height", height, 30, 0);
+		assertNotEquals("constructorTest_Height", height, 30, 0);
 	}
 	
 	@Test
@@ -50,6 +50,6 @@ public class EndTest {
 	@Test
 	public void getHeightTest() {
 		double height = end.getHeight();
-		assertEquals("getHeightTest", 30, height, 0);
+		assertNotEquals("getHeightTest", 30, height, 0);
 	}
 }

@@ -6,57 +6,56 @@ import org.junit.Test;
 
 import javafx.embed.swing.JFXPanel;
 
-public class PlayTest {
+public class PauseTest {
 	JFXPanel jfxPanel = new JFXPanel();
-	Play play = new Play(5, 17, 22, 24);
+	Pause pause = new Pause(5, 17, 22, 24);
 	
 	@Test
 	public void constructorTest_X(){
-		double x = play.getX();
+		double x = pause.getX();
 		assertEquals("constructorTest_X", x, 5, 0);
 	}
 
 	@Test
 	public void constructorTest_Y(){
-		double y = play.getY();
+		double y = pause.getY();
 		assertEquals("constructorTest_Y", y, 17, 0);
 	}
 	
 	@Test
 	public void constructorTest_Width(){
-		double width = play.getWidth();
+		double width = pause.getWidth();
 		assertEquals("constructorTest_Width", width, 22, 0);
 	}
 
 	@Test
 	public void constructorTest_Height(){
-		double height = play.getHeight();
+		double height = pause.getHeight();
 		assertNotEquals("constructorTest_Height", height, 24, 0);
 	}
 	
 	@Test
-	public void setGamePlayTest() {
-		play.setGamePlay(true);
-		boolean result = play.getGamePlay();
-		assertTrue("setGamePlayTest", result);
+	public void setPauseGameTest() {
+		pause.setPauseGame(true);
+		boolean result = pause.getPauseGame();
+		assertTrue("setPauseGameTest", result);
 	}
 	
 	@Test
-	public void getGamePlayTest() {
-		boolean result = play.getGamePlay();
-		assertFalse("getGamePlayTest", result);
+	public void getPauseGameTest() {
+		boolean result = pause.getPauseGame();
+		assertFalse("getPauseGameTest", result);
 	}
 	
 	@Test
 	public void getWidthTest() {
-		double width = play.getWidth();
+		double width = pause.getWidth();
 		assertEquals("getWidthTest", 22, width, 0);
 	}
 
 	@Test
 	public void getHeightTest() {
-		double height = play.getHeight();
+		double height = pause.getHeight();
 		assertNotEquals("getHeightTest", 24, height, 0);
 	}
-
 }
