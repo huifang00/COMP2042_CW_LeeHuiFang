@@ -188,7 +188,7 @@ public class Animal extends Actor {
 	}
 	
 	public boolean getStop() {
-		return end==5;	//return true if end == 5
+		return end==1;	//return true if end == 5
 	}
 	
 	public int getEnd() {
@@ -336,10 +336,10 @@ public class Animal extends Actor {
 	public void Intersection() {
 		double speed;	//create this variable to get the speed of the actor intersection with
 		// so the frog can move at the same speed
-		if (getIntersectingObjects(CarObstacle.class).size() >= 1) {	//intersect with truck
+		if (getIntersectingObjects(CarObstacle.class).size() >= 1) {	//intersect with car
 			this.carDeath = true;
 		}
-		else if (getIntersectingObjects(CarObstacle.class).size() >= 1) {	//intersect with truck
+		else if (getIntersectingObjects(TruckObstacle.class).size() >= 1) {	//intersect with truck
 			this.carDeath = true;
 		}
 		else if (getIntersectingObjects(Log.class).size() >= 1 && !noMove) {	//intersect with log

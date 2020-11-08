@@ -9,6 +9,7 @@ public class Level3{
 	End end1, end2, end3, end4, end5;
 	CarObstacle carobstacle1, carobstacle2, carobstacle3, carobstacle4, carobstacle5;
 	TruckObstacle truckobstacle1, truckobstacle2, truckobstacle3, truckobstacle4, truckobstacle5, truckobstacle6;
+	LevelImage levelImage;
 	private int score = 0;
 	
 	public Level3() {
@@ -16,11 +17,17 @@ public class Level3{
 	}
 	
 	public Level3(MyStage background, Animal animal) {
+		addLevelImage(background);
 		addLog(background);
 		addTurtle(background);
 		addEnd(background);
 		addAnimal(background, animal);
 		addObstacle(background);
+	}
+	
+	public void addLevelImage(MyStage background) {
+		levelImage = new LevelImage(3, 10, 40, 130, 130);
+		background.add(levelImage);
 	}
 	
 	public void addLog(MyStage background) {
@@ -110,6 +117,7 @@ public class Level3{
     }
     
     public void remove(MyStage background) {
+    	removeLevelImage(background);
     	removeLog(background);
     	removeTurtle(background);
     	removeEnd(background);
@@ -117,6 +125,11 @@ public class Level3{
     	removeCarObstacle(background);
     	removeTruckObstacle(background);
     }
+    
+    public void removeLevelImage(MyStage background) {
+    	background.remove(levelImage);
+    }
+    
     public void removeLog(MyStage background) {
     	background.remove(log1);
     	background.remove(log2);

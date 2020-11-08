@@ -49,10 +49,10 @@ public class Main extends Application {
 	private ArrayList<Life> ArrayLife = new ArrayList<Life>();	//save the actor of Life
 	private Life lifeImg;
 	private Instruction howtoplay;
-	private Instruction instruction = new Instruction("file:src/p4_group_8_repo/instruction.png", 540, 10, 50, 50);
-	private Pause pause = new Pause(0, 10, 40, 40);
-	private Resume resume = new Resume(0, 10, 40, 40);
-	Sound sound = new Sound();
+	private Instruction instruction = new Instruction("file:src/p4_group_8_repo/instruction.png", 560, 10, 30, 30);
+	private Pause pause = new Pause(525, 10, 30, 30);
+	private Resume resume = new Resume(525, 10, 30, 30);
+	private Sound sound = new Sound();
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -77,7 +77,7 @@ public class Main extends Application {
 		background.add(howtoplay);	//addprintinstruction at main page
 		
 		//create sound button to play music or mute
-		sound = new Sound(background, 50, 10, 40, 40);
+		sound = new Sound(background, 490, 10, 30, 30);
 		
 		background.start();
 		
@@ -116,7 +116,7 @@ public class Main extends Application {
             		background.add(instruction);
             		background.add(pause);
             		background.add(sound);
-            		background.add(new Digit(0, 360, 25, 30, 30));
+            		background.add(new Digit(0, 450, 10, 30, 30));
             		level1 = new Level1(background);
             		setAnimal(level1.animal);
             		setPrintGame(false);	// to prevent the next second on printing this condition
@@ -230,7 +230,7 @@ public class Main extends Application {
     		  int d = n / 10;
     		  int k = n - d * 10;
     		  n = d;
-    		  digit = new Digit(k, 360 - shift, 25, 30, 30);
+    		  digit = new Digit(k, 450 - shift, 10, 30, 30);
     		  ArrayDigit.add(digit);
     		  background.add(digit);
     		  shift+=30;		
@@ -242,10 +242,10 @@ public class Main extends Application {
 		if(life == 3) {
 			//ArrayLife.clear(); //clear previous level life
 			for(int i = 0; i < 3;i++) {
-				lifeImg = new Life(background, 480 + shift, 65, 35, 35);
+				lifeImg = new Life(background, 450 - shift, 50, 25, 25);
 	    		ArrayLife.add(lifeImg);
 	    		background.add(lifeImg);
-				shift += 40;
+				shift += 33;
 			}
 		}
 		else if(life == 2 || life == 1 || life == 0){
@@ -491,7 +491,7 @@ public class Main extends Application {
 
     //not use yet this is new window
     public void setting() {
-    	Sound sound = new Sound(background, 50, 50, 50, 50);
+    	Sound sound = new Sound(background, 450, 10, 30, 30);
     	Stage new_stage = new Stage();
     	MyStage settingBackground = new MyStage();
     	Scene new_scene = new Scene(settingBackground, 200, 200);
