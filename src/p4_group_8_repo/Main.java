@@ -1,5 +1,6 @@
 package p4_group_8_repo;
 
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -49,8 +50,9 @@ public class Main extends Application {
 	private Life lifeImg;
 	private Instruction howtoplay;
 	private Instruction instruction = new Instruction("file:src/p4_group_8_repo/instruction.png", 540, 10, 50, 50);
-	private Pause pause = new Pause(0, 10, 40, 40);;
-	private Resume resume = new Resume(0, 10, 40, 40);;
+	private Pause pause = new Pause(0, 10, 40, 40);
+	private Resume resume = new Resume(0, 10, 40, 40);
+	Sound sound = new Sound();
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -62,17 +64,20 @@ public class Main extends Application {
 		playerNameDialog("");
 		
 		background = new MyStage();
-	    scene  = new Scene(background, 600, 800);	//remove the datatype since it is declared as global variable
+	    scene  = new Scene(background, 600, 800);	//remove the datatype since Scene is declared as global variable
 	    
 		froggerback = new BackgroundImage("file:src/p4_group_8_repo/iKogsKW_cropped.png", 600, 800);
 		background.add(froggerback);
-		
+
 		//create the menu before the game start
 		play = new Play(230, 350, 120, 120);
 		background.add(play);	//add start/play button
 		
 		howtoplay = new Instruction("file:src/p4_group_8_repo/howtoplay.png", 150, 450, 300, 300);
 		background.add(howtoplay);	//addprintinstruction at main page
+		
+		//create sound button to play music or mute
+		sound = new Sound(background, 50, 10, 40, 40);
 		
 		background.start();
 		
@@ -110,6 +115,7 @@ public class Main extends Application {
             		background.remove(howtoplay);	//remove the button
             		background.add(instruction);
             		background.add(pause);
+            		background.add(sound);
             		background.add(new Digit(0, 360, 25, 30, 30));
             		level1 = new Level1(background);
             		setAnimal(level1.animal);
@@ -399,7 +405,6 @@ public class Main extends Application {
     			FileReader filereader = new FileReader(file);   //reads the file  
     			BufferedReader bufferedreader = new BufferedReader(filereader);  //creates a buffering character input stream  
     		while((line = bufferedreader.readLine())!=null)  {
-    			//String filename = "abc.def.ghi";     // full file name
     			int index = line.indexOf(":"); //this finds the first occurrence of ":" 
     			//in string thus giving you the index of where it is in the string
 
@@ -468,6 +473,7 @@ public class Main extends Application {
     
     public void pause() {
     	background.stopMusic();
+    	background.remove(sound);	//remove the sound button
     	background.stop();
     	animal.setNoMove(true);
     	pause.setPauseGame(false);
@@ -476,10 +482,26 @@ public class Main extends Application {
     
     public void resume() {
     	background.playMusic();
+    	background.add(sound);	//add back the sound button
     	background.start();
     	animal.setNoMove(false);
     	resume.setResumeGame(false);
     	instruction.setResumeGame(false);
+    }
+
+    //not use yet this is new window
+    public void setting() {
+    	Sound sound = new Sound(background, 50, 50, 50, 50);
+    	Stage new_stage = new Stage();
+    	MyStage settingBackground = new MyStage();
+    	Scene new_scene = new Scene(settingBackground, 200, 200);
+    	
+    	BackgroundImage settingBack = new BackgroundImage("file:src/p4_group_8_repo/settingBack.png", 200, 200);
+    	settingBackground.add(settingBack);
+    	settingBackground.add(sound);
+    	
+    	new_stage.setScene(new_scene);
+    	new_stage.show();
     }
     
 }
