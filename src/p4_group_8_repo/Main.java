@@ -242,7 +242,7 @@ public class Main extends Application {
 		if(life == 3) {
 			//ArrayLife.clear(); //clear previous level life
 			for(int i = 0; i < 3;i++) {
-				lifeImg = new Life(background, 450 - shift, 50, 25, 25);
+				lifeImg = new Life(background, 384 + shift, 50, 25, 25);
 	    		ArrayLife.add(lifeImg);
 	    		background.add(lifeImg);
 				shift += 33;
