@@ -8,23 +8,56 @@ import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+/**
+* Pause Class
+* Set the instruction image as a button.
+* 
+*
+* @author  Lee Hui Fang 20125427, hfyhl2
+* @version 1.0
+* @since   2020-12-12
+*/
 public class Instruction extends Actor{
-
+	/**
+	 * The instruction image as a button.
+	 */
 	private Image instruction;
+	/**
+	 * The current page of the instruction.
+	 */
 	private static int instructionPage = 1;
+	/**
+	 * The value to print the instruction.
+	 */
 	private boolean printInstruction = false;
+	/**
+	 * The value to resume the game application.
+	 */
 	private boolean resumeGame = false;
+	/**
+	 * The value to pause the game application.
+	 */
 	private boolean pauseGame = false;
 	
+	/**
+	* This is the abstract method from superclass.
+	* @param now The timestamp of the current frame given in nanoseconds.
+	*/
 	@Override
 	public void act(long now) {
 		// TODO Auto-generated method stub
 	}
 	
-	public Instruction() {
-		//default constructor
-	}
-	
+	/**
+	 * Class constructor specifies and sets the position and size of the instruction image.
+	 * This constructor sets the image of the instruction button.
+	 * This constructor defines the action to take when the instruction button is clicked.
+	 * @param link The file location of the instruction image.
+	 * @param xpos The x-coordinate of the instruction image.
+	 * @param ypos The y-coordinate of the instruction image.
+	 * @param width The width of the instruction image.
+	 * @param height The height of the instruction image.
+	 */
 	public Instruction(String link, int xpos, int ypos, double width, double height){
 		instruction = new Image(link, width, height, true, true);
 		setImage(instruction);
@@ -94,26 +127,50 @@ public class Instruction extends Actor{
 			
 	}
 
+	/**
+	 * This method is get the value to print the instruction.
+	 * @return This returns the value to print the instruction.
+	 */
 	public boolean getPrintInstruction() {
 		return printInstruction;
 	}
 
+	/**
+	 * This method is set the value to print the instruction.
+	 * @param The value to print the instruction.
+	 */
 	public void setPrintInstruction(boolean printInstruction) {
 		this.printInstruction = printInstruction;
 	}
 
+	/**
+	 * This method is get the value to resume the game application.
+	 * @return This returns the value to resume the game application.
+	 */
 	public boolean getResumeGame() {
 		return resumeGame;
 	}
 
+	/**
+	 * This method is set the value to resume the game application.
+	 * @param The value to resume the game application.
+	 */
 	public void setResumeGame(boolean resumeGame) {
 		this.resumeGame = resumeGame;
 	}
 
+	/**
+	 * This method is get the value to pause the game application.
+	 * @return This returns the value to pause the game application.
+	 */
 	public boolean getPauseGame() {
 		return pauseGame;
 	}
 
+	/**
+	 * This method is set the value to pause the game application.
+	 * @param The value to pause the game application.
+	 */
 	public void setPauseGame(boolean pauseGame) {
 		this.pauseGame = pauseGame;
 	}

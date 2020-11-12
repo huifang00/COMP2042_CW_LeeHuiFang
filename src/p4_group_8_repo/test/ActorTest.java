@@ -1,4 +1,4 @@
-package p4_group_8_repo;
+package p4_group_8_repo.test;
 
 import static org.junit.Assert.*;
 

@@ -1,10 +1,11 @@
-package p4_group_8_repo;
+package p4_group_8_repo.test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
 import javafx.embed.swing.JFXPanel;
+import p4_group_8_repo.Digit;
 
 public class DigitTest {
 	JFXPanel jfxPanel = new JFXPanel();
@@ -32,5 +33,17 @@ public class DigitTest {
 	public void getHeightTest() {
 		double height = digit.getHeight();
 		assertEquals("getHeightTest", 30, height, 0);
+	}
+	
+	@Test
+	public void getWrongWidthTest() {
+		double width = digit.getWidth();
+		assertNotEquals("getWidthTest", 20, width, 0);
+	}
+
+	@Test
+	public void getWrongHeightTest() {
+		double height = digit.getHeight();
+		assertNotEquals("getHeightTest", 10, height, 0);
 	}
 }

@@ -8,7 +8,15 @@ import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
-
+/**
+* Animal Class
+* Create animal as frog in the Frogger application.
+* 
+*
+* @author  Lee Hui Fang 20125427, hfyhl2
+* @version 1.0
+* @since   2020-12-12
+*/
 public class Animal extends Actor {
 	private double width;
 	private double height;
@@ -31,11 +39,20 @@ public class Animal extends Actor {
 	private int life = 3;
 	private boolean changeLife = false;
 	
+	/**
+	* Default constructor
+	*/
 	public Animal() {
-		
+		//default constructor
 	}
-	/*
-	 * @param imageLink the location of the animal's image
+	
+	/**
+	 * Class constructor specifies the position and size of frog image.
+	 * This constructor defines the action of frog when a specific key is pressed or released.
+	 * @param xpos The x-coordinate of the frog.
+	 * @param ypos The y-coordinate of the frog.
+	 * @param width The width of the frog.
+	 * @param height The height of the frog.
 	 */
 	//public Animal(String imageLink) {
 	public Animal(int xpos, double ypos, double width, double height) {
@@ -142,6 +159,10 @@ public class Animal extends Actor {
 		});
 	}
 	
+	/**
+	* This is the method which allows the frog to perform some action(s).
+	* @param now The timestamp of the current frame given in nanoseconds.
+	*/
 	@Override
 	public void act(long now) {
 		//int bounds = 0;	//can remove since bounds is not used
@@ -170,80 +191,51 @@ public class Animal extends Actor {
 		*/
 	}
 	
-	//setter and getter method
-	public double getWidth() {
-		return width;
-	}
-	
-	public void setWidth(double width) {
-		this.width = width;
-	}
-	
-	public double getHeight() {
-		return height;
-	}
-	
-	public void setHeight(double height) {
-		this.height = height;
-	}
-	
+	/**
+	* This is the method is to get the value whether the slot is fully occupied.
+	* @return boolean This returns the value whether the slot is fully occupied.
+	*/
 	public boolean getStop() {
-		return end==5;	//return true if end == 5
+		return end==1;	//return true if end == 5
 	}
 	
-	public int getEnd() {
-		return end;
-	}
-	
+	/**
+	* This is the method to set the end value of the application.
+	* @param end The value whether to end the application.
+	*/
 	public void setEnd(int end) {
 		this.end = end;
 	}
 	
+	/**
+	* This is the method to get the points player get.
+	* @return int This returns the points player get.
+	*/
 	public int getPoints() {
 		return points;
 	}
 	
+	/**
+	* This is the method to set the points player get.
+	* @param points The points that the player get.
+	*/
 	public void setPoints(int points) {
 		this.points = points;
 		changeScore = true;
 	}
 	
-	public int getLevel() {
-		return level;
-	}
-	
+	/**
+	* This is to set the current level.
+	* @param level The level the player has reached.
+	*/
 	public void setLevel(int level) {
 		this.level = level;
 	}
 	
-	public int getDeath() {
-		return death;
-	}
-	
-	public void setDeath(int death) {
-		this.death = death;
-	}
-	
-	public boolean getChangeScore() {
-		return changeScore;
-	}
-	
-	public void setChangeScore(boolean changeScore) {
-		this.changeScore = changeScore;
-	}
-	
-	public int getLife() {
-		return life;
-	}
-	
-	public void setLife(int life) {
-		this.life = life;
-	}
-	
-	public boolean noLife() {
-		return life == 0;
-	}
-	
+	/**
+	* This is the method to update the current score.
+	* @return boolean This returns the value on whether to update the current score.
+	*/
 	public boolean changeScore() {
 		if (changeScore) {
 			changeScore = false;
@@ -253,6 +245,26 @@ public class Animal extends Actor {
 		
 	}
 	
+	/**
+	* This is the method to get the life of the frog.
+	* @return This returns the life of the frog has.
+	*/
+	public int getLife() {
+		return life;
+	}
+
+	/**
+	* This is the method is to get the value whether to end the game depends on the life the frog has.
+	* @return boolean This returns the value whether the to end the game due to no life left.
+	*/
+	public boolean noLife() {
+		return life == 0;
+	}
+	
+	/**
+	* This is the method to update the current life
+	* @return boolean This returns the value on whether to update the current life.
+	*/
 	public boolean changeLife() {
 		if(changeLife) {
 			changeLife = false;
@@ -261,7 +273,12 @@ public class Animal extends Actor {
 		return false;
 	}
 	
-	//newly created setCarDeath method to change the animal photo
+	/**
+	* This is the method to set the value of carDeath and set the image of frog when hit by a car.
+	* @param now The timestamp of the current frame given in nanoseconds.
+	* @param carDeath The value of whether the frog is hit by car.
+	* @return boolean This returns the value of carDeath of frog. 
+	*/
 	public boolean setCarDeath(long now,boolean carDeath) {
 		if (carDeath) {
 			noMove = true;
@@ -294,7 +311,12 @@ public class Animal extends Actor {
 		return carDeath;
 	}
 	
-	//newly created setWaterDeath method to change the animal photo
+	/**
+	* This is the method to set the value of waterDeath and set the image of frog if frog drowns.
+	* @param now The timestamp of the current frame given in nanoseconds.
+	* @param waterDeath The value of whether the frog drowns.
+	* @return boolean This returns the value of waterDeath of frog. 
+	*/
 	public boolean setWaterDeath(long now,boolean waterDeath) {
 		if (waterDeath) {
 			noMove = true;
@@ -332,7 +354,9 @@ public class Animal extends Actor {
 		return waterDeath;
 	}
 	
-	//newly created Intersection Method
+	/**
+	* This is the method to run when intersection occurs between the frog and obstacle.
+	*/
 	public void Intersection() {
 		double speed;	//create this variable to get the speed of the actor intersection with
 		// so the frog can move at the same speed
@@ -366,7 +390,6 @@ public class Animal extends Actor {
 				this.points-=50;	// remove the add 50 points for getting into a non-empty slot
 			}
 			this.points+=50;	//so there is no increment or decrement in points if frog enter slot is not available
-			this.changeScore = true;
 			this.w=800;
 			getIntersectingObjects(End.class).get(0).setEnd();
 			this.end++;
@@ -380,6 +403,10 @@ public class Animal extends Actor {
 		}
 	}
 	
+	/**
+	* This is the method to set movement of frog.
+	* @param noMove The value to set the movement of frog.
+	*/
 	public void setNoMove(boolean noMove) {
 		this.noMove = noMove;
 	}

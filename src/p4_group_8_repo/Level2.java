@@ -12,10 +12,6 @@ public class Level2{
 	LevelImage levelImage;
 	private int score = 0;
 	
-	public Level2() {
-		//default constructor
-	}
-	
 	public Level2(MyStage background, Animal animal) {
 		addLevelImage(background);
 		addLog(background);
@@ -25,6 +21,10 @@ public class Level2{
 		addObstacle(background);
 	}
 	
+	public Level2() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public void addLevelImage(MyStage background) {
 		levelImage = new LevelImage(2, 10, 40, 130, 130);
 		background.add(levelImage);

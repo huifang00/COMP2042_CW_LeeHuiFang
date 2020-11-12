@@ -1,10 +1,11 @@
-package p4_group_8_repo;
+package p4_group_8_repo.test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
 import javafx.embed.swing.JFXPanel;
+import p4_group_8_repo.Instruction;
 
 public class InstructionTest {
 	JFXPanel jfxPanel = new JFXPanel();
@@ -16,18 +17,24 @@ public class InstructionTest {
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
-	public void ThrowExceptionSpaceLinkTest1() {
+	public void ThrowExceptionSpaceLinkTest() {
 		instruction = new Instruction(" ", 5, 17, 22, 24);
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
-	public void ThrowExceptionSpaceLinkTest2() {
+	public void ThrowExceptionFileNotExistTest() {
 		instruction = new Instruction("abc.png", 5, 17, 22, 24);
 	}
 	
-	@Test(expected = NullPointerException.class)
+	@Test
 	public void ThrowExceptionNullLinkTest() {
-		instruction = new Instruction(null, 5, 17, 22, 24);
+		Exception exception = assertThrows(NullPointerException.class, () -> {
+			instruction = new Instruction(null, 5, 17, 22, 24);
+	    });
+		
+		String expectedMessage = "URL must not be null";
+		String actualMessage = exception.getMessage();
+	    assertTrue(actualMessage.contains(expectedMessage));
 	}
 	
 	@Test

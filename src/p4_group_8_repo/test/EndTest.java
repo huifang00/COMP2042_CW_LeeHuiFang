@@ -1,10 +1,11 @@
-package p4_group_8_repo;
+package p4_group_8_repo.test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
 import javafx.embed.swing.JFXPanel;
+import p4_group_8_repo.End;
 
 public class EndTest {
 	JFXPanel jfxPanel = new JFXPanel();
@@ -23,18 +24,6 @@ public class EndTest {
 	}
 	
 	@Test
-	public void constructorTest_Width(){
-		double width = end.getWidth();
-		assertEquals("constructorTest_Width", width, 20, 0);
-	}
-
-	@Test
-	public void constructorTest_Height(){
-		double height = end.getHeight();
-		assertNotEquals("constructorTest_Height", height, 30, 0);
-	}
-	
-	@Test
 	public void setEndTest() {
 		end.setEnd();
 		boolean activated = end.isActivated();
@@ -42,14 +31,9 @@ public class EndTest {
 	}
 	
 	@Test
-	public void getWidthTest() {
-		double width = end.getWidth();
-		assertEquals("getWidthTest", 20, width, 0);
+	public void isActivatedTest() {
+		boolean result = end.isActivated();
+		assertFalse("isActivatedTest",result);
 	}
-
-	@Test
-	public void getHeightTest() {
-		double height = end.getHeight();
-		assertNotEquals("getHeightTest", 30, height, 0);
-	}
+	
 }

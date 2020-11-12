@@ -1,10 +1,11 @@
-package p4_group_8_repo;
+package p4_group_8_repo.test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
 import javafx.embed.swing.JFXPanel;
+import p4_group_8_repo.Play;
 
 public class PlayTest {
 	JFXPanel jfxPanel = new JFXPanel();
@@ -23,18 +24,6 @@ public class PlayTest {
 	}
 	
 	@Test
-	public void constructorTest_Width(){
-		double width = play.getWidth();
-		assertEquals("constructorTest_Width", width, 22, 0);
-	}
-
-	@Test
-	public void constructorTest_Height(){
-		double height = play.getHeight();
-		assertNotEquals("constructorTest_Height", height, 24, 0);
-	}
-	
-	@Test
 	public void setGamePlayTest() {
 		play.setGamePlay(true);
 		boolean result = play.getGamePlay();
@@ -47,16 +36,5 @@ public class PlayTest {
 		assertFalse("getGamePlayTest", result);
 	}
 	
-	@Test
-	public void getWidthTest() {
-		double width = play.getWidth();
-		assertEquals("getWidthTest", 22, width, 0);
-	}
-
-	@Test
-	public void getHeightTest() {
-		double height = play.getHeight();
-		assertNotEquals("getHeightTest", 24, height, 0);
-	}
 
 }

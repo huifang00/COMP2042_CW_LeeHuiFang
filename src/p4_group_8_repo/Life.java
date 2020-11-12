@@ -10,11 +10,11 @@ public class Life extends Actor{
 		// TODO Auto-generated method stub
 	}
 	
-	public Life(MyStage background, int x, int y, double width, double height) {	//remove the dimension as parameter since it always fixed to the image
+	public Life(MyStage background, int xpos, int ypos, double width, double height) {	//remove the dimension as parameter since it always fixed to the image
 		life = new Image("file:src/p4_group_8_repo/life.png", width, height, true, true);
 		setImage(life);
-		setX(x);
-		setY(y);
+		setX(xpos);
+		setY(ypos);
 	}
 
 }

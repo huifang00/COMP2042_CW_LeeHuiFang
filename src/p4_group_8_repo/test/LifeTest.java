@@ -1,10 +1,11 @@
-package p4_group_8_repo;
+package p4_group_8_repo.test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
 import javafx.embed.swing.JFXPanel;
+import p4_group_8_repo.Life;
 
 public class LifeTest {
 	JFXPanel jfxPanel = new JFXPanel();
@@ -22,15 +23,4 @@ public class LifeTest {
 		assertEquals("constructorTest_Y", y, 22, 0);
 	}
 	
-	@Test
-	public void getWidthTest() {
-		double width = life.getWidth();
-		assertEquals("getWidthTest", 15, width, 0);
-	}
-	
-	@Test
-	public void getHeightTest() {
-		double height = life.getHeight();
-		assertNotEquals("getHeightTest", 18, height, 0);
-	}
 }

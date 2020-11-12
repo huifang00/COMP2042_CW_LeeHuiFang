@@ -13,6 +13,7 @@ import java.util.Optional;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.geometry.Rectangle2D;
+import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -26,6 +27,15 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+/**
+* FROGGER
+* The Frogger application is a game that helps the frog to cross the traffic and river.
+* 
+*
+* @author  Lee Hui Fang 20125427, hfyhl2
+* @version 1.0
+* @since   2020-12-12
+*/
 public class Main extends Application {
 	private AnimationTimer timer;
 	private MyStage background;
@@ -52,12 +62,22 @@ public class Main extends Application {
 	private Instruction instruction = new Instruction("file:src/p4_group_8_repo/instruction.png", 560, 10, 30, 30);
 	private Pause pause = new Pause(525, 10, 30, 30);
 	private Resume resume = new Resume(525, 10, 30, 30);
-	private Sound sound = new Sound();
+	private Sound sound;
+	private HighScore highscoreButton;
 	
+	/**
+	* This is the main method which run the whole application.
+	* @param args Unused.
+	*/
 	public static void main(String[] args) {
 		launch(args);
 	}
 
+	/**
+	* This is the main method which display a pop up dialog for player name and display the scene with background.
+	* @param primaryStage The JavaFX Stage class is the top level JavaFX container.
+	* @see Exception
+	*/
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
@@ -70,14 +90,19 @@ public class Main extends Application {
 		background.add(froggerback);
 
 		//create the menu before the game start
-		play = new Play(230, 350, 120, 120);
+		
+		play = new Play(230, 250, 120, 120);
 		background.add(play);	//add start/play button
 		
-		howtoplay = new Instruction("file:src/p4_group_8_repo/howtoplay.png", 150, 450, 300, 300);
+		howtoplay = new Instruction("file:src/p4_group_8_repo/howtoplay.png", 150, 350, 300, 300);
 		background.add(howtoplay);	//addprintinstruction at main page
+		
+		highscoreButton = new HighScore(background, 155, 450, 300, 300);
+		background.add(highscoreButton);
 		
 		//create sound button to play music or mute
 		sound = new Sound(background, 490, 10, 30, 30);
+		background.add(sound);
 		
 		background.start();
 		
@@ -102,9 +127,12 @@ public class Main extends Application {
 		primaryStage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
 
 		primaryStage.show();
-		start();  
+		start();
 	}
 	
+	/**
+	* This is the method to create animation and handle() method is called in every frame of the animation.
+	*/
 	public void createTimer() {
         timer = new AnimationTimer() {
             @Override
@@ -113,9 +141,9 @@ public class Main extends Application {
             		background.remove(play);	//once the button is clicked then remove the button
             		play.setGamePlay(false);
             		background.remove(howtoplay);	//remove the button
+            		background.remove(highscoreButton);
             		background.add(instruction);
             		background.add(pause);
-            		background.add(sound);
             		background.add(new Digit(0, 450, 10, 30, 30));
             		level1 = new Level1(background);
             		setAnimal(level1.animal);
@@ -161,7 +189,7 @@ public class Main extends Application {
             		}
             		else {
             			highscore = level * 800;
-            			printNextLevel(animal.getPoints());
+            			printNextLevel();
 	            		animal.setEnd(0);	//set the end back to 0 to prevent getStop() infinite loop
 	            		setNextLevel(true);	//in order to run the condition for increasing to nextlevel
             		}
@@ -173,7 +201,8 @@ public class Main extends Application {
         		}
             	else if (alert.getResult() == ButtonType.NO || level == 0){
             		printEnd();
-            		background.stopMusic();
+            		if(!sound.getMuted())
+            			background.stopMusic();
             		stop();	//timer stop
             		background.stop();	//timer stop
             	}
@@ -182,22 +211,25 @@ public class Main extends Application {
             	}
             	if(animal.noLife()) {
             		printGameOver(animal.getPoints());
-            		background.stopMusic();
+            		if(!sound.getMuted())
+            			background.stopMusic();
             		stop();
             		background.stop();
             	}
+            	/*
             	if(instruction.getPauseGame()) {
             		pause();
             	}
             	if(instruction.getResumeGame()) {
             		resume();
             	}
-            	if(pause.getPauseGame()) {
+            	*/
+            	if(instruction.getPauseGame() || pause.getPauseGame()) {
             		pause();
                 	background.remove(pause);
                 	background.add(resume);
             	}
-            	if(resume.getResumeGame()) {
+            	if(instruction.getResumeGame()|| resume.getResumeGame()) {
             		resume();
                 	background.remove(resume);
                 	background.add(pause);
@@ -206,16 +238,27 @@ public class Main extends Application {
         };
 	}
 	    
+	/**
+	* This is the method to play the background music, create and start the animation timer.
+	*/
 	public void start() {
-		background.playMusic();
+		if(!sound.getMuted())
+			background.playMusic();
     	createTimer();
         timer.start();
     }
 
+	/**
+	* This is the method to stop the animation timer.
+	*/
     public void stop() {
         timer.stop();
     }
     
+    /**
+	* This is the method to display the images of digit as score on the interface.
+	* @param n The value to be showed on the interface such as current score.
+	*/
     public void setNumber(int n) {
     	int shift = 0;
     	//clear previous digit(s) to save memory space
@@ -237,6 +280,10 @@ public class Main extends Application {
     	}
     }
    
+    /**
+	* This is the method to display the image of life on the interface.
+	* @param life The number of life left.
+	*/
     public void setLife(int life) {
 		int shift = 0;
 		if(life == 3) {
@@ -254,37 +301,74 @@ public class Main extends Application {
 		}
 	}
     
+    /**
+	* This is the method to set the object created from Animal class to the global variable.
+	* @param animal The object created of Animal class.
+	*/
     public void setAnimal(Animal animal) {
     	this.animal = animal;
     }
     
+    /**
+	* This is the method to get the object created from Animal class from global variable.
+	* @return Animal This returns the object of Animal class.
+	*/
     public Animal getAnimal() {
     	return animal;
     }
+    
+    /**
+	* This is the method to set the boolean variable to display the game screen.
+	* @param printGame Value to display the game screen.
+	*/
     public void setPrintGame(boolean printGame) {
     	this.printGame = printGame;
     }
     
+    /**
+	* This is the method to get signal to display the game screen.
+	* @return boolean This returns signal to display the game screen..
+	*/
     public boolean getPrintGame() {
     	return printGame;
     }
     
+    /**
+	* This is the method to set the player name to the global variable.
+	* @param playerName The name of player given.
+	*/
     public void setPlayerName(String playerName) {
     	this.playerName = playerName;
     }
     
+    /**
+	* This is the method to get the player name who is playing currently.
+	* @return String This returns the name of current player.
+	*/
     public String getPlayerName() {
     	return playerName;
     }
 
+    /**
+	* This is the method to set the boolean variable to proceed to next level.
+	* @param nextLevel The signal whether to proceed to next level.
+	*/
 	protected void setNextLevel(boolean nextLevel) {
 		this.nextLevel = nextLevel;
 	}
 
+	/**
+	* This is the method to get the signal on whether to proceed the next level.
+	* @return boolean This returns the signal to proceed to the next level.
+	*/
 	protected boolean getNextLevel() {
 		return nextLevel;
 	}
 	
+	/**
+	* This is the method to display the pop up dialog which ask for player's name.
+	* @param Message The error message if the name cannot be used.
+	*/
     public void playerNameDialog(String Message) {
     	//String message = "";
     	TextInputDialog dialog = new TextInputDialog();
@@ -326,6 +410,9 @@ public class Main extends Application {
     	}
 	}
     
+    /**
+	* This is the method to display the pop up dialog which display at the end of the game.
+	*/
     public void printEnd() {
     	String levelmsg;	//variable to save the message of score for each level
     	this.score = level1.getScore() + level2.getScore() + level3.getScore();
@@ -351,7 +438,10 @@ public class Main extends Application {
 		save();	//call the method to save score and player name in file
     }
     
-    public void printNextLevel(int score) {
+    /**
+	* This is the method to display the pop up dialog which display at the end of each level.
+	*/
+    public void printNextLevel() {
     	String levelmsg;	//variable to save the message of score for each level
     	this.alert = new Alert(AlertType.NONE);
 		alert.getButtonTypes().addAll(ButtonType.YES, ButtonType.NO);
@@ -364,7 +454,7 @@ public class Main extends Application {
 		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
 		
 		if(level == 1)
-			alert.setContentText("Level 1: " + score +"!\n"+"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
+			alert.setContentText("Level 1: " + level1.getScore() +"!\n"+"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
 		else if(level == 2) {
 			levelmsg = "Level 1: " + level1.getScore() + "!\nLevel 2: " + level2.getScore() + "!\n";
 			alert.setContentText(levelmsg +"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
@@ -372,6 +462,10 @@ public class Main extends Application {
 		alert.show();
     }
  
+    /**
+	* This is the method to display the game over dialog.
+	* @param score This value is the last obtained score from the game.
+	*/
     public void printGameOver(int score) {
     	if(level == 1) {
     		this.score = score;
@@ -396,6 +490,11 @@ public class Main extends Application {
 		save();	//call the method to save score and player name in file
     }
     
+    /**
+	* This is the method check is the name given player used by others.
+	* @param enteredName The name entered by the player.
+	* @return boolean This returns the value on whether the name is used.
+	*/
     public boolean isNameUsed(String enteredName) {
     	String line, name = "";  
     	try  
@@ -431,6 +530,11 @@ public class Main extends Application {
 		return false;  
     }
     
+    /**
+   	* This is the method check is the name given player contains any special character(s).
+   	* @param enteredName The name entered by the player.
+   	* @return boolean This returns the value on whether the name contains any special character(s).
+   	*/
     public boolean containSymbol(String enteredName) {
     	String specialCharactersString = "!@#$%&*()'+,-./:;<=>?[]^_`{|}";
         for (int i=0; i < enteredName.length() ; i++)
@@ -443,6 +547,9 @@ public class Main extends Application {
         return false;
     }
     
+    /**
+   	* This is the method save a record of player name and score achieved.
+   	*/
     public void save() {
     	try {
     		//directory of the file
@@ -471,6 +578,9 @@ public class Main extends Application {
     	}
     }
     
+    /**
+   	* This is the method pause the game.
+   	*/
     public void pause() {
     	background.stopMusic();
     	background.remove(sound);	//remove the sound button
@@ -480,28 +590,17 @@ public class Main extends Application {
     	instruction.setPauseGame(false);
     }
     
+    /**
+   	* This is the method resume the game after pausing the game.
+   	*/
     public void resume() {
-    	background.playMusic();
+    	if(!sound.getMuted())
+    		background.playMusic();	//if the sound is not muted
     	background.add(sound);	//add back the sound button
     	background.start();
     	animal.setNoMove(false);
     	resume.setResumeGame(false);
     	instruction.setResumeGame(false);
-    }
-
-    //not use yet this is new window
-    public void setting() {
-    	Sound sound = new Sound(background, 450, 10, 30, 30);
-    	Stage new_stage = new Stage();
-    	MyStage settingBackground = new MyStage();
-    	Scene new_scene = new Scene(settingBackground, 200, 200);
-    	
-    	BackgroundImage settingBack = new BackgroundImage("file:src/p4_group_8_repo/settingBack.png", 200, 200);
-    	settingBackground.add(settingBack);
-    	settingBackground.add(sound);
-    	
-    	new_stage.setScene(new_scene);
-    	new_stage.show();
     }
     
 }
