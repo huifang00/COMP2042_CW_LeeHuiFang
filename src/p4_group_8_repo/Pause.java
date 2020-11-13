@@ -57,7 +57,7 @@ public class Pause extends Actor{
 
 	/**
 	 * This method is get the value to pause the game application.
-	 * @return This returns the value to pause the game application.
+	 * @return boolean This returns the value to pause the game application.
 	 */
 	public boolean getPauseGame() {
 		return pauseGame;
@@ -65,7 +65,7 @@ public class Pause extends Actor{
 
 	/**
 	 * This method is set the value to pause the game application.
-	 * @param The value to pause the game application.
+	 * @param pauseGame The value to pause the game application.
 	 */
 	public void setPauseGame(boolean pauseGame) {
 		this.pauseGame = pauseGame;

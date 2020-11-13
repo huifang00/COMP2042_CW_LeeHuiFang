@@ -39,6 +39,7 @@ public class TruckObstacle extends Actor{
 	/**
 	 * Class constructor specifies and sets the position, speed and size of the truck image.
 	 * This constructor sets the image of the truck according to the direction from speed.
+	 * @param num The number of trailer of truck.
 	 * @param xpos The x-coordinate of the truck.
 	 * @param ypos The y-coordinate of the truck.
 	 * @param speed The speed of the truck.

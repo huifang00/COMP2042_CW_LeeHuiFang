@@ -7,6 +7,14 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
+/**
+ * MyStage Class
+ * Class play or stop the background music 
+ * 
+ * @author  Lee Hui Fang 20125427, hfyhl2
+* @version 1.0
+* @since   2020-12-12
+ */
 public class MyStage extends World{
 	MediaPlayer mediaPlayer;
 	@Override
@@ -29,6 +37,9 @@ public class MyStage extends World{
 //		mediaPlayer.play();
 	}
 	
+	/**
+	 * This is the method to call the music file, create an Media object and play the background music.
+	 */
 	public void playMusic() {
 		String musicFile = "src/p4_group_8_repo/Frogger Main Song Theme (loop).mp3";   
 		Media sound = new Media(new File(musicFile).toURI().toString());
@@ -37,6 +48,9 @@ public class MyStage extends World{
 	    mediaPlayer.play();
 	}
 	
+	/**
+	 * This is the method to stop on playing the background music.
+	 */
 	public void stopMusic() {
 		mediaPlayer.stop();
 	}		

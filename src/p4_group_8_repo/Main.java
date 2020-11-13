@@ -12,8 +12,9 @@ import java.util.Optional;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.geometry.Rectangle2D;
-import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -25,7 +26,6 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
 /**
 * FROGGER
@@ -132,6 +132,7 @@ public class Main extends Application {
 	
 	/**
 	* This is the method to create animation and handle() method is called in every frame of the animation.
+	* In handle method, different condition are given to perform specific action.
 	*/
 	public void createTimer() {
         timer = new AnimationTimer() {
@@ -157,7 +158,8 @@ public class Main extends Application {
             		animal.setLevel(level);	//set the level in animal class for the speed
             		//setLife(3);
             		//animal.setLife(3);
-            		level1.remove(background);
+            		//level1.remove(background);
+            		level1.remove();
             		level2 = new Level2(background, animal);
             		setPrintGame(false);
             	}
@@ -166,7 +168,7 @@ public class Main extends Application {
             		animal.setLevel(level);	//set the level in animal class for the speed
             		//setLife(3);
             		//animal.setLife(3);
-            		level2.remove(background);
+            		level2.remove();
             		level3 = new Level3(background, animal);
             		setPrintGame(false);
             	}
@@ -184,7 +186,7 @@ public class Main extends Application {
             		if(level == 3) {
             			highscore = level * 800;
             			level3.setScore(animal.getPoints());	//save the score in level3 class
-            			level3.remove(background);
+            			level3.remove();
             			level = 0;	//end the game
             		}
             		else {
@@ -199,10 +201,12 @@ public class Main extends Application {
         			setPrintGame(true);
         			setNextLevel(false);	//to prevent the next second on running this condition till the next alert box appear
         		}
-            	else if (alert.getResult() == ButtonType.NO || level == 0){
+            	else if (alert.getResult() == ButtonType.NO || level == 0){	
             		printEnd();
-            		if(!sound.getMuted())
+            		
+            		if(!sound.getMuted()) 
             			background.stopMusic();
+            		
             		stop();	//timer stop
             		background.stop();	//timer stop
             	}
@@ -237,7 +241,7 @@ public class Main extends Application {
             }
         };
 	}
-	    
+
 	/**
 	* This is the method to play the background music, create and start the animation timer.
 	*/
@@ -289,7 +293,7 @@ public class Main extends Application {
 		if(life == 3) {
 			//ArrayLife.clear(); //clear previous level life
 			for(int i = 0; i < 3;i++) {
-				lifeImg = new Life(background, 384 + shift, 50, 25, 25);
+				lifeImg = new Life(384 + shift, 50, 25, 25);
 	    		ArrayLife.add(lifeImg);
 	    		background.add(lifeImg);
 				shift += 33;
@@ -434,6 +438,9 @@ public class Main extends Application {
 			levelmsg = "Level 1: " + level1.getScore() + "!\nLevel 2: " + level2.getScore() + "!\nLevel 3: " + level3.getScore() + "!\n";
 			alertEnd.setContentText(levelmsg +"Highest Possible Score: " + highscore);
 		}
+
+		//alert.setOnHidden(evt -> Platform.exit());
+		alertEnd.setOnCloseRequest(evt -> System.exit(0));	//use a handler for the onCloseRequest event for the alert to close the application when the alert is closed:
 		alertEnd.show();
 		save();	//call the method to save score and player name in file
     }
@@ -476,7 +483,7 @@ public class Main extends Application {
     	else if(level == 3) {
     		this.score = level1.getScore() + level2.getScore() + score;
     	}
-    	Alert alertGameOver = new Alert(AlertType.INFORMATION);
+    	Alert alertGameOver  = new Alert(AlertType.INFORMATION);
 		alertGameOver.setTitle("GAME OVER!!!");
 		alertGameOver.setHeaderText("GAME OVER!!!\nYou Have No Life Left");
 		alertGameOver.setContentText("Your Total Score: "+ this.score +"!");
@@ -485,6 +492,9 @@ public class Main extends Application {
 
 		// Add a custom icon.
 		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
+		
+		//alert.setOnHidden(evt -> Platform.exit());
+		alertGameOver.setOnCloseRequest(evt -> System.exit(0));
 		
 		alertGameOver.show();
 		save();	//call the method to save score and player name in file

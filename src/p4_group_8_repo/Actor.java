@@ -6,8 +6,8 @@ import javafx.scene.input.InputEvent;
 import java.util.ArrayList;
 
 /**
-* FROGGER
-* The Frogger application is a game that helps the frog to cross the traffic and river.
+* Actor Class
+* Abstract class which contains the method that relevant of each inherited subclass.
 * 
 *
 * @author  Lee Hui Fang 20125427, hfyhl2
@@ -51,9 +51,11 @@ public abstract class Actor extends ImageView{
     }
 
     /**
-	* This is the method intersection occurs between more than 2 objects.
-	* @return ArrayList This returns the array of objects which involve in the intersection.
-	*/
+     * This is the method intersection occurs between more than 2 objects..
+     * @param <A> The type of the actor class modeled by actor object
+     * @param cls The class object corresponding to Actor type.
+     * @return ArrayList<A> This returns the array which contains the list of object(s) of actor class.
+     */
     public <A extends Actor> java.util.List<A> getIntersectingObjects(java.lang.Class<A> cls){
         ArrayList<A> someArray = new ArrayList<A>();
         for (A actor: getWorld().getObjects(cls)) {
@@ -71,9 +73,11 @@ public abstract class Actor extends ImageView{
 	*/
     
     /**
-	* This is the method intersection occurs between 2 objects.
-	* @return ArrayList This returns the array of the 2 objects which involve in the intersection.
-	*/
+     * This is the method intersection occurs between 2 objects.
+     * @param <A> The type of the actor class modeled by actor object
+     * @param cls The class object corresponding to Actor type.
+     * @return ArrayList<A> This returns the array which contains the list of object(s) of actor class.
+     */
     public <A extends Actor> A getOneIntersectingObject(java.lang.Class<A> cls) {
         ArrayList<A> someArray = new ArrayList<A>();
         for (A actor: getWorld().getObjects(cls)) {
@@ -86,7 +90,7 @@ public abstract class Actor extends ImageView{
     }
 
     /**
-	* This is the abstract method for actor performing an action.
+	* This is the abstract method for actor performing an action and must included in each concrete subclass(es).
 	*/
     public abstract void act(long now);
 

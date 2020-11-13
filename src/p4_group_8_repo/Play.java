@@ -58,18 +58,18 @@ public class Play extends Actor{
 	
 	/**
 	 * This method is get the value to play the game application.
-	 * @return This returns the value to play the game application.
+	 * @return boolean This returns the value to play the game application.
 	 */
-	public void setGamePlay(boolean gameplay) {
-		this.gameplay = gameplay;
+	public boolean getGamePlay() {
+		return gameplay;
 	}
 	
 	/**
 	 * This method is set the value to play the game application.
-	 * @param The value to play the game application.
+	 * @param gameplay The value to play the game application.
 	 */
-	public boolean getGamePlay() {
-		return gameplay;
+	public void setGamePlay(boolean gameplay) {
+		this.gameplay = gameplay;
 	}
 	
 }

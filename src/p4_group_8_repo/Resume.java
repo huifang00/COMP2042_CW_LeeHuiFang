@@ -57,7 +57,7 @@ public class Resume extends Actor{
 
 	/**
 	 * This method is get the value to resume the game application.
-	 * @return This returns the value to resume the game application.
+	 * @return boolean This returns the value to resume the game application.
 	 */
 	public boolean getResumeGame() {
 		return resumeGame;
@@ -65,7 +65,7 @@ public class Resume extends Actor{
 
 	/**
 	 * This method is set the value to resume the game application.
-	 * @param The value to resume the game application.
+	 * @param resumeGame The value to resume the game application.
 	 */
 	public void setResumeGame(boolean resumeGame) {
 		this.resumeGame = resumeGame;

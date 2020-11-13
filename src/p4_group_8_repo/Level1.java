@@ -1,5 +1,14 @@
 package p4_group_8_repo;
 
+/**
+* Level1 Class
+* Class which includes all the actor(s) or images(s) for level 1.
+* 
+*
+* @author  Lee Hui Fang 20125427, hfyhl2
+* @version 1.0
+* @since   2020-12-12
+*/
 public class Level1{
 	
 	Animal animal;
@@ -11,26 +20,41 @@ public class Level1{
 	TruckObstacle truckobstacle1, truckobstacle2, truckobstacle3, truckobstacle4, truckobstacle5;
 	LevelImage levelImage;
 	private int score = 0;
+	MyStage background;
 	
+	/**
+	 * Class constructor which calls the method(s) to create image(s) in the application.
+	 * @param background The stage of the game application where it contain all actors.
+	 */
 	public Level1(MyStage background) {
-		addLevelImage(background);
-		addLog(background);
-		addTurtle(background);
-		addEnd(background);
-		addAnimal(background);
-		addObstacle(background);
+		this.background = background;
+		addLevelImage();
+		addLog();
+		addTurtle();
+		addEnd();
+		addAnimal();
+		addObstacle();
 	}
 	
+	/**
+	 * Default constructor
+	 */
 	public Level1() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void addLevelImage(MyStage background) {
+	/**
+	 * This is the method to add the image of level information.
+	 */
+	public void addLevelImage() {
 		levelImage = new LevelImage(1, 10, 40, 130, 130);
 		background.add(levelImage);
 	}
 	
-	public void addLog(MyStage background) {
+	/**
+	 * This is the method to add the image(s) of log.
+	 */
+	public void addLog() {
     	/*
     	background.add(new Log("file:src/p4_group_8_repo/log3.png", 0, 166, 0.75, 150, 150));
 		background.add(new Log("file:src/p4_group_8_repo/log3.png", 220, 166, 0.75, 150, 150));
@@ -65,7 +89,10 @@ public class Level1{
     	background.add(log8);
     }
     
-    public void addTurtle(MyStage background) {
+	/**
+	 * This is the method to add the image(s) of wet turtle.
+	 */
+    public void addTurtle() {
     	/*
     	background.add(new Turtle(500, 376, -1, 130, 130));
 		background.add(new Turtle(300, 376, -1, 130, 130));
@@ -91,7 +118,10 @@ public class Level1{
     	
     }
     
-    public void addEnd(MyStage background) {
+    /**
+     * This is the method to add the image(s) of empty slot.
+     */
+    public void addEnd() {
     	//End end1, end2, end3, end4, end5;
     	end1 = new End(13, 96, 60, 60);
     	background.add(end1);
@@ -112,15 +142,21 @@ public class Level1{
 		*/
     }
     
-    public void addAnimal(MyStage background) {
+    /**
+     * This is the method to add the image of frog as the main character in the application.
+     */
+    public void addAnimal() {
     	//animal = new Animal("file:src/p4_group_8_repo/froggerUp.png");
     	animal = new Animal(300, 679.8+(13.3333333*2), 40, 40);
 		background.add(animal);
     }
     
-    public void addObstacle(MyStage background) {
-    	addCarObstacle(background);
-    	addTruckObstacle(background);
+    /**
+     * This is the method to add the image(s) of car and truck as obstacle(s).
+     */
+    public void addObstacle() {
+    	addCarObstacle();
+    	addTruckObstacle();
     	/*
     	background.add(new Obstacle("file:src/p4_group_8_repo/truck1"+"Right.png", 0, 649, 1, 120, 120));
 		background.add(new Obstacle("file:src/p4_group_8_repo/truck1"+"Right.png", 300, 649, 1, 120, 120));
@@ -136,7 +172,10 @@ public class Level1{
 		*/
     }
     
-    public void addCarObstacle(MyStage background) {
+    /**
+     * This is the method to add the image(s) of car as obstacle(s).
+     */
+    public void addCarObstacle() {
     	carobstacle1 = new CarObstacle(100, 597, -1, 50, 50);
     	background.add(carobstacle1);
     	carobstacle2 = new CarObstacle(250, 597, -1, 50, 50);
@@ -149,7 +188,10 @@ public class Level1{
     	background.add(carobstacle5);
     }
     
-    public void addTruckObstacle(MyStage background) {
+    /**
+     * This is the method to add the image(s) of truck as obstacle(s).
+     */
+    public void addTruckObstacle() {
     	truckobstacle1 = new TruckObstacle(1, 0, 649, 1, 120, 120);
     	background.add(truckobstacle1);
     	truckobstacle2 = new TruckObstacle(1, 300, 649, 1, 120, 120);
@@ -162,21 +204,30 @@ public class Level1{
     	background.add(truckobstacle5);
     }
     
-    public void remove(MyStage background) {
-    	removeLevelImage(background);
-    	removeLog(background);
-    	removeTurtle(background);
-    	removeEnd(background);
-    	removeAnimal(background);
-    	removeCarObstacle(background);
-    	removeTruckObstacle(background);
+    /**
+     * This is the method to remove the image(s) in the application.
+     */
+    public void remove() {
+    	removeLevelImage();
+    	removeLog();
+    	removeTurtle();
+    	removeEnd();
+    	removeAnimal();
+    	removeCarObstacle();
+    	removeTruckObstacle();
     }
     
-    public void removeLevelImage(MyStage background) {
+    /**
+     * This is the method to remove the image of level information.
+     */
+    public void removeLevelImage() {
     	background.remove(levelImage);
     }
 
-    public void removeLog(MyStage background) {
+    /**
+     * This is the method to remove the image(s) of log.
+     */
+    public void removeLog() {
     	background.remove(log1);
     	background.remove(log2);
     	background.remove(log3);
@@ -186,8 +237,11 @@ public class Level1{
     	background.remove(log7);
     	background.remove(log8);
     }
-    
-    public void removeTurtle(MyStage background) {
+
+    /**
+     * This is the method to add the image(s) of turtle.
+     */
+    public void removeTurtle() {
     	background.remove(turtle1);
     	background.remove(turtle2);
     	background.remove(weturtle1);
@@ -197,7 +251,10 @@ public class Level1{
     	
     }
     
-    public void removeEnd(MyStage background) {
+    /**
+     * This is the method to add the image(s) of empty slot.
+     */
+    public void removeEnd() {
     	background.remove(end1);
     	background.remove(end2);
     	background.remove(end3);
@@ -205,7 +262,10 @@ public class Level1{
     	background.remove(end5);
     }
     
-    public void removeAnimal(MyStage background) {
+    /**
+     * This is the method to remove the image of frog as the main character in the application.
+     */
+    public void removeAnimal() {
 		background.remove(animal);
     }
     /*
@@ -215,7 +275,10 @@ public class Level1{
     }
     */
     
-    public void removeCarObstacle(MyStage background) {
+    /**
+     * This is the method to remove the image(s) of car as obstacle(s).
+     */
+    public void removeCarObstacle() {
     	background.remove(carobstacle1);
     	background.remove(carobstacle2);
     	background.remove(carobstacle3);
@@ -223,7 +286,10 @@ public class Level1{
     	background.remove(carobstacle5);
     }
     
-    public void removeTruckObstacle(MyStage background) {
+    /**
+     * This is the method to remove the image(s) of truck as obstacle(s).
+     */
+    public void removeTruckObstacle() {
     	background.remove(truckobstacle1);
     	background.remove(truckobstacle2);
     	background.remove(truckobstacle3);
@@ -231,10 +297,18 @@ public class Level1{
     	background.remove(truckobstacle5);
     }
  
+    /**
+     * This is the method to set the score which player get for level 1.
+     * @param score The score which player get for level 1.
+     */
     public void setScore(int score) {
     	this.score = score;
     }
     
+    /**
+     * This is the method to get the score of level 1 which player achieved.
+     * @return int This returns the score of level 1 which player achieved.
+     */
     public int getScore() {
     	return score;
     }

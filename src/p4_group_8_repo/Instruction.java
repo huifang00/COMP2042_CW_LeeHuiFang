@@ -9,7 +9,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 /**
-* Pause Class
+* Instruction Class
 * Set the instruction image as a button.
 * 
 *
@@ -129,7 +129,7 @@ public class Instruction extends Actor{
 
 	/**
 	 * This method is get the value to print the instruction.
-	 * @return This returns the value to print the instruction.
+	 * @return boolean This returns the value to print the instruction.
 	 */
 	public boolean getPrintInstruction() {
 		return printInstruction;
@@ -137,7 +137,7 @@ public class Instruction extends Actor{
 
 	/**
 	 * This method is set the value to print the instruction.
-	 * @param The value to print the instruction.
+	 * @param printInstruction The value to print the instruction.
 	 */
 	public void setPrintInstruction(boolean printInstruction) {
 		this.printInstruction = printInstruction;
@@ -145,7 +145,7 @@ public class Instruction extends Actor{
 
 	/**
 	 * This method is get the value to resume the game application.
-	 * @return This returns the value to resume the game application.
+	 * @return boolean This returns the value to resume the game application.
 	 */
 	public boolean getResumeGame() {
 		return resumeGame;
@@ -153,7 +153,7 @@ public class Instruction extends Actor{
 
 	/**
 	 * This method is set the value to resume the game application.
-	 * @param The value to resume the game application.
+	 * @param resumeGame The value to resume the game application.
 	 */
 	public void setResumeGame(boolean resumeGame) {
 		this.resumeGame = resumeGame;
@@ -161,7 +161,7 @@ public class Instruction extends Actor{
 
 	/**
 	 * This method is get the value to pause the game application.
-	 * @return This returns the value to pause the game application.
+	 * @return boolean This returns the value to pause the game application.
 	 */
 	public boolean getPauseGame() {
 		return pauseGame;
@@ -169,7 +169,7 @@ public class Instruction extends Actor{
 
 	/**
 	 * This method is set the value to pause the game application.
-	 * @param The value to pause the game application.
+	 * @param pauseGame The value to pause the game application.
 	 */
 	public void setPauseGame(boolean pauseGame) {
 		this.pauseGame = pauseGame;

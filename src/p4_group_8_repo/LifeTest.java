@@ -9,7 +9,7 @@ import p4_group_8_repo.Life;
 
 public class LifeTest {
 	JFXPanel jfxPanel = new JFXPanel();
-	Life life = new Life(null, 12, 22, 15, 18);
+	Life life = new Life(12, 22, 15, 18);
 	
 	@Test
 	public void constructorTest_X() {

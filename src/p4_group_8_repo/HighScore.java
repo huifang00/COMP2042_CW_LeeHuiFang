@@ -2,33 +2,26 @@ package p4_group_8_repo;
 
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.stream.Stream;
 
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
 /**
 * HighScore Class
-* Set the highscore image as a button.
+* Set the highscore image as a button to get the top3 player.
 * 
 *
 * @author  Lee Hui Fang 20125427, hfyhl2
@@ -40,9 +33,6 @@ public class HighScore extends Actor{
 	 * The highscore image as a button.
 	 */
 	private Image highscore;
-	
-	private MyStage backgroud;
-
 	/**
 	* This is the abstract method from superclass.
 	* @param now The timestamp of the current frame given in nanoseconds.
@@ -66,21 +56,24 @@ public class HighScore extends Actor{
 		setImage(highscore);
 		setX(xpos);
 		setY(ypos);
-		this.backgroud = background;
 		setOnMouseClicked(new EventHandler<MouseEvent>(){
 			@Override 
 			   public void handle(MouseEvent e) { 
-					highScoreAlert();
+					getHighScore();
 			   }
 			}); 	
 	}
 	
-	public void highScoreAlert() {
+	/**
+	 * This method gets the top3 player from the text file.
+	 */
+	public void getHighScore() {
 		ArrayList<Integer>scoreList = new ArrayList<>();
 		String top3 = "";
 		FileReader filereader;
 		BufferedReader bufferedreader;
-		int numberOfLine = 0;
+		int numberOfLine = 0, j;
+		int[] top = new int[3];
 		try  
     	{  
     		File file = new File(".\\src\\p4_group_8_repo\\player information.txt");    //creates a new file instance 
@@ -106,8 +99,7 @@ public class HighScore extends Actor{
 				bufferedreader.close();
 	    		filereader.close();    //closes the stream and release the resources
 	    		
-				int[] top = new int[3];
-				int j = 0;
+				j = 0;
 				for(int i = 0;i < scoreList.size();i++) {
 					if(scoreList.get(i) == Collections.max(scoreList)) {
 						top[j] = i;	//the highest is top1
@@ -164,6 +156,10 @@ public class HighScore extends Actor{
     	} 
 	}
 	
+	/**
+	 * Display the window which contains high score information.
+	 * @param top3 The string contains the information of top3 player(s).
+	 */
 	public void highScoreWindow(String top3){
 		
 		String family = "SERIF";

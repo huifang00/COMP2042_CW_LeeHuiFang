@@ -33,7 +33,6 @@ public class Digit extends Actor{
 	 * This constructor sets the image of the digit.
 	 * @param xpos The x-coordinate of the digit.
 	 * @param ypos The y-coordinate of the digit.
-	 * @param speed The speed of the digit.
 	 * @param width The width of the digit.
 	 * @param height The height of the digit.
 	 */

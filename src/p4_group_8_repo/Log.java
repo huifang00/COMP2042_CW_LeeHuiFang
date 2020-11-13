@@ -39,6 +39,7 @@ public class Log extends Actor {
 	/**
 	 * Class constructor specifies and sets the size of log, position, speed and size of the log image.
 	 * This constructor sets the image of the log according to the direction from speed.
+	 * @param sizeoflog The size of the log (not the size of image).
 	 * @param xpos The x-coordinate of the log.
 	 * @param ypos The y-coordinate of the log.
 	 * @param speed The speed of the log.

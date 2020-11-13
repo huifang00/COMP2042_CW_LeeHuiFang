@@ -10,7 +10,7 @@ import javafx.scene.input.KeyEvent;
 
 /**
 * Animal Class
-* Create animal as frog in the Frogger application.
+* Create animal as frog as main character in the application.
 * 
 *
 * @author  Lee Hui Fang 20125427, hfyhl2
