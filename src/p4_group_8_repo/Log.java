@@ -11,7 +11,7 @@ import javafx.scene.image.Image;
 * @version 1.0
 * @since   2020-12-12
 */
-public class Log extends Actor {
+public class Log extends Obstacle {
 	/**
 	 * The speed of log.
 	 */
@@ -47,13 +47,13 @@ public class Log extends Actor {
 	 * @param height The height of the log.
 	 */
 	//public Log(String imageLink, int size, int xpos, int ypos, double s)
-	public Log(int sizeoflog, int xpos, int ypos, double speed, double width, double height) {
+	public Log(int xpos, int ypos, double speed, double width, double height) {
 		log1 = new Image("file:src/p4_group_8_repo/log3.png", width, height, true, true);
 		log2 = new Image("file:src/p4_group_8_repo/logs.png", width, height, true, true);
-		if(sizeoflog == 1) {
+		if(width == 150) {
 			setImage(log1);
 		}
-		else if(sizeoflog == 2) {
+		else if(width == 300) {
 			setImage(log2);
 		}
 		setX(xpos);

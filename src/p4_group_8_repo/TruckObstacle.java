@@ -11,7 +11,7 @@ import javafx.scene.image.Image;
 * @version 1.0
 * @since   2020-12-12
 */
-public class TruckObstacle extends Actor{
+public class TruckObstacle extends Obstacle{
 	/**
 	 * The speed of truck.
 	 */
@@ -46,24 +46,24 @@ public class TruckObstacle extends Actor{
 	 * @param width The width of the truck.
 	 * @param height The height of the truck.
 	 */
-	public TruckObstacle(int num, int xpos, int ypos, double speed, double width, double height) {
+	public TruckObstacle(int xpos, int ypos, double speed, double width, double height) {
 		truckobstacleL1 = new Image("file:src/p4_group_8_repo/truck1Left.png", width, height, true, true);
 		truckobstacleL2 = new Image("file:src/p4_group_8_repo/truck2Left.png", width, height, true, true);
 		truckobstacleR1 = new Image("file:src/p4_group_8_repo/truck1Right.png", width, height, true, true);
 		truckobstacleR2 = new Image("file:src/p4_group_8_repo/truck2Right.png", width, height, true, true);
 		if(speed > 0) {	//moving towards right
-			if(num == 1) {
+			if(width == 120) {
 				setImage(truckobstacleR1);
 			}
-			else if(num == 2) {
+			else if(width == 200) {
 				setImage(truckobstacleR2);
 			}
 		}
 		else{ //moving towards left
-			if(num == 1) {
+			if(width == 120) {
 				setImage(truckobstacleL1);
 			}
-			else if(num == 2) {
+			else if(width == 200) {
 				setImage(truckobstacleL2);
 			}
 		}

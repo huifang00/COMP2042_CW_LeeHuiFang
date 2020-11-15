@@ -1,4 +1,4 @@
-package p4_group_8_repo.test;
+package p4_group_8_repo;
 
 import static org.junit.Assert.*;
 
@@ -9,7 +9,7 @@ import p4_group_8_repo.Log;
 
 public class LogTest {
 	JFXPanel jfxPanel = new JFXPanel();
-	Log log = new Log(1, 10, 20, -1, 25, 30);
+	Log log = new Log(10, 20, -1, 25, 30);
 	
 	@Test
 	public void constructorTest_X() {

@@ -32,6 +32,7 @@ public abstract class Actor extends ImageView{
 	*/
     public World getWorld() {
         return (World) getParent();
+        
     }
 
     /**
@@ -68,7 +69,7 @@ public abstract class Actor extends ImageView{
     
     /*can remove if not used this is from source code
     public void manageInput(InputEvent e) {
-        
+        b
     }
 	*/
     

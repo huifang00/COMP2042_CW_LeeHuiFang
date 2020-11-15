@@ -11,7 +11,7 @@ import javafx.scene.image.Image;
 * @version 1.0
 * @since   2020-12-12
 */
-public class CarObstacle extends Actor{
+public class CarObstacle extends Obstacle{
 	/**
 	 * The speed of car.
 	 */

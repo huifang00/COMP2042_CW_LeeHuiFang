@@ -1,4 +1,4 @@
-package p4_group_8_repo.test;
+package p4_group_8_repo;
 
 import static org.junit.Assert.*;
 
@@ -9,7 +9,7 @@ import p4_group_8_repo.TruckObstacle;
 
 public class TruckObstacleTest {
 	JFXPanel jfxPanel = new JFXPanel();
-	TruckObstacle truck = new TruckObstacle(1, 10, 20, -1, 25, 30);
+	TruckObstacle truck = new TruckObstacle(10, 20, -1, 25, 30);
 	
 	@Test
 	public void constructorTest_X() {

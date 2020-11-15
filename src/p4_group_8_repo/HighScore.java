@@ -33,6 +33,9 @@ public class HighScore extends Actor{
 	 * The highscore image as a button.
 	 */
 	private Image highscore;
+	ArrayList<Integer>scoreList = new ArrayList<>();
+	String top3 = "";
+	
 	/**
 	* This is the abstract method from superclass.
 	* @param now The timestamp of the current frame given in nanoseconds.
@@ -68,8 +71,6 @@ public class HighScore extends Actor{
 	 * This method gets the top3 player from the text file.
 	 */
 	public void getHighScore() {
-		ArrayList<Integer>scoreList = new ArrayList<>();
-		String top3 = "";
 		FileReader filereader;
 		BufferedReader bufferedreader;
 		int numberOfLine = 0, j;

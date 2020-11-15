@@ -11,7 +11,7 @@ import javafx.scene.image.Image;
 * @version 1.0
 * @since   2020-12-12
 */
-public class Turtle extends Actor{
+public class Turtle extends Obstacle{
 	/**
 	 * The speed of turtle.
 	 */
