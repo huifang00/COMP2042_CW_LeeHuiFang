@@ -26,6 +26,20 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import p4_group_8_repo.LifeAndScore.Digit;
+import p4_group_8_repo.LifeAndScore.HighScore;
+import p4_group_8_repo.LifeAndScore.Life;
+import p4_group_8_repo.actor.Animal;
+import p4_group_8_repo.actor.BackgroundImage;
+import p4_group_8_repo.backgroundfunction.MyStage;
+import p4_group_8_repo.level.Level1;
+import p4_group_8_repo.level.Level2;
+import p4_group_8_repo.level.Level3;
+import p4_group_8_repo.mainfunction.Instruction;
+import p4_group_8_repo.mainfunction.Pause;
+import p4_group_8_repo.mainfunction.Play;
+import p4_group_8_repo.mainfunction.Resume;
+import p4_group_8_repo.mainfunction.Sound;
 
 /**
 * FROGGER
@@ -83,7 +97,7 @@ public class Main extends Application {
 		
 		playerNameDialog("");
 		
-		background = new MyStage();
+		this.background = new MyStage();
 	    scene  = new Scene(background, 600, 800);	//remove the datatype since Scene is declared as global variable
 	    
 		froggerback = new BackgroundImage("file:src/p4_group_8_repo/iKogsKW_cropped.png", 600, 800);
@@ -147,7 +161,7 @@ public class Main extends Application {
             		background.add(pause);
             		background.add(new Digit(0, 450, 10, 30, 30));
             		level1 = new Level1(background);
-            		setAnimal(level1.animal);
+            		setAnimal(level1.getAnimal());
             		setPrintGame(false);	// to prevent the next second on printing this condition
             		animal.setLevel(level);	//set the level in animal class for the speed
             		setLife(3);
@@ -439,10 +453,16 @@ public class Main extends Application {
 			alertEnd.setContentText(levelmsg +"Highest Possible Score: " + highscore);
 		}
 
-		//alert.setOnHidden(evt -> Platform.exit());
-		alertEnd.setOnCloseRequest(evt -> System.exit(0));	//use a handler for the onCloseRequest event for the alert to close the application when the alert is closed:
 		alertEnd.show();
 		save();	//call the method to save score and player name in file
+		
+		//use a handler for the onCloseRequest event for the alert to close the application when the alert is closed:
+		alertEnd.setOnCloseRequest(evt -> {
+			System.exit(0);
+			if(highscoreButton.getStage().isShowing()) {
+				highscoreButton.close();
+			}
+		});
     }
     
     /**
@@ -493,11 +513,16 @@ public class Main extends Application {
 		// Add a custom icon.
 		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
 		
-		//alert.setOnHidden(evt -> Platform.exit());
-		alertGameOver.setOnCloseRequest(evt -> System.exit(0));
-		
 		alertGameOver.show();
 		save();	//call the method to save score and player name in file
+		
+		//use a handler for the onCloseRequest event for the alert to close the application when the alert is closed:
+		alertGameOver.setOnCloseRequest(evt -> {
+			System.exit(0);
+			if(highscoreButton.getStage().isShowing()) {
+				highscoreButton.close();
+			}
+		});
     }
     
     /**
