@@ -22,6 +22,9 @@ public class ObstacleFactory{
 	      else if(obstacle.equalsIgnoreCase("WET TURTLE")) {
 	    	  return new WetTurtle(xpos, ypos, speed, width, height);
 	      }
+	      else if(obstacle.equalsIgnoreCase("SNAKE")) {
+	    	  return new Snake(xpos, ypos, speed, width, height);
+	      }
 	      
 	      return null;
 	   }

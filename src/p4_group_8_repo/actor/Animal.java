@@ -9,6 +9,8 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import p4_group_8_repo.actor.obstacle.CarObstacle;
 import p4_group_8_repo.actor.obstacle.Log;
+import p4_group_8_repo.actor.obstacle.Obstacle;
+import p4_group_8_repo.actor.obstacle.Snake;
 import p4_group_8_repo.actor.obstacle.TruckObstacle;
 import p4_group_8_repo.actor.obstacle.Turtle;
 import p4_group_8_repo.actor.obstacle.WetTurtle;
@@ -369,6 +371,9 @@ public class Animal extends Actor {
 			this.carDeath = true;
 		}
 		else if (getIntersectingObjects(TruckObstacle.class).size() >= 1) {	//intersect with truck
+			this.carDeath = true;
+		}
+		else if (getIntersectingObjects(Snake.class).size() >= 1) {	//intersect with snake
 			this.carDeath = true;
 		}
 		else if (getIntersectingObjects(Log.class).size() >= 1 && !noMove) {	//intersect with log

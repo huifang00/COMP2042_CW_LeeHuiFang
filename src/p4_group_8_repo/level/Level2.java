@@ -48,7 +48,8 @@ public class Level2{
 		addTurtle();
 		addEnd();
 		addAnimal();
-		addObstacle();
+		addCarObstacle();
+		addTruckObstacle();
 	}
 	
 	/**
@@ -129,15 +130,7 @@ public class Level2{
     public void addAnimal() {
     	background.add(animal);
     }
-    
-    /**
-     * This is the method to add the image(s) of car and truck as obstacle(s).
-     */
-    public void addObstacle() {
-    	addCarObstacle();
-    	addTruckObstacle();
-    }
-    
+
     /**
      * This is the method to add the image(s) of car as obstacle(s).
      */

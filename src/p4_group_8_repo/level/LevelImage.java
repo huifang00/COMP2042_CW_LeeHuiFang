@@ -16,7 +16,7 @@ public class LevelImage extends Actor {
 	/**
 	 * The image(s) of level description.
 	 */
-	private Image level1, level2, level3;
+	private Image levelimg;
 	
 	/**
 	* This is the abstract method from superclass.
@@ -37,6 +37,11 @@ public class LevelImage extends Actor {
 	 * @param height The height of the level description image.
 	 */
 	public LevelImage(int level, int xpos, int ypos, double width, double height) {
+		levelimg = new Image("file:src/p4_group_8_repo/Level"+level+".png", width, height, true, true);
+		setImage(levelimg);
+		setX(xpos);
+		setY(ypos);
+		/*
 		level1 = new Image("file:src/p4_group_8_repo/Level1.png", width, height, true, true);
 		level2 = new Image("file:src/p4_group_8_repo/Level2.png", width, height, true, true);
 		level3 = new Image("file:src/p4_group_8_repo/Level3.png", width, height, true, true);
@@ -48,6 +53,7 @@ public class LevelImage extends Actor {
 			setImage(level2);
 		else if(level == 3)
 			setImage(level3);
+		*/
 	}
 
 }

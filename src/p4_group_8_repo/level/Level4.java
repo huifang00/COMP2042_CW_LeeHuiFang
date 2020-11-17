@@ -15,9 +15,9 @@ import p4_group_8_repo.actor.obstacle.ObstacleFactory;
 * @version 1.0
 * @since   2020-12-12
 */
-public class Level3{
+public class Level4{
 	
-	Animal animal;
+	public Animal animal;
 	/*
 	Log log1, log2, log3, log4, log5, log6, log7, log8;
 	Turtle turtle1, turtle2;
@@ -30,17 +30,18 @@ public class Level3{
 	private int score = 0;
 	MyStage background;
 	ObstacleFactory obstacleFactory = new ObstacleFactory();
-	Obstacle log1, log2, log3, log4, log5, log6, log7,
+	Obstacle log1, log2, log3, log4, log5, log6, log7, log8,
 	turtle1, turtle2, 
 	weturtle1, weturtle2, weturtle3, weturtle4, 
-	carobstacle1, carobstacle2, carobstacle3, carobstacle4, carobstacle5, 
-	truckobstacle1, truckobstacle2, truckobstacle3, truckobstacle4, truckobstacle5, truckobstacle6;
+	carobstacle1, carobstacle2, carobstacle3, carobstacle4, carobstacle5, carobstacle6,
+	truckobstacle1, truckobstacle2, truckobstacle3, truckobstacle4, truckobstacle5, truckobstacle6,
+	snake1, snake2, snake3;
 	
 	/**
 	 * Class constructor which calls the method(s) to create image(s) in the application.
 	 * @param background The stage of the game application where it contain all actors.
 	 */
-	public Level3(MyStage background, Animal animal) {
+	public Level4(MyStage background, Animal animal) {
 		this.background = background;
 		this.animal = animal;
 		addLevelImage();
@@ -50,12 +51,13 @@ public class Level3{
 		addAnimal();
 		addCarObstacle();
 		addTruckObstacle();
+		addSnake();
 	}
 	
 	/**
 	 * Default constructor
 	 */
-	public Level3() {
+	public Level4() {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -63,7 +65,7 @@ public class Level3{
 	 * This is the method to add the image of level information.
 	 */
 	public void addLevelImage() {
-		levelImage = new LevelImage(3, 10, 40, 130, 130);
+		levelImage = new LevelImage(4, 10, 40, 130, 130);
 		background.add(levelImage);
 	}
 
@@ -71,37 +73,39 @@ public class Level3{
 	 * This is the method to add the image(s) of log.
 	 */
 	public void addLog() {
-		log1 = obstacleFactory.getObstacle("Log", 0, 166, 2, 150, 150);
+		log1 = obstacleFactory.getObstacle("Log", 0, 166, 1.25, 150, 150);
     	background.add(log1);
-    	log2 = obstacleFactory.getObstacle("Log", 220, 166, 2, 150, 150);
+    	log2 = obstacleFactory.getObstacle("Log", 220, 166, 1.25, 150, 150);
     	background.add(log2);
-    	log3 = obstacleFactory.getObstacle("Log", 440, 166, 2, 150, 150);
+    	log3 = obstacleFactory.getObstacle("Log", 440, 166, 1.25, 150, 150);
     	background.add(log3);
-    	log4 = obstacleFactory.getObstacle("Log", 0, 276, -2.5, 300, 300);
+    	log4 = obstacleFactory.getObstacle("Log", 0, 276, -2, 300, 300);
     	background.add(log4);
-    	log5 = obstacleFactory.getObstacle("Log", 400, 276, -2.5, 300, 300);
+    	log5 = obstacleFactory.getObstacle("Log", 400, 276, -2, 300, 300);
     	background.add(log5);
-    	log6 = obstacleFactory.getObstacle("Log", 50, 329, 3, 150, 150);
+    	log6 = obstacleFactory.getObstacle("Log", 50, 385, 1.25, 150, 150);
     	background.add(log6);
-    	log7 = obstacleFactory.getObstacle("Log", 400, 329, 3, 300, 300);
+    	log7 = obstacleFactory.getObstacle("Log", 270, 385, 1.25, 150, 150);
     	background.add(log7);
+    	log8 = obstacleFactory.getObstacle("Log", 490, 385, 1.25, 150, 150);
+    	background.add(log8);
     }
 
 	/**
 	 * This is the method to add the image(s) of wet turtle.
 	 */
     public void addTurtle() {
-    	turtle1 = obstacleFactory.getObstacle("Turtle", 500, 376, -2.5, 130, 130);	
+    	turtle1 = obstacleFactory.getObstacle("Turtle", 500, 329, -1, 130, 130);	
     	background.add(turtle1);
-    	turtle2 = obstacleFactory.getObstacle("Turtle", 300, 376, -2.5, 130, 130);
+    	turtle2 = obstacleFactory.getObstacle("Turtle", 300, 329, -1, 130, 130);
     	background.add(turtle2);
-    	weturtle1 = obstacleFactory.getObstacle("Wet Turtle", 700, 376, -2.5, 130, 130);
+    	weturtle1 = obstacleFactory.getObstacle("Wet Turtle", 700, 329, -1, 130, 130);
     	background.add(weturtle1);
-    	weturtle2 = obstacleFactory.getObstacle("Wet Turtle", 100, 217, 1.5, 130, 130);//-1
+    	weturtle2 = obstacleFactory.getObstacle("Wet Turtle", 100, 217, 1, 130, 130);//-1
     	background.add(weturtle2);
-    	weturtle3 = obstacleFactory.getObstacle("Wet Turtle", 400, 217, 1.5, 130, 130);
+    	weturtle3 = obstacleFactory.getObstacle("Wet Turtle", 400, 217, 1, 130, 130);
     	background.add(weturtle3);
-    	weturtle4 = obstacleFactory.getObstacle("Wet Turtle", 700, 217, 1.5, 130, 130);
+    	weturtle4 = obstacleFactory.getObstacle("Wet Turtle", 700, 217, 1, 130, 130);
     	background.add(weturtle4);
     	
     }
@@ -124,8 +128,8 @@ public class Level3{
     
     /**
      * This is the method to add the image of frog as the main character in the application.
-     */
-   public void addAnimal() {
+    */
+    public void addAnimal() {
     	background.add(animal);
     }
    
@@ -133,16 +137,18 @@ public class Level3{
      * This is the method to add the image(s) of car as obstacle(s).
      */
     public void addCarObstacle() {
-    	carobstacle1 = obstacleFactory.getObstacle("Car", 200, 597, -3, 50, 50);	//previous -1(L1)
+    	carobstacle1 = obstacleFactory.getObstacle("Car", 100, 597, -1.5, 50, 50);	//previous -1(L1)
     	background.add(carobstacle1);
-    	carobstacle2 = obstacleFactory.getObstacle("Car", 400, 597, -3, 50, 50);
+    	carobstacle2 = obstacleFactory.getObstacle("Car", 250, 597, -1.5, 50, 50);
     	background.add(carobstacle2);
-    	carobstacle3 = obstacleFactory.getObstacle("Car", 600, 597, -3, 50, 50);
+    	carobstacle3 = obstacleFactory.getObstacle("Car", 400, 597, -1.5, 50, 50);
     	background.add(carobstacle3);
-    	carobstacle4 = obstacleFactory.getObstacle("Car", 500, 490, -5, 50, 50);
+    	carobstacle4 = obstacleFactory.getObstacle("Car", 550, 597, -1.5, 50, 50);
     	background.add(carobstacle4);
-    	carobstacle5 = obstacleFactory.getObstacle("Car", 300, 540, 1, 50, 50);
+    	carobstacle5 = obstacleFactory.getObstacle("Car", 500, 490, -5, 50, 50);
     	background.add(carobstacle5);
+    	carobstacle6 = obstacleFactory.getObstacle("Car", 150, 490, -5, 50, 50);	//previous no
+    	background.add(carobstacle6);
     }
 
     /**
@@ -159,10 +165,20 @@ public class Level3{
     	background.add(truckobstacle4);
     	truckobstacle5 = obstacleFactory.getObstacle("Truck", 500, 540, 1, 200, 200);
     	background.add(truckobstacle5);
-    	truckobstacle6 = obstacleFactory.getObstacle("Truck", 150, 490, -5, 120, 120);
-    	background.add(truckobstacle6);
     }
 
+	/**
+	 * This is the method to add the image(s) of snake.
+	 */
+	public void addSnake() {
+		snake1 = obstacleFactory.getObstacle("Snake", 10, 170, 1.25, 100, 100);
+		background.add(snake1);
+		snake2 = obstacleFactory.getObstacle("Snake", 560, 275, -2, 130, 130);
+		background.add(snake2);
+		snake3 = obstacleFactory.getObstacle("Snake", 280, 390, 1.25, 80, 80);
+		background.add(snake3);
+	}
+	
     /**
      * This is the method to remove the image(s) in the application.
      */
@@ -174,6 +190,7 @@ public class Level3{
     	removeAnimal();
     	removeCarObstacle();
     	removeTruckObstacle();
+    	removeSnake();
     }
     
     /**
@@ -194,6 +211,7 @@ public class Level3{
     	background.remove(log5);
     	background.remove(log6);
     	background.remove(log7);
+    	background.remove(log8);
     }
 
     /**
@@ -236,6 +254,7 @@ public class Level3{
     	background.remove(carobstacle3);
     	background.remove(carobstacle4);
     	background.remove(carobstacle5);
+    	background.remove(carobstacle6);
     }
 
     /**
@@ -249,7 +268,16 @@ public class Level3{
     	background.remove(truckobstacle5);
     	background.remove(truckobstacle6);
     }
-
+    
+    /**
+     * This is the method to remove the image(s) of snake.
+     */
+    public void removeSnake() {
+    	background.remove(snake1);
+    	background.remove(snake2);
+    	background.remove(snake3);
+    }
+    
     /**
      * This is the method to set the score which player get for level 3.
      * @param score The score which player get for level 3.

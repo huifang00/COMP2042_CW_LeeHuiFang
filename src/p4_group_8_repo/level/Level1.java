@@ -45,7 +45,8 @@ public class Level1{
 		addTurtle();
 		addEnd();
 		addAnimal();
-		addObstacle();
+		addCarObstacle();
+		addTruckObstacle();
 	}
 	
 	/**
@@ -55,9 +56,14 @@ public class Level1{
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * This method is to get the animal created.
+	 * @return Animal This returns the object created from Animal class.
+	 */
 	public Animal getAnimal() {
 		return animal;
 	}
+	
 	/**
 	 * This is the method to add the image of level information.
 	 */
@@ -211,26 +217,6 @@ public class Level1{
 		background.add(animal);
     }
     
-    /**
-     * This is the method to add the image(s) of car and truck as obstacle(s).
-     */
-    public void addObstacle() {
-    	addCarObstacle();
-    	addTruckObstacle();
-    	/*
-    	background.add(new Obstacle("file:src/p4_group_8_repo/truck1"+"Right.png", 0, 649, 1, 120, 120));
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck1"+"Right.png", 300, 649, 1, 120, 120));
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck1"+"Right.png", 600, 649, 1, 120, 120));
-		//background.add(new Obstacle("file:src/p4_group_8_repo/truck1"+"Right.png", 720, 649, 1, 120, 120));
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 100, 597, -1, 50, 50));
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 250, 597, -1, 50, 50));
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 400, 597, -1, 50, 50));
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 550, 597, -1, 50, 50));
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck2Right.png", 0, 540, 1, 200, 200));
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck2Right.png", 500, 540, 1, 200, 200));
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 500, 490, -5, 50, 50));
-		*/
-    }
     
     /**
      * This is the method to add the image(s) of car as obstacle(s).
