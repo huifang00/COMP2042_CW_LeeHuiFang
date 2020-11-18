@@ -34,7 +34,6 @@ import p4_group_8_repo.actor.BackgroundImage;
 import p4_group_8_repo.backgroundfunction.MyStage;
 import p4_group_8_repo.level.Level;
 import p4_group_8_repo.level.Level1;
-import p4_group_8_repo.level.Level7;
 import p4_group_8_repo.level.LevelFactory;
 import p4_group_8_repo.mainfunction.Instruction;
 import p4_group_8_repo.mainfunction.Pause;
@@ -220,7 +219,6 @@ public class Main extends Application {
 	            		level7 = levelFactory.getLevel(7, background, animal);
 	            		setPrintGame(false);
 	            	}
-	            	/*
 	            	else if(level == 8) {	//Level8
 	            		background.start();
 	            		animal.setPoints(0);	//display the score (digit image) as 0
@@ -245,7 +243,6 @@ public class Main extends Application {
 	            		level10 = levelFactory.getLevel(10, background, animal);
 	            		setPrintGame(false);
 	            	}
-	            	*/
             	}
             	if (animal.changeScore()) {
             		setNumber(animal.getPoints());
@@ -277,7 +274,6 @@ public class Main extends Application {
             			level6.setScore(animal.getPoints());
             			score = score + level6.getScore();
             		}
-            		/*
             		else if(level == 7) {	//save the score in level7 class
             			level7.setScore(animal.getPoints());
             			score = score + level7.getScore();
@@ -290,8 +286,6 @@ public class Main extends Application {
             			level9.setScore(animal.getPoints());
             			score = score + level9.getScore();
             		}
-            		*/
-            		
             		if(level == 10) {
             			highscore = level * 800;
             			level10.setScore(animal.getPoints());	//save the score in level3 class
@@ -312,7 +306,7 @@ public class Main extends Application {
         			setPrintGame(true);
         			setNextLevel(false);	//to prevent the next second on running this condition till the next alert box appear
         		}
-            	else if (alert.getResult() == ButtonType.NO || level == 0){	
+            	else if (alert.getResult() == ButtonType.NO || level == 0){
             		printEnd();
             		
             		if(!sound.getMuted()) 
@@ -539,7 +533,8 @@ public class Main extends Application {
 		// Add a custom icon.
 		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
 		
-		levelMsg(level);
+		if(level == 0)
+			levelMsg(level);
 		
 		alertEnd.setContentText(levelmsg +"Highest Possible Score: " + highscore);
 		alertEnd.show();

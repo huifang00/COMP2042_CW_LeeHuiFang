@@ -7,8 +7,8 @@ import p4_group_8_repo.actor.obstacle.Obstacle;
 import p4_group_8_repo.actor.obstacle.ObstacleFactory;
 
 /**
-* Level6 Class
-* Class which includes all the actor(s) or images(s) for level 5.
+* Level7Class
+* Class which includes all the actor(s) or images(s) for level 7.
 * 
 *
 * @author  Lee Hui Fang 20125427, hfyhl2
@@ -115,7 +115,6 @@ public class Level7 implements Level{
      * This is the method to add the image of frog as the main character in the application.
     */
     public void addAnimal() {
-    	animal = new Animal(300, 679.8+(13.3333333*2), 40, 40);//
     	background.add(animal);
     }
    
