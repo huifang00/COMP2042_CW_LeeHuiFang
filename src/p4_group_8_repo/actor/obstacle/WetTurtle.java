@@ -54,7 +54,7 @@ public class WetTurtle extends Obstacle{
 		move(speed , 0);
 		if (getX() > 600 && speed>0)
 			setX(-200);
-		if (getX() < -75 && speed<0)
+		if (getX() < -120 && speed<0)
 			setX(600);
 	}
 	

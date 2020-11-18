@@ -36,7 +36,11 @@ public class LevelImage extends Actor {
 	 * @param width The width of the level description image.
 	 * @param height The height of the level description image.
 	 */
-	public LevelImage(int level, int xpos, int ypos, double width, double height) {
+	public LevelImage(int level) {
+		int xpos = 10;
+		int ypos = 40;
+		double width = 130;
+		double height = 130;
 		levelimg = new Image("file:src/p4_group_8_repo/Level"+level+".png", width, height, true, true);
 		setImage(levelimg);
 		setX(xpos);

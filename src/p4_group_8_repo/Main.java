@@ -32,10 +32,10 @@ import p4_group_8_repo.LifeAndScore.Life;
 import p4_group_8_repo.actor.Animal;
 import p4_group_8_repo.actor.BackgroundImage;
 import p4_group_8_repo.backgroundfunction.MyStage;
+import p4_group_8_repo.level.Level;
 import p4_group_8_repo.level.Level1;
-import p4_group_8_repo.level.Level2;
-import p4_group_8_repo.level.Level3;
-import p4_group_8_repo.level.Level4;
+import p4_group_8_repo.level.Level7;
+import p4_group_8_repo.level.LevelFactory;
 import p4_group_8_repo.mainfunction.Instruction;
 import p4_group_8_repo.mainfunction.Pause;
 import p4_group_8_repo.mainfunction.Play;
@@ -59,11 +59,9 @@ public class Main extends Application {
 	private BackgroundImage froggerback;
 	private Play play;
 	private int level = 1;	//initialized the level to 1
-	private Level1 level1 = new Level1();//
+	private Level1 level1;//
 	private Alert alert = new Alert(AlertType.NONE);//
-	private Level2 level2 = new Level2();//
 	private boolean printGame;//
-	private Level3 level3 = new Level3();//
 	private int highscore;//
 	private boolean nextLevel;//
 	private String playerName;//
@@ -79,7 +77,9 @@ public class Main extends Application {
 	private Resume resume = new Resume(525, 10, 30, 30);
 	private Sound sound;
 	private HighScore highscoreButton;
-	private Level4 level4 = new Level4();
+	private LevelFactory levelFactory = new LevelFactory();
+	private Level level2, level3, level4, level5, level6, level7, level8, level9, level10;
+	private String levelmsg = "";	//variable to save the message of score for each level
 	
 	/**
 	* This is the main method which run the whole application.
@@ -169,33 +169,89 @@ public class Main extends Application {
             		setLife(3);
             		start();
             	}
-            	else if(level == 2 && getPrintGame()) {	//Level2
-            		animal.setPoints(0);	//display the score (digit image) as 0
-            		animal.setLevel(level);	//set the level in animal class for the speed
-            		//setLife(3);
-            		//animal.setLife(3);
-            		level1.remove();
-            		level2 = new Level2(background, animal);
-            		setPrintGame(false);
-            	}
-            	else if(level == 3 && getPrintGame()) {	//Level3
-            		animal.setPoints(0);	//display the score (digit image) as 0
-            		animal.setLevel(level);	//set the level in animal class for the speed
-            		level2.remove();
-            		level3 = new Level3(background, animal);
-            		setPrintGame(false);
-            	}
-            	else if(level == 4 && getPrintGame()) {	//Level3
-            		animal.setPoints(0);	//display the score (digit image) as 0
-            		animal.setLevel(level);	//set the level in animal class for the speed
-            		level3.remove();
-            		level4 = new Level4(background, animal);
-            		setPrintGame(false);
+            	if(getPrintGame()){
+	            	if(level == 2) {	//Level2
+	            		background.start();
+	            		animal.setPoints(0);	//display the score (digit image) as 0
+	            		animal.setLevel(level);	//set the level in animal class for the speed
+	            		//setLife(3);
+	            		//animal.setLife(3);
+	            		level1.remove();
+	            		level2 = levelFactory.getLevel(2, background, animal);
+	            		setPrintGame(false);
+	            	}
+	            	else if(level == 3) {	//Level3
+	            		background.start();
+	            		animal.setPoints(0);	//display the score (digit image) as 0
+	            		animal.setLevel(level);	//set the level in animal class for the speed
+	            		level2.remove();
+	            		level3 = levelFactory.getLevel(3, background, animal);
+	            		setPrintGame(false);
+	            	}
+	            	else if(level == 4) {	//Level4
+	            		background.start();
+	            		animal.setPoints(0);	//display the score (digit image) as 0
+	            		animal.setLevel(level);	//set the level in animal class for the speed
+	            		level3.remove();
+	            		level4 = levelFactory.getLevel(4, background, animal);
+	            		setPrintGame(false);
+	            	}
+	            	else if(level == 5) {	//Level5
+	            		background.start();
+	            		animal.setPoints(0);	//display the score (digit image) as 0
+	            		animal.setLevel(level);	//set the level in animal class for the speed
+	            		level4.remove();
+	            		level5 = levelFactory.getLevel(5, background, animal);
+	            		setPrintGame(false);
+	            	}
+	            	else if(level == 6) {	//Level6
+	            		background.start();
+	            		animal.setPoints(0);	//display the score (digit image) as 0
+	            		animal.setLevel(level);	//set the level in animal class for the speed
+	            		level5.remove();
+	            		level6 = levelFactory.getLevel(6, background, animal);
+	            		setPrintGame(false);
+	            	}
+	            	else if(level == 7) {	//Level7
+	            		background.start();
+	            		animal.setPoints(0);	//display the score (digit image) as 0
+	            		animal.setLevel(level);	//set the level in animal class for the speed
+	            		level6.remove();
+	            		level7 = levelFactory.getLevel(7, background, animal);
+	            		setPrintGame(false);
+	            	}
+	            	/*
+	            	else if(level == 8) {	//Level8
+	            		background.start();
+	            		animal.setPoints(0);	//display the score (digit image) as 0
+	            		animal.setLevel(level);	//set the level in animal class for the speed
+	            		level7.remove();
+	            		level8 = levelFactory.getLevel(8, background, animal);
+	            		setPrintGame(false);
+	            	}
+	            	else if(level == 9) {	//Level9
+	            		background.start();
+	            		animal.setPoints(0);	//display the score (digit image) as 0
+	            		animal.setLevel(level);	//set the level in animal class for the speed
+	            		level8.remove();
+	            		level9 = levelFactory.getLevel(8, background, animal);
+	            		setPrintGame(false);
+	            	}
+	            	else if(level == 10) {	//Level10
+	            		background.start();
+	            		animal.setPoints(0);	//display the score (digit image) as 0
+	            		animal.setLevel(level);	//set the level in animal class for the speed
+	            		level9.remove();
+	            		level10 = levelFactory.getLevel(10, background, animal);
+	            		setPrintGame(false);
+	            	}
+	            	*/
             	}
             	if (animal.changeScore()) {
             		setNumber(animal.getPoints());
             	}
             	if (animal.getStop()) {
+            		setNumber(animal.getPoints());
             		System.out.print("STOPP:");
             		if(level == 1) {	//save the score in level1 class
             			level1.setScore(animal.getPoints());
@@ -205,19 +261,47 @@ public class Main extends Application {
             			level2.setScore(animal.getPoints());
             			score = score + level2.getScore();
             		}
-            		else if(level == 3) {	//save the score in level2 class
+            		else if(level == 3) {	//save the score in level3 class
             			level3.setScore(animal.getPoints());
             			score = score + level3.getScore();
             		}
-            		if(level == 4) {
-            			highscore = level * 800;
-            			level4.setScore(animal.getPoints());	//save the score in level3 class
-            			level4.remove();
+            		else if(level == 4) {	//save the score in level4 class
+            			level4.setScore(animal.getPoints());
             			score = score + level4.getScore();
+            		}
+            		else if(level == 5) {	//save the score in level5 class
+            			level5.setScore(animal.getPoints());
+            			score = score + level5.getScore();
+            		}
+            		else if(level == 6) {	//save the score in level6 class
+            			level6.setScore(animal.getPoints());
+            			score = score + level6.getScore();
+            		}
+            		/*
+            		else if(level == 7) {	//save the score in level7 class
+            			level7.setScore(animal.getPoints());
+            			score = score + level7.getScore();
+            		}
+            		else if(level == 8) {	//save the score in level8 class
+            			level8.setScore(animal.getPoints());
+            			score = score + level8.getScore();
+            		}
+            		else if(level == 9) {	//save the score in level9 class
+            			level9.setScore(animal.getPoints());
+            			score = score + level9.getScore();
+            		}
+            		*/
+            		
+            		if(level == 10) {
+            			highscore = level * 800;
+            			level10.setScore(animal.getPoints());	//save the score in level3 class
+            			level10.remove();
+            			score = score + level10.getScore();
             			level = 0;	//end the game
             		}
             		else {
             			highscore = level * 800;
+            			background.stop();
             			printNextLevel();
 	            		animal.setEnd(0);	//set the end back to 0 to prevent getStop() infinite loop
 	            		setNextLevel(true);	//in order to run the condition for increasing to nextlevel
@@ -445,7 +529,6 @@ public class Main extends Application {
 	* This is the method to display the pop up dialog which display at the end of the game.
 	*/
     public void printEnd() {
-    	String levelmsg;	//variable to save the message of score for each level
     	//this.score = level1.getScore() + level2.getScore() + level3.getScore();
     	Alert alertEnd = new Alert(AlertType.INFORMATION);
 		alertEnd.setTitle("You Have Won The Game!");
@@ -455,21 +538,12 @@ public class Main extends Application {
 
 		// Add a custom icon.
 		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
-		if(level == 1)
-			alertEnd.setContentText("Level 1: " + score +"!\n"+"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
-		else if(level == 2) {
-			levelmsg = "Level 1: " + level1.getScore() + "!\nLevel 2: " + level2.getScore() + "!\n";
-			alertEnd.setContentText(levelmsg +"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
-		}
-		else if(level == 3) {
-			levelmsg = "Level 1: " + level1.getScore() + "!\nLevel 2: " + level2.getScore() + "!\nLevel 3: " + level3.getScore() + "!\n";
-			alertEnd.setContentText(levelmsg +"Highest Possible Score: " + highscore);
-		}
-		else if(level == 4) {
-			levelmsg = "Level 1: " + level1.getScore() + "!\nLevel 2: " + level2.getScore() + "!\nLevel 3: " + level3.getScore() + "!\nLevel 4: " + level4.getScore() + "!\n";
-			alertEnd.setContentText(levelmsg +"Highest Possible Score: " + highscore);
-		}
+		
+		levelMsg(level);
+		
+		alertEnd.setContentText(levelmsg +"Highest Possible Score: " + highscore);
 		alertEnd.show();
+		
 		save();	//call the method to save score and player name in file
 		
 		//use a handler for the onCloseRequest event for the alert to close the application when the alert is closed:
@@ -485,7 +559,6 @@ public class Main extends Application {
 	* This is the method to display the pop up dialog which display at the end of each level.
 	*/
     public void printNextLevel() {
-    	String levelmsg;	//variable to save the message of score for each level
     	this.alert = new Alert(AlertType.NONE);
 		alert.getButtonTypes().addAll(ButtonType.YES, ButtonType.NO);
 		alert.setTitle("NEXT LEVEL");
@@ -496,40 +569,73 @@ public class Main extends Application {
 		// Add a custom icon.
 		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
 		
-		if(level == 1)
-			alert.setContentText("Level 1: " + level1.getScore() +"!\n"+"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
-		else if(level == 2) {
-			levelmsg = "Level 1: " + level1.getScore() + "!\nLevel 2: " + level2.getScore() + "!\n";
-			alert.setContentText(levelmsg +"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
-		}
-		else if(level == 3) {
-			levelmsg = "Level 1: " + level1.getScore() + "!\nLevel 2: " + level2.getScore() + "!\nLevel 3: " + level3.getScore() + "!\n";
-			alert.setContentText(levelmsg +"Highest Possible Score: " + highscore);	//"Highest Possible Score: 800"
-		}
+		levelMsg(level);
+		
+		alert.setContentText(levelmsg +"Highest Possible Score: " + highscore);
 		alert.show();
     }
  
+    /**
+     * This is the method to save the string to print the information after each round.
+     * @param level The current level the player reached.
+     */
+    public void levelMsg(int level) {
+    	if(level == 1)
+			levelmsg += "Level 1: " + level1.getScore() + "!\n";
+		else if(level == 2)
+			levelmsg += "Level 2: " + level2.getScore() + "!\n";
+		else if(level == 3)
+			levelmsg += "Level 3: " + level3.getScore() + "!\n";
+		else if(level == 4)
+			levelmsg += "Level 4: " + level4.getScore() + "!\n";
+		else if(level == 5)
+			levelmsg += "Level 5: " + level5.getScore() + "!\n";
+		else if(level == 6)
+			levelmsg += "Level 6: " + level6.getScore() + "!\n";
+		else if(level == 7)
+			levelmsg += "Level 7: " + level7.getScore() + "!\n";
+		else if(level == 8)
+			levelmsg += "Level 8: " + level8.getScore() + "!\n";
+		else if(level == 9)
+			levelmsg += "Level 9: " + level9.getScore() + "!\n";
+		else if(level == 10)
+			levelmsg += "Level 10: " + level10.getScore() + "!\n";
+    }
+    
     /**
 	* This is the method to display the game over dialog.
 	* @param score This value is the last obtained score from the game.
 	*/
     public void printGameOver(int score) {
-    	if(level == 1) {
-    		this.score = score;
+    	if(level >= 1 && level <= 10) {
+    		this.score = this.score + score;
     	}
-    	else if(level == 2) {
-    		this.score = level1.getScore() + score;
-    	}
-    	else if(level == 3) {
-    		this.score = level1.getScore() + level2.getScore() + score;
-    	}
-    	else if(level == 4) {
-    		this.score = level1.getScore() + level2.getScore() + level3.getScore() + score;
-    	}
+    	
+    	if(level == 1)
+			levelmsg += "Level 1: " + score + "!\n";
+		else if(level == 2)
+			levelmsg += "Level 2: " + score + "!\n";
+		else if(level == 3)
+			levelmsg += "Level 3: " + score + "!\n";
+		else if(level == 4)
+			levelmsg += "Level 4: " + score + "!\n";
+		else if(level == 5)
+			levelmsg += "Level 5: " + score + "!\n";
+		else if(level == 6)
+			levelmsg += "Level 6: " +score + "!\n";
+		else if(level == 7)
+			levelmsg += "Level 7: " +score + "!\n";
+		else if(level == 8)
+			levelmsg += "Level 8: " +score + "!\n";
+		else if(level == 9)
+			levelmsg += "Level 9: " +score + "!\n";
+		else if(level == 10)
+			levelmsg += "Level 10: " +score + "!\n";
+    	
     	Alert alertGameOver  = new Alert(AlertType.INFORMATION);
 		alertGameOver.setTitle("GAME OVER!!!");
 		alertGameOver.setHeaderText("GAME OVER!!!\nYou Have No Life Left");
-		alertGameOver.setContentText("Your Total Score: "+ this.score +"!");
+		alertGameOver.setContentText(levelmsg + "Your Total Score: "+ this.score +"!");
 		// Get the Stage.
 		Stage stage = (Stage) alertGameOver.getDialogPane().getScene().getWindow();
 

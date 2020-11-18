@@ -15,7 +15,7 @@ import p4_group_8_repo.actor.obstacle.ObstacleFactory;
 * @version 1.0
 * @since   2020-12-12
 */
-public class Level2{
+public class Level2 implements Level{
 	
 	Animal animal;
 	/*
@@ -39,6 +39,7 @@ public class Level2{
 	/**
 	 * Class constructor which calls the method(s) to create image(s) in the application.
 	 * @param background The stage of the game application where it contain all actors.
+	 * @param animal The main character(frog) of the application.
 	 */
 	public Level2(MyStage background, Animal animal) {
 		this.background = background;
@@ -53,17 +54,10 @@ public class Level2{
 	}
 	
 	/**
-	 * Default constructor
-	 */
-	public Level2() {
-		// TODO Auto-generated constructor stub
-	}
-
-	/**
 	 * This is the method to add the image of level information.
 	 */
 	public void addLevelImage() {
-		levelImage = new LevelImage(2, 10, 40, 130, 130);
+		levelImage = new LevelImage(2);
 		background.add(levelImage);
 	}
 	
