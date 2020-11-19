@@ -4,7 +4,7 @@ package p4_group_8_repo.actor.obstacle;
  * ObstacleFactory Class
  * This class is used create the object of Obstacle without exposing the logic to client.
  * This class refer to newly created object using an abstract class.
- * @author  Lee Hui Fang 20125427, hfyhl2
+ * @author  Lee Hui Fang 20125427, hfyhl2 
  * @version 1.0
  * @since   2020-12-12
  */

@@ -23,7 +23,7 @@ public class Pause extends Actor{
 	 * The value to pause the game application.
 	 */
 	private boolean pauseGame = false;
-	
+	private int pausing = 0;
 	/**
 	* This is the abstract method from superclass.
 	* @param now The timestamp of the current frame given in nanoseconds.
@@ -51,6 +51,7 @@ public class Pause extends Actor{
 			@Override 
 			   public void handle(MouseEvent e) { 
 			      setPauseGame(true);
+			      pausing = 1;
 			   }
 		}); 
 			
@@ -72,4 +73,15 @@ public class Pause extends Actor{
 		this.pauseGame = pauseGame;
 	}
 
+	/**
+	 * This method is to check whether is the game application pausing.
+	 * @return boolean This returns true when it is pausing, false when is not pausing.
+	 */
+	public boolean isPausing() {
+		return pausing == 1;
+	}
+
+	public void setPausing() {
+		this.pausing = 0;
+	}
 }

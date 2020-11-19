@@ -143,6 +143,13 @@ public class Main extends Application {
 
 		primaryStage.show();
 		start();
+		
+		primaryStage.setOnCloseRequest(evt -> {
+			System.exit(0);
+    		if(highscoreButton.getStage().isShowing()) {
+				highscoreButton.close();
+			}
+    	});
 	}
 	
 	/**
@@ -165,7 +172,7 @@ public class Main extends Application {
             		setAnimal(level1.getAnimal());
             		setPrintGame(false);	// to prevent the next second on printing this condition
             		animal.setLevel(level);	//set the level in animal class for the speed
-            		setLife(3);
+            		setLife(5);
             		start();
             	}
             	if(getPrintGame()){
@@ -333,12 +340,20 @@ public class Main extends Application {
             		resume();
             	}
             	*/
-            	if(instruction.getPauseGame() || pause.getPauseGame()) {
+            	if(pause.getPauseGame()) {
             		pause();
                 	background.remove(pause);
                 	background.add(resume);
             	}
+            	else if(instruction.getPauseGame()) {
+            		if(!pause.isPausing()) {
+	            		pause();
+	                	background.remove(pause);
+	                	background.add(resume);
+            		}
+            	}
             	if(instruction.getResumeGame()|| resume.getResumeGame()) {
+            		pause.setPausing();
             		resume();
                 	background.remove(resume);
                 	background.add(pause);
@@ -395,16 +410,16 @@ public class Main extends Application {
 	*/
     public void setLife(int life) {
 		int shift = 0;
-		if(life == 3) {
+		if(life == 5) {
 			//ArrayLife.clear(); //clear previous level life
-			for(int i = 0; i < 3;i++) {
+			for(int i = 0; i < 5;i++) {
 				lifeImg = new Life(384 + shift, 50, 25, 25);
 	    		ArrayLife.add(lifeImg);
 	    		background.add(lifeImg);
 				shift += 33;
 			}
 		}
-		else if(life == 2 || life == 1 || life == 0){
+		else if(life >= 0 && life < 5){
 			background.remove(ArrayLife.get(0));
 			ArrayLife.remove(0);
 		}

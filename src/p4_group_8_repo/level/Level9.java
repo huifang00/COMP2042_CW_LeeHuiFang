@@ -86,9 +86,9 @@ public class Level9 implements Level{
     	background.add(turtle2);
     	weturtle1 = obstacleFactory.getObstacle("Wet Turtle", 350, 329, 4.25, 130, 130);
     	background.add(weturtle1);
-    	weturtle2 = obstacleFactory.getObstacle("Wet Turtle", 300, 217, 4, 130, 130);
+    	weturtle2 = obstacleFactory.getObstacle("Wet Turtle", 0, 217, 4, 130, 130);
     	background.add(weturtle2);
-    	weturtle3 = obstacleFactory.getObstacle("Wet Turtle", 500, 217, 4, 130, 130);
+    	weturtle3 = obstacleFactory.getObstacle("Wet Turtle", 300, 217, 4, 130, 130);
     	background.add(weturtle3);
     	weturtle4 = obstacleFactory.getObstacle("Wet Turtle", 700, 217, 4, 130, 130);
     	background.add(weturtle4);
@@ -110,7 +110,7 @@ public class Level9 implements Level{
     	end5 = new End(141 + 141-13+141-13+141-13+3, 96, 60, 60);
     	background.add(end5);
     }
-    
+
     /**
      * This is the method to add the image of frog as the main character in the application.
     */

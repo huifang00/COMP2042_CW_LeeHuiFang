@@ -194,6 +194,9 @@ public class HighScore extends Actor{
     	
     	//not allowed to resize the screen/window
     	new_stage.setResizable(false);
+    	
+    	// Add a custom icon.
+    	new_stage.getIcons().add(new Image(this.getClass().getResource("../smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
     			
     	new_stage.setScene(new_scene);
     	

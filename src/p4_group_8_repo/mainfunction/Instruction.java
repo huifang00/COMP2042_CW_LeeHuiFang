@@ -28,10 +28,6 @@ public class Instruction extends Actor{
 	 */
 	private static int instructionPage = 1;
 	/**
-	 * The value to print the instruction.
-	 */
-	private boolean printInstruction = false;
-	/**
 	 * The value to resume the game application.
 	 */
 	private boolean resumeGame = false;
@@ -39,7 +35,6 @@ public class Instruction extends Actor{
 	 * The value to pause the game application.
 	 */
 	private boolean pauseGame = false;
-	
 	/**
 	* This is the abstract method from superclass.
 	* @param now The timestamp of the current frame given in nanoseconds.
@@ -67,7 +62,8 @@ public class Instruction extends Actor{
 		setOnMouseClicked(new EventHandler<MouseEvent>(){
 			@Override 
 			   public void handle(MouseEvent e) { 
-			      InstructionDialog();
+					setPauseGame(true);
+					InstructionDialog();
 			   }
 
 			private void InstructionDialog() {
@@ -75,14 +71,13 @@ public class Instruction extends Actor{
 				Alert alert = new Alert(AlertType.NONE);
 				alert.getButtonTypes().addAll(ButtonType.NEXT, ButtonType.CLOSE);
 				alert.setTitle("INSTRUCTION");
-				setPrintInstruction(true);
-				setPauseGame(true);
-				
+				//setPauseGame(true);
+	
 				// Get the Stage.
 				Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
 
 				// Add a custom icon.
-				stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
+				stage.getIcons().add(new Image(this.getClass().getResource("../smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
 				
 				//print Instruction
 				switch(instructionPage) {
@@ -95,13 +90,15 @@ public class Instruction extends Actor{
 					case 2: instruction = "1. Avoid the moving car(s) \ud83d\ude97 and truck(s) \ud83d\ude9a\n\n"
 							+ "2. Logs of different lengths is to help the frog to cross the river\n"
 							+ "   Jump on the log to avoid the frog from falling into river\n\n"
-							+ "3. Step on the red turtles \ud83d\udc22 to avoid the frog from falling into river\n"
-							+ "4. Green turtles \ud83d\udc22 will submerge and cause the frog drown";break;
+							+ "3. Step on the red turtles \ud83d\udc22 to avoid the frog from falling into river\n\n"
+							+ "4. Green turtles \ud83d\udc22 will submerge and cause the frog drown\n\n" 
+							+ "5. Avoid the snake \ud83d\udc0d which appears on the log";break;
 					case 3: instruction = "Score System & Life System\n\n"
 							+ "1. Every Successful Step + 10\n"
 							+ "2. Every Successful Frog to Empty Slot + 50\n"
-							+ "3. Frog Hit The Obstacle - 50 & -1\u2665\n"
-							+ "4. Frog Falls Into River - 50 & -1\u2665\n\n"
+							+ "3. Frog Hit By A Car/Truck - 50 & -1\u2665\n"
+							+ "4. Frog Falls Into River - 50 & -1\u2665\n"
+							+ "5. Frog Eaten By A Snake - 50 & -1\u2665\n\n"
 							+ "*No point is deducted if the current point is less than 50\n"
 							+ "*No point is deducted if the frog enter a non-empty slot BUT the current frog need to start from the initial position again";break;
 				}
@@ -109,8 +106,9 @@ public class Instruction extends Actor{
 				alert.showAndWait();
 				if(alert.getResult() == ButtonType.NEXT) {
 					instructionPage++;
-					if(instructionPage != 4)
+					if(instructionPage != 4) {
 						InstructionDialog();
+					}
 					else{
 						alert.close();
 					}
@@ -126,22 +124,6 @@ public class Instruction extends Actor{
 			}
 		}); 
 			
-	}
-
-	/**
-	 * This method is get the value to print the instruction.
-	 * @return boolean This returns the value to print the instruction.
-	 */
-	public boolean getPrintInstruction() {
-		return printInstruction;
-	}
-
-	/**
-	 * This method is set the value to print the instruction.
-	 * @param printInstruction The value to print the instruction.
-	 */
-	public void setPrintInstruction(boolean printInstruction) {
-		this.printInstruction = printInstruction;
 	}
 
 	/**
@@ -175,5 +157,4 @@ public class Instruction extends Actor{
 	public void setPauseGame(boolean pauseGame) {
 		this.pauseGame = pauseGame;
 	}
-
 }

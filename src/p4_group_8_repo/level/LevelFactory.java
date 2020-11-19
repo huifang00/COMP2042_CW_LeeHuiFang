@@ -36,7 +36,6 @@ public class LevelFactory {
 		else if(level == 6) {
 			return new Level6(background, animal);
 		}
-		/*
 		else if(level == 7) {
 			return new Level7(background, animal);
 		}
@@ -49,7 +48,6 @@ public class LevelFactory {
 		else if(level == 10) {
 			return new Level10(background, animal);
 		}
-		*/
 		return null;
 	}
 }

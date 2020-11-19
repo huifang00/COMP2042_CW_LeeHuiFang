@@ -43,7 +43,7 @@ public class Animal extends Actor {
 	private double w = 800;
 	private ArrayList<End> inter = new ArrayList<End>();	//dont really need can remove
 	private int level = 0;
-	private int life = 3;
+	private int life = 5;
 	private boolean changeLife = false;
 	
 	/**
@@ -203,7 +203,7 @@ public class Animal extends Actor {
 	* @return boolean This returns the value whether the slot is fully occupied.
 	*/
 	public boolean getStop() {
-		return end==1;	//return true if end == 5
+		return end==5;	//return true if end == 5
 	}
 	
 	/**
@@ -302,6 +302,7 @@ public class Animal extends Actor {
 				setImage(new Image("file:src/p4_group_8_repo/cardeath3.png", width, height, true, true));
 			}
 			else if (this.death == 4) {
+				setX(300);
 				setY(679.8+movement);
 				carDeath = false;
 				this.life--;	//decrease one life
@@ -373,12 +374,12 @@ public class Animal extends Actor {
 		else if (getIntersectingObjects(TruckObstacle.class).size() >= 1) {	//intersect with truck
 			this.carDeath = true;
 		}
-		else if (getIntersectingObjects(Snake.class).size() >= 1) {	//intersect with snake
-			this.carDeath = true;
-		}
-		else if (getIntersectingObjects(Log.class).size() >= 1 && !noMove) {	//intersect with log
+		if (getIntersectingObjects(Log.class).size() >= 1 && !noMove) {	//intersect with log
 			speed = getIntersectingObjects(Log.class).get(0).getSpeed();
 			move (speed, 0);	//display as moving together with log
+			if (getIntersectingObjects(Snake.class).size() >= 1) {	//intersect with snake
+				this.waterDeath = true;
+			}
 		}
 		else if (getIntersectingObjects(Turtle.class).size() >= 1 && !noMove) {	//intersect with turtle
 			speed = getIntersectingObjects(Turtle.class).get(0).getSpeed();
@@ -393,7 +394,7 @@ public class Animal extends Actor {
 			}
 		}
 		else if (getIntersectingObjects(End.class).size() >= 1) {	//intersect with the end slot
-			inter = (ArrayList<End>) getIntersectingObjects(End.class);	//dont really need as nothing using this
+			inter = (ArrayList<End>) getIntersectingObjects(End.class);	//don't really need as nothing using this
 			if (getIntersectingObjects(End.class).get(0).isActivated()) {	//if the slot is unavailable
 				this.end--;
 				this.points-=110;	// remove the previous frog results if it enter the non-empty slot
