@@ -1,4 +1,4 @@
-package p4_group_8_repo.mainfunction;
+package p4_group_8_repo.actor.mainfunction;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;

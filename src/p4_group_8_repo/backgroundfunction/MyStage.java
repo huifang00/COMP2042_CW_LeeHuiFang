@@ -6,7 +6,6 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
-import p4_group_8_repo.World;
 
 /**
  * MyStage Class

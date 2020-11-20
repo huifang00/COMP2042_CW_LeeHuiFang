@@ -1,4 +1,4 @@
-package p4_group_8_repo.LifeAndScore;
+package p4_group_8_repo.actor.lifeAndscore;
 
 import javafx.scene.Group;
 import javafx.scene.Scene;

@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import javafx.embed.swing.JFXPanel;
-import p4_group_8_repo.mainfunction.Resume;
+import p4_group_8_repo.actor.mainfunction.Resume;
 
 public class ResumeTest {
 	JFXPanel jfxPanel = new JFXPanel();

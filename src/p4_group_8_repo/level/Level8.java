@@ -2,6 +2,7 @@ package p4_group_8_repo.level;
 
 import p4_group_8_repo.actor.Animal;
 import p4_group_8_repo.actor.End;
+import p4_group_8_repo.actor.LevelImage;
 import p4_group_8_repo.backgroundfunction.MyStage;
 import p4_group_8_repo.actor.obstacle.Obstacle;
 import p4_group_8_repo.actor.obstacle.ObstacleFactory;

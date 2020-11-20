@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import javafx.embed.swing.JFXPanel;
-import p4_group_8_repo.mainfunction.Instruction;
+import p4_group_8_repo.actor.mainfunction.Instruction;
 
 public class InstructionTest {
 	JFXPanel jfxPanel = new JFXPanel();

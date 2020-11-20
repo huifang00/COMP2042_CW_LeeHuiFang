@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import javafx.embed.swing.JFXPanel;
-import p4_group_8_repo.level.LevelImage;
+import p4_group_8_repo.actor.LevelImage;
 
 public class LevelImageTest {
 	JFXPanel jfxPanel = new JFXPanel();

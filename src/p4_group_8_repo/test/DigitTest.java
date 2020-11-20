@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import javafx.embed.swing.JFXPanel;
-import p4_group_8_repo.LifeAndScore.Digit;
+import p4_group_8_repo.actor.lifeAndscore.Digit;
 
 public class DigitTest {
 	JFXPanel jfxPanel = new JFXPanel();

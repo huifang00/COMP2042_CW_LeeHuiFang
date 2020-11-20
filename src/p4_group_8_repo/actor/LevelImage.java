@@ -1,7 +1,6 @@
-package p4_group_8_repo.level;
+package p4_group_8_repo.actor;
 
 import javafx.scene.image.Image;
-import p4_group_8_repo.actor.Actor;
 
 /**
 * LevelImage Class

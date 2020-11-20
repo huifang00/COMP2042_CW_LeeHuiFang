@@ -26,20 +26,20 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import p4_group_8_repo.LifeAndScore.Digit;
-import p4_group_8_repo.LifeAndScore.HighScore;
-import p4_group_8_repo.LifeAndScore.Life;
 import p4_group_8_repo.actor.Animal;
 import p4_group_8_repo.actor.BackgroundImage;
+import p4_group_8_repo.actor.lifeAndscore.Digit;
+import p4_group_8_repo.actor.lifeAndscore.HighScore;
+import p4_group_8_repo.actor.lifeAndscore.Life;
+import p4_group_8_repo.actor.mainfunction.Instruction;
+import p4_group_8_repo.actor.mainfunction.Pause;
+import p4_group_8_repo.actor.mainfunction.Play;
+import p4_group_8_repo.actor.mainfunction.Resume;
+import p4_group_8_repo.actor.mainfunction.Sound;
 import p4_group_8_repo.backgroundfunction.MyStage;
 import p4_group_8_repo.level.Level;
 import p4_group_8_repo.level.Level1;
 import p4_group_8_repo.level.LevelFactory;
-import p4_group_8_repo.mainfunction.Instruction;
-import p4_group_8_repo.mainfunction.Pause;
-import p4_group_8_repo.mainfunction.Play;
-import p4_group_8_repo.mainfunction.Resume;
-import p4_group_8_repo.mainfunction.Sound;
 
 /**
 * FROGGER

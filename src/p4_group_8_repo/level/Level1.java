@@ -2,6 +2,7 @@ package p4_group_8_repo.level;
 
 import p4_group_8_repo.actor.Animal;
 import p4_group_8_repo.actor.End;
+import p4_group_8_repo.actor.LevelImage;
 import p4_group_8_repo.backgroundfunction.MyStage;
 import p4_group_8_repo.actor.obstacle.Obstacle;
 import p4_group_8_repo.actor.obstacle.ObstacleFactory;
@@ -17,18 +18,18 @@ import p4_group_8_repo.actor.obstacle.ObstacleFactory;
 */
 public class Level1 implements Level{
 	
-	Animal animal;
+	private Animal animal;
 	//Log log1, log2, log3, log4, log5, log6, log7, log8;
 	//Turtle turtle1, turtle2;
 	//WetTurtle weturtle1, weturtle2, weturtle3, weturtle4;
-	End end1, end2, end3, end4, end5;
+	private End end1, end2, end3, end4, end5;
 	//CarObstacle carobstacle1, carobstacle2, carobstacle3, carobstacle4, carobstacle5;
 	//TruckObstacle truckobstacle1, truckobstacle2, truckobstacle3, truckobstacle4, truckobstacle5;
-	LevelImage levelImage;
+	private LevelImage levelImage;
 	private int score = 0;
-	MyStage background;
-	ObstacleFactory obstacleFactory = new ObstacleFactory();
-	Obstacle log1, log2, log3, log4, log5, log6, log7, log8,
+	private MyStage background;
+	private ObstacleFactory obstacleFactory = new ObstacleFactory();
+	private Obstacle log1, log2, log3, log4, log5, log6, log7, log8,
 	turtle1, turtle2, 
 	weturtle1, weturtle2, weturtle3, weturtle4, 
 	carobstacle1, carobstacle2, carobstacle3, carobstacle4, carobstacle5, 

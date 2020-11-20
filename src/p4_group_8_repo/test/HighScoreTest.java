@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import javafx.embed.swing.JFXPanel;
-import p4_group_8_repo.LifeAndScore.HighScore;
+import p4_group_8_repo.actor.lifeAndscore.HighScore;
 
 public class HighScoreTest {
 	JFXPanel jfxPanel = new JFXPanel();
