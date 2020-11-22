@@ -4,8 +4,6 @@ import java.io.File;
 
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.scene.paint.Color;
-import javafx.util.Duration;
 
 /**
  * MyStage Class
@@ -20,21 +18,6 @@ public class MyStage extends World{
 	@Override
 	public void act(long now) {
 		
-	}
-	
-	public MyStage() {
-		
-//		mediaPlayer.play();
-//		mediaPlayer.setOnEndOfMedia(new Runnable() {
-//
-//			@Override
-//			public void run() {
-//				mediaPlayer.seek(Duration.ZERO);
-//				
-//			}
-//			
-//		});
-//		mediaPlayer.play();
 	}
 	
 	/**

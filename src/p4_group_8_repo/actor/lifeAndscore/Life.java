@@ -34,7 +34,7 @@ public class Life extends Actor{
 	 * @param width The width of the life image.
 	 * @param height The height of the life image.
 	 */
-	public Life(int xpos, int ypos, double width, double height) {	//remove the dimension as parameter since it always fixed to the image
+	public Life(int xpos, int ypos, double width, double height) {
 		life = new Image("file:src/p4_group_8_repo/life.png", width, height, true, true);
 		setImage(life);
 		setX(xpos);

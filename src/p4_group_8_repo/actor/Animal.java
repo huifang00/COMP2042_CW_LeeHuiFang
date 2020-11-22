@@ -1,7 +1,5 @@
 package p4_group_8_repo.actor;
 
-import java.util.ArrayList;
-
 import javafx.event.EventHandler;
 
 import javafx.scene.image.Image;
@@ -9,7 +7,6 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import p4_group_8_repo.actor.obstacle.CarObstacle;
 import p4_group_8_repo.actor.obstacle.Log;
-import p4_group_8_repo.actor.obstacle.Obstacle;
 import p4_group_8_repo.actor.obstacle.Snake;
 import p4_group_8_repo.actor.obstacle.TruckObstacle;
 import p4_group_8_repo.actor.obstacle.Turtle;
@@ -34,16 +31,13 @@ public class Animal extends Actor {
 	private boolean noMove = false;
 	private double movement = 13.3333333*2;
 	private double movementX = 10.666666*2;
-	//int imgSize = 40;
 	private boolean carDeath = false;
 	private boolean waterDeath = false;
-	//boolean stop = false;	//not really used
 	private boolean changeScore = false;
-	private int death = 0;	//int carD = 0;
+	private int death = 0;
 	private double w = 800;
-	private ArrayList<End> inter = new ArrayList<End>();	//dont really need can remove
 	private int level = 0;
-	private int life = 5;
+	private int life = 3;
 	private boolean changeLife = false;
 	
 	/**
@@ -71,10 +65,7 @@ public class Animal extends Actor {
 		imgA2 = new Image("file:src/p4_group_8_repo/froggerLeftJump.png", width, height, true, true);
 		imgS2 = new Image("file:src/p4_group_8_repo/froggerDownJump.png", width, height, true, true);
 		imgD2 = new Image("file:src/p4_group_8_repo/froggerRightJump.png", width, height, true, true);
-		//setImage(new Image(imageLink, imgSize, imgSize, true, true));
 		setImage(imgW1);
-		//setX(300);
-		//setY(679.8+movement);
 		setX(xpos);
 		setY(ypos);
 		this.width = width;
@@ -172,7 +163,6 @@ public class Animal extends Actor {
 	*/
 	@Override
 	public void act(long now) {
-		//int bounds = 0;	//can remove since bounds is not used
 		
 		// condition for the animal not to exceed the bound
 		if (getY()<0 || getY()>734) {
@@ -182,7 +172,8 @@ public class Animal extends Actor {
 	
 		if (getX()<0) {
 			move(movement*2, 0);
-		}	//move the if x coordinate more than 600 togehter with less than 0
+		}	
+		//move the if x coordinate more than 600 togehter with less than 0
 		else if (getX()>600) {
 			move(-movement*2, 0);
 		}
@@ -191,11 +182,6 @@ public class Animal extends Actor {
 		waterDeath = setWaterDeath(now,waterDeath);
 		Intersection();	//intersection method
 		
-		/*	this code is not used 
-		if(getX() == 240 && getY() == 82) {
-			stop = true;
-		}
-		*/
 	}
 	
 	/**
@@ -203,7 +189,7 @@ public class Animal extends Actor {
 	* @return boolean This returns the value whether the slot is fully occupied.
 	*/
 	public boolean getStop() {
-		return end==5;	//return true if end == 5
+		return end==1;	//return true if end == 5
 	}
 	
 	/**
@@ -260,6 +246,13 @@ public class Animal extends Actor {
 		return life;
 	}
 
+	/**
+	 * This is the method to set the life for each level.
+	 * @param life The number of life for each level.
+	 */
+	public void setLife(int life) {
+		this.life = life;
+	}
 	/**
 	* This is the method is to get the value whether to end the game depends on the life the frog has.
 	* @return boolean This returns the value whether the to end the game due to no life left.
@@ -394,7 +387,6 @@ public class Animal extends Actor {
 			}
 		}
 		else if (getIntersectingObjects(End.class).size() >= 1) {	//intersect with the end slot
-			inter = (ArrayList<End>) getIntersectingObjects(End.class);	//don't really need as nothing using this
 			if (getIntersectingObjects(End.class).get(0).isActivated()) {	//if the slot is unavailable
 				this.end--;
 				this.points-=110;	// remove the previous frog results if it enter the non-empty slot

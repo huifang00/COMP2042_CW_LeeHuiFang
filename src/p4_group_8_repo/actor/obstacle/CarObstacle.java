@@ -15,7 +15,7 @@ public class CarObstacle extends Obstacle{
 	/**
 	 * The speed of car.
 	 */
-	private double speed;	//change the datatype to double
+	private double speed;	//changed the datatype to double
 	/**
 	 * The image(s) of car as obstacle(s).
 	 */
@@ -31,7 +31,6 @@ public class CarObstacle extends Obstacle{
 		move(speed , 0);
 		if (getX() > 600 && speed>0)
 			setX(-200);
-		//if (getX() < -50 && speed<0)
 		if (getX() < -150 && speed<0)
 			setX(600);
 	}
@@ -48,7 +47,6 @@ public class CarObstacle extends Obstacle{
 	public CarObstacle(int xpos, int ypos, double speed, double width, double height) {
 		carobstacleL = new Image("file:src/p4_group_8_repo/car1Left.png", width, height, true, true); 
 		carobstacleR = new Image("file:src/p4_group_8_repo/car1Right.png", width, height, true, true);
-		//setImage(new Image(imageLink, w,h, true, true));
 		if(speed > 0) {	//moving towards right
 			setImage(carobstacleR);
 		}

@@ -20,8 +20,6 @@ public class Turtle extends Obstacle{
 	 * The image(s) of turtle as obstacle(s).
 	 */
 	private Image turtle1, turtle2, turtle3;
-	//int i = 1;	//not use
-	//boolean bool = true;	//not use
 	
 	/**
 	* This is the abstract method from superclass.
@@ -56,7 +54,6 @@ public class Turtle extends Obstacle{
 	 * @param width The width of the turtle.
 	 * @param height The height of the turtle.
 	 */
-	//public Turtle(String imageLink, int xpos, int ypos, double s, int w, int h) {
 	public Turtle(int xpos, int ypos, double speed, double width, double height) {
 		turtle1 = new Image("file:src/p4_group_8_repo/TurtleAnimation1.png", width, height, true, true);
  		turtle2 = new Image("file:src/p4_group_8_repo/TurtleAnimation2.png", width, height, true, true);

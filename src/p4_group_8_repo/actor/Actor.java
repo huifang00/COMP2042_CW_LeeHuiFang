@@ -1,7 +1,6 @@
 package p4_group_8_repo.actor;
 
 import javafx.scene.image.ImageView;
-import javafx.scene.input.InputEvent;
 import p4_group_8_repo.backgroundfunction.World;
 
 import java.util.ArrayList;
@@ -9,7 +8,7 @@ import java.util.ArrayList;
 /**
 * Actor Class
 * Abstract class which contains the method that relevant of each inherited subclass.
-* This class creates an image on the applciation.
+* This class creates an image on the application.
 *
 * @author  Lee Hui Fang 20125427, hfyhl2
 * @version 1.0
@@ -67,12 +66,6 @@ public abstract class Actor extends ImageView{
         }
         return someArray;
     }
-    
-    /*can remove if not used this is from source code
-    public void manageInput(InputEvent e) {
-        b
-    }
-	*/
     
     /**
      * This is the method intersection occurs between 2 objects.

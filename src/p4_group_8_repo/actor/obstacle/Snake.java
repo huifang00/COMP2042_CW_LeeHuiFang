@@ -30,7 +30,6 @@ public class Snake extends Obstacle{
 	public void act(long now) {
 		move(speed , 0);
 		if (getX()>600 && speed>0)
-			//setX(-180);
 			setX(-280);
 		if (getX()<-300 && speed<0) 
 			setX(600);

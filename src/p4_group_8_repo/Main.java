@@ -7,13 +7,10 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.event.EventHandler;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -21,9 +18,6 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.image.Image;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javafx.scene.text.Text;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import p4_group_8_repo.actor.Animal;
@@ -58,16 +52,15 @@ public class Main extends Application {
 	private BackgroundImage froggerback;
 	private Play play;
 	private int level = 1;	//initialized the level to 1
-	private Level1 level1;//
-	private Alert alert = new Alert(AlertType.NONE);//
-	private boolean printGame;//
-	private int highscore;//
-	private boolean nextLevel;//
-	private String playerName;//
-	private int score = 0;//
-	private Digit digit;//
+	private Level1 level1;
+	private Alert alert = new Alert(AlertType.NONE);
+	private boolean printGame;
+	private int highscore;
+	private boolean nextLevel;
+	private String playerName;
+	private int score = 0;
+	private Digit digit;
 	private ArrayList<Digit> ArrayDigit = new ArrayList<Digit>();	//save the actor of Digit
-	//private Instruction instruction = new Instruction();//Instruction image
 	private ArrayList<Life> ArrayLife = new ArrayList<Life>();	//save the actor of Life
 	private Life lifeImg;
 	private Instruction howtoplay;
@@ -105,14 +98,13 @@ public class Main extends Application {
 		background.add(froggerback);
 
 		//create the menu before the game start
-		
 		play = new Play(230, 250, 120, 120);
 		background.add(play);	//add start/play button
 		
 		howtoplay = new Instruction("file:src/p4_group_8_repo/howtoplay.png", 150, 350, 300, 300);
 		background.add(howtoplay);	//addprintinstruction at main page
 		
-		highscoreButton = new HighScore(background, 155, 450, 300, 300);
+		highscoreButton = new HighScore(155, 450, 300, 300);
 		background.add(highscoreButton);
 		
 		//create sound button to play music or mute
@@ -172,16 +164,17 @@ public class Main extends Application {
             		setAnimal(level1.getAnimal());
             		setPrintGame(false);	// to prevent the next second on printing this condition
             		animal.setLevel(level);	//set the level in animal class for the speed
-            		setLife(5);
+            		setLife(3);
             		start();
             	}
             	if(getPrintGame()){
+            		animal.setLife(3);	//reset the life to 3
+            		setLife(3);	
+            		
 	            	if(level == 2) {	//Level2
 	            		background.start();
 	            		animal.setPoints(0);	//display the score (digit image) as 0
 	            		animal.setLevel(level);	//set the level in animal class for the speed
-	            		//setLife(3);
-	            		//animal.setLife(3);
 	            		level1.remove();
 	            		level2 = levelFactory.getLevel(2, background, animal);
 	            		setPrintGame(false);
@@ -332,14 +325,6 @@ public class Main extends Application {
             		stop();
             		background.stop();
             	}
-            	/*
-            	if(instruction.getPauseGame()) {
-            		pause();
-            	}
-            	if(instruction.getResumeGame()) {
-            		resume();
-            	}
-            	*/
             	if(pause.getPauseGame()) {
             		pause();
                 	background.remove(pause);
@@ -410,16 +395,19 @@ public class Main extends Application {
 	*/
     public void setLife(int life) {
 		int shift = 0;
-		if(life == 5) {
-			//ArrayLife.clear(); //clear previous level life
-			for(int i = 0; i < 5;i++) {
+		if(life == 3) {
+			while(ArrayLife.size() != 0) {	//clear previous level life
+				background.remove(ArrayLife.get(0));
+				ArrayLife.remove(0);
+			}
+			for(int i = 0; i < 3;i++) {
 				lifeImg = new Life(384 + shift, 50, 25, 25);
 	    		ArrayLife.add(lifeImg);
 	    		background.add(lifeImg);
 				shift += 33;
 			}
 		}
-		else if(life >= 0 && life < 5){
+		else if(life >= 0 && life < 3){
 			background.remove(ArrayLife.get(0));
 			ArrayLife.remove(0);
 		}
@@ -538,7 +526,6 @@ public class Main extends Application {
 	* This is the method to display the pop up dialog which display at the end of the game.
 	*/
     public void printEnd() {
-    	//this.score = level1.getScore() + level2.getScore() + level3.getScore();
     	Alert alertEnd = new Alert(AlertType.INFORMATION);
 		alertEnd.setTitle("You Have Won The Game!");
 		alertEnd.setHeaderText("Your Total Score: "+ score +"!");

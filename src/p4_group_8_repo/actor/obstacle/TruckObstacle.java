@@ -15,7 +15,7 @@ public class TruckObstacle extends Obstacle{
 	/**
 	 * The speed of truck.
 	 */
-	private double speed;	//change the datatype to double
+	private double speed;	//changed the datatype to double
 	/**
 	 * The image(s) of truck as obstacle(s).
 	 */
@@ -31,7 +31,6 @@ public class TruckObstacle extends Obstacle{
 		move(speed , 0);
 		if (getX() > 600 && speed>0)
 			setX(-200);
-		//if (getX() < -50 && speed<0)
 		if (getX() < -150 && speed<0)
 			setX(600);
 	}

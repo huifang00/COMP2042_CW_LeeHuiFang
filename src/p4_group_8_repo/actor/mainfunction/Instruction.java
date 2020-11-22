@@ -77,7 +77,7 @@ public class Instruction extends Actor{
 				Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
 
 				// Add a custom icon.
-				stage.getIcons().add(new Image(this.getClass().getResource("../smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
+				stage.getIcons().add(new Image(this.getClass().getResource("../../smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
 				
 				//print Instruction
 				switch(instructionPage) {

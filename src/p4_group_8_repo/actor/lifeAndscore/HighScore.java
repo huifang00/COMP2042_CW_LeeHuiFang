@@ -2,6 +2,9 @@ package p4_group_8_repo.actor.lifeAndscore;
 
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 
 import java.io.BufferedReader;
@@ -19,7 +22,6 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import p4_group_8_repo.actor.Actor;
-import p4_group_8_repo.backgroundfunction.MyStage;
 
 /**
 * HighScore Class
@@ -35,7 +37,7 @@ public class HighScore extends Actor{
 	 * The highscore image as a button.
 	 */
 	private Image highscore;	
-	private Stage new_stage = new Stage();
+	private Stage new_stage;// = new Stage();
 	
 	/**
 	* This is the abstract method from superclass.
@@ -55,7 +57,7 @@ public class HighScore extends Actor{
 	 * @param width The width of the highscore image.
 	 * @param height The height of the highscore image.
 	 */
-	public HighScore(MyStage background, int xpos, int ypos, double width, double height){
+	public HighScore(int xpos, int ypos, double width, double height){
 		highscore = new Image("file:src/p4_group_8_repo/highscore.png", width, height, true, true);
 		setImage(highscore);
 		setX(xpos);
@@ -63,6 +65,7 @@ public class HighScore extends Actor{
 		setOnMouseClicked(new EventHandler<MouseEvent>(){
 			@Override 
 			   public void handle(MouseEvent e) {
+				new_stage = new Stage();
 				if(!new_stage.isShowing())
 					getHighScore();
 			   }
@@ -171,6 +174,8 @@ public class HighScore extends Actor{
 	 */
 	public void highScoreWindow(String top3){
 		
+		new_stage = new Stage();
+		
 		String family = "SERIF";
 		double titlesize = 25;
 		double contentsize = 20;
@@ -196,7 +201,7 @@ public class HighScore extends Actor{
     	new_stage.setResizable(false);
     	
     	// Add a custom icon.
-    	new_stage.getIcons().add(new Image(this.getClass().getResource("../smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
+    	new_stage.getIcons().add(new Image(this.getClass().getResource("../../smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
     			
     	new_stage.setScene(new_scene);
     	
@@ -204,7 +209,7 @@ public class HighScore extends Actor{
     	
     	new_stage.show();
     }
-	
+
 	public Stage getStage() {
 		return new_stage;
 	}

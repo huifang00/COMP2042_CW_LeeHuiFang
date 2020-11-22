@@ -18,13 +18,13 @@ import p4_group_8_repo.actor.obstacle.ObstacleFactory;
 */
 public class Level7 implements Level{
 	
-	public Animal animal;
-	End end1, end2, end3, end4, end5;
-	LevelImage levelImage;
+	private Animal animal;
+	private End end1, end2, end3, end4, end5;
+	private LevelImage levelImage;
 	private int score = 0;
-	MyStage background;
-	ObstacleFactory obstacleFactory = new ObstacleFactory();
-	Obstacle log1, log2, log3, log4, log5, log6, log7,
+	private MyStage background;
+	private ObstacleFactory obstacleFactory = new ObstacleFactory();
+	private Obstacle log1, log2, log3, log4, log5, log6, log7,
 	turtle1, turtle2, 
 	weturtle1, weturtle2, weturtle3, weturtle4, 
 	carobstacle1, carobstacle2, carobstacle3, carobstacle4, carobstacle5, carobstacle6, carobstacle7, carobstacle8, 

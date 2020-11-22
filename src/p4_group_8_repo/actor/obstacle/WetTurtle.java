@@ -20,8 +20,7 @@ public class WetTurtle extends Obstacle{
 	 * The image(s) of wet turtle as obstacle(s).
 	 */
 	private Image turtle1, turtle2, turtle3, turtle4;
-	//int i = 1;
-	//boolean bool = true;
+
 	/**
 	 * The value whether the wet turtle goes below the water surface.
 	 */
@@ -67,7 +66,6 @@ public class WetTurtle extends Obstacle{
 	 * @param width The width of the wet turtle.
 	 * @param height The height of the wet turtle.
 	 */
-	//public WetTurtle(String imageLink, int xpos, int ypos, double s, int w, int h) {
 	public WetTurtle(int xpos, int ypos, double speed, double width, double height) {
 		turtle1 = new Image("file:src/p4_group_8_repo/TurtleAnimation1.png", width, height, true, true);
 		turtle2 = new Image("file:src/p4_group_8_repo/TurtleAnimation2Wet.png", width, height, true, true);

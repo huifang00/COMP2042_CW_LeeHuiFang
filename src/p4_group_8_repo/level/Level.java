@@ -1,7 +1,5 @@
 package p4_group_8_repo.level;
 
-import p4_group_8_repo.actor.Animal;
-
 /**
  * Level Interface
  * Interface which contains abstract method must be run in each subclasses.

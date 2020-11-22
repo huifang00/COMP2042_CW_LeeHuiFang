@@ -1,16 +1,15 @@
 package p4_group_8_repo.test;
 
 import static org.junit.Assert.*;
-
 import org.junit.Test;
-
 import javafx.embed.swing.JFXPanel;
 import p4_group_8_repo.actor.lifeAndscore.HighScore;
 
 public class HighScoreTest {
+
 	JFXPanel jfxPanel = new JFXPanel();
-	HighScore highscore = new HighScore(null, 20, 21, 15.2, 23.1);
-	
+	HighScore highscore = new HighScore(20, 21, 15, 23);
+    
 	@Test
 	public void constructorTest_X1() {
 		double x = highscore.getX();

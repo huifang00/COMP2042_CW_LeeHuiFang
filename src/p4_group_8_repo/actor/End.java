@@ -47,7 +47,6 @@ public class End extends Actor{
 	 * @param height The height of the empty slot image.
 	 */
 	public End(int xpos, int ypos, double width, double height) {
-		//endSlot = new Image("file:src/p4_group_8_repo/End.png", 60, 60, true, true);
 		endSlot = new Image("file:src/p4_group_8_repo/End.png", width, height, true, true);
 		setX(xpos);
 		setY(ypos);
@@ -60,7 +59,6 @@ public class End extends Actor{
 	 * This method is to replaced the empty slot image with a frog image when it is placed in the empty slot.
 	 */
 	public void setEnd() {	//no need to set the width and height as it is same as the slot
-		//endFrog = new Image("file:src/p4_group_8_repo/FrogEnd.png", 70, 70, true, true);
 		endFrog = new Image("file:src/p4_group_8_repo/FrogEnd.png", width, height, true, true);
 		setImage(endFrog);
 		activated = true;

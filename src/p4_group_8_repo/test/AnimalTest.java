@@ -14,7 +14,7 @@ import p4_group_8_repo.actor.obstacle.Obstacle;
 import p4_group_8_repo.actor.obstacle.ObstacleFactory;
 import p4_group_8_repo.actor.obstacle.TruckObstacle;
 
-public class AnimalTest<A> {
+public class AnimalTest{
 	JFXPanel jfxPanel = new JFXPanel();
 	Animal animal = new Animal(10, 20, 25.3, 35.1);
 	

@@ -30,7 +30,6 @@ public class Log extends Obstacle {
 	public void act(long now) {
 		move(speed , 0);
 		if (getX()>600 && speed>0)
-			//setX(-180);
 			setX(-280);
 		if (getX()<-300 && speed<0) 
 			setX(600);
@@ -46,7 +45,6 @@ public class Log extends Obstacle {
 	 * @param width The width of the log.
 	 * @param height The height of the log.
 	 */
-	//public Log(String imageLink, int size, int xpos, int ypos, double s)
 	public Log(int xpos, int ypos, double speed, double width, double height) {
 		log1 = new Image("file:src/p4_group_8_repo/log3.png", width, height, true, true);
 		log2 = new Image("file:src/p4_group_8_repo/logs.png", width, height, true, true);
@@ -60,11 +58,7 @@ public class Log extends Obstacle {
 		setY(ypos);
 		this.speed = speed;
 	}
-	/*
-	public boolean getLeft() {
-		return speed < 0;
-	}
-*/
+
 	/**
 	 * This method gets the speed of the log.
 	 * @return double This returns the speed of log.

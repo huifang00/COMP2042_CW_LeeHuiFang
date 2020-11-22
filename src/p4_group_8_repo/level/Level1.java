@@ -19,12 +19,7 @@ import p4_group_8_repo.actor.obstacle.ObstacleFactory;
 public class Level1 implements Level{
 	
 	private Animal animal;
-	//Log log1, log2, log3, log4, log5, log6, log7, log8;
-	//Turtle turtle1, turtle2;
-	//WetTurtle weturtle1, weturtle2, weturtle3, weturtle4;
 	private End end1, end2, end3, end4, end5;
-	//CarObstacle carobstacle1, carobstacle2, carobstacle3, carobstacle4, carobstacle5;
-	//TruckObstacle truckobstacle1, truckobstacle2, truckobstacle3, truckobstacle4, truckobstacle5;
 	private LevelImage levelImage;
 	private int score = 0;
 	private MyStage background;
@@ -71,39 +66,6 @@ public class Level1 implements Level{
 	 * This is the method to add the image(s) of log.
 	 */
 	public void addLog() {
-    	/*
-    	background.add(new Log("file:src/p4_group_8_repo/log3.png", 0, 166, 0.75, 150, 150));
-		background.add(new Log("file:src/p4_group_8_repo/log3.png", 220, 166, 0.75, 150, 150));
-		background.add(new Log("file:src/p4_group_8_repo/log3.png", 440, 166, 0.75, 150, 150));
-		//background.add(new Log("file:src/p4_group_8_repo/log3.png", 0, 166, 0.75, 150, 150));
-		background.add(new Log("file:src/p4_group_8_repo/logs.png", 0, 276, -2, 300, 300));
-		background.add(new Log("file:src/p4_group_8_repo/logs.png", 400, 276, -2, 300, 300));
-		//background.add(new Log("file:src/p4_group_8_repo/logs.png", 800, 276, -2, 300, 300));
-		background.add(new Log("file:src/p4_group_8_repo/log3.png", 50, 329, 0.75, 150, 150));
-		background.add(new Log("file:src/p4_group_8_repo/log3.png", 270, 329, 0.75, 150, 150));
-		background.add(new Log("file:src/p4_group_8_repo/log3.png", 490, 329, 0.75, 150, 150));
-		//background.add(new Log("file:src/p4_group_8_repo/log3.png", 570, 329, 0.75, 150, 150));
-		 */
-    	//Log log1, log2, log3, log4, log5, log6, log7, log8;
-    	
-    	/*
-    	log1 = new Log(1, 0, 166, 0.75, 150, 150);
-    	background.add(log1);
-    	log2 = new Log(1, 220, 166, 0.75, 150, 150);
-    	background.add(log2);
-    	log3 = new Log(1, 440, 166, 0.75, 150, 150);
-    	background.add(log3);
-    	log4 = new Log(2, 0, 276, -2, 300, 300);
-    	background.add(log4);
-    	log5 = new Log(2, 400, 276, -2, 300, 300);
-    	background.add(log5);
-    	log6 = new Log(1, 50, 329, 0.75, 150, 150);
-    	background.add(log6);
-    	log7 = new Log(1, 270, 329, 0.75, 150, 150);
-    	background.add(log7);
-    	log8 = new Log(1, 490, 329, 0.75, 150, 150);
-    	background.add(log8);
-    	*/
 		log1 = obstacleFactory.getObstacle("Log", 0, 166, 0.75, 150, 150);
     	background.add(log1);
     	log2 = obstacleFactory.getObstacle("Log", 220, 166, 0.75, 150, 150);
@@ -126,45 +88,6 @@ public class Level1 implements Level{
 	 * This is the method to add the image(s) of wet turtle.
 	 */
     public void addTurtle() {
-    	/*
-    	background.add(new Turtle(500, 376, -1, 130, 130));
-		background.add(new Turtle(300, 376, -1, 130, 130));
-		background.add(new WetTurtle(700, 376, -1, 130, 130));
-		background.add(new WetTurtle(600, 217, -1, 130, 130));
-		background.add(new WetTurtle(400, 217, -1, 130, 130));
-		background.add(new WetTurtle(200, 217, -1, 130, 130));
-		*/
-    	//Turtle turtle1, turtle2;
-    	//WetTurtle weturtle1, weturtle2, weturtle3, weturtle4;
-    	/*
-    	turtle1 = new Turtle(500, 376, -1, 130, 130);
-    	background.add(turtle1);
-    	turtle2 = new Turtle(300, 376, -1, 130, 130);
-    	background.add(turtle2);
-    	weturtle1 = new WetTurtle(700, 376, -1, 130, 130);
-    	background.add(weturtle1);
-    	weturtle2 = new WetTurtle(600, 217, -1, 130, 130);
-    	background.add(weturtle2);
-    	weturtle3 = new WetTurtle(400, 217, -1, 130, 130);
-    	background.add(weturtle3);
-    	weturtle4 = new WetTurtle(200, 217, -1, 130, 130);
-    	background.add(weturtle4);
-    	*/
-    	/*
-    	turtle1 = new Turtle(500, 376, -1, 130, 130);
-    	background.add(turtle1);
-    	turtle2 = new Turtle(300, 376, -1, 130, 130);
-    	background.add(turtle2);
-    	weturtle1 = new WetTurtle(700, 376, -1, 130, 130);
-    	background.add(weturtle1);
-    	weturtle2 = new WetTurtle(600, 217, -1, 130, 130);
-    	background.add(weturtle2);
-    	weturtle3 = new WetTurtle(400, 217, -1, 130, 130);
-    	background.add(weturtle3);
-    	weturtle4 = new WetTurtle(200, 217, -1, 130, 130);
-    	background.add(weturtle4);
-    	*/
-    	
     	turtle1 = obstacleFactory.getObstacle("Turtle", 500, 376, -1, 130, 130);
     	background.add(turtle1);
     	turtle2 = obstacleFactory.getObstacle("Turtle", 300, 376, -1, 130, 130);
@@ -183,7 +106,6 @@ public class Level1 implements Level{
      * This is the method to add the image(s) of empty slot.
      */
     public void addEnd() {
-    	//End end1, end2, end3, end4, end5;
     	end1 = new End(13, 96, 60, 60);
     	background.add(end1);
     	end2 = new End(141, 96, 60, 60);
@@ -194,20 +116,12 @@ public class Level1 implements Level{
     	background.add(end4);
     	end5 = new End(141 + 141-13+141-13+141-13+3, 96, 60, 60);
     	background.add(end5);
-    	/*
-    	background.add(new End(13,96));
-		background.add(new End(141,96));
-		background.add(new End(141 + 141-13,96));
-		background.add(new End(141 + 141-13+141-13+1,96));
-		background.add(new End(141 + 141-13+141-13+141-13+3,96));
-		*/
     }
     
     /**
      * This is the method to add the image of frog as the main character in the application.
      */
     public void addAnimal() {
-    	//animal = new Animal("file:src/p4_group_8_repo/froggerUp.png");
     	animal = new Animal(300, 679.8+(13.3333333*2), 40, 40);
 		background.add(animal);
     }
@@ -227,18 +141,6 @@ public class Level1 implements Level{
     	background.add(carobstacle4);
     	carobstacle5 = obstacleFactory.getObstacle("Car", 500, 490, -5, 50, 50);
     	background.add(carobstacle5);
-    	/*
-    	carobstacle1 = new CarObstacle(100, 597, -1, 50, 50);
-    	background.add(carobstacle1);
-    	carobstacle2 = new CarObstacle(250, 597, -1, 50, 50);
-    	background.add(carobstacle2);
-    	carobstacle3 = new CarObstacle(400, 597, -1, 50, 50);
-    	background.add(carobstacle3);
-    	carobstacle4 = new CarObstacle(550, 597, -1, 50, 50);
-    	background.add(carobstacle4);
-    	carobstacle5 = new CarObstacle(500, 490, -5, 50, 50);
-    	background.add(carobstacle5);
-    	*/
     }
     
     /**
@@ -255,19 +157,6 @@ public class Level1 implements Level{
     	background.add(truckobstacle4);
     	truckobstacle5 = obstacleFactory.getObstacle("Truck", 500, 540, 1, 200, 200);
     	background.add(truckobstacle5);
-    	
-    	/*
-    	truckobstacle1 = new TruckObstacle(0, 649, 1, 120, 120);
-    	background.add(truckobstacle1);
-    	truckobstacle2 = new TruckObstacle(300, 649, 1, 120, 120);
-    	background.add(truckobstacle2);
-    	truckobstacle3 = new TruckObstacle(600, 649, 1, 120, 120);
-    	background.add(truckobstacle3);
-    	truckobstacle4 = new TruckObstacle(0, 540, 1, 200, 200);
-    	background.add(truckobstacle4);
-    	truckobstacle5 = new TruckObstacle(500, 540, 1, 200, 200);
-    	background.add(truckobstacle5);
-    	*/
     }
     
     /**
@@ -334,12 +223,6 @@ public class Level1 implements Level{
     public void removeAnimal() {
 		background.remove(animal);
     }
-    /*
-    public void removeObstacle(MyStage background) {
-    	removeCarObstacle(background);
-    	removeTruckObstacle(background);
-    }
-    */
     
     /**
      * This is the method to remove the image(s) of car as obstacle(s).

@@ -37,8 +37,7 @@ public class Digit extends Actor{
 	 * @param width The width of the digit.
 	 * @param height The height of the digit.
 	 */
-	//public Digit(int n, int dim, int x, int y)
-	public Digit(int n, int xpos, int ypos, double width, double height) {	//remove the dimension as parameter since it always fixed to the image
+	public Digit(int n, int xpos, int ypos, double width, double height) {
 		im1 = new Image("file:src/p4_group_8_repo/"+n+".png", width, height, false, true);
 		setImage(im1);
 		setX(xpos);
