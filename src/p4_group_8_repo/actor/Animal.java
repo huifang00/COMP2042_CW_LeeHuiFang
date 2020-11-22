@@ -189,7 +189,7 @@ public class Animal extends Actor {
 	* @return boolean This returns the value whether the slot is fully occupied.
 	*/
 	public boolean getStop() {
-		return end==1;	//return true if end == 5
+		return end==5;	//return true if end == 5
 	}
 	
 	/**
