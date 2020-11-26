@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import javafx.embed.swing.JFXPanel;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 import p4_group_8_repo.actor.Animal;
 import p4_group_8_repo.backgroundfunction.MyStage;
 import p4_group_8_repo.level.Level;
@@ -22,7 +24,9 @@ import p4_group_8_repo.level.LevelFactory;
 public class LevelFactoryTest {
 	
 	JFXPanel jfxPanel = new JFXPanel();
-	MyStage background = new MyStage();
+	BorderPane root = new BorderPane();
+	Scene scene = new Scene(root,600,800);
+	MyStage background = new MyStage(root);
 	Animal animal = new Animal(300, 679.8+(13.3333333*2), 40, 40);
 	LevelFactory levelFactory = new LevelFactory();
 	

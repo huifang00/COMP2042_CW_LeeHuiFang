@@ -7,6 +7,7 @@ import org.junit.Test;
 import javafx.embed.swing.JFXPanel;
 import p4_group_8_repo.actor.lifeAndscore.Digit;
 
+
 public class DigitTest {
 	JFXPanel jfxPanel = new JFXPanel();
 	Digit digit = new Digit(1, 10, 20, 30, 30);

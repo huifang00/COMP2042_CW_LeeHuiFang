@@ -280,19 +280,24 @@ public class Animal extends Actor {
 	* @return boolean This returns the value of carDeath of frog. 
 	*/
 	public boolean setCarDeath(long now,boolean carDeath) {
+		Image death1 = new Image("file:src/p4_group_8_repo/cardeath1.png", width, height, true, true);
+		Image death2 = new Image("file:src/p4_group_8_repo/cardeath2.png", width, height, true, true);
+		Image death3 = new Image("file:src/p4_group_8_repo/cardeath3.png", width, height, true, true);
+		Image death4 = new Image("file:src/p4_group_8_repo/cardeath4.png", width, height, true, true);
+
 		if (carDeath) {
 			noMove = true;
 			if ((now)% 11 == 0) {
 				this.death++;
 			}
-			if (this.death == 1) {
-				setImage(new Image("file:src/p4_group_8_repo/cardeath1.png", width, height, true, true));
+			if (this.death  == 1) {
+				setImage(death1);
 			}
 			else if (this.death == 2) {
-				setImage(new Image("file:src/p4_group_8_repo/cardeath2.png", width, height, true, true));
+				setImage(death2);
 			}
 			else if (this.death == 3) {
-				setImage(new Image("file:src/p4_group_8_repo/cardeath3.png", width, height, true, true));
+				setImage(death3);
 			}
 			else if (this.death == 4) {
 				setX(300);
@@ -301,7 +306,7 @@ public class Animal extends Actor {
 				this.life--;	//decrease one life
 				this.changeLife = true;
 				this.death = 0;	//reset to 0
-				setImage(new Image("file:src/p4_group_8_repo/froggerUp.png", width, height, true, true));
+				setImage(death4);
 				noMove = false;
 				if (this.points>50) {
 					this.points-=50;
@@ -319,22 +324,28 @@ public class Animal extends Actor {
 	* @return boolean This returns the value of waterDeath of frog. 
 	*/
 	public boolean setWaterDeath(long now,boolean waterDeath) {
+		Image death1 = new Image("file:src/p4_group_8_repo/waterdeath1.png", width, height, true, true);
+		Image death2 = new Image("file:src/p4_group_8_repo/waterdeath2.png", width, height, true, true);
+		Image death3 = new Image("file:src/p4_group_8_repo/waterdeath3.png", width, height, true, true);
+		Image death4 = new Image("file:src/p4_group_8_repo/waterdeath4.png", width, height, true, true);
+		Image death5 = new Image("file:src/p4_group_8_repo/waterdeath5.png", width, height, true, true);
+		
 		if (waterDeath) {
 			noMove = true;
 			if ((now)% 11 == 0) {
 				this.death++;
 			}
 			if (this.death == 1) {
-				setImage(new Image("file:src/p4_group_8_repo/waterdeath1.png", width, height , true, true));
+				setImage(death1);
 			}
 			else if (this.death == 2) {
-				setImage(new Image("file:src/p4_group_8_repo/waterdeath2.png", width, height , true, true));
+				setImage(death2);
 			}
 			else if (this.death == 3) {
-				setImage(new Image("file:src/p4_group_8_repo/waterdeath3.png", width, height , true, true));
+				setImage(death3);
 			}
 			else if (this.death == 4) {
-				setImage(new Image("file:src/p4_group_8_repo/waterdeath4.png", width, height , true, true));
+				setImage(death4);
 			}
 			else if (this.death == 5) {
 				setX(300);
@@ -343,7 +354,7 @@ public class Animal extends Actor {
 				this.life--;	//decrease one life
 				this.changeLife = true;
 				this.death = 0;
-				setImage(new Image("file:src/p4_group_8_repo/froggerUp.png", width, height, true, true));
+				setImage(death5);
 				noMove = false;
 				if (this.points>50) {
 					this.points-=50;

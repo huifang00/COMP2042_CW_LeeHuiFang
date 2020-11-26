@@ -1,16 +1,14 @@
 package p4_group_8_repo.backgroundfunction;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
 import javafx.animation.AnimationTimer;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import p4_group_8_repo.actor.Actor;
 
@@ -25,52 +23,50 @@ import p4_group_8_repo.actor.Actor;
 */
 public abstract class World extends Pane {
     private AnimationTimer timer;
+    static BorderPane root;
     
-    public World() {
+    public World(BorderPane root) {
+    	World.root = root;
+    	Scene newValue = root.getScene();
     	
-    	sceneProperty().addListener(new ChangeListener<Scene>() {
-
-			@Override
-			public void changed(ObservableValue<? extends Scene> observable, Scene oldValue, Scene newValue) {
-				if (newValue != null) {
-					newValue.setOnKeyReleased(new EventHandler<KeyEvent>() {
-
-						@Override
-						public void handle(KeyEvent event) {
-							if(getOnKeyReleased() != null) 
-								getOnKeyReleased().handle(event);
-							List<Actor> myActors = getObjects(Actor.class);
-							for (Actor anActor: myActors) {
-								if (anActor.getOnKeyReleased() != null) {
-									anActor.getOnKeyReleased().handle(event);
-								}
-							}
-						}
-						
-					});
+    	
+		newValue.setOnKeyReleased(new EventHandler<KeyEvent>() {
 					
-					newValue.setOnKeyPressed(new EventHandler<KeyEvent>() {
+    	    	//Scene newValue = root.getScene();
+    	    	//newValue.setOnKeyReleased(new EventHandler<KeyEvent>() {
 
-						@Override
-						public void handle(KeyEvent event) {
-							if(getOnKeyPressed() != null) 
-								getOnKeyPressed().handle(event);
-							List<Actor> myActors = getObjects(Actor.class);
-							for (Actor anActor: myActors) {
-								if (anActor.getOnKeyPressed() != null) {
-									anActor.getOnKeyPressed().handle(event);
-								}
-							}
-						}
-						
-					});
-				}
-				
-			}
-    		
-		});
+    				@Override
+    				public void handle(KeyEvent event) {
+    					if(getOnKeyReleased() != null) 
+    						getOnKeyReleased().handle(event);
+    					List<Actor> myActors = getObjects(Actor.class);
+    					for (Actor anActor: myActors) {
+    						if (anActor.getOnKeyReleased() != null) {
+    							anActor.getOnKeyReleased().handle(event);
+    						}
+    					}
+    				}
+    				
+    			});
+    			
+    			newValue.setOnKeyPressed(new EventHandler<KeyEvent>() {
+
+    				@Override
+    				public void handle(KeyEvent event) {
+    					if(getOnKeyPressed() != null) 
+    						getOnKeyPressed().handle(event);
+    					List<Actor> myActors = getObjects(Actor.class);
+    					for (Actor anActor: myActors) {
+    						if (anActor.getOnKeyPressed() != null) {
+    							anActor.getOnKeyPressed().handle(event);
+    						}
+    					}
+    				}
+    				
+    			});
     }
 
+    
     /**
 	* This is the method to create animation and handle() method is called in every frame of the animation.
 	* This method save the object created/inherited from actor class to a list.
@@ -81,7 +77,6 @@ public abstract class World extends Pane {
             public void handle(long now) {
                 act(now);
                 List<Actor> actors = getObjects(Actor.class);
-                
                 for (Actor anActor: actors) {
                 	anActor.act(now);
                 }
@@ -110,7 +105,7 @@ public abstract class World extends Pane {
      * @param actor The object of actor class to be added to the application.
      */
     public void add(Actor actor) {
-        getChildren().add(actor);
+        root.getChildren().add(actor);
     }
 
     /**
@@ -118,7 +113,7 @@ public abstract class World extends Pane {
      * @param actor The object of actor of class to be removed from the application.
      */
     public void remove(Actor actor) {
-        getChildren().remove(actor);
+        root.getChildren().remove(actor);
     }
 
     /**
@@ -127,9 +122,9 @@ public abstract class World extends Pane {
      * @param cls The class object corresponding to Actor type.
      * @return ArrayList<A> This returns the array which contains the list of object(s) of actor class.
      */
-    public <A extends Actor> List<A> getObjects(Class<A> cls) {
+    public static <A extends Actor> List<A> getObjects(Class<A> cls) {
         ArrayList<A> someArray = new ArrayList<A>();
-        for (Node n: getChildren()) {
+        for (Node n: root.getChildren()) {
             if (cls.isInstance(n)) {
                 someArray.add((A)n);
             }

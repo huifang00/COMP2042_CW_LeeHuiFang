@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="p4_group_8_repo.MVC.Controller">
+   <children>
+      <ImageView fx:id="background" fitHeight="800.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ImageView fx:id="start" fitHeight="120.0" fitWidth="120.0" layoutX="230.0" layoutY="250.0" onMouseClicked="#onStartClicked" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="howtoplay" fitHeight="300.0" fitWidth="300.0" layoutX="150.0" layoutY="350.0" onMouseClicked="#onInstructionClicked" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="highscore" fitHeight="300.0" fitWidth="300.0" layoutX="155.0" layoutY="450.0" onMouseClicked="#onHighscoreClicked" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="startIns" fitHeight="60.0" fitWidth="500.0" layoutX="40.0" layoutY="600.0" onMouseClicked="#onStartClicked" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="sound" fitHeight="30.0" fitWidth="30.0" layoutX="490.0" layoutY="10.0" onMouseClicked="#onSoundClicked" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="instruction" fitHeight="30.0" fitWidth="30.0" layoutX="525.0" layoutY="10.0" onMouseClicked="#onInstructionClicked" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="pause" fitHeight="30.0" fitWidth="30.0" layoutX="560.0" layoutY="10.0" onMouseClicked="#onPauseClicked" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

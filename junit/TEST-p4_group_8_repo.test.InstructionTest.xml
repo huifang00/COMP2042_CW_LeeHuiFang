@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" name="p4_group_8_repo.test.InstructionTest" skipped="0" tests="10" time="0.84" timestamp="2020-11-22T15:59:21">
+<testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" name="p4_group_8_repo.test.InstructionTest" skipped="0" tests="10" time="0.652" timestamp="2020-11-26T07:36:28">
   <properties>
     <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
     <property name="env.NUMBER_OF_PROCESSORS" value="4" />
@@ -10,11 +10,12 @@
     <property name="sun.jnu.encoding" value="Cp1252" />
     <property name="sun.arch.data.model" value="64" />
     <property name="debuglevel" value="source,lines,vars" />
+    <property name="env.FPS_BROWSER_APP_PROFILE_STRING" value="Internet Explorer" />
     <property name="java.vendor.url" value="https://java.oracle.com/" />
     <property name="env.CommonProgramW6432" value="C:\Program Files\Common Files" />
     <property name="env.OS" value="Windows_NT" />
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.InstructionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.InstructionTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher6113302705989260973.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit16546516308721430961.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.InstructionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.InstructionTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher7473030849343887469.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit13829099270789314619.properties" />
     <property name="jdk.debug" value="release" />
     <property name="env.ComSpec" value="C:\WINDOWS\system32\cmd.exe" />
     <property name="eclipse.pdebuild.templates" value="C:\Users\huifa\eclipse\java-2020-09\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.pde.build_3.10.800.v20200410-1419\templates" />
@@ -22,13 +23,13 @@
     <property name="java.version.date" value="2020-09-15" />
     <property name="java.home" value="C:\Program Files\Java\jdk-15" />
     <property name="env.ProgramFiles" value="C:\Program Files" />
-    <property name="file.separator" value="\" />
     <property name="basedir" value="C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang" />
+    <property name="file.separator" value="\" />
     <property name="java.vm.compressedOopsMode" value="32-bit" />
     <property name="line.separator" value="&#xd;&#xa;" />
     <property name="env.PROMPT" value="$P$G" />
-    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
     <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
     <property name="env.LOCALAPPDATA" value="C:\Users\huifa\AppData\Local" />
     <property name="env.USERDOMAIN_ROAMINGPROFILE" value="DESKTOP-GCDNCCL" />
     <property name="env.PROCESSOR_REVISION" value="3a09" />
@@ -52,16 +53,16 @@
     <property name="java.io.tmpdir" value="C:\Users\huifa\AppData\Local\Temp\" />
     <property name="java.version" value="15" />
     <property name="env.PROCESSOR_LEVEL" value="6" />
-    <property name="env.HOMEDRIVE" value="C:" />
     <property name="env.Path" value="C:/Program Files/Java/jdk-15/bin/server;C:/Program Files/Java/jdk-15/bin;C:\Program Files\Ant\apache-ant-1.10.9\bin;C:\Program Files\Java\jdk-15\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MATLAB\R2020b\runtime\win64;C:\Program Files\MATLAB\R2020b\bin;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\Program Files\Java\jdk-15\bin;C:\Users\huifa\AppData\Local\Microsoft\WindowsApps;C:\Users\huifa\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.2\bin;;C:\Users\huifa\Desktop\apache-ant-1.9.15-bin;;C:\Users\huifa\Desktop;" />
+    <property name="env.HOMEDRIVE" value="C:" />
     <property name="env.TMP" value="C:\Users\huifa\AppData\Local\Temp" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
     <property name="ant.home" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239" />
     <property name="sun.os.patch.level" value="" />
     <property name="junit.output.dir" value="junit" />
     <property name="ant.version" value="Apache Ant(TM) version 1.10.8 compiled on May 10 2020" />
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-15\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk-15/bin/server;C:/Program Files/Java/jdk-15/bin;C:\Program Files\Ant\apache-ant-1.10.9\bin;C:\Program Files\Java\jdk-15\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MATLAB\R2020b\runtime\win64;C:\Program Files\MATLAB\R2020b\bin;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\Program Files\Java\jdk-15\bin;C:\Users\huifa\AppData\Local\Microsoft\WindowsApps;C:\Users\huifa\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.2\bin;;C:\Users\huifa\Desktop\apache-ant-1.9.15-bin;;C:\Users\huifa\Desktop;;." />
     <property name="eclipse.pdebuild.scripts" value="C:\Users\huifa\eclipse\java-2020-09\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.pde.build_3.10.800.v20200410-1419\scripts" />
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-15\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk-15/bin/server;C:/Program Files/Java/jdk-15/bin;C:\Program Files\Ant\apache-ant-1.10.9\bin;C:\Program Files\Java\jdk-15\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MATLAB\R2020b\runtime\win64;C:\Program Files\MATLAB\R2020b\bin;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\Program Files\Java\jdk-15\bin;C:\Users\huifa\AppData\Local\Microsoft\WindowsApps;C:\Users\huifa\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.2\bin;;C:\Users\huifa\Desktop\apache-ant-1.9.15-bin;;C:\Users\huifa\Desktop;;." />
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="env.LOGONSERVER" value="\\DESKTOP-GCDNCCL" />
     <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
@@ -74,8 +75,8 @@
     <property name="java.vm.specification.version" value="15" />
     <property name="os.name" value="Windows 10" />
     <property name="ant.file.COMP2042_CW_LeeHuiFang" value="C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\build.xml" />
-    <property name="sun.java.launcher" value="SUN_STANDARD" />
     <property name="user.country" value="US" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
     <property name="env.USERDOMAIN" value="DESKTOP-GCDNCCL" />
     <property name="sun.cpu.endian" value="little" />
     <property name="user.home" value="C:\Users\huifa" />
@@ -92,7 +93,7 @@
     <property name="env.CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" />
-    <property name="ant.project.invoked-targets" value="compile,InstructionTest" />
+    <property name="ant.project.invoked-targets" value="build,build-refprojects,init-eclipse-compiler,runJunitTest" />
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
     <property name="ECLIPSE_HOME" value="../../../../../../eclipse/java-2020-09/eclipse/" />
     <property name="ant.file.type.COMP2042_CW_LeeHuiFang" value="file" />
@@ -105,18 +106,19 @@
     <property name="env.ProgramFiles(x86)" value="C:\Program Files (x86)" />
     <property name="java.vm.info" value="mixed mode, sharing" />
     <property name="java.vm.version" value="15+36-1562" />
+    <property name="env.FPS_BROWSER_USER_PROFILE_STRING" value="Default" />
     <property name="env.TEMP" value="C:\Users\huifa\AppData\Local\Temp" />
     <property name="java.class.version" value="59.0" />
     <property name="env.OneDrive" value="C:\Users\huifa\OneDrive" />
     <property name="ant.project.default-target" value="build" />
   </properties>
-  <testcase classname="p4_group_8_repo.test.InstructionTest" name="ThrowExceptionSpaceLinkTest" time="0.575" />
-  <testcase classname="p4_group_8_repo.test.InstructionTest" name="ThrowExceptionFileNotExistTest" time="0.02" />
-  <testcase classname="p4_group_8_repo.test.InstructionTest" name="getWidthTest" time="0.013" />
-  <testcase classname="p4_group_8_repo.test.InstructionTest" name="constructorTest_Width" time="0.005" />
+  <testcase classname="p4_group_8_repo.test.InstructionTest" name="ThrowExceptionSpaceLinkTest" time="0.477" />
+  <testcase classname="p4_group_8_repo.test.InstructionTest" name="ThrowExceptionFileNotExistTest" time="0.011" />
+  <testcase classname="p4_group_8_repo.test.InstructionTest" name="getWidthTest" time="0.012" />
+  <testcase classname="p4_group_8_repo.test.InstructionTest" name="constructorTest_Width" time="0.007" />
   <testcase classname="p4_group_8_repo.test.InstructionTest" name="getHeightTest" time="0.005" />
-  <testcase classname="p4_group_8_repo.test.InstructionTest" name="ThrowExceptionNullLinkTest" time="0.005" />
-  <testcase classname="p4_group_8_repo.test.InstructionTest" name="ThrowExceptionNoLinkTest" time="0.003" />
+  <testcase classname="p4_group_8_repo.test.InstructionTest" name="ThrowExceptionNullLinkTest" time="0.004" />
+  <testcase classname="p4_group_8_repo.test.InstructionTest" name="ThrowExceptionNoLinkTest" time="0.002" />
   <testcase classname="p4_group_8_repo.test.InstructionTest" name="constructorTest_X" time="0.003" />
   <testcase classname="p4_group_8_repo.test.InstructionTest" name="constructorTest_Y" time="0.003" />
   <testcase classname="p4_group_8_repo.test.InstructionTest" name="constructorTest_Height" time="0.003" />

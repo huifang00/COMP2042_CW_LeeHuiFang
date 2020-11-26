@@ -2,6 +2,7 @@ package p4_group_8_repo.backgroundfunction;
 
 import java.io.File;
 
+import javafx.scene.layout.BorderPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
@@ -14,7 +15,13 @@ import javafx.scene.media.MediaPlayer;
 * @since   2020-12-12
  */
 public class MyStage extends World{
-	MediaPlayer mediaPlayer;
+
+	public MyStage(BorderPane root) {
+		super(root);
+		// TODO Auto-generated constructor stub
+	}
+
+	static MediaPlayer mediaPlayer;
 	@Override
 	public void act(long now) {
 		
@@ -23,7 +30,7 @@ public class MyStage extends World{
 	/**
 	 * This is the method to call the music file, create an Media object and play the background music.
 	 */
-	public void playMusic() {
+	public static void playMusic() {
 		String musicFile = "src/p4_group_8_repo/Frogger Main Song Theme (loop).mp3";   
 		Media sound = new Media(new File(musicFile).toURI().toString());
 		mediaPlayer = new MediaPlayer(sound);
@@ -34,7 +41,7 @@ public class MyStage extends World{
 	/**
 	 * This is the method to stop on playing the background music.
 	 */
-	public void stopMusic() {
+	public static void stopMusic() {
 		mediaPlayer.stop();
 	}		
 

@@ -1,6 +1,5 @@
 package p4_group_8_repo;
 
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -11,26 +10,23 @@ import java.util.Optional;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.image.Image;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import p4_group_8_repo.actor.Animal;
-import p4_group_8_repo.actor.BackgroundImage;
 import p4_group_8_repo.actor.lifeAndscore.Digit;
-import p4_group_8_repo.actor.lifeAndscore.HighScore;
 import p4_group_8_repo.actor.lifeAndscore.Life;
-import p4_group_8_repo.actor.mainfunction.Instruction;
-import p4_group_8_repo.actor.mainfunction.Pause;
-import p4_group_8_repo.actor.mainfunction.Play;
-import p4_group_8_repo.actor.mainfunction.Resume;
-import p4_group_8_repo.actor.mainfunction.Sound;
 import p4_group_8_repo.backgroundfunction.MyStage;
+import p4_group_8_repo.MVC.Controller;
 import p4_group_8_repo.level.Level;
 import p4_group_8_repo.level.Level1;
 import p4_group_8_repo.level.LevelFactory;
@@ -49,8 +45,6 @@ public class Main extends Application {
 	private MyStage background;
 	private Animal animal = new Animal();
 	private Scene scene;	
-	private BackgroundImage froggerback;
-	private Play play;
 	private int level = 1;	//initialized the level to 1
 	private Level1 level1;
 	private Alert alert = new Alert(AlertType.NONE);
@@ -63,15 +57,10 @@ public class Main extends Application {
 	private ArrayList<Digit> ArrayDigit = new ArrayList<Digit>();	//save the actor of Digit
 	private ArrayList<Life> ArrayLife = new ArrayList<Life>();	//save the actor of Life
 	private Life lifeImg;
-	private Instruction howtoplay;
-	private Instruction instruction = new Instruction("file:src/p4_group_8_repo/instruction.png", 560, 10, 30, 30);
-	private Pause pause = new Pause(525, 10, 30, 30);
-	private Resume resume = new Resume(525, 10, 30, 30);
-	private Sound sound;
-	private HighScore highscoreButton;
 	private LevelFactory levelFactory = new LevelFactory();
 	private Level level2, level3, level4, level5, level6, level7, level8, level9, level10;
 	private String levelmsg = "";	//variable to save the message of score for each level
+	BorderPane root;
 	
 	/**
 	* This is the main method which run the whole application.
@@ -80,7 +69,7 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
-
+	
 	/**
 	* This is the main method which display a pop up dialog for player name and display the scene with background.
 	* @param primaryStage The JavaFX Stage class is the top level JavaFX container.
@@ -91,55 +80,54 @@ public class Main extends Application {
 		
 		playerNameDialog("");
 		
-		this.background = new MyStage();
-	    scene  = new Scene(background, 600, 800);	//remove the datatype since Scene is declared as global variable
-	    
-		froggerback = new BackgroundImage("file:src/p4_group_8_repo/iKogsKW_cropped.png", 600, 800);
-		background.add(froggerback);
+		try {
+			this.root = new BorderPane();
+			scene = new Scene(root,600,800);
+			//System.out.println(Main.class.getClassLoader().getResource("GUI.fxml"));
+			Parent content = FXMLLoader.load(Main.class.getClassLoader().getResource("p4_group_8_repo/MVC/View.fxml"));
+			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			root.setCenter(content);
+			
+			primaryStage.setScene(scene);
+			
+			Screen screen = Screen.getPrimary();
+			Rectangle2D bounds = screen.getVisualBounds();
 
-		//create the menu before the game start
-		play = new Play(230, 250, 120, 120);
-		background.add(play);	//add start/play button
+			//set Stage boundaries to visible bounds of the main screen
+			double screen_x = ((bounds.getMinX() + bounds.getMaxX())/2) - 300;
+			double screen_y= bounds.getMinY();
+			primaryStage.setX(screen_x);
+			primaryStage.setY(screen_y);
+			
+			//not allowed to resize the screen/window
+			primaryStage.setResizable(false);
+
+			// Set the title for the application
+			primaryStage.setTitle("Frogger");
+			
+			// Add a custom icon.
+			primaryStage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
+
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 		
-		howtoplay = new Instruction("file:src/p4_group_8_repo/howtoplay.png", 150, 350, 300, 300);
-		background.add(howtoplay);	//addprintinstruction at main page
-		
-		highscoreButton = new HighScore(155, 450, 300, 300);
-		background.add(highscoreButton);
+		this.background = new MyStage(root);
 		
 		//create sound button to play music or mute
-		sound = new Sound(background, 490, 10, 30, 30);
-		background.add(sound);
+		//sound = new Sound(background, 490, 10, 30, 30);
+		//background.add(sound);
 		
 		background.start();
-		
-		Screen screen = Screen.getPrimary();
-		Rectangle2D bounds = screen.getVisualBounds();
-
-		//set Stage boundaries to visible bounds of the main screen
-		double screen_x = ((bounds.getMinX() + bounds.getMaxX())/2) - 300;
-		double screen_y= bounds.getMinY();
-		primaryStage.setX(screen_x);
-		primaryStage.setY(screen_y);
-		
-		//not allowed to resize the screen/window
-		primaryStage.setResizable(false);
-		
-		primaryStage.setScene(scene);
-
-		// Set the title for the application
-		primaryStage.setTitle("Frogger");
-		
-		// Add a custom icon.
-		primaryStage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
 
 		primaryStage.show();
 		start();
 		
 		primaryStage.setOnCloseRequest(evt -> {
 			System.exit(0);
-    		if(highscoreButton.getStage().isShowing()) {
-				highscoreButton.close();
+    		if(Controller.getGameModel().getStage().isShowing()) {
+    			Controller.getGameModel().close();
 			}
     	});
 	}
@@ -152,13 +140,15 @@ public class Main extends Application {
         timer = new AnimationTimer() {
             @Override
             public void handle(long now) {
-            	if(play.getGamePlay() == true) {	//Level1
-            		background.remove(play);	//once the button is clicked then remove the button
-            		play.setGamePlay(false);
-            		background.remove(howtoplay);	//remove the button
-            		background.remove(highscoreButton);
-            		background.add(instruction);
-            		background.add(pause);
+            	if(Controller.getGameModel().getGamePlay() == true) {	//Level1
+            		//background.remove(play);	//once the button is clicked then remove the button
+            		//background.remove(playIns);
+            		
+					//background.remove(howtoplay);	//remove the button
+            		//background.remove(highscoreButton);
+            		//background.add(instruction);
+            		//background.add(pause);
+            		//background.add(new Digit(0, 450, 10, 30, 30));
             		background.add(new Digit(0, 450, 10, 30, 30));
             		level1 = new Level1(background);
             		setAnimal(level1.getAnimal());
@@ -166,6 +156,7 @@ public class Main extends Application {
             		animal.setLevel(level);	//set the level in animal class for the speed
             		setLife(3);
             		start();
+            		Controller.getGameModel().setGamePlay(false);
             	}
             	if(getPrintGame()){
             		animal.setLife(3);	//reset the life to 3
@@ -309,8 +300,9 @@ public class Main extends Application {
             	else if (alert.getResult() == ButtonType.NO || level == 0){
             		printEnd();
             		
-            		if(!sound.getMuted()) 
-            			background.stopMusic();
+            		if(!Controller.getMuted()) 
+            			//background.stopMusic();
+            			MyStage.stopMusic();
             		
             		stop();	//timer stop
             		background.stop();	//timer stop
@@ -320,11 +312,13 @@ public class Main extends Application {
             	}
             	if(animal.noLife()) {
             		printGameOver(animal.getPoints());
-            		if(!sound.getMuted())
-            			background.stopMusic();
+            		if(!Controller.getMuted())
+            			//background.stopMusic();
+            			MyStage.stopMusic();
             		stop();
             		background.stop();
             	}
+            	/*
             	if(pause.getPauseGame()) {
             		pause();
                 	background.remove(pause);
@@ -343,6 +337,30 @@ public class Main extends Application {
                 	background.remove(resume);
                 	background.add(pause);
             	}
+            	*/
+            	if(Controller.getGameModel().getPauseGame()) {
+            		pause();
+            		//Controller.setPauseGame(false);
+            		//Controller.setInsPauseGame(false);
+            		//MyStage.stopMusic();
+            		//background.stop();
+            	}
+            	else if(Controller.getGameModel().getInsPauseGame()) {
+            		if(Controller.pausing % 2 == 0) {
+            			pause();
+	            		//Controller.setPauseGame(false);
+	            		//Controller.setInsPauseGame(false);
+	            		//MyStage.stopMusic();
+	            		//background.stop();
+            		}
+            	}
+            	if(Controller.getGameModel().getResumeGame()) {
+            		Controller.getGameModel().setResumeGame(false);
+            		background.start();
+            		if(!Controller.getMuted()) {
+            			MyStage.playMusic();
+            		}
+            	}
             }
         };
 	}
@@ -351,8 +369,8 @@ public class Main extends Application {
 	* This is the method to play the background music, create and start the animation timer.
 	*/
 	public void start() {
-		if(!sound.getMuted())
-			background.playMusic();
+		if(!Controller.getMuted())
+			MyStage.playMusic();
     	createTimer();
         timer.start();
     }
@@ -546,8 +564,8 @@ public class Main extends Application {
 		//use a handler for the onCloseRequest event for the alert to close the application when the alert is closed:
 		alertEnd.setOnCloseRequest(evt -> {
 			System.exit(0);
-			if(highscoreButton.getStage().isShowing()) {
-				highscoreButton.close();
+			if(Controller.getGameModel().getStage().isShowing()) {
+    			Controller.getGameModel().close();
 			}
 		});
     }
@@ -645,8 +663,8 @@ public class Main extends Application {
 		//use a handler for the onCloseRequest event for the alert to close the application when the alert is closed:
 		alertGameOver.setOnCloseRequest(evt -> {
 			System.exit(0);
-			if(highscoreButton.getStage().isShowing()) {
-				highscoreButton.close();
+			if(Controller.getGameModel().getStage().isShowing()) {
+    			Controller.getGameModel().close();
 			}
 		});
     }
@@ -743,25 +761,30 @@ public class Main extends Application {
    	* This is the method pause the game.
    	*/
     public void pause() {
-    	background.stopMusic();
-    	background.remove(sound);	//remove the sound button
-    	background.stop();
-    	animal.setNoMove(true);
-    	pause.setPauseGame(false);
-    	instruction.setPauseGame(false);
+    	//background.stopMusic();
+    	//background.remove(sound);	//remove the sound button
+    	//background.stop();
+    	//animal.setNoMove(true);
+    	//pause.setPauseGame(false);
+    	//instruction.setPauseGame(false);
+    	Controller.getGameModel().setPauseGame(false);
+    	Controller.getGameModel().setInsPauseGame(false);
+		MyStage.stopMusic();
+		background.stop();
     }
-    
     /**
    	* This is the method resume the game after pausing the game.
    	*/
+    /*
     public void resume() {
-    	if(!sound.getMuted())
-    		background.playMusic();	//if the sound is not muted
+    	if(!Controller.getMuted())
+    		MyStage.playMusic();	//if the sound is not muted
     	background.add(sound);	//add back the sound button
     	background.start();
     	animal.setNoMove(false);
     	resume.setResumeGame(false);
     	instruction.setResumeGame(false);
     }
+    */
     
 }

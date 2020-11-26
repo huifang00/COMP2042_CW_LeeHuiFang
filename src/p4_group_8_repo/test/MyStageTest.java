@@ -8,14 +8,19 @@ import java.util.List;
 import org.junit.Test;
 
 import javafx.embed.swing.JFXPanel;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 import p4_group_8_repo.actor.Actor;
 import p4_group_8_repo.actor.Animal;
 import p4_group_8_repo.backgroundfunction.MyStage;
+import p4_group_8_repo.backgroundfunction.World;
 import p4_group_8_repo.actor.obstacle.CarObstacle;
 
 public class MyStageTest {
 	JFXPanel jfxPanel = new JFXPanel();
-	MyStage mystage = new MyStage();
+	BorderPane root = new BorderPane();
+	Scene scene = new Scene(root,600,800);
+	MyStage mystage = new MyStage(root);
 	
 	@Test
 	public void addTest() {
@@ -23,8 +28,7 @@ public class MyStageTest {
 		Actor b = new CarObstacle(2, 5, -1, 23, 21);
 		mystage.add(a);
 		mystage.add(b);
-		List<Actor> list = new ArrayList<>();
-		list = mystage.getObjects(Actor.class);
+		List<Actor> list = World.getObjects(Actor.class);
 		assertEquals("getObjectsTest", 2, list.size());
 	}
 
@@ -35,8 +39,7 @@ public class MyStageTest {
 		mystage.add(a);
 		mystage.add(b);
 		mystage.remove(a);
-		List<Actor> list = new ArrayList<>();
-		list = mystage.getObjects(Actor.class);
+		List<Actor> list = World.getObjects(Actor.class);
 		assertEquals("getObjectsTest", 1, list.size());
 	}
 	
@@ -46,8 +49,7 @@ public class MyStageTest {
 		Actor b = new CarObstacle(2, 5, -1, 23, 21);
 		mystage.add(a);
 		mystage.add(b);
-		List<Actor> result = new ArrayList<>();
-		result = mystage.getObjects(Actor.class);
+		List<Actor> result = World.getObjects(Actor.class);
 		List<Actor> expected = new ArrayList<>();
 		expected.add(a);
 		expected.add(b);
