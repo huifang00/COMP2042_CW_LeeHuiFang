@@ -16,7 +16,6 @@ import javafx.scene.layout.BorderPane;
 import p4_group_8_repo.actor.Animal;
 import p4_group_8_repo.actor.obstacle.Obstacle;
 import p4_group_8_repo.actor.obstacle.ObstacleFactory;
-import p4_group_8_repo.actor.obstacle.TruckObstacle;
 import p4_group_8_repo.backgroundfunction.MyStage;
 
 
@@ -91,18 +90,6 @@ public class AnimalTest{
 		assertNotEquals("getHeightTest", 35.1, result, 0);
 	}
 	
-	/*
-	@Test
-	public void getWorldTest() {
-		boolean result = false;
-		MyStage myWorld = new MyStage(null);
-		myWorld.add(animal);
-		if(animal.getWorld() != null)
-			result = true;
-		assertTrue("getWorldTest", result);
-	}
-	*/
-	
 	@Test
 	public void getIntersectObjectsTest() {
 		MyStage myWorld = new MyStage(root);
@@ -118,19 +105,4 @@ public class AnimalTest{
 		assertEquals("getIntersectObjectsTest", 2, result);
 	}
 	
-	@Test
-	public void getIntersectObjectTest() {
-		MyStage myWorld = new MyStage(root);
-		ObstacleFactory obstacleFactory = new ObstacleFactory();
-		Obstacle truck1 = obstacleFactory.getObstacle("Truck", 42, 34, -1, 30, 30);
-		Obstacle truck2 = obstacleFactory.getObstacle("Truck", 31, 24, 3, 30, 30);
-		myWorld.add(animal);
-		myWorld.add(truck1);
-		myWorld.add(truck2);
-		List<Obstacle> list = new ArrayList<>();
-		list = animal.getIntersectingObjects(Obstacle.class);
-		TruckObstacle obj;
-		obj = animal.getOneIntersectingObject(TruckObstacle.class);
-		assertEquals("getIntersectObjectTest", list.get(0), obj);
-	}
 }

@@ -1,790 +1,865 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
   realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <package id="1" language="java" name="p4_group_8_repo.actor" project="COMP2042_CW_LeeHuiFang" 
+  <package id="1" language="java" name="p4_group_8_repo" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1594" width="1915" x="-537" y="-175"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="2" language="java" name="p4_group_8_repo.Main" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/Main.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="263" y="-37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <package id="3" language="java" name="p4_group_8_repo.actor" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="405" width="835" x="471" y="-72"/>    
+    <position height="302" width="677" x="535" y="114"/>    
     <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="2" language="java" name="p4_group_8_repo.actor.Actor" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/Actor.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1028" y="54"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="3" language="java" name="p4_group_8_repo.actor.Animal" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/Animal.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="831" y="193"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="4" language="java" name="p4_group_8_repo.actor.BackgroundImage" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/BackgroundImage.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1165" y="153"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="5" language="java" name="p4_group_8_repo.actor.End" project="COMP2042_CW_LeeHuiFang" 
+  <class id="4" language="java" name="p4_group_8_repo.actor.End" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/End.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="885" y="290"/>    
+    <position height="-1" width="-1" x="743" y="265"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <package id="6" language="java" name="p4_group_8_repo.actor.lifeAndscore" project="COMP2042_CW_LeeHuiFang" 
+  <class id="5" language="java" name="p4_group_8_repo.actor.LevelImage" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/LevelImage.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="881" y="336"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="p4_group_8_repo.actor.Animal" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/Animal.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="610" y="202"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="p4_group_8_repo.actor.Actor" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/Actor.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="968" y="206"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <package id="8" language="java" name="p4_group_8_repo.actor.lifeAndscore" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/lifeAndscore" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="176" width="583" x="106" y="-345"/>    
+    <position height="199" width="391" x="685" y="-144"/>    
     <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="7" language="java" name="p4_group_8_repo.actor.lifeAndscore.Digit" project="COMP2042_CW_LeeHuiFang" 
+  <class id="9" language="java" name="p4_group_8_repo.actor.lifeAndscore.Digit" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/lifeAndscore/Digit.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="201" y="-258"/>    
+    <position height="-1" width="-1" x="791" y="-15"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="p4_group_8_repo.actor.lifeAndscore.HighScore" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/lifeAndscore/HighScore.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="589" y="-257"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="9" language="java" name="p4_group_8_repo.actor.lifeAndscore.Life" project="COMP2042_CW_LeeHuiFang" 
+  <class id="10" language="java" name="p4_group_8_repo.actor.lifeAndscore.Life" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/lifeAndscore/Life.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="396" y="-258"/>    
+    <position height="-1" width="-1" x="980" y="-68"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <package id="10" language="java" name="p4_group_8_repo.actor.mainfunction" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/mainfunction" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="163" width="894" x="784" y="-336"/>    
-    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <class id="11" language="java" name="p4_group_8_repo.actor.mainfunction.Instruction" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/mainfunction/Instruction.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="875" y="-246"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="12" language="java" name="p4_group_8_repo.actor.mainfunction.Play" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/mainfunction/Play.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1054" y="-246"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="13" language="java" name="p4_group_8_repo.actor.mainfunction.Pause" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/mainfunction/Pause.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1233" y="-246"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="14" language="java" name="p4_group_8_repo.actor.mainfunction.Resume" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/mainfunction/Resume.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1408" y="-248"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="15" language="java" name="p4_group_8_repo.actor.mainfunction.Sound" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/mainfunction/Sound.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1582" y="-248"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <package id="16" language="java" name="p4_group_8_repo.actor.obstacle" project="COMP2042_CW_LeeHuiFang" 
+  <package id="11" language="java" name="p4_group_8_repo.actor.obstacle" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/obstacle" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="234" width="724" x="580" y="442"/>    
+    <position height="392" width="665" x="628" y="498"/>    
     <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="17" language="java" name="p4_group_8_repo.actor.obstacle.Obstacle" project="COMP2042_CW_LeeHuiFang" 
+  <class id="12" language="java" name="p4_group_8_repo.actor.obstacle.Obstacle" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/obstacle/Obstacle.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1018" y="521"/>    
+    <position height="-1" width="-1" x="1100" y="624"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <class id="18" language="java" name="p4_group_8_repo.actor.obstacle.ObstacleFactory" project="COMP2042_CW_LeeHuiFang" 
+  <class id="13" language="java" name="p4_group_8_repo.actor.obstacle.ObstacleFactory" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/obstacle/ObstacleFactory.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="664" y="494"/>    
+    <position height="-1" width="-1" x="781" y="625"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <class id="19" language="java" name="p4_group_8_repo.actor.obstacle.WetTurtle" project="COMP2042_CW_LeeHuiFang" 
+  <class id="14" language="java" name="p4_group_8_repo.actor.obstacle.WetTurtle" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/obstacle/WetTurtle.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="680" y="571"/>    
+    <position height="-1" width="-1" x="749" y="703"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <class id="20" language="java" name="p4_group_8_repo.actor.obstacle.CarObstacle" project="COMP2042_CW_LeeHuiFang" 
+  <class id="15" language="java" name="p4_group_8_repo.actor.obstacle.CarObstacle" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/obstacle/CarObstacle.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="704" y="640"/>    
+    <position height="-1" width="-1" x="757" y="785"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <class id="21" language="java" name="p4_group_8_repo.actor.obstacle.Turtle" project="COMP2042_CW_LeeHuiFang" 
+  <class id="16" language="java" name="p4_group_8_repo.actor.obstacle.Turtle" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/obstacle/Turtle.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="874" y="640"/>    
+    <position height="-1" width="-1" x="882" y="847"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <class id="22" language="java" name="p4_group_8_repo.actor.obstacle.Log" project="COMP2042_CW_LeeHuiFang" 
+  <class id="17" language="java" name="p4_group_8_repo.actor.obstacle.Log" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/obstacle/Log.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1037" y="643"/>    
+    <position height="-1" width="-1" x="1042" y="842"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <class id="23" language="java" name="p4_group_8_repo.actor.obstacle.TruckObstacle" project="COMP2042_CW_LeeHuiFang" 
+  <class id="18" language="java" name="p4_group_8_repo.actor.obstacle.TruckObstacle" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/obstacle/TruckObstacle.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1194" y="607"/>    
+    <position height="-1" width="-1" x="1192" y="812"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <class id="24" language="java" name="p4_group_8_repo.actor.obstacle.Snake" project="COMP2042_CW_LeeHuiFang" 
+  <class id="19" language="java" name="p4_group_8_repo.actor.obstacle.Snake" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/obstacle/Snake.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1211" y="533"/>    
+    <position height="-1" width="-1" x="1206" y="728"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <package id="25" language="java" name="p4_group_8_repo.level" project="COMP2042_CW_LeeHuiFang" 
+  <package id="20" language="java" name="p4_group_8_repo.level" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="626" width="869" x="-623" y="-134"/>    
+    <position height="821" width="750" x="-362" y="116"/>    
     <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="26" language="java" name="p4_group_8_repo.level.Level1" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level1.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-68" y="-59"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="27" language="java" name="p4_group_8_repo.level.Level2" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level2.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-196" y="-23"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="28" language="java" name="p4_group_8_repo.level.Level3" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level3.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-310" y="19"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="29" language="java" name="p4_group_8_repo.level.Level4" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level4.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-308" y="82"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="30" language="java" name="p4_group_8_repo.actor.LevelImage" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/actor/LevelImage.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="159" width="138" x="620" y="18"/>    
-    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="31" language="java" name="p4_group_8_repo.level.Level5" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level5.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-307" y="148"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="32" language="java" name="p4_group_8_repo.level.Level6" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level6.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-306" y="209"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="33" language="java" name="p4_group_8_repo.level.Level7" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level7.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-303" y="274"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="34" language="java" name="p4_group_8_repo.level.Level8" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level8.java" binary="false" corner="BOTTOM_LEFT">    
-    <position height="-1" width="-1" x="-302" y="336"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="35" language="java" name="p4_group_8_repo.level.Level9" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level9.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-269" y="401"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="36" language="java" name="p4_group_8_repo.level.Level10" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level10.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-119" y="438"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <class id="37" language="java" name="p4_group_8_repo.level.LevelFactory" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/LevelFactory.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-315" y="-97"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <interface id="38" language="java" name="p4_group_8_repo.level.Level" project="COMP2042_CW_LeeHuiFang" 
+  <interface id="21" language="java" name="p4_group_8_repo.level.Level" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-558" y="136"/>    
+    <position height="-1" width="-1" x="-288" y="352"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </interface>  
-  <package id="39" language="java" name="p4_group_8_repo.backgroundfunction" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/backgroundfunction" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="328" width="843" x="-622" y="528"/>    
-    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <class id="40" language="java" name="p4_group_8_repo.backgroundfunction.MyStage" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/backgroundfunction/MyStage.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="105" width="166" x="-307" y="640"/>    
+  <class id="22" language="java" name="p4_group_8_repo.level.LevelFactory" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/LevelFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="139" x="-331" y="191"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <class id="41" language="java" name="p4_group_8_repo.backgroundfunction.World" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/backgroundfunction/World.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-222" y="810"/>    
+  <class id="23" language="java" name="p4_group_8_repo.level.Level2" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level2.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="104" y="279"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <generalization id="42">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="2"/>  
+  <class id="24" language="java" name="p4_group_8_repo.level.Level1" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level1.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="188" y="196"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="p4_group_8_repo.level.Level3" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level3.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="47" y="355"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="p4_group_8_repo.level.Level4" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level4.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1" y="433"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="p4_group_8_repo.level.Level5" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level5.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-5" y="512"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="p4_group_8_repo.level.Level6" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level6.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="0" y="590"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="p4_group_8_repo.level.Level7" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level7.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-3" y="675"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="p4_group_8_repo.level.Level8" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level8.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="104" x="-11" y="719"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="p4_group_8_repo.level.Level9" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level9.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="104" x="100" y="766"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="p4_group_8_repo.level.Level10" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/level/Level10.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="246" y="863"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <package id="33" language="java" name="p4_group_8_repo.backgroundfunction" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/backgroundfunction" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="405" width="863" x="-455" y="986"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="34" language="java" name="p4_group_8_repo.backgroundfunction.MyStage" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/backgroundfunction/MyStage.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="39" y="1134"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="p4_group_8_repo.backgroundfunction.World" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/backgroundfunction/World.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="285" y="1128"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <package id="36" language="java" name="p4_group_8_repo.MVC" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/MVC" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="214" width="387" x="-448" y="-154"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="37" language="java" name="p4_group_8_repo.MVC.GameModel" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/MVC/GameModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-213" y="17"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="p4_group_8_repo.MVC.Controller" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/MVC/Controller.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-217" y="-67"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <generalization id="39">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="12"/>  
   </generalization>  
-  <association id="43">    
-    <bendpoint x="-534" y="300"/>    
-    <bendpoint x="-550" y="602"/>    
-    <bendpoint x="-457" y="641"/>    
-    <end type="SOURCE" refId="33" navigable="false">      
-      <attribute id="44" name="background">        
-        <position height="18" width="67" x="-314" y="587"/>      
-      </attribute>      
-      <multiplicity id="45" minimum="0" maximum="1">        
-        <position height="16" width="23" x="-351" y="663"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="40" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="46">    
-    <bendpoint x="-555" y="388"/>    
-    <end type="SOURCE" refId="35"/>    
-    <end type="TARGET" refId="38"/>  
-  </realization>  
-  <generalization id="47">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="2"/>  
+  <generalization id="40">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="12"/>  
   </generalization>  
-  <realization id="48">    
-    <end type="SOURCE" refId="32"/>    
-    <end type="TARGET" refId="38"/>  
-  </realization>  
-  <generalization id="49">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <generalization id="50">    
-    <bendpoint x="679" y="-65"/>    
-    <bendpoint x="828" y="-15"/>    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <generalization id="51">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <association id="52">    
-    <bendpoint x="-140" y="178"/>    
-    <bendpoint x="-48" y="308"/>    
-    <bendpoint x="9" y="532"/>    
-    <bendpoint x="-71" y="582"/>    
-    <end type="SOURCE" refId="29" navigable="false">      
-      <attribute id="53" name="background">        
-        <position height="18" width="67" x="-135" y="595"/>      
-      </attribute>      
-      <multiplicity id="54" minimum="0" maximum="1">        
-        <position height="16" width="23" x="-111" y="615"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="40" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="55">    
-    <bendpoint x="815" y="35"/>    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <generalization id="56">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="17"/>  
-  </generalization>  
-  <association id="57">    
-    <bendpoint x="385" y="-28"/>    
+  <association id="41">    
     <end type="SOURCE" refId="27" navigable="false">      
-      <attribute id="58" name="levelImage">        
-        <position height="18" width="60" x="319" y="-43"/>      
+      <attribute id="42" name="obstacleFactory">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="43" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <dependency id="44">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="33"/>  
+  </dependency>  
+  <generalization id="45">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <realization id="46">    
+    <bendpoint x="87" y="192"/>    
+    <bendpoint x="-29" y="198"/>    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="21"/>  
+  </realization>  
+  <association id="47">    
+    <bendpoint x="607" y="52"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="48" name="animal">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="49" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <association id="50">    
+    <bendpoint x="-46" y="375"/>    
+    <bendpoint x="-196" y="558"/>    
+    <bendpoint x="-191" y="949"/>    
+    <bendpoint x="-190" y="1135"/>    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="51" name="background">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="52" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <dependency id="53">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="37"/>  
+  </dependency>  
+  <association id="54">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="55" name="obstacleFactory">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="56" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <association id="57">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="58" name="obstacleFactory">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="59" minimum="0" maximum="1">        
-        <position height="16" width="23" x="364" y="-24"/>      
+        <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
-  <generalization id="60">    
-    <bendpoint x="1313" y="-74"/>    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <association id="61">    
-    <bendpoint x="121" y="658"/>    
-    <bendpoint x="136" y="728"/>    
-    <bendpoint x="-32" y="765"/>    
-    <end type="SOURCE" refId="26" navigable="false">      
-      <attribute id="62" name="background">        
-        <position height="18" width="65" x="-129" y="727"/>      
+  <association id="60">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="61" name="obstacleFactory">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="63" minimum="0" maximum="1">        
-        <position height="16" width="23" x="-103" y="746"/>      
+      <multiplicity id="62" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="40" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
+  <dependency id="63">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
   <realization id="64">    
-    <end type="SOURCE" refId="31"/>    
-    <end type="TARGET" refId="38"/>  
+    <bendpoint x="-156" y="461"/>    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="21"/>  
   </realization>  
-  <realization id="65">    
+  <dependency id="65">    
+    <bendpoint x="1191" y="-26"/>    
+    <bendpoint x="1195" y="80"/>    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <generalization id="66">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <realization id="67">    
+    <bendpoint x="-166" y="538"/>    
     <end type="SOURCE" refId="28"/>    
-    <end type="TARGET" refId="38"/>  
+    <end type="TARGET" refId="21"/>  
   </realization>  
-  <association id="66">    
-    <bendpoint x="-13" y="277"/>    
-    <bendpoint x="83" y="571"/>    
-    <bendpoint x="116" y="696"/>    
-    <end type="SOURCE" refId="27" navigable="false">      
-      <attribute id="67" name="background">        
-        <position height="18" width="67" x="-116" y="677"/>      
-      </attribute>      
-      <multiplicity id="68" minimum="0" maximum="1">        
-        <position height="16" width="23" x="-92" y="695"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="40" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
+  <realization id="68">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="21"/>  
+  </realization>  
   <association id="69">    
-    <bendpoint x="269" y="271"/>    
-    <bendpoint x="498" y="247"/>    
-    <end type="SOURCE" refId="34" navigable="false">      
-      <attribute id="70" name="levelImage">        
-        <position height="18" width="60" x="540" y="167"/>      
+    <bendpoint x="-52" y="233"/>    
+    <bendpoint x="-303" y="533"/>    
+    <bendpoint x="-303" y="793"/>    
+    <bendpoint x="-308" y="1201"/>    
+    <bendpoint x="-167" y="1202"/>    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="70" name="background">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="71" minimum="0" maximum="1">        
-        <position height="16" width="23" x="579" y="184"/>      
+        <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
   <generalization id="72">    
-    <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="17"/>  
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
   </generalization>  
-  <generalization id="73">    
-    <end type="SOURCE" refId="21"/>    
-    <end type="TARGET" refId="17"/>  
-  </generalization>  
-  <realization id="74">    
-    <bendpoint x="-560" y="-60"/>    
-    <end type="SOURCE" refId="26"/>    
-    <end type="TARGET" refId="38"/>  
-  </realization>  
-  <generalization id="75">    
-    <bendpoint x="1178" y="-99"/>    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <generalization id="76">    
-    <end type="SOURCE" refId="24"/>    
-    <end type="TARGET" refId="17"/>  
-  </generalization>  
-  <association id="77">    
-    <bendpoint x="-494" y="371"/>    
-    <bendpoint x="-499" y="515"/>    
-    <end type="SOURCE" refId="34" navigable="false">      
-      <attribute id="78" name="background">        
-        <position height="18" width="67" x="-381" y="608"/>      
+  <association id="73">    
+    <bendpoint x="-55" y="717"/>    
+    <bendpoint x="-53" y="909"/>    
+    <bendpoint x="-34" y="1021"/>    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="74" name="background">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="79" minimum="0" maximum="1">        
-        <position height="16" width="23" x="-320" y="621"/>      
+      <multiplicity id="75" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="40" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
+  <association id="76">    
+    <bendpoint x="-53" y="78"/>    
+    <bendpoint x="-376" y="83"/>    
+    <bendpoint x="-386" y="1283"/>    
+    <bendpoint x="-183" y="1285"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="77" name="background">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="78" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <generalization id="79">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="35"/>  
+  </generalization>  
   <association id="80">    
-    <bendpoint x="-298" y="508"/>    
-    <end type="SOURCE" refId="35" navigable="false">      
-      <attribute id="81" name="background">        
-        <position height="18" width="67" x="-382" y="732"/>      
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="81" name="obstacleFactory">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="82" minimum="0" maximum="1">        
-        <position height="16" width="23" x="-257" y="601"/>      
+        <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="40" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
   <association id="83">    
-    <bendpoint x="171" y="86"/>    
-    <end type="SOURCE" refId="31" navigable="false">      
-      <attribute id="84" name="levelImage">        
-        <position height="18" width="60" x="296" y="71"/>      
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="84" name="obstacleFactory">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="85" minimum="0" maximum="1">        
-        <position height="16" width="23" x="317" y="88"/>      
+        <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
-  <generalization id="86">    
-    <bendpoint x="874" y="122"/>    
-    <end type="SOURCE" refId="30"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <realization id="87">    
-    <bendpoint x="-489" y="340"/>    
-    <end type="SOURCE" refId="34"/>    
-    <end type="TARGET" refId="38"/>  
-  </realization>  
-  <generalization id="88">    
-    <bendpoint x="1413" y="23"/>    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <generalization id="89">    
-    <end type="SOURCE" refId="23"/>    
-    <end type="TARGET" refId="17"/>  
-  </generalization>  
+  <association id="86">    
+    <bendpoint x="110" y="1047"/>    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="87" name="background">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="88" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <dependency id="89">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
   <association id="90">    
-    <bendpoint x="-562" y="276"/>    
-    <bendpoint x="-586" y="723"/>    
-    <end type="SOURCE" refId="32" navigable="false">      
-      <attribute id="91" name="background">        
-        <position height="18" width="67" x="-424" y="692"/>      
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="91" name="gameModel">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="92" minimum="0" maximum="1">        
-        <position height="16" width="23" x="-398" y="708"/>      
+        <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="40" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="37" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
-  <realization id="93">    
-    <bendpoint x="-467" y="248"/>    
-    <end type="SOURCE" refId="33"/>    
-    <end type="TARGET" refId="38"/>  
-  </realization>  
-  <generalization id="94">    
-    <end type="SOURCE" refId="40"/>    
-    <end type="TARGET" refId="41"/>  
-  </generalization>  
-  <generalization id="95">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <association id="96">    
-    <bendpoint x="-140" y="116"/>    
-    <bendpoint x="-26" y="293"/>    
-    <bendpoint x="63" y="616"/>    
-    <bendpoint x="-10" y="637"/>    
-    <end type="SOURCE" refId="28" navigable="false">      
-      <attribute id="97" name="background">        
-        <position height="18" width="67" x="-91" y="633"/>      
+  <association id="93">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="94" name="ArrayDigit">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="98" minimum="0" maximum="1">        
-        <position height="16" width="23" x="-63" y="651"/>      
+      <multiplicity id="95" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="40" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
-  <association id="99">    
-    <bendpoint x="348" y="346"/>    
-    <bendpoint x="564" y="332"/>    
-    <end type="SOURCE" refId="35" navigable="false">      
-      <attribute id="100" name="levelImage">        
-        <position height="18" width="60" x="402" y="120"/>      
-      </attribute>      
-      <multiplicity id="101" minimum="0" maximum="1">        
-        <position height="16" width="23" x="619" y="230"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="102">    
-    <bendpoint x="-608" y="437"/>    
-    <bendpoint x="-610" y="270"/>    
-    <end type="SOURCE" refId="36"/>    
-    <end type="TARGET" refId="38"/>  
+  <realization id="96">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="21"/>  
   </realization>  
-  <realization id="103">    
-    <bendpoint x="-484" y="-23"/>    
-    <end type="SOURCE" refId="27"/>    
+  <dependency id="97">    
+    <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="38"/>  
-  </realization>  
-  <generalization id="104">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <generalization id="105">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="17"/>  
-  </generalization>  
-  <association id="106">    
-    <bendpoint x="-222" y="37"/>    
-    <bendpoint x="70" y="29"/>    
-    <bendpoint x="254" y="30"/>    
-    <end type="SOURCE" refId="29" navigable="false">      
-      <attribute id="107" name="levelImage">        
-        <position height="18" width="60" x="458" y="51"/>      
+  </dependency>  
+  <association id="98">    
+    <bendpoint x="156" y="1076"/>    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="99" name="background">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="108" minimum="0" maximum="1">        
-        <position height="16" width="23" x="480" y="67"/>      
+      <multiplicity id="100" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
-  <association id="109">    
-    <bendpoint x="-578" y="264"/>    
-    <bendpoint x="-614" y="776"/>    
-    <bendpoint x="-413" y="776"/>    
+  <dependency id="101">    
+    <bendpoint x="-417" y="-62"/>    
+    <bendpoint x="-426" y="1360"/>    
+    <bendpoint x="-145" y="1365"/>    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="34"/>  
+  </dependency>  
+  <association id="102">    
     <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="103" name="obstacleFactory">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="104" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <association id="105">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="106" name="lifeImg">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="107" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <generalization id="108">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <association id="109">    
+    <bendpoint x="-82" y="484"/>    
+    <bendpoint x="-157" y="585"/>    
+    <bendpoint x="-150" y="957"/>    
+    <bendpoint x="-150" y="1095"/>    
+    <end type="SOURCE" refId="26" navigable="false">      
       <attribute id="110" name="background">        
-        <position height="18" width="67" x="-381" y="648"/>      
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="111" minimum="0" maximum="1">        
-        <position height="16" width="23" x="-353" y="750"/>      
+        <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="40" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
-  <association id="112">    
-    <bendpoint x="276" y="423"/>    
-    <bendpoint x="754" y="406"/>    
-    <end type="SOURCE" refId="36" navigable="false">      
-      <attribute id="113" name="levelImage">        
-        <position height="18" width="60" x="674" y="211"/>      
-      </attribute>      
-      <multiplicity id="114" minimum="0" maximum="1">        
-        <position height="16" width="23" x="720" y="227"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="115">    
-    <bendpoint x="-144" y="568"/>    
-    <end type="SOURCE" refId="36" navigable="false">      
-      <attribute id="116" name="background">        
-        <position height="18" width="67" x="-219" y="593"/>      
-      </attribute>      
-      <multiplicity id="117" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="40" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="118">    
-    <bendpoint x="483" y="-47"/>    
+  <realization id="112">    
+    <bendpoint x="-221" y="580"/>    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="21"/>  
+  </realization>  
+  <generalization id="113">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="114">    
     <end type="SOURCE" refId="26" navigable="false">      
-      <attribute id="119" name="levelImage">        
-        <position height="18" width="58" x="560" y="4"/>      
+      <attribute id="115" name="obstacleFactory">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="120" minimum="0" maximum="1">        
-        <position height="16" width="23" x="570" y="24"/>      
+      <multiplicity id="116" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
-  <association id="121">    
-    <bendpoint x="293" y="11"/>    
-    <bendpoint x="401" y="13"/>    
-    <end type="SOURCE" refId="28" navigable="false">      
-      <attribute id="122" name="levelImage">        
-        <position height="18" width="60" x="302" y="-5"/>      
+  <association id="117">    
+    <bendpoint x="-4" y="87"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="118" name="levelFactory">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="123" minimum="0" maximum="1">        
-        <position height="16" width="23" x="329" y="14"/>      
+      <multiplicity id="119" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
+  <association id="120">    
+    <bendpoint x="-74" y="546"/>    
+    <bendpoint x="-119" y="600"/>    
+    <bendpoint x="-115" y="954"/>    
+    <bendpoint x="-116" y="1069"/>    
+    <bendpoint x="-85" y="1095"/>    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="121" name="background">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="122" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <generalization id="123">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
   <association id="124">    
-    <bendpoint x="120" y="179"/>    
-    <end type="SOURCE" refId="32" navigable="false">      
-      <attribute id="125" name="levelImage">        
-        <position height="18" width="60" x="568" y="211"/>      
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="125" name="background">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="126" minimum="0" maximum="1">        
-        <position height="16" width="23" x="426" y="134"/>      
+        <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
-  <association id="127">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="128" name="inter"/>      
-      <multiplicity id="129" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="130">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="2"/>  
+  <generalization id="127">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="12"/>  
   </generalization>  
-  <realization id="131">    
-    <end type="SOURCE" refId="29"/>    
-    <end type="TARGET" refId="38"/>  
-  </realization>  
-  <association id="132">    
-    <bendpoint x="107" y="240"/>    
-    <bendpoint x="398" y="190"/>    
-    <end type="SOURCE" refId="33" navigable="false">      
-      <attribute id="133" name="levelImage">        
-        <position height="18" width="60" x="541" y="122"/>      
+  <dependency id="128">    
+    <bendpoint x="-497" y="-32"/>    
+    <bendpoint x="-495" y="1139"/>    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="33"/>  
+  </dependency>  
+  <association id="129">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="130" name="level1">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="134" minimum="0" maximum="1">        
-        <position height="16" width="23" x="557" y="138"/>      
+      <multiplicity id="131" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
+  <dependency id="132">    
+    <bendpoint x="1318" y="1200"/>    
+    <bendpoint x="1316" y="441"/>    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <realization id="133">    
+    <bendpoint x="-146" y="402"/>    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="21"/>  
+  </realization>  
+  <generalization id="134">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <association id="135">    
+    <bendpoint x="-51" y="304"/>    
+    <bendpoint x="-241" y="541"/>    
+    <bendpoint x="-239" y="913"/>    
+    <bendpoint x="-240" y="1164"/>    
+    <bendpoint x="-130" y="1167"/>    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="136" name="background">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="137" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <generalization id="138">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <realization id="139">    
+    <bendpoint x="-348" y="864"/>    
+    <bendpoint x="-350" y="582"/>    
+    <bendpoint x="-346" y="437"/>    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="21"/>  
+  </realization>  
+  <association id="140">    
+    <bendpoint x="-34" y="139"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="141" name="level4">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="142" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <dependency id="143">    
+    <bendpoint x="343" y="968"/>    
+    <bendpoint x="924" y="973"/>    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="144">    
+    <bendpoint x="426" y="271"/>    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <association id="145">    
+    <bendpoint x="-88" y="634"/>    
+    <bendpoint x="-88" y="923"/>    
+    <bendpoint x="-64" y="1075"/>    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="146" name="background">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="147" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <realization id="148">    
+    <bendpoint x="-319" y="792"/>    
+    <bendpoint x="-320" y="458"/>    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="21"/>  
+  </realization>  
+  <generalization id="149">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="150">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="151" name="obstacleFactory">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="152" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <association id="153">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="154" name="obstacleFactory">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="155" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <realization id="156">    
+    <bendpoint x="-279" y="743"/>    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="21"/>  
+  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="false" package="false" protected="false" private="false" static="false"/>    
     <operations public="false" package="false" protected="false" private="false" static="false"/>  
   </classifier-display>  
-  <association-display labels="true" multiplicity="true"/>
+  <association-display labels="false" multiplicity="false"/>
 </class-diagram>

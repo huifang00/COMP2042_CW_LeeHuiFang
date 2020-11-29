@@ -1,19 +1,30 @@
 package p4_group_8_repo.MVC;
 
-
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import p4_group_8_repo.backgroundfunction.MyStage;
 
+/**
+* Controller Class
+* A controller for applying MVC pattern. 
+* This class is responsible for controlling the way of user interacts with the frogger application.
+* 
+*
+* @author  	Lee Hui Fang 20125427, hfyhl2
+* @since   	1.9
+*/
 public class Controller {
 	@FXML private ImageView background, start, howtoplay, highscore, startIns, sound, pause, instruction;
 	private Image background_img, start_img, howtoplay_img, highscore_img, startIns_img, instruction_img;
 	private static Image soundOn_img, soundOff_img, pause_img, resume_img;
-	public static int soundOnOff = 0;
-	public static int pausing = 0;
+	private static int soundOnOff = 0;
+	private static int pausing = 0;
 	private static GameModel gameModel = new GameModel();
 	
+	/**
+	 * This method is called when the FXML loader finish loading the FXML document.
+	 * @since 1.9
+	 */
 	public void initialize() {
 		background_img = new Image("file:src/p4_group_8_repo/iKogsKW_cropped.png");
 		background.setImage(background_img);
@@ -34,6 +45,10 @@ public class Controller {
 		
 	}
 	
+	/**
+	 * This method is called when the start/play button is clicked.
+	 * @since 1.9
+	 */
 	@FXML
 	public void onStartClicked() {
 		System.out.println("START:"); 
@@ -46,6 +61,10 @@ public class Controller {
 		instruction.setImage(instruction_img);
 	}
 	
+	/**
+	 * This method is called when the instruction button is clicked.
+	 * @since 1.9
+	 */
 	@FXML
 	public void onInstructionClicked() {
 		gameModel.setInsPauseGame(true);
@@ -65,26 +84,36 @@ public class Controller {
 		}
 	}
 	
+	/**
+	 * This method is called when the high score button is clicked.
+	 * @since 1.9
+	 */
 	@FXML
 	public void onHighscoreClicked() {
 		if(!gameModel.getStage().isShowing())
 			gameModel.getHighScore();
 	}
 	
+	/**
+	 * This method is called when the sound button is clicked.
+	 * @since 1.9
+	 */
 	@FXML
 	public void onSoundClicked() {
 		soundOnOff++;
+		gameModel.setSound(true);
 		if(soundOnOff%2 == 0) {
 			sound.setImage(soundOff_img);
-			if(pausing%2 == 0) 
-				MyStage.playMusic();
 		}
 	    else {
 	    	sound.setImage(soundOn_img);
-	    	MyStage.stopMusic();
 	    }
 	}
 	
+	/**
+	 * This method is called when the pause/resume button is clicked.
+	 * @since 1.9
+	 */
 	@FXML
 	public void onPauseClicked() {
 		//pausing = 1;
@@ -104,6 +133,7 @@ public class Controller {
 	/**
 	 * This methods get the value of the sound is played/muted.
 	 * @return This returns the value of to play/mute the background music.
+	 * @since 1.9
 	 */
 	public static boolean getMuted() {
 		if(soundOnOff % 2 == 0)
@@ -112,8 +142,30 @@ public class Controller {
 			return true;
 	}
 	
-	public static GameModel getGameModel() {
+	/**
+	 * This methods get the object of GameModel which is created.
+	 * @return GameModel This returns the gamemodel which is created.
+	 * @since 1.9
+	 */
+	public GameModel getGameModel() {
 		return gameModel;
+	}
+
+	/**
+	 * This methods return the value which indicates the pausing status.
+	 * @return int This returns the value of pausing status.
+	 * @since 1.9
+	 */
+	public int getPausing() {
+		return pausing;
+	}
+	
+	/**
+	 * This methods get the value which indicated the sound playing status.
+	 * @return int This returns the value of sound playing status.
+	 */
+	public int getsoundOnOff() {
+		return soundOnOff;
 	}
 
 }

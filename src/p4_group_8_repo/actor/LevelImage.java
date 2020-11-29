@@ -4,22 +4,19 @@ import javafx.scene.image.Image;
 
 /**
 * LevelImage Class
-* Set the level image(s).
+* This class set the level image(s) for each level.
 * 
 *
-* @author  Lee Hui Fang 20125427, hfyhl2
-* @version 1.0
-* @since   2020-12-12
+* @author  	Lee Hui Fang 20125427, hfyhl2
+* @since 	1.4
 */
 public class LevelImage extends Actor {
-	/**
-	 * The image(s) of level description.
-	 */
-	private Image levelimg;
+	private Image levelimg;	//The image(s) of level description
 	
 	/**
 	* This is the abstract method from superclass.
-	* @param now The timestamp of the current frame given in nanoseconds.
+	* @param now The time stamp of the current frame given in nanoseconds.
+	* @since 1.4
 	*/
 	@Override
 	public void act(long now) {
@@ -30,10 +27,7 @@ public class LevelImage extends Actor {
 	 * Class constructor specifies and sets the current level, position and size of the level description image.
 	 * This constructor sets the image of the level description.
 	 * @param level The current level of the player.
-	 * @param xpos The x-coordinate of the level description image.
-	 * @param ypos The y-coordinate of the level description image.
-	 * @param width The width of the level description image.
-	 * @param height The height of the level description image.
+	 * @since 1.4
 	 */
 	public LevelImage(int level) {
 		int xpos = 10;

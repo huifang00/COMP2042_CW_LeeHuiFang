@@ -5,8 +5,7 @@ package p4_group_8_repo.actor.obstacle;
  * This class is used create the object of Obstacle without exposing the logic to client.
  * This class refer to newly created object using an abstract class.
  * @author  Lee Hui Fang 20125427, hfyhl2 
- * @version 1.0
- * @since   2020-12-12
+ * @since	1.5
  */
 
 public class ObstacleFactory{
@@ -20,6 +19,7 @@ public class ObstacleFactory{
 	 * @param width	The width of the obstacle
 	 * @param height The height of the obstacle
 	 * @return	Obstacle This returns the object created based on the name of obstacle given.
+	 * @since 1.5
 	 */
 	public Obstacle getObstacle(String obstacle, int xpos, int ypos, double speed, double width, double height){
 		if(obstacle == null){

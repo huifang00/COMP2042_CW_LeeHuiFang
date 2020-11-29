@@ -1,52 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
   realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <package id="1" language="java" name="p4_group_8_repo.backgroundfunction" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/backgroundfunction" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="362" width="611" x="219" y="-150"/>    
+  <package id="1" language="java" name="p4_group_8_repo" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1158" width="943" x="29" y="-318"/>    
     <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="2" language="java" name="p4_group_8_repo.backgroundfunction.MyStage" project="COMP2042_CW_LeeHuiFang" 
+  <class id="2" language="java" name="p4_group_8_repo.Main" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/Main.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="140" y="242"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="3" language="java" name="p4_group_8_repo.backgroundfunction" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/backgroundfunction" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="328" width="578" x="364" y="-245"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="4" language="java" name="p4_group_8_repo.backgroundfunction.MyStage" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/backgroundfunction/MyStage.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="418" y="58"/>    
+    <position height="-1" width="-1" x="535" y="-20"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="p4_group_8_repo.backgroundfunction.World" project="COMP2042_CW_LeeHuiFang" 
+  <class id="5" language="java" name="p4_group_8_repo.backgroundfunction.World" project="COMP2042_CW_LeeHuiFang" 
     file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/backgroundfunction/World.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="686" y="63"/>    
+    <position height="-1" width="-1" x="838" y="-68"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="p4_group_8_repo.Main" project="COMP2042_CW_LeeHuiFang" 
-    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/Main.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="1143" width="177" x="-51" y="-514"/>    
+  <package id="6" language="java" name="p4_group_8_repo.MVC" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/MVC" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="675" width="586" x="365" y="134"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="7" language="java" name="p4_group_8_repo.MVC.Controller" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/MVC/Controller.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="487" y="493"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <generalization id="5">    
+  <class id="8" language="java" name="p4_group_8_repo.MVC.GameModel" project="COMP2042_CW_LeeHuiFang" 
+    file="/COMP2042_CW_LeeHuiFang/src/p4_group_8_repo/MVC/GameModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="831" y="487"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="9">    
     <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <association id="6">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="7" name="background"/>      
-      <multiplicity id="8" minimum="0" maximum="1"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="10">    
+    <bendpoint x="303" y="184"/>    
+    <bendpoint x="687" y="184"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <association id="11">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="12" name="gameModel">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="13" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
+    <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <association id="14">    
+    <bendpoint x="303" y="-23"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="15" name="background">        
+        <position height="0" width="0" x="-1" y="26"/>      
+      </attribute>      
+      <multiplicity id="16" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-1" y="26"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="17">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

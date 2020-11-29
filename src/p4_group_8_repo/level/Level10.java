@@ -1,5 +1,6 @@
 package p4_group_8_repo.level;
 
+import p4_group_8_repo.Main;
 import p4_group_8_repo.actor.Animal;
 import p4_group_8_repo.actor.End;
 import p4_group_8_repo.actor.LevelImage;
@@ -12,9 +13,8 @@ import p4_group_8_repo.actor.obstacle.ObstacleFactory;
 * Class which includes all the actor(s) or images(s) for level 10.
 * 
 *
-* @author  Lee Hui Fang 20125427, hfyhl2
-* @version 1.0
-* @since   2020-12-12
+* @author  	Lee Hui Fang 20125427, hfyhl2
+* @since	1.8
 */
 public class Level10 implements Level{
 	
@@ -33,12 +33,11 @@ public class Level10 implements Level{
 	
 	/**
 	 * Class constructor which calls the method(s) to create image(s) in the application.
-	 * @param background The stage of the game application where it contain all actors.
-	 * @param animal The main character(frog) of the application.
+	 * @since 1.8
 	 */
-	public Level10(MyStage background, Animal animal) {
-		this.background = background;
-		this.animal = animal;
+	public Level10() {
+		this.background = Main.getMyStage();
+		this.animal = Main.getAnimal();
 		addLevelImage();
 		addLog();
 		addTurtle();
@@ -51,6 +50,7 @@ public class Level10 implements Level{
 
 	/**
 	 * This is the method to add the image of level information.
+	 * @since 1.8
 	 */
 	public void addLevelImage() {
 		levelImage = new LevelImage(10);
@@ -59,6 +59,7 @@ public class Level10 implements Level{
 
 	/**
 	 * This is the method to add the image(s) of log.
+	 * @since 1.8
 	 */
 	public void addLog() {
 		log1 = obstacleFactory.getObstacle("Log", 0, 166, -6, 300, 300);
@@ -77,6 +78,7 @@ public class Level10 implements Level{
 
 	/**
 	 * This is the method to add the image(s) of wet turtle.
+	 * @since 1.8
 	 */
     public void addTurtle() {
     	turtle1 = obstacleFactory.getObstacle("Turtle", 50, 329, 5.5, 130, 130);	
@@ -96,6 +98,7 @@ public class Level10 implements Level{
     
     /**
      * This is the method to add the image(s) of empty slot.
+     * @since 1.8
      */
     public void addEnd() {
     	end1 = new End(13, 96, 60, 60);
@@ -111,7 +114,8 @@ public class Level10 implements Level{
     }
     
     /**
-     * This is the method to add the image of frog as the main character in the application.
+     * This is the method to add the image of frog as the main character on the game interface of the application.
+     * @since 1.8
     */
     public void addAnimal() {
     	background.add(animal);
@@ -119,6 +123,7 @@ public class Level10 implements Level{
    
     /**
      * This is the method to add the image(s) of car as obstacle(s).
+     * @since 1.8
      */
     public void addCarObstacle() {
     	carobstacle1 = obstacleFactory.getObstacle("Car", 200, 649, -3.75, 50, 50);
@@ -135,6 +140,7 @@ public class Level10 implements Level{
 
     /**
      * This is the method to add the image(s) of truck as obstacle(s).
+     * @since 1.8
      */
     public void addTruckObstacle() {
     	truckobstacle1 = obstacleFactory.getObstacle("Truck", 0, 597, 3, 120, 120);
@@ -153,6 +159,7 @@ public class Level10 implements Level{
 
     /**
 	 * This is the method to add the image(s) of snake.
+	 * @since 1.8
 	 */
 	public void addSnake() {
 		snake1 = obstacleFactory.getObstacle("Snake", 170, 170, -6, 130, 130);
@@ -170,115 +177,18 @@ public class Level10 implements Level{
 	}
 
     /**
-     * This is the method to remove the image(s) in the application.
-     */
-    public void remove() {
-    	removeLevelImage();
-    	removeLog();
-    	removeTurtle();
-    	removeEnd();
-    	removeAnimal();
-    	removeCarObstacle();
-    	removeTruckObstacle();
-    	removeSnake();
-    }
-    
-    /**
-     * This is the method to remove the image of level information.
-     */
-    public void removeLevelImage() {
-    	background.remove(levelImage);
-    }
-
-    /**
-     * This is the method to remove the image(s) of log.
-     */
-    public void removeLog() {
-    	background.remove(log1);
-    	background.remove(log2);
-    	background.remove(log3);
-    	background.remove(log4);
-    	background.remove(log5);
-    	background.remove(log6);
-    }
-
-    /**
-     * This is the method to add the image(s) of turtle.
-     */
-    public void removeTurtle() {
-    	background.remove(turtle1);
-    	background.remove(turtle2);
-    	background.remove(weturtle1);
-    	background.remove(weturtle2);
-    	background.remove(weturtle3);
-    	background.remove(weturtle4);
-    	
-    }
-
-    /**
-     * This is the method to add the image(s) of empty slot.
-     */
-    public void removeEnd() {
-    	background.remove(end1);
-    	background.remove(end2);
-    	background.remove(end3);
-    	background.remove(end4);
-    	background.remove(end5);
-    }
-    
-    /**
-     * This is the method to remove the image of frog as the main character in the application.
-     */
-    public void removeAnimal() {
-		background.remove(animal);
-    }
-    
-    /**
-     * This is the method to remove the image(s) of car as obstacle(s).
-     */
-    public void removeCarObstacle() {
-    	background.remove(carobstacle1);
-    	background.remove(carobstacle2);
-    	background.remove(carobstacle3);
-    	background.remove(carobstacle4);
-    	background.remove(carobstacle5);
-    }
-
-    /**
-     * This is the method to remove the image(s) of truck as obstacle(s).
-     */
-    public void removeTruckObstacle() {
-    	background.remove(truckobstacle1);
-    	background.remove(truckobstacle2);
-    	background.remove(truckobstacle3);
-    	background.remove(truckobstacle4);
-    	background.remove(truckobstacle5);
-    	background.remove(truckobstacle6);
-    }
-
-    /**
-     * This is the method to remove the image(s) of snake.
-     */
-    public void removeSnake() {
-    	background.remove(snake1);
-    	background.remove(snake2);
-    	background.remove(snake3);
-    	background.remove(snake4);
-    	background.remove(snake5);
-    	background.remove(snake6);
-    }
-    
-    /**
-     * This is the method to set the score which player get for level 3.
-     * @param score The score which player get for level 3.
+     * This is the method to set the score which player get for level 10.
+     * @param score The score which player get for level 10.
+     * @since 1.8
      */
     public void setScore(int score) {
     	this.score = score;
     }
 
     /**
-     * This is the method to get the score of level 3 which player achieved.
-     * @return int This returns the score of level 3 which player achieved.
+     * This is the method to get the score of level 10 which player achieved.
+     * @return int This returns the score of level 10 which player achieved.
+     * @since 1.8
      */
     public int getScore() {
     	return score;

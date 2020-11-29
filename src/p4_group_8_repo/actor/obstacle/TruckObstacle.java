@@ -7,24 +7,19 @@ import javafx.scene.image.Image;
 * Set the image(s) of truck as obstacle(s).
 * 
 *
-* @author  Lee Hui Fang 20125427, hfyhl2
-* @version 1.0
-* @since   2020-12-12
+* @author  	Lee Hui Fang 20125427, hfyhl2
+* @since 	1.1
 */
 public class TruckObstacle extends Obstacle{
-	/**
-	 * The speed of truck.
-	 */
-	private double speed;	//changed the datatype to double
-	/**
-	 * The image(s) of truck as obstacle(s).
-	 */
+	private double speed;	//the speed of truck
+	//the image(s) of truck as obstacle(s)
 	private Image truckobstacleL1, truckobstacleL2, truckobstacleR1, truckobstacleR2;
 	
 	/**
 	* This is the abstract method from superclass.
 	* This method allows the truck to perform action(s).
-	* @param now The timestamp of the current frame given in nanoseconds.
+	* @param now The time stamp of the current frame given in nanoseconds.
+	* @since 1.1
 	*/
 	@Override
 	public void act(long now) {
@@ -43,6 +38,7 @@ public class TruckObstacle extends Obstacle{
 	 * @param speed The speed of the truck.
 	 * @param width The width of the truck.
 	 * @param height The height of the truck.
+	 * @since 1.1
 	 */
 	public TruckObstacle(int xpos, int ypos, double speed, double width, double height) {
 		truckobstacleL1 = new Image("file:src/p4_group_8_repo/truck1Left.png", width, height, true, true);

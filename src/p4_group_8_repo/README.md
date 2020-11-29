@@ -29,12 +29,11 @@ This project is about maintaining and extending on a classic retro game(Frogger)
 	
 6. Constructor in each class.
 	<ol type="i">
-		<li>Create default constructor to prevent error happens.</li>
 		<li>Position of image are set as parameter, so code maintenance is easier.</li>
-		<li>Remove parameter from constructor which are no longer so the code more understandable for the method created.</li>
+		<li>Remove unused parameter from constructor, so the code more understandable and prevent confusion.</li>
 		<li>Rename parameters of constructor, so the code is more understandable.</li>
 		<li>Change the datatype of parameters to double as it is more accurate.</li>
-		<li>Edit on variable and sequence of parameter, so constructor with similar usage looks uniform.</li>
+		<li>Edit the sequence of parameter, so constructor with similar usage looks uniform.</li>
 	</ol>
 	
 8. Remove unused code such as commented codes, unused variable and condition never met.
@@ -48,6 +47,14 @@ This project is about maintaining and extending on a classic retro game(Frogger)
 12. Create class for each level. Therefore, code maintenance is easier as each level is unique.
 
 13. Apply Factory Design Pattern so the creation logic of object(s) is hidden to the client.
+
+14. Apply MVC Pattern which divides the program into Model, View and Controller. Therefore, the logic on front-end and back-end is separated.
+
+15. Use JavaFX Scene Builder to deal with the interface.
+
+16. Junit tests are created to ensure that the classes or methods created have no errors. And this project is also builded using Ant.
+
+17. Use lambda functions
 
 ## Extension
 

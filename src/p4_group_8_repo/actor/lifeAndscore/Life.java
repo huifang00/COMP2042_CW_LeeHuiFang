@@ -8,19 +8,16 @@ import p4_group_8_repo.actor.Actor;
 * Set the image(s) of life.
 * 
 *
-* @author  Lee Hui Fang 20125427, hfyhl2
-* @version 1.0
-* @since   2020-12-12
+* @author  	Lee Hui Fang 20125427, hfyhl2
+* @since 	1.2
 */
 public class Life extends Actor{
-	/**
-	 * The image of life
-	 */
-	private Image life;
+	private Image life;	//The image(s) of life
 		
 	/**
 	* This is the abstract method from superclass.
 	* @param now The timestamp of the current frame given in nanoseconds.
+	* @since 1.2
 	*/
 	@Override
 	public void act(long now) {
@@ -33,6 +30,7 @@ public class Life extends Actor{
 	 * @param ypos The y-coordinate of the life image.
 	 * @param width The width of the life image.
 	 * @param height The height of the life image.
+	 * @since 1.2
 	 */
 	public Life(int xpos, int ypos, double width, double height) {
 		life = new Image("file:src/p4_group_8_repo/life.png", width, height, true, true);

@@ -68,12 +68,6 @@
         <path refid="javafx.userclasspath"/>
         <path refid="JUnit 4.libraryclasspath"/>
     </path>
-    <path id="run.InstructionTest.classpath">
-        <path refid="COMP2042_CW_LeeHuiFang.classpath"/>
-        <path refid="JavaFX SDK.libraryclasspath"/>
-        <path refid="javafx.userclasspath"/>
-        <path refid="JUnit 4.libraryclasspath"/>
-    </path>
     <path id="run.LevelFactoryTest.classpath">
         <path refid="COMP2042_CW_LeeHuiFang.classpath"/>
         <path refid="JavaFX SDK.libraryclasspath"/>
@@ -111,30 +105,6 @@
         <path refid="JUnit 4.libraryclasspath"/>
     </path>
     <path id="run.ObstacleFactoryTest.classpath">
-        <path refid="COMP2042_CW_LeeHuiFang.classpath"/>
-        <path refid="JavaFX SDK.libraryclasspath"/>
-        <path refid="javafx.userclasspath"/>
-        <path refid="JUnit 4.libraryclasspath"/>
-    </path>
-    <path id="run.PauseTest.classpath">
-        <path refid="COMP2042_CW_LeeHuiFang.classpath"/>
-        <path refid="JavaFX SDK.libraryclasspath"/>
-        <path refid="javafx.userclasspath"/>
-        <path refid="JUnit 4.libraryclasspath"/>
-    </path>
-    <path id="run.PlayTest.classpath">
-        <path refid="COMP2042_CW_LeeHuiFang.classpath"/>
-        <path refid="JavaFX SDK.libraryclasspath"/>
-        <path refid="javafx.userclasspath"/>
-        <path refid="JUnit 4.libraryclasspath"/>
-    </path>
-    <path id="run.ResumeTest.classpath">
-        <path refid="COMP2042_CW_LeeHuiFang.classpath"/>
-        <path refid="JavaFX SDK.libraryclasspath"/>
-        <path refid="javafx.userclasspath"/>
-        <path refid="JUnit 4.libraryclasspath"/>
-    </path>
-    <path id="run.SoundTest.classpath">
         <path refid="COMP2042_CW_LeeHuiFang.classpath"/>
         <path refid="JavaFX SDK.libraryclasspath"/>
         <path refid="javafx.userclasspath"/>
@@ -196,16 +166,10 @@
     		<classpath refid="COMP2042_CW_LeeHuiFang.classpath"/>
     	</javac>
    	</target>
-    <!--
-    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
-        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
-        <antcall target="build"/>
-    </target>
-    -->
     <target name="runJunitTest" description="Run all Junit Tests"
     	depends="AnimalTest, BackgroundImageTest, CarObstacleTest, DigitTest, EndTest, HighScoreTest,
-              	InstructionTest, LevelFactoryTest, LevelImageTest, LifeTest, LogTest, MyStageTest, ObstacleFactoryTest, 
-              	PauseTest, PlayTest, ResumeTest, SoundTest, TruckObstacleTest, TurtleTest, WetTurtleTest"/>
+              	LevelFactoryTest, LevelImageTest, LifeTest, LogTest, MyStageTest, ObstacleFactoryTest, 
+              	TruckObstacleTest, TurtleTest, WetTurtleTest"/>
     <target name="AnimalTest">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
@@ -258,15 +222,6 @@
             <test name="p4_group_8_repo.test.HighScoreTest" todir="${junit.output.dir}"/>
             <jvmarg line="-ea"/>
             <classpath refid="run.HighScoreTest.classpath"/>
-        </junit>
-    </target>
-    <target name="InstructionTest">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="p4_group_8_repo.test.InstructionTest" todir="${junit.output.dir}"/>
-            <jvmarg line="-ea"/>
-            <classpath refid="run.InstructionTest.classpath"/>
         </junit>
     </target>
     <target name="LevelFactoryTest">
@@ -327,42 +282,6 @@
             <test name="p4_group_8_repo.test.ObstacleFactoryTest" todir="${junit.output.dir}"/>
             <jvmarg line="-ea"/>
             <classpath refid="run.ObstacleFactoryTest.classpath"/>
-        </junit>
-    </target>
-    <target name="PauseTest">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="p4_group_8_repo.test.PauseTest" todir="${junit.output.dir}"/>
-            <jvmarg line="-ea"/>
-            <classpath refid="run.PauseTest.classpath"/>
-        </junit>
-    </target>
-    <target name="PlayTest">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="p4_group_8_repo.test.PlayTest" todir="${junit.output.dir}"/>
-            <jvmarg line="-ea"/>
-            <classpath refid="run.PlayTest.classpath"/>
-        </junit>
-    </target>
-    <target name="ResumeTest">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="p4_group_8_repo.test.ResumeTest" todir="${junit.output.dir}"/>
-            <jvmarg line="-ea"/>
-            <classpath refid="run.ResumeTest.classpath"/>
-        </junit>
-    </target>
-    <target name="SoundTest">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="p4_group_8_repo.test.SoundTest" todir="${junit.output.dir}"/>
-            <jvmarg line="-ea"/>
-            <classpath refid="run.SoundTest.classpath"/>
         </junit>
     </target>
     <target name="TruckObstacleTest">

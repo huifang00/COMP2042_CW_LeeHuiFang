@@ -8,23 +8,17 @@ import javafx.scene.image.Image;
 * 
 *
 * @author  Lee Hui Fang 20125427, hfyhl2
-* @version 1.0
-* @since   2020-12-12
+* @since   1.0
 */
 public class Log extends Obstacle {
-	/**
-	 * The speed of log.
-	 */
-	private double speed;
-	/**
-	 * The image(s) of log.
-	 */
-	private Image log1, log2;
+	private double speed;	//the speed of log
+	private Image log1, log2;	//the image(s) of log
 	
 	/**
 	* This is the abstract method from superclass.
 	* This method allows the log to perform action(s).
-	* @param now The timestamp of the current frame given in nanoseconds.
+	* @param now The time stamp of the current frame given in nanoseconds.
+	* @since 1.0
 	*/
 	@Override
 	public void act(long now) {
@@ -38,12 +32,12 @@ public class Log extends Obstacle {
 	/**
 	 * Class constructor specifies and sets the size of log, position, speed and size of the log image.
 	 * This constructor sets the image of the log according to the direction from speed.
-	 * @param sizeoflog The size of the log (not the size of image).
 	 * @param xpos The x-coordinate of the log.
 	 * @param ypos The y-coordinate of the log.
 	 * @param speed The speed of the log.
 	 * @param width The width of the log.
 	 * @param height The height of the log.
+	 * @since 1.0
 	 */
 	public Log(int xpos, int ypos, double speed, double width, double height) {
 		log1 = new Image("file:src/p4_group_8_repo/log3.png", width, height, true, true);
@@ -62,6 +56,7 @@ public class Log extends Obstacle {
 	/**
 	 * This method gets the speed of the log.
 	 * @return double This returns the speed of log.
+	 * @since 1.0.1
 	 */
 	public double getSpeed() {
 		return speed;

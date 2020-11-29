@@ -18,58 +18,59 @@ import p4_group_8_repo.actor.Actor;
 * 
 *
 * @author  Lee Hui Fang 20125427, hfyhl2
-* @version 1.0
-* @since   2020-12-12
+* @since   1.0
 */
 public abstract class World extends Pane {
     private AnimationTimer timer;
-    static BorderPane root;
+    private static BorderPane root;
     
+    /**
+	 * Constructor to pass in the value of Border Pane which is created using the Scene Builder.
+	 * This allows actor(s) can be added without using the Scene Builder such as for the function of game which is the backend.
+	 * @param root The variable of Border Pane which is created using the Scene Builder.
+	 * @since 1.0.1
+	 */
     public World(BorderPane root) {
     	World.root = root;
     	Scene newValue = root.getScene();
     	
-    	
 		newValue.setOnKeyReleased(new EventHandler<KeyEvent>() {
 					
-    	    	//Scene newValue = root.getScene();
-    	    	//newValue.setOnKeyReleased(new EventHandler<KeyEvent>() {
-
-    				@Override
-    				public void handle(KeyEvent event) {
-    					if(getOnKeyReleased() != null) 
-    						getOnKeyReleased().handle(event);
-    					List<Actor> myActors = getObjects(Actor.class);
-    					for (Actor anActor: myActors) {
-    						if (anActor.getOnKeyReleased() != null) {
-    							anActor.getOnKeyReleased().handle(event);
-    						}
-    					}
+    		@Override
+    		public void handle(KeyEvent event) {
+    			if(getOnKeyReleased() != null) 
+    				getOnKeyReleased().handle(event);
+    			List<Actor> myActors = getObjects(Actor.class);
+    			for (Actor anActor: myActors) {
+    				if (anActor.getOnKeyReleased() != null) {
+    					anActor.getOnKeyReleased().handle(event);
     				}
-    				
-    			});
+    			}
+    		}	
+    		
+    	});
     			
-    			newValue.setOnKeyPressed(new EventHandler<KeyEvent>() {
+    	newValue.setOnKeyPressed(new EventHandler<KeyEvent>() {
 
-    				@Override
-    				public void handle(KeyEvent event) {
-    					if(getOnKeyPressed() != null) 
-    						getOnKeyPressed().handle(event);
-    					List<Actor> myActors = getObjects(Actor.class);
-    					for (Actor anActor: myActors) {
-    						if (anActor.getOnKeyPressed() != null) {
-    							anActor.getOnKeyPressed().handle(event);
-    						}
-    					}
+    	@Override
+    		public void handle(KeyEvent event) {
+    			if(getOnKeyPressed() != null) 
+    				getOnKeyPressed().handle(event);
+    			List<Actor> myActors = getObjects(Actor.class);
+    			for (Actor anActor: myActors) {
+    				if (anActor.getOnKeyPressed() != null) {
+    					anActor.getOnKeyPressed().handle(event);
     				}
+    			}
+    		}
     				
-    			});
+    	});
     }
 
-    
-    /**
+	/**
 	* This is the method to create animation and handle() method is called in every frame of the animation.
 	* This method save the object created/inherited from actor class to a list.
+	* @since 1.0
 	*/
     public void createTimer() {
         timer = new AnimationTimer() {
@@ -87,6 +88,7 @@ public abstract class World extends Pane {
 
     /**
 	* This is the method to create and start the animation timer.
+	* @since 1.0
 	*/
     public void start() {
     	createTimer();
@@ -95,22 +97,25 @@ public abstract class World extends Pane {
 
     /**
 	* This is the method to stop the animation timer.
+	* @since 1.0
 	*/
     public void stop() {
         timer.stop();
     }
     
     /**
-     * This is the method to add the object of actor class to the application..
+     * This is the method to add the object of actor class to the application.
      * @param actor The object of actor class to be added to the application.
+     * @since 1.0
      */
     public void add(Actor actor) {
         root.getChildren().add(actor);
     }
 
     /**
-     * This is the method to remove the object of actor class from the application..
+     * This is the method to remove the object of actor class from the application.
      * @param actor The object of actor of class to be removed from the application.
+     * @since 1.0
      */
     public void remove(Actor actor) {
         root.getChildren().remove(actor);
@@ -118,9 +123,10 @@ public abstract class World extends Pane {
 
     /**
      * This is the method get the list of object(s) of actor class.
-     * @param <A> The type of the actor class modeled by actor object
+     * @param <A> The type of the actor class modeled by actor object.
      * @param cls The class object corresponding to Actor type.
-     * @return ArrayList<A> This returns the array which contains the list of object(s) of actor class.
+     * @return A This returns the array which contains the list of object(s) of class extended from actor class. 
+     * @since 1.0
      */
     public static <A extends Actor> List<A> getObjects(Class<A> cls) {
         ArrayList<A> someArray = new ArrayList<A>();
@@ -134,6 +140,8 @@ public abstract class World extends Pane {
 
     /**
   	* This is the abstract method for actor performing an action and must included in each concrete subclass(es).
+  	* @param now The time stamp of the current frame given in nanoseconds.
+  	* @since 1.0
   	*/
     public abstract void act(long now);
 }

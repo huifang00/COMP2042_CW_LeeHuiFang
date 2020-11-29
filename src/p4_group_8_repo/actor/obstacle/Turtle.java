@@ -8,23 +8,17 @@ import javafx.scene.image.Image;
 * 
 *
 * @author  Lee Hui Fang 20125427, hfyhl2
-* @version 1.0
-* @since   2020-12-12
+* @since	 1.0
 */
 public class Turtle extends Obstacle{
-	/**
-	 * The speed of turtle.
-	 */
-	private double speed;	//change the speed to double
-	/**
-	 * The image(s) of turtle as obstacle(s).
-	 */
-	private Image turtle1, turtle2, turtle3;
+	private double speed;	//the speed of turtle
+	private Image turtle1, turtle2, turtle3;	//the image(s) of turtle as obstacle(s)
 	
 	/**
 	* This is the abstract method from superclass.
 	* This method allows the turtle to perform action(s).
-	* @param now The timestamp of the current frame given in nanoseconds.
+	* @param now The time stamp of the current frame given in nanoseconds.
+	* @since 1.0
 	*/
 	@Override
 	public void act(long now) {
@@ -53,6 +47,7 @@ public class Turtle extends Obstacle{
 	 * @param speed The speed of the turtle.
 	 * @param width The width of the turtle.
 	 * @param height The height of the turtle.
+	 * @since 1.0
 	 */
 	public Turtle(int xpos, int ypos, double speed, double width, double height) {
 		turtle1 = new Image("file:src/p4_group_8_repo/TurtleAnimation1.png", width, height, true, true);
@@ -67,6 +62,7 @@ public class Turtle extends Obstacle{
 	/**
 	 * This method gets the speed of the turtle.
 	 * @return double This returns the speed of turtle.
+	 * @since 1.0.1
 	 */
 	public double getSpeed() {
 		return speed;

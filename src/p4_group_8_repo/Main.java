@@ -36,14 +36,14 @@ import p4_group_8_repo.level.LevelFactory;
 * The Frogger application is a game that helps the frog to cross the traffic and river.
 * 
 *
-* @author  Lee Hui Fang 20125427, hfyhl2
-* @version 1.0
-* @since   2020-12-12
+* @author  	Lee Hui Fang 20125427, hfyhl2
+* @version	1.9
+* @since   	1.0
 */
 public class Main extends Application {
 	private AnimationTimer timer;
-	private MyStage background;
-	private Animal animal = new Animal();
+	private static MyStage background;
+	private static Animal animal = new Animal();
 	private Scene scene;	
 	private int level = 1;	//initialized the level to 1
 	private Level1 level1;
@@ -60,11 +60,13 @@ public class Main extends Application {
 	private LevelFactory levelFactory = new LevelFactory();
 	private Level level2, level3, level4, level5, level6, level7, level8, level9, level10;
 	private String levelmsg = "";	//variable to save the message of score for each level
-	BorderPane root;
+	private BorderPane root;
+	private Controller control = new Controller();
 	
 	/**
 	* This is the main method which run the whole application.
 	* @param args Unused.
+	* @since 1.0
 	*/
 	public static void main(String[] args) {
 		launch(args);
@@ -74,6 +76,7 @@ public class Main extends Application {
 	* This is the main method which display a pop up dialog for player name and display the scene with background.
 	* @param primaryStage The JavaFX Stage class is the top level JavaFX container.
 	* @see Exception
+	* @since 1.0
 	*/
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -83,7 +86,6 @@ public class Main extends Application {
 		try {
 			this.root = new BorderPane();
 			scene = new Scene(root,600,800);
-			//System.out.println(Main.class.getClassLoader().getResource("GUI.fxml"));
 			Parent content = FXMLLoader.load(Main.class.getClassLoader().getResource("p4_group_8_repo/MVC/View.fxml"));
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			root.setCenter(content);
@@ -113,11 +115,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 		
-		this.background = new MyStage(root);
-		
-		//create sound button to play music or mute
-		//sound = new Sound(background, 490, 10, 30, 30);
-		//background.add(sound);
+		Main.setMyStage(root);
 		
 		background.start();
 
@@ -126,8 +124,8 @@ public class Main extends Application {
 		
 		primaryStage.setOnCloseRequest(evt -> {
 			System.exit(0);
-    		if(Controller.getGameModel().getStage().isShowing()) {
-    			Controller.getGameModel().close();
+    		if(control.getGameModel().getStage().isShowing()) {
+    			control.getGameModel().close();
 			}
     	});
 	}
@@ -135,112 +133,59 @@ public class Main extends Application {
 	/**
 	* This is the method to create animation and handle() method is called in every frame of the animation.
 	* In handle method, different condition are given to perform specific action.
+	* @since 1.0
 	*/
 	public void createTimer() {
         timer = new AnimationTimer() {
             @Override
             public void handle(long now) {
-            	if(Controller.getGameModel().getGamePlay() == true) {	//Level1
-            		//background.remove(play);	//once the button is clicked then remove the button
-            		//background.remove(playIns);
-            		
-					//background.remove(howtoplay);	//remove the button
-            		//background.remove(highscoreButton);
-            		//background.add(instruction);
-            		//background.add(pause);
-            		//background.add(new Digit(0, 450, 10, 30, 30));
+            	if(control.getGameModel().getGamePlay() == true) {	//Level1
             		background.add(new Digit(0, 450, 10, 30, 30));
-            		level1 = new Level1(background);
+            		level1 = new Level1();
             		setAnimal(level1.getAnimal());
             		setPrintGame(false);	// to prevent the next second on printing this condition
             		animal.setLevel(level);	//set the level in animal class for the speed
             		setLife(3);
             		start();
-            		Controller.getGameModel().setGamePlay(false);
+            		control.getGameModel().setGamePlay(false);
             	}
             	if(getPrintGame()){
+            		Level.remove();
+            		background.add(new Digit(0, 450, 10, 30, 30));
+            		background.start();
+            		animal.setPoints(0);	//display the score (digit image) as 0
+            		animal.setLevel(level);	//set the level in animal class for the speed
             		animal.setLife(3);	//reset the life to 3
             		setLife(3);	
+            		setPrintGame(false);
             		
-	            	if(level == 2) {	//Level2
-	            		background.start();
-	            		animal.setPoints(0);	//display the score (digit image) as 0
-	            		animal.setLevel(level);	//set the level in animal class for the speed
-	            		level1.remove();
-	            		level2 = levelFactory.getLevel(2, background, animal);
-	            		setPrintGame(false);
-	            	}
-	            	else if(level == 3) {	//Level3
-	            		background.start();
-	            		animal.setPoints(0);	//display the score (digit image) as 0
-	            		animal.setLevel(level);	//set the level in animal class for the speed
-	            		level2.remove();
-	            		level3 = levelFactory.getLevel(3, background, animal);
-	            		setPrintGame(false);
-	            	}
-	            	else if(level == 4) {	//Level4
-	            		background.start();
-	            		animal.setPoints(0);	//display the score (digit image) as 0
-	            		animal.setLevel(level);	//set the level in animal class for the speed
-	            		level3.remove();
-	            		level4 = levelFactory.getLevel(4, background, animal);
-	            		setPrintGame(false);
-	            	}
-	            	else if(level == 5) {	//Level5
-	            		background.start();
-	            		animal.setPoints(0);	//display the score (digit image) as 0
-	            		animal.setLevel(level);	//set the level in animal class for the speed
-	            		level4.remove();
-	            		level5 = levelFactory.getLevel(5, background, animal);
-	            		setPrintGame(false);
-	            	}
-	            	else if(level == 6) {	//Level6
-	            		background.start();
-	            		animal.setPoints(0);	//display the score (digit image) as 0
-	            		animal.setLevel(level);	//set the level in animal class for the speed
-	            		level5.remove();
-	            		level6 = levelFactory.getLevel(6, background, animal);
-	            		setPrintGame(false);
-	            	}
-	            	else if(level == 7) {	//Level7
-	            		background.start();
-	            		animal.setPoints(0);	//display the score (digit image) as 0
-	            		animal.setLevel(level);	//set the level in animal class for the speed
-	            		level6.remove();
-	            		level7 = levelFactory.getLevel(7, background, animal);
-	            		setPrintGame(false);
-	            	}
-	            	else if(level == 8) {	//Level8
-	            		background.start();
-	            		animal.setPoints(0);	//display the score (digit image) as 0
-	            		animal.setLevel(level);	//set the level in animal class for the speed
-	            		level7.remove();
-	            		level8 = levelFactory.getLevel(8, background, animal);
-	            		setPrintGame(false);
-	            	}
-	            	else if(level == 9) {	//Level9
-	            		background.start();
-	            		animal.setPoints(0);	//display the score (digit image) as 0
-	            		animal.setLevel(level);	//set the level in animal class for the speed
-	            		level8.remove();
-	            		level9 = levelFactory.getLevel(8, background, animal);
-	            		setPrintGame(false);
-	            	}
-	            	else if(level == 10) {	//Level10
-	            		background.start();
-	            		animal.setPoints(0);	//display the score (digit image) as 0
-	            		animal.setLevel(level);	//set the level in animal class for the speed
-	            		level9.remove();
-	            		level10 = levelFactory.getLevel(10, background, animal);
-	            		setPrintGame(false);
-	            	}
+	            	if(level == 2)			//Level2
+	            		level2 = levelFactory.getLevel(2);
+	            	else if(level == 3)		//Level3
+	            		level3 = levelFactory.getLevel(3);
+	            	else if(level == 4) 	//Level4
+	            		level4 = levelFactory.getLevel(4);
+	            	else if(level == 5)		//Level5
+	            		level5 = levelFactory.getLevel(5);
+	            	else if(level == 6)		//Level6
+	            		level6 = levelFactory.getLevel(6);
+	            	else if(level == 7) 	//Level7
+	            		level7 = levelFactory.getLevel(7);
+	            	else if(level == 8) 	//Level8
+	            		level8 = levelFactory.getLevel(8);
+	            	else if(level == 9) 	//Level9
+	            		level9 = levelFactory.getLevel(9);
+	            	else if(level == 10) 	//Level10
+	            		level10 = levelFactory.getLevel(10);
+	            	
+	            	
             	}
             	if (animal.changeScore()) {
             		setNumber(animal.getPoints());
             	}
             	if (animal.getStop()) {
             		setNumber(animal.getPoints());
-            		System.out.print("STOPP:");
+            		System.out.print("STOP:");
             		if(level == 1) {	//save the score in level1 class
             			level1.setScore(animal.getPoints());
             			score = score + level1.getScore();
@@ -280,7 +225,7 @@ public class Main extends Application {
             		if(level == 10) {
             			highscore = level * 800;
             			level10.setScore(animal.getPoints());	//save the score in level3 class
-            			level10.remove();
+            			Level.remove();
             			score = score + level10.getScore();
             			level = 0;	//end the game
             		}
@@ -298,11 +243,9 @@ public class Main extends Application {
         			setNextLevel(false);	//to prevent the next second on running this condition till the next alert box appear
         		}
             	else if (alert.getResult() == ButtonType.NO || level == 0){
-            		printEnd();
-            		
+            		printEnd();		
             		if(!Controller.getMuted()) 
-            			//background.stopMusic();
-            			MyStage.stopMusic();
+            			background.stopMusic();
             		
             		stop();	//timer stop
             		background.stop();	//timer stop
@@ -313,53 +256,35 @@ public class Main extends Application {
             	if(animal.noLife()) {
             		printGameOver(animal.getPoints());
             		if(!Controller.getMuted())
-            			//background.stopMusic();
-            			MyStage.stopMusic();
+            			background.stopMusic();
             		stop();
             		background.stop();
             	}
-            	/*
-            	if(pause.getPauseGame()) {
+            	if(control.getGameModel().getPauseGame()) {
             		pause();
-                	background.remove(pause);
-                	background.add(resume);
             	}
-            	else if(instruction.getPauseGame()) {
-            		if(!pause.isPausing()) {
-	            		pause();
-	                	background.remove(pause);
-	                	background.add(resume);
-            		}
-            	}
-            	if(instruction.getResumeGame()|| resume.getResumeGame()) {
-            		pause.setPausing();
-            		resume();
-                	background.remove(resume);
-                	background.add(pause);
-            	}
-            	*/
-            	if(Controller.getGameModel().getPauseGame()) {
-            		pause();
-            		//Controller.setPauseGame(false);
-            		//Controller.setInsPauseGame(false);
-            		//MyStage.stopMusic();
-            		//background.stop();
-            	}
-            	else if(Controller.getGameModel().getInsPauseGame()) {
-            		if(Controller.pausing % 2 == 0) {
+            	else if(control.getGameModel().getInsPauseGame()) {
+            		if(control.getPausing() % 2 == 0) {
             			pause();
-	            		//Controller.setPauseGame(false);
-	            		//Controller.setInsPauseGame(false);
-	            		//MyStage.stopMusic();
-	            		//background.stop();
             		}
             	}
-            	if(Controller.getGameModel().getResumeGame()) {
-            		Controller.getGameModel().setResumeGame(false);
+            	if(control.getGameModel().getResumeGame()) {
+            		control.getGameModel().setResumeGame(false);
             		background.start();
+            		animal.setNoMove(false);
             		if(!Controller.getMuted()) {
-            			MyStage.playMusic();
+            			background.playMusic();
             		}
+            	}
+            	if(control.getGameModel().getSound()) {
+            		if(control.getsoundOnOff()%2 == 0) {
+            			if(control.getPausing()%2 == 0)
+            				background.playMusic();
+            		}
+            	    else {
+            	    	background.stopMusic();
+            	    }
+            		control.getGameModel().setSound(false);
             	}
             }
         };
@@ -367,16 +292,18 @@ public class Main extends Application {
 
 	/**
 	* This is the method to play the background music, create and start the animation timer.
+	* @since 1.0
 	*/
 	public void start() {
 		if(!Controller.getMuted())
-			MyStage.playMusic();
+			background.playMusic();
     	createTimer();
         timer.start();
     }
 
 	/**
 	* This is the method to stop the animation timer.
+	* @since 1.0
 	*/
     public void stop() {
         timer.stop();
@@ -385,6 +312,7 @@ public class Main extends Application {
     /**
 	* This is the method to display the images of digit as score on the interface.
 	* @param n The value to be showed on the interface such as current score.
+	* @since 1.0
 	*/
     public void setNumber(int n) {
     	int shift = 0;
@@ -410,6 +338,7 @@ public class Main extends Application {
     /**
 	* This is the method to display the image of life on the interface.
 	* @param life The number of life left.
+	* @since 1.0.5
 	*/
     public void setLife(int life) {
 		int shift = 0;
@@ -434,22 +363,25 @@ public class Main extends Application {
     /**
 	* This is the method to set the object created from Animal class to the global variable.
 	* @param animal The object created of Animal class.
+	* @since 1.0.1
 	*/
     public void setAnimal(Animal animal) {
-    	this.animal = animal;
+    	Main.animal = animal;
     }
     
     /**
 	* This is the method to get the object created from Animal class from global variable.
 	* @return Animal This returns the object of Animal class.
+	* @since 1.0.1
 	*/
-    public Animal getAnimal() {
+    public static Animal getAnimal() {
     	return animal;
     }
     
     /**
 	* This is the method to set the boolean variable to display the game screen.
 	* @param printGame Value to display the game screen.
+	* @since 1.0.4
 	*/
     public void setPrintGame(boolean printGame) {
     	this.printGame = printGame;
@@ -457,7 +389,8 @@ public class Main extends Application {
     
     /**
 	* This is the method to get signal to display the game screen.
-	* @return boolean This returns signal to display the game screen..
+	* @return boolean This returns signal to display the game screen.
+	* @since 1.0.4
 	*/
     public boolean getPrintGame() {
     	return printGame;
@@ -466,6 +399,7 @@ public class Main extends Application {
     /**
 	* This is the method to set the player name to the global variable.
 	* @param playerName The name of player given.
+	* @since 1.0.3
 	*/
     public void setPlayerName(String playerName) {
     	this.playerName = playerName;
@@ -474,6 +408,7 @@ public class Main extends Application {
     /**
 	* This is the method to get the player name who is playing currently.
 	* @return String This returns the name of current player.
+	* @since 1.0.3
 	*/
     public String getPlayerName() {
     	return playerName;
@@ -482,6 +417,7 @@ public class Main extends Application {
     /**
 	* This is the method to set the boolean variable to proceed to next level.
 	* @param nextLevel The signal whether to proceed to next level.
+	* @since 1.0.1
 	*/
 	protected void setNextLevel(boolean nextLevel) {
 		this.nextLevel = nextLevel;
@@ -490,6 +426,7 @@ public class Main extends Application {
 	/**
 	* This is the method to get the signal on whether to proceed the next level.
 	* @return boolean This returns the signal to proceed to the next level.
+	* @since 1.0.1
 	*/
 	protected boolean getNextLevel() {
 		return nextLevel;
@@ -498,6 +435,7 @@ public class Main extends Application {
 	/**
 	* This is the method to display the pop up dialog which ask for player's name.
 	* @param Message The error message if the name cannot be used.
+	* @since 1.0.3
 	*/
     public void playerNameDialog(String Message) {
     	//String message = "";
@@ -542,6 +480,7 @@ public class Main extends Application {
     
     /**
 	* This is the method to display the pop up dialog which display at the end of the game.
+	* @since 1.0.6
 	*/
     public void printEnd() {
     	Alert alertEnd = new Alert(AlertType.INFORMATION);
@@ -564,14 +503,15 @@ public class Main extends Application {
 		//use a handler for the onCloseRequest event for the alert to close the application when the alert is closed:
 		alertEnd.setOnCloseRequest(evt -> {
 			System.exit(0);
-			if(Controller.getGameModel().getStage().isShowing()) {
-    			Controller.getGameModel().close();
+			if(control.getGameModel().getStage().isShowing()) {
+				control.getGameModel().close();
 			}
 		});
     }
     
     /**
 	* This is the method to display the pop up dialog which display at the end of each level.
+	* @since 1.0.6
 	*/
     public void printNextLevel() {
     	this.alert = new Alert(AlertType.NONE);
@@ -593,6 +533,7 @@ public class Main extends Application {
     /**
      * This is the method to save the string to print the information after each round.
      * @param level The current level the player reached.
+     * @since 1.0.6
      */
     public void levelMsg(int level) {
     	if(level == 1)
@@ -620,6 +561,7 @@ public class Main extends Application {
     /**
 	* This is the method to display the game over dialog.
 	* @param score This value is the last obtained score from the game.
+	* @since 1.0.6
 	*/
     public void printGameOver(int score) {
     	if(level >= 1 && level <= 10) {
@@ -663,8 +605,8 @@ public class Main extends Application {
 		//use a handler for the onCloseRequest event for the alert to close the application when the alert is closed:
 		alertGameOver.setOnCloseRequest(evt -> {
 			System.exit(0);
-			if(Controller.getGameModel().getStage().isShowing()) {
-    			Controller.getGameModel().close();
+			if(control.getGameModel().getStage().isShowing()) {
+				control.getGameModel().close();
 			}
 		});
     }
@@ -673,6 +615,7 @@ public class Main extends Application {
 	* This is the method check is the name given player used by others.
 	* @param enteredName The name entered by the player.
 	* @return boolean This returns the value on whether the name is used.
+	* @since 1.0.3
 	*/
     public boolean isNameUsed(String enteredName) {
     	String line, name = "";  
@@ -713,6 +656,7 @@ public class Main extends Application {
    	* This is the method check is the name given player contains any special character(s).
    	* @param enteredName The name entered by the player.
    	* @return boolean This returns the value on whether the name contains any special character(s).
+   	* @since 1.0.3
    	*/
     public boolean containSymbol(String enteredName) {
     	String specialCharactersString = "!@#$%&*()'+,-./:;<=>?[]^_`{|}";
@@ -728,6 +672,7 @@ public class Main extends Application {
     
     /**
    	* This is the method save a record of player name and score achieved.
+   	* @since 1.0.2
    	*/
     public void save() {
     	try {
@@ -759,32 +704,30 @@ public class Main extends Application {
     
     /**
    	* This is the method pause the game.
+   	* @since 1.0.7
    	*/
     public void pause() {
-    	//background.stopMusic();
-    	//background.remove(sound);	//remove the sound button
-    	//background.stop();
-    	//animal.setNoMove(true);
-    	//pause.setPauseGame(false);
-    	//instruction.setPauseGame(false);
-    	Controller.getGameModel().setPauseGame(false);
-    	Controller.getGameModel().setInsPauseGame(false);
-		MyStage.stopMusic();
+    	control.getGameModel().setPauseGame(false);
+    	control.getGameModel().setInsPauseGame(false);
+    	animal.setNoMove(true);
+    	background.stopMusic();
 		background.stop();
     }
-    /**
-   	* This is the method resume the game after pausing the game.
-   	*/
-    /*
-    public void resume() {
-    	if(!Controller.getMuted())
-    		MyStage.playMusic();	//if the sound is not muted
-    	background.add(sound);	//add back the sound button
-    	background.start();
-    	animal.setNoMove(false);
-    	resume.setResumeGame(false);
-    	instruction.setResumeGame(false);
-    }
-    */
     
+    /**
+     * This is the method to get object typed MyStage. 
+     * @return MyStage This returns the object of MyStage created.
+     * @since 1.0.8
+     */
+    public static MyStage getMyStage() {
+    	return background;
+    }  
+    
+    /**
+     * This is the method to set the background which is an object of MyStage.
+     * @param root The value for the variable pane which want to create a stage for it.
+     */
+    public static void setMyStage(BorderPane root) {
+    	Main.background = new MyStage(root);
+    }
 }

@@ -7,24 +7,18 @@ import javafx.scene.image.Image;
 * Set the image(s) of car as obstacle(s).
 * 
 *
-* @author  Lee Hui Fang 20125427, hfyhl2
-* @version 1.0
-* @since   2020-12-12
+* @author  	Lee Hui Fang 20125427, hfyhl2
+* @since 	1.1
 */
 public class CarObstacle extends Obstacle{
-	/**
-	 * The speed of car.
-	 */
-	private double speed;	//changed the datatype to double
-	/**
-	 * The image(s) of car as obstacle(s).
-	 */
-	private Image carobstacleL, carobstacleR;
+	private double speed;	//the speed of car
+	private Image carobstacleL, carobstacleR;	//the image(s) of car as obstacle(s).
 	
 	/**
 	* This is the abstract method from superclass.
 	* This method allows the car to perform action(s).
-	* @param now The timestamp of the current frame given in nanoseconds.
+	* @param now The time stamp of the current frame given in nanoseconds.
+	* @since 1.1
 	*/
 	@Override
 	public void act(long now) {
@@ -43,6 +37,7 @@ public class CarObstacle extends Obstacle{
 	 * @param speed The speed of the car.
 	 * @param width The width of the car.
 	 * @param height The height of the car.
+	 * @since 1.1
 	 */
 	public CarObstacle(int xpos, int ypos, double speed, double width, double height) {
 		carobstacleL = new Image("file:src/p4_group_8_repo/car1Left.png", width, height, true, true); 

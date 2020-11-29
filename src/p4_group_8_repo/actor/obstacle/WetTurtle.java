@@ -8,28 +8,18 @@ import javafx.scene.image.Image;
 * 
 *
 * @author  Lee Hui Fang 20125427, hfyhl2
-* @version 1.0
-* @since   2020-12-12
+* @since   1.0
 */
 public class WetTurtle extends Obstacle{
-	/**
-	 * The speed of wet turtle.
-	 */
-	private double speed;	//change the datatype to double
-	/**
-	 * The image(s) of wet turtle as obstacle(s).
-	 */
-	private Image turtle1, turtle2, turtle3, turtle4;
-
-	/**
-	 * The value whether the wet turtle goes below the water surface.
-	 */
-	boolean sunk = false;
+	private double speed;	//the speed of wet turtle
+	private Image turtle1, turtle2, turtle3, turtle4;	//the image(s) of wet turtle as obstacle(s)
+	private boolean sunk = false;	//the value whether the wet turtle goes below the water surface
 	
 	/**
 	* This is the abstract method from superclass.
 	* This method allows the wet turtle to perform action(s).
-	* @param now The timestamp of the current frame given in nanoseconds.
+	* @param now The time stamp of the current frame given in nanoseconds.
+	* @since 1.0
 	*/
 	@Override
 	public void act(long now) {
@@ -65,6 +55,7 @@ public class WetTurtle extends Obstacle{
 	 * @param speed The speed of the wet turtle.
 	 * @param width The width of the wet turtle.
 	 * @param height The height of the wet turtle.
+	 * @since 1.0
 	 */
 	public WetTurtle(int xpos, int ypos, double speed, double width, double height) {
 		turtle1 = new Image("file:src/p4_group_8_repo/TurtleAnimation1.png", width, height, true, true);
@@ -80,6 +71,7 @@ public class WetTurtle extends Obstacle{
 	/**
 	 * This method checks whether the wet turtle is on or below water surface.
 	 * @return boolean This returns the value on whether the wet turtle is on or below water surface.
+	 * @since 1.0
 	 */
 	public boolean isSunk() {
 		return sunk;
@@ -88,6 +80,7 @@ public class WetTurtle extends Obstacle{
 	/**
 	 * This method gets the speed of the wet turtle.
 	 * @return double This returns the speed of wet turtle.
+	 * @since 1.0.1
 	 */
 	public double getSpeed() {
 		return speed;

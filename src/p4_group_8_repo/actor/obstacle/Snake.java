@@ -7,24 +7,18 @@ import javafx.scene.image.Image;
 * Set the image(s) of snake as obstacle(s).
 * 
 *
-* @author  Lee Hui Fang 20125427, hfyhl2
-* @version 1.0
-* @since   2020-12-12
+* @author  	Lee Hui Fang 20125427, hfyhl2
+* @since 	1.6
 */
 public class Snake extends Obstacle{
-	/**
-	 * The speed of snake.
-	 */
-	private double speed;	//change the datatype to double
-	/**
-	 * The image(s) of snake as obstacle(s).
-	 */
-	private Image snakeL, snakeR;
+	private double speed;	//the speed of snake
+	private Image snakeL, snakeR;	//the image(s) of snake as obstacle(s)
 	
 	/**
 	* This is the abstract method from superclass.
 	* This method allows the snake to perform action(s).
-	* @param now The timestamp of the current frame given in nanoseconds.
+	* @param now The time stamp of the current frame given in nanoseconds.
+	* @since 1.6
 	*/
 	@Override
 	public void act(long now) {
@@ -43,6 +37,7 @@ public class Snake extends Obstacle{
 	 * @param speed The speed of the snake.
 	 * @param width The width of the snake.
 	 * @param height The height of the snake.
+	 * @since 1.6
 	 */
 	public Snake(int xpos, int ypos, double speed, double width, double height) {
 		snakeL =  new Image("file:src/p4_group_8_repo/snakeLeft.png", width, height, true, true);

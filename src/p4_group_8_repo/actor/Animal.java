@@ -18,8 +18,7 @@ import p4_group_8_repo.actor.obstacle.WetTurtle;
 * 
 *
 * @author  Lee Hui Fang 20125427, hfyhl2
-* @version 1.0
-* @since   2020-12-12
+* @since   1.0
 */
 public class Animal extends Actor {
 	private double width;
@@ -29,7 +28,7 @@ public class Animal extends Actor {
 	private int end = 0;
 	private boolean second = false;
 	private boolean noMove = false;
-	private double movement = 13.3333333*2;
+	private double movementY = 13.3333333*2;
 	private double movementX = 10.666666*2;
 	private boolean carDeath = false;
 	private boolean waterDeath = false;
@@ -54,8 +53,8 @@ public class Animal extends Actor {
 	 * @param ypos The y-coordinate of the frog.
 	 * @param width The width of the frog.
 	 * @param height The height of the frog.
+	 * @since 1.0
 	 */
-	//public Animal(String imageLink) {
 	public Animal(int xpos, double ypos, double width, double height) {
 		imgW1 = new Image("file:src/p4_group_8_repo/froggerUp.png", width, height, true, true);
 		imgA1 = new Image("file:src/p4_group_8_repo/froggerLeft.png", width, height, true, true);
@@ -78,7 +77,7 @@ public class Animal extends Actor {
 				else {
 				if (second) {
 					if (event.getCode() == KeyCode.W) {	  
-		                move(0, -movement);
+		                move(0, -movementY);
 		                changeScore = false;
 		                setImage(imgW1);
 		                second = false;
@@ -89,7 +88,7 @@ public class Animal extends Actor {
 		            	 second = false;
 		            }
 		            else if (event.getCode() == KeyCode.S) {	            	
-		            	 move(0, movement);
+		            	 move(0, movementY);
 		            	 setImage(imgS1);
 		            	 second = false;
 		            }
@@ -100,7 +99,7 @@ public class Animal extends Actor {
 		            }
 				}
 				else if (event.getCode() == KeyCode.W) {	            	
-	                move(0, -movement);
+	                move(0, -movementY);
 	                setImage(imgW2);
 	                second = true;
 	            }
@@ -110,7 +109,7 @@ public class Animal extends Actor {
 	            	 second = true;
 	            }
 	            else if (event.getCode() == KeyCode.S) {	            	
-	            	 move(0, movement);
+	            	 move(0, movementY);
 	            	 setImage(imgS2);
 	            	 second = true;
 	            }
@@ -132,7 +131,7 @@ public class Animal extends Actor {
 						w = getY();
 						points+=10;
 					}
-	                move(0, -movement);
+	                move(0, -movementY);
 	                setImage(imgW1);
 	                second = false;
 	            }
@@ -142,7 +141,7 @@ public class Animal extends Actor {
 	            	 second = false;
 	            }
 	            else if (event.getCode() == KeyCode.S) {	            	
-	            	 move(0, movement);
+	            	 move(0, movementY);
 	            	 setImage(imgS1);
 	            	 second = false;
 	            }
@@ -159,7 +158,8 @@ public class Animal extends Actor {
 	
 	/**
 	* This is the method which allows the frog to perform some action(s).
-	* @param now The timestamp of the current frame given in nanoseconds.
+	* @param now The time stamp of the current frame given in nanoseconds.
+	* @since 1.0
 	*/
 	@Override
 	public void act(long now) {
@@ -167,15 +167,15 @@ public class Animal extends Actor {
 		// condition for the animal not to exceed the bound
 		if (getY()<0 || getY()>734) {
 			setX(300);
-			setY(679.8+movement);
+			setY(679.8+movementY);
 		}
 	
 		if (getX()<0) {
-			move(movement*2, 0);
+			move(movementY*2, 0);
 		}	
-		//move the if x coordinate more than 600 togehter with less than 0
+		//move the if x coordinate more than 600 together with less than 0
 		else if (getX()>600) {
-			move(-movement*2, 0);
+			move(-movementY*2, 0);
 		}
 		
 		carDeath = setCarDeath(now,carDeath);
@@ -187,6 +187,7 @@ public class Animal extends Actor {
 	/**
 	* This is the method is to get the value whether the slot is fully occupied.
 	* @return boolean This returns the value whether the slot is fully occupied.
+	* @since 1.0
 	*/
 	public boolean getStop() {
 		return end==5;	//return true if end == 5
@@ -195,6 +196,7 @@ public class Animal extends Actor {
 	/**
 	* This is the method to set the end value of the application.
 	* @param end The value whether to end the application.
+	* @since 1.0.1
 	*/
 	public void setEnd(int end) {
 		this.end = end;
@@ -203,6 +205,7 @@ public class Animal extends Actor {
 	/**
 	* This is the method to get the points player get.
 	* @return int This returns the points player get.
+	* @since 1.0
 	*/
 	public int getPoints() {
 		return points;
@@ -211,6 +214,7 @@ public class Animal extends Actor {
 	/**
 	* This is the method to set the points player get.
 	* @param points The points that the player get.
+	* @since 1.0.1
 	*/
 	public void setPoints(int points) {
 		this.points = points;
@@ -220,6 +224,7 @@ public class Animal extends Actor {
 	/**
 	* This is to set the current level.
 	* @param level The level the player has reached.
+	* @since 1.0.2
 	*/
 	public void setLevel(int level) {
 		this.level = level;
@@ -228,6 +233,7 @@ public class Animal extends Actor {
 	/**
 	* This is the method to update the current score.
 	* @return boolean This returns the value on whether to update the current score.
+	* @since 1.0
 	*/
 	public boolean changeScore() {
 		if (changeScore) {
@@ -241,6 +247,7 @@ public class Animal extends Actor {
 	/**
 	* This is the method to get the life of the frog.
 	* @return This returns the life of the frog has.
+	* @since 1.0.3
 	*/
 	public int getLife() {
 		return life;
@@ -249,6 +256,7 @@ public class Animal extends Actor {
 	/**
 	 * This is the method to set the life for each level.
 	 * @param life The number of life for each level.
+	 * @since 1.0.3
 	 */
 	public void setLife(int life) {
 		this.life = life;
@@ -256,6 +264,7 @@ public class Animal extends Actor {
 	/**
 	* This is the method is to get the value whether to end the game depends on the life the frog has.
 	* @return boolean This returns the value whether the to end the game due to no life left.
+	* @since 1.0.3
 	*/
 	public boolean noLife() {
 		return life == 0;
@@ -264,6 +273,7 @@ public class Animal extends Actor {
 	/**
 	* This is the method to update the current life
 	* @return boolean This returns the value on whether to update the current life.
+	* @since 1.0.3
 	*/
 	public boolean changeLife() {
 		if(changeLife) {
@@ -275,7 +285,8 @@ public class Animal extends Actor {
 	
 	/**
 	* This is the method to set the value of carDeath and set the image of frog when hit by a car.
-	* @param now The timestamp of the current frame given in nanoseconds.
+	* @since 1.0.1
+	* @param now The time stamp of the current frame given in nanoseconds.
 	* @param carDeath The value of whether the frog is hit by car.
 	* @return boolean This returns the value of carDeath of frog. 
 	*/
@@ -301,7 +312,7 @@ public class Animal extends Actor {
 			}
 			else if (this.death == 4) {
 				setX(300);
-				setY(679.8+movement);
+				setY(679.8+movementY);
 				carDeath = false;
 				this.life--;	//decrease one life
 				this.changeLife = true;
@@ -319,7 +330,8 @@ public class Animal extends Actor {
 	
 	/**
 	* This is the method to set the value of waterDeath and set the image of frog if frog drowns.
-	* @param now The timestamp of the current frame given in nanoseconds.
+	* @since 1.0.1
+	* @param now The time stamp of the current frame given in nanoseconds.
 	* @param waterDeath The value of whether the frog drowns.
 	* @return boolean This returns the value of waterDeath of frog. 
 	*/
@@ -349,7 +361,7 @@ public class Animal extends Actor {
 			}
 			else if (this.death == 5) {
 				setX(300);
-				setY(679.8+movement);
+				setY(679.8+movementY);
 				waterDeath = false;
 				this.life--;	//decrease one life
 				this.changeLife = true;
@@ -368,6 +380,7 @@ public class Animal extends Actor {
 	
 	/**
 	* This is the method to run when intersection occurs between the frog and obstacle.
+	* @since 1.0.1
 	*/
 	public void Intersection() {
 		double speed;	//create this variable to get the speed of the actor intersection with
@@ -394,7 +407,7 @@ public class Animal extends Actor {
 			if (getIntersectingObjects(WetTurtle.class).get(0).isSunk()) {
 				this.waterDeath = true;
 			} else {
-				move(speed, 0);	//display as moving together with wetturtle
+				move(speed, 0);	//display as moving together with wet turtle
 			}
 		}
 		else if (getIntersectingObjects(End.class).size() >= 1) {	//intersect with the end slot
@@ -408,17 +421,16 @@ public class Animal extends Actor {
 			getIntersectingObjects(End.class).get(0).setEnd();
 			this.end++;
 			setX(300);
-			setY(679.8+movement);
+			setY(679.8+movementY);
 		}
 		else if (getY()<413){	//frog drop into water
 			this.waterDeath = true;
-			//setX(300);
-			//setY(679.8+movement);
 		}
 	}
 	
 	/**
 	* This is the method to set movement of frog.
+	* @since 1.0.4
 	* @param noMove The value to set the movement of frog.
 	*/
 	public void setNoMove(boolean noMove) {

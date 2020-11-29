@@ -19,6 +19,14 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+/**
+ * GameModel Class 
+ * This class contains all the logic of frogger application that is not contained in a view or a controller.
+ * 
+ * 
+ * @author  	Lee Hui Fang 20125427, hfyhl2
+ * @since   	1.9
+ */
 public class GameModel {
 
 	private boolean InspauseGame = false;
@@ -26,14 +34,14 @@ public class GameModel {
 	private boolean gameplay = false;
 	private boolean resumeGame = false;
 	private boolean pauseGame = false;
-	private Stage new_stage = new Stage();
-	public static int soundOnOff = 0;
-	public static int pausing = 0;
+	private static Stage new_stage = new Stage();
 	private boolean alertClose = false;
+	private boolean sound = false;
 	
 	/**
 	 * This method is get the value to play the game application.
 	 * @return boolean This returns the value to play the game application.
+	 * @since 1.9
 	 */
 	public boolean getGamePlay() {
 		return gameplay;
@@ -42,11 +50,16 @@ public class GameModel {
 	/**
 	 * This method is set the value to play the game application.
 	 * @param gameplay The value to play the game application.
+	 * @since 1.9
 	 */
 	public void setGamePlay(boolean gameplay) {
 		this.gameplay = gameplay;
 	}
 	
+	/**
+	 * This method displays the instruction dialog.
+	 * @since 1.9
+	 */
 	public void InstructionDialog() {
 		setAlertClose(false);
 		String instruction = "";
@@ -103,28 +116,31 @@ public class GameModel {
 			setResumeGame(true);
 			instructionPage = 1;
 			setAlertClose(true);
-			/*
-			pause.setImage(pause_img);
-			if(getMuted())
-				sound.setImage(soundOn_img);
-			else
-				sound.setImage(soundOff_img);
-			*/
-			
 		}
 	}
 	
-	public void setAlertClose(boolean alertClose) {
-		this.alertClose = alertClose;
-	}
-	
+	/**
+	 * This method gets the boolean variable when the alert dialog is close.
+	 * @return boolean This returns the value which represents whether the alert dialog is open or close.
+	 * @since 1.9
+	 */
 	public boolean getAlertClose() {
 		return alertClose;
 	}
 	
 	/**
+	 * This method sets the boolean variable when the alert dialog is close.
+	 * @param alertClose The value whether the alert dialog is open or close.
+	 * @since 1.9
+	 */
+	public void setAlertClose(boolean alertClose) {
+		this.alertClose = alertClose;
+	}
+	
+	/**
 	 * This method is get the value to resume the game application.
 	 * @return boolean This returns the value to resume the game application.
+	 * @since 1.9
 	 */
 	public boolean getResumeGame() {
 		return resumeGame;
@@ -133,6 +149,7 @@ public class GameModel {
 	/**
 	 * This method is set the value to resume the game application.
 	 * @param resumeGame The value to resume the game application.
+	 * @since 1.9
 	 */
 	public void setResumeGame(boolean resumeGame) {
 		this.resumeGame = resumeGame;
@@ -141,6 +158,7 @@ public class GameModel {
 	/**
 	 * This method is get the value to pause the game application.
 	 * @return boolean This returns the value to pause the game application.
+	 * @since 1.9
 	 */
 	public boolean getPauseGame() {
 		return pauseGame;
@@ -149,6 +167,7 @@ public class GameModel {
 	/**
 	 * This method is set the value to pause the game application.
 	 * @param pauseGame The value to pause the game application.
+	 * @since 1.9
 	 */
 	public void setPauseGame(boolean pauseGame) {
 		this.pauseGame = pauseGame;
@@ -157,6 +176,7 @@ public class GameModel {
 	/**
 	 * This method is get the value to pause the game application.
 	 * @return boolean This returns the value to pause the game application.
+	 * @since 1.9
 	 */
 	public boolean getInsPauseGame() {
 		return InspauseGame;
@@ -164,28 +184,34 @@ public class GameModel {
 
 	/**
 	 * This method is set the value to pause the game application.
-	 * @param pauseGame The value to pause the game application.
+	 * @param InspauseGame The value to pause the game application.
+	 * @since 1.9
 	 */
 	public void setInsPauseGame(boolean InspauseGame) {
 		this.InspauseGame = InspauseGame;
 	}
 	
 	/**
-	 * This method is to check whether is the game application pausing.
-	 * @return boolean This returns true when it is pausing, false when is not pausing.
+	 * This method is to get the value for the status of sound button, whether is it clicked or not.
+	 * @return boolean This returns the value of status of sound button.
+	 * @since 1.9
 	 */
-	/*
-	public boolean isPausing() {
-		return pausing == 1;
+	public boolean getSound() {
+		return sound;
 	}
 
-	public void setPausing() {
-		this.pausing = 0;
+	/**
+	 * This method is to set the value when the sound button is clicked.
+	 * @param sound	The value when the sound button is clicked.
+	 * @since 1.9
+	 */
+	public void setSound(boolean sound) {
+		this.sound = sound;
 	}
-	*/
-	
+
 	/**
 	 * This method gets the top3 player from the text file.
+	 * @since 1.9
 	 */
 	public void getHighScore() {
 		ArrayList<Integer>scoreList = new ArrayList<>();
@@ -283,6 +309,7 @@ public class GameModel {
 	/**
 	 * Display the window which contains high score information.
 	 * @param top3 The string contains the information of top3 player(s).
+	 * @since 1.9
 	 */
 	public void highScoreWindow(String top3){
 		
@@ -322,25 +349,21 @@ public class GameModel {
     	new_stage.show();
     }
 
+	/**
+	 * This method is to get the stage created for displaying the highscore.
+	 * @return Stage This returns the Stage object which is created for displaying highscore.
+	 * @since 1.9
+	 */
 	public Stage getStage() {
 		return new_stage;
 	}
 
+	/**
+	 * This method is to close/exit dialog.
+	 * @since 1.9
+	 */
 	public void close() {
 		System.exit(0);
 	}
 	
-	/**
-	 * This methods get the value of the sound is played/muted.
-	 * @return This returns the value of to play/mute the background music.
-	 */
-	/*
-	public static boolean getMuted() {
-		System.out.println(soundOnOff);
-		if(soundOnOff % 2 == 0)
-			return false;
-		else 
-			return true;
-	}
-	*/
 }
