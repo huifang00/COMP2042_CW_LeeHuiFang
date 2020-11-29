@@ -11,7 +11,7 @@ import javafx.scene.image.Image;
 * @since 	1.4
 */
 public class LevelImage extends Actor {
-	private Image levelimg;	//The image(s) of level description
+	private Image levelimg;	//the image(s) of level description
 	
 	/**
 	* This is the abstract method from superclass.

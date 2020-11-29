@@ -692,7 +692,7 @@ ul.help-section-list {
 main a[href*="://"]::after {
     content:"";
     display:inline-block;
-    background-image:url('data:image/svg+xml; utf8,
+    background-image:url('data:image/svg+xml; utf8, 
       <svg xmlns="http://www.w3.org/2000/svg" width="768" height="768">
         <path d="M584 664H104V184h216V80H0v688h688V448H584zM384 0l132 
         132-240 240 120 120 240-240 132 132V0z" fill="%234a6782"/>

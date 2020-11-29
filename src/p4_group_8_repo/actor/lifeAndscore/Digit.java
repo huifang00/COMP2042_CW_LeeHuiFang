@@ -12,11 +12,11 @@ import p4_group_8_repo.actor.Actor;
 * @since 	1.0
 */
 public class Digit extends Actor{
-	private Image im1;	//The image(s) of digit
+	private Image im1;	//the image(s) of digit
 		
 	/**
 	* This is the abstract method from superclass.
-	* @param now The timestamp of the current frame given in nanoseconds.
+	* @param now The time stamp of the current frame given in nanoseconds.
 	* @since 1.0
 	*/
 	@Override

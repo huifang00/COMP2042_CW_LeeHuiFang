@@ -12,11 +12,11 @@ import p4_group_8_repo.actor.Actor;
 * @since 	1.2
 */
 public class Life extends Actor{
-	private Image life;	//The image(s) of life
+	private Image life;	//the image(s) of life
 		
 	/**
 	* This is the abstract method from superclass.
-	* @param now The timestamp of the current frame given in nanoseconds.
+	* @param now The time stamp of the current frame given in nanoseconds.
 	* @since 1.2
 	*/
 	@Override

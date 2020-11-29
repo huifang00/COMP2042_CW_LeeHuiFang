@@ -11,14 +11,14 @@ import javafx.scene.image.Image;
 * @since   1.0
 */
 public class End extends Actor{
-	private boolean activated = false;	//The value on whether is the slot activated.
-	private double width; 	//The width of the image
-	private double height;	//The height of the image.
-	private Image endSlot, endFrog;		//The image(s) of empty slot and frog placed in the empty slot.
+	private boolean activated = false;	//the value on whether is the slot activated
+	private double width; 	//the width of the image
+	private double height;	//the height of the image
+	private Image endSlot, endFrog;		//the image(s) of empty slot and frog placed in the empty slot
 	
 	/**
 	* This is the abstract method from superclass.
-	* @param now The timestamp of the current frame given in nanoseconds.
+	* @param now The time stamp of the current frame given in nanoseconds.
 	* @since   1.0
 	*/
 	@Override
@@ -48,7 +48,7 @@ public class End extends Actor{
 	 * This method is to replaced the empty slot image with a frog image when it is placed in the empty slot.
 	 * @since   1.0
 	 */
-	public void setEnd() {	//no need to set the width and height as it is same as the slot
+	public void setEnd() {
 		endFrog = new Image("file:src/p4_group_8_repo/FrogEnd.png", width, height, true, true);
 		setImage(endFrog);
 		activated = true;

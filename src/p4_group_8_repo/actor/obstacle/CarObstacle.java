@@ -12,7 +12,7 @@ import javafx.scene.image.Image;
 */
 public class CarObstacle extends Obstacle{
 	private double speed;	//the speed of car
-	private Image carobstacleL, carobstacleR;	//the image(s) of car as obstacle(s).
+	private Image carobstacleL, carobstacleR;	//the image(s) of car as obstacle(s)
 	
 	/**
 	* This is the abstract method from superclass.

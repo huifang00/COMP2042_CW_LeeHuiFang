@@ -23,25 +23,25 @@ public class ObstacleFactory{
 	 */
 	public Obstacle getObstacle(String obstacle, int xpos, int ypos, double speed, double width, double height){
 		if(obstacle == null){
-			return null;
+			return null;	//return null
 		}		
 		if(obstacle.equalsIgnoreCase("LOG")){
-			return new Log(xpos, ypos, speed, width, height);
+			return new Log(xpos, ypos, speed, width, height);	//return object of Log obstacle
 		}
 		else if(obstacle.equalsIgnoreCase("CAR")){
-			return new CarObstacle(xpos, ypos, speed, width, height);
+			return new CarObstacle(xpos, ypos, speed, width, height);	//return object of car obstacle
 		}
 		else if(obstacle.equalsIgnoreCase("TRUCK")){
-			return new TruckObstacle(xpos, ypos, speed, width, height);
+			return new TruckObstacle(xpos, ypos, speed, width, height);	//return object of truck obstacle
 		}
 		else if(obstacle.equalsIgnoreCase("TURTLE")) {
-			return new Turtle(xpos, ypos, speed, width, height);
+			return new Turtle(xpos, ypos, speed, width, height);	//return object of turtle obstacle
 		}
 		else if(obstacle.equalsIgnoreCase("WET TURTLE")) {
-			return new WetTurtle(xpos, ypos, speed, width, height);
+			return new WetTurtle(xpos, ypos, speed, width, height);	//return the object of wet turtle obstacle
 		}
 		else if(obstacle.equalsIgnoreCase("SNAKE")) {
-			return new Snake(xpos, ypos, speed, width, height);
+			return new Snake(xpos, ypos, speed, width, height);	//return the object of snake obstacle
 		}
 		return null;
 		}

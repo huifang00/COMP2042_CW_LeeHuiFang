@@ -13,7 +13,7 @@ import javafx.scene.image.Image;
 public class WetTurtle extends Obstacle{
 	private double speed;	//the speed of wet turtle
 	private Image turtle1, turtle2, turtle3, turtle4;	//the image(s) of wet turtle as obstacle(s)
-	private boolean sunk = false;	//the value whether the wet turtle goes below the water surface
+	private boolean sunk = false;	//the value indicates whether the wet turtle goes below the water surface
 	
 	/**
 	* This is the abstract method from superclass.

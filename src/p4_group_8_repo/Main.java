@@ -224,7 +224,7 @@ public class Main extends Application {
             		}
             		if(level == 10) {
             			highscore = level * 800;
-            			level10.setScore(animal.getPoints());	//save the score in level3 class
+            			level10.setScore(animal.getPoints());	//save the score in level10 class
             			Level.remove();
             			score = score + level10.getScore();
             			level = 0;	//end the game
@@ -234,7 +234,7 @@ public class Main extends Application {
             			background.stop();
             			printNextLevel();
 	            		animal.setEnd(0);	//set the end back to 0 to prevent getStop() infinite loop
-	            		setNextLevel(true);	//in order to run the condition for increasing to nextlevel
+	            		setNextLevel(true);	//in order to run the condition for increasing to next level
             		}
             	}
             	if (alert.getResult() == ButtonType.YES && getNextLevel()) {

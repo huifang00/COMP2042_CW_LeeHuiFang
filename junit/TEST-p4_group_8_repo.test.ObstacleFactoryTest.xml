@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" name="p4_group_8_repo.test.ObstacleFactoryTest" skipped="0" tests="14" time="0.759" timestamp="2020-11-29T07:27:53">
+<testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" name="p4_group_8_repo.test.ObstacleFactoryTest" skipped="0" tests="14" time="0.73" timestamp="2020-11-29T15:42:46">
   <properties>
     <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
     <property name="env.NUMBER_OF_PROCESSORS" value="4" />
@@ -15,12 +15,12 @@
     <property name="java.vendor.url" value="https://java.oracle.com/" />
     <property name="env.OS" value="Windows_NT" />
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.ObstacleFactoryTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.ObstacleFactoryTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher8669518294771692708.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit15164742025450249512.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.ObstacleFactoryTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.ObstacleFactoryTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher3305789047075774699.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit17112186099104427366.properties" />
     <property name="jdk.debug" value="release" />
     <property name="env.ComSpec" value="C:\WINDOWS\system32\cmd.exe" />
     <property name="eclipse.pdebuild.templates" value="C:\Users\huifa\eclipse\java-2020-09\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.pde.build_3.10.800.v20200410-1419\templates" />
     <property name="java.specification.vendor" value="Oracle Corporation" />
-    <property name="org.apache.tools.ant.taskdefs.optional.junit.AggregateTransformer0" value="C:\Users\huifa\AppData\Local\Temp\null1533989971" />
+    <property name="org.apache.tools.ant.taskdefs.optional.junit.AggregateTransformer0" value="C:\Users\huifa\AppData\Local\Temp\null1461032029" />
     <property name="java.version.date" value="2020-09-15" />
     <property name="java.home" value="C:\Program Files\Java\jdk-15" />
     <property name="file.separator" value="\" />
@@ -113,20 +113,20 @@
     <property name="env.OneDrive" value="C:\Users\huifa\OneDrive" />
     <property name="ant.project.default-target" value="build" />
   </properties>
-  <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleStringNotExistTest" time="0.362" />
-  <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleTurtleTest1" time="0.104" />
+  <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleStringNotExistTest" time="0.336" />
+  <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleTurtleTest1" time="0.096" />
   <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleTurtleTest2" time="0.011" />
-  <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleTruckTest1" time="0.068" />
-  <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleTruckTest2" time="0.004" />
+  <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleTruckTest1" time="0.088" />
+  <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleTruckTest2" time="0.008" />
   <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleLogTest1" time="0.002" />
   <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleLogTest2" time="0.003" />
   <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleNullTest" time="0.0" />
-  <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleWetTurtleTest1" time="0.005" />
+  <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleWetTurtleTest1" time="0.004" />
   <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleWetTurtleTest2" time="0.003" />
   <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleSnakeTest1" time="0.046" />
-  <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleSnakeTest2" time="0.005" />
-  <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleCarTest1" time="0.005" />
-  <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleCarTest2" time="0.013" />
+  <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleSnakeTest2" time="0.004" />
+  <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleCarTest1" time="0.003" />
+  <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleCarTest2" time="0.011" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
