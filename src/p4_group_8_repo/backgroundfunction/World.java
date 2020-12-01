@@ -4,10 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javafx.animation.AnimationTimer;
-import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import p4_group_8_repo.actor.Actor;
@@ -33,38 +31,29 @@ public abstract class World extends Pane {
     public World(BorderPane root) {
     	World.root = root;
     	Scene newValue = root.getScene();
-    	
-		newValue.setOnKeyReleased(new EventHandler<KeyEvent>() {
-					
-    		@Override
-    		public void handle(KeyEvent event) {
-    			if(getOnKeyReleased() != null) 
-    				getOnKeyReleased().handle(event);
-    			List<Actor> myActors = getObjects(Actor.class);
-    			for (Actor anActor: myActors) {
-    				if (anActor.getOnKeyReleased() != null) {
-    					anActor.getOnKeyReleased().handle(event);
-    				}
+    	//when keyboard key is pressed
+    	newValue.setOnKeyPressed(event -> {
+    		if(getOnKeyPressed() != null) 
+    			getOnKeyPressed().handle(event);
+    		List<Actor> myActors = getObjects(Actor.class);
+    		for (Actor anActor: myActors) {
+    			if (anActor.getOnKeyPressed() != null) {
+    				anActor.getOnKeyPressed().handle(event);
     			}
-    		}	
-    		
+    		}			
     	});
-    			
-    	newValue.setOnKeyPressed(new EventHandler<KeyEvent>() {
-
-    	@Override
-    		public void handle(KeyEvent event) {
-    			if(getOnKeyPressed() != null) 
-    				getOnKeyPressed().handle(event);
-    			List<Actor> myActors = getObjects(Actor.class);
-    			for (Actor anActor: myActors) {
-    				if (anActor.getOnKeyPressed() != null) {
-    					anActor.getOnKeyPressed().handle(event);
-    				}
+    	//when the pressed key is released
+    	newValue.setOnKeyReleased(event -> {
+    		if(getOnKeyReleased() != null) 
+    			getOnKeyReleased().handle(event);
+    		List<Actor> myActors = getObjects(Actor.class);
+    		for (Actor anActor: myActors) {
+    			if (anActor.getOnKeyReleased() != null) {
+    				anActor.getOnKeyReleased().handle(event);
     			}
     		}
-    				
     	});
+    	
     }
     
 	/**

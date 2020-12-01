@@ -1,10 +1,7 @@
 package p4_group_8_repo.actor;
 
-import javafx.event.EventHandler;
-
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import p4_group_8_repo.actor.obstacle.CarObstacle;
 import p4_group_8_repo.actor.obstacle.Log;
 import p4_group_8_repo.actor.obstacle.Snake;
@@ -69,12 +66,12 @@ public class Animal extends Actor {
 		setY(ypos);
 		this.width = width;
 		this.height = height;
-		setOnKeyPressed(new EventHandler<KeyEvent>() {
-			public void handle(KeyEvent event){
-				if (noMove) {
-					
-				}
-				else {
+		//when keyboard key is pressed
+		setOnKeyPressed(event -> {
+			if (noMove) {
+				
+			}
+			else {
 				if (second) {
 					if (event.getCode() == KeyCode.W) {	  
 		                move(0, -movementY);
@@ -119,12 +116,13 @@ public class Animal extends Actor {
 	            	 second = true;
 	            }
 	        }
+		});
+		//when the pressed key is released
+		setOnKeyReleased(event -> {
+			if (noMove) {
+				
 			}
-		});	
-		setOnKeyReleased(new EventHandler<KeyEvent>() {
-			public void handle(KeyEvent event) {
-				if (noMove) {}
-				else {
+			else {
 				if (event.getCode() == KeyCode.W) {	  
 					if (getY() < w) {
 						changeScore = true;
@@ -151,8 +149,6 @@ public class Animal extends Actor {
 	            	 second = false;
 	            }
 	        }
-			}
-			
 		});
 	}
 	

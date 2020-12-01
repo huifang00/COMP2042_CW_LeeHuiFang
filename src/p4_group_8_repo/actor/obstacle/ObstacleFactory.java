@@ -38,11 +38,11 @@ public class ObstacleFactory{
 			return new Turtle(xpos, ypos, speed, width, height);	//return object of turtle obstacle
 		}
 		else if(obstacle.equalsIgnoreCase("WET TURTLE")) {
-			return new WetTurtle(xpos, ypos, speed, width, height);	//return the object of wet turtle obstacle
+			return new WetTurtle(xpos, ypos, speed, width, height);	//return object of wet turtle obstacle
 		}
 		else if(obstacle.equalsIgnoreCase("SNAKE")) {
-			return new Snake(xpos, ypos, speed, width, height);	//return the object of snake obstacle
+			return new Snake(xpos, ypos, speed, width, height);	//return object of snake obstacle
 		}
-		return null;
+		return null;	//return null
 		}
 }

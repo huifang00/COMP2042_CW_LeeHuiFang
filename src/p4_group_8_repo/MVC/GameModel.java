@@ -66,12 +66,11 @@ public class GameModel {
 		Alert alert = new Alert(AlertType.NONE);
 		alert.getButtonTypes().addAll(ButtonType.NEXT, ButtonType.CLOSE);
 		alert.setTitle("INSTRUCTION");
-		//setPauseGame(true);
 
-		// Get the Stage.
+		//get the stage
 		Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
 
-		// Add a custom icon.
+		//add a custom icon
 		stage.getIcons().add(new Image(this.getClass().getResource("../smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
 		
 		//print Instruction
@@ -235,8 +234,7 @@ public class GameModel {
 	    			index += 2;	//increase the index till the starting of points
 	    			int score = 0;
 	    			
-	    			// Now index can be -1, if lets say the string had no ":" at all in it i.e. no ":" is found. 
-	    			//So check and account for it.
+	    			//index == -1, if ":" is not found
 	    			if(index != -1)
 	    				score = Integer.parseInt(line.substring(index));
 	    			numberOfLine++;	//calculate the number of line of the file
@@ -339,7 +337,7 @@ public class GameModel {
     	//not allowed to resize the screen/window
     	new_stage.setResizable(false);
     	
-    	// Add a custom icon.
+    	//add a custom icon
     	new_stage.getIcons().add(new Image(this.getClass().getResource("../smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
     			
     	new_stage.setScene(new_scene);

@@ -87,7 +87,6 @@ public class Main extends Application {
 			this.root = new BorderPane();
 			scene = new Scene(root,600,800);
 			Parent content = FXMLLoader.load(Main.class.getClassLoader().getResource("p4_group_8_repo/MVC/View.fxml"));
-			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			root.setCenter(content);
 			
 			primaryStage.setScene(scene);
@@ -104,10 +103,10 @@ public class Main extends Application {
 			//not allowed to resize the screen/window
 			primaryStage.setResizable(false);
 
-			// Set the title for the application
+			//set the title for the application
 			primaryStage.setTitle("Frogger");
 			
-			// Add a custom icon.
+			//add a custom icon
 			primaryStage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
 
 			
@@ -439,19 +438,18 @@ public class Main extends Application {
 	* @since 1.0.3
 	*/
     public void playerNameDialog(String Message) {
-    	//String message = "";
     	TextInputDialog dialog = new TextInputDialog();
     	dialog.setTitle("Enter Name");
     	dialog.setHeaderText("Welcome To Frogger!!!" + Message);
     	dialog.setContentText("Please enter your name:");
     		
-    	// Get the Stage.
+    	//get the stage
     	Stage stage = (Stage) dialog.getDialogPane().getScene().getWindow();
 
-    	// Add a custom icon.
+    	//add a custom icon
     	stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
     		
-    	// To get the response value.
+    	//to get the response value
     	Optional<String> result = dialog.showAndWait();
     	if (result.isPresent()){	//ok was pressed
     		String input = result.get(); //assigned to a variable easier to use
@@ -487,10 +485,10 @@ public class Main extends Application {
     	Alert alertEnd = new Alert(AlertType.INFORMATION);
 		alertEnd.setTitle("You Have Won The Game!");
 		alertEnd.setHeaderText("Your Total Score: "+ score +"!");
-		// Get the Stage.
+		//get the stage
 		Stage stage = (Stage) alertEnd.getDialogPane().getScene().getWindow();
 
-		// Add a custom icon.
+		//add a custom icon
 		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
 		
 		if(level == 0)
@@ -501,7 +499,7 @@ public class Main extends Application {
 		
 		save();	//call the method to save score and player name in file
 		
-		//use a handler for the onCloseRequest event for the alert to close the application when the alert is closed:
+		//use a handler for the onCloseRequest event for the alert to close the application when the alert is closed
 		alertEnd.setOnCloseRequest(evt -> {
 			System.exit(0);
 			if(control.getGameModel().getStage().isShowing()) {
@@ -519,10 +517,10 @@ public class Main extends Application {
 		alert.getButtonTypes().addAll(ButtonType.YES, ButtonType.NO);
 		alert.setTitle("NEXT LEVEL");
 		alert.setHeaderText("PROCEED TO NEXT LEVEL?");
-		// Get the Stage.
+		//get the stage
 		Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
 
-		// Add a custom icon.
+		//add a custom icon
 		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
 		
 		levelMsg(level);
@@ -594,16 +592,16 @@ public class Main extends Application {
 		alertGameOver.setTitle("GAME OVER!!!");
 		alertGameOver.setHeaderText("GAME OVER!!!\nYou Have No Life Left");
 		alertGameOver.setContentText(levelmsg + "Your Total Score: "+ this.score +"!");
-		// Get the Stage.
+		//get the stage
 		Stage stage = (Stage) alertGameOver.getDialogPane().getScene().getWindow();
 
-		// Add a custom icon.
+		//add a custom icon
 		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
 		
 		alertGameOver.show();
 		save();	//call the method to save score and player name in file
 		
-		//use a handler for the onCloseRequest event for the alert to close the application when the alert is closed:
+		//use a handler for the onCloseRequest event for the alert to close the application when the alert is closed
 		alertGameOver.setOnCloseRequest(evt -> {
 			System.exit(0);
 			if(control.getGameModel().getStage().isShowing()) {
@@ -630,8 +628,7 @@ public class Main extends Application {
     			int index = line.indexOf(":"); //this finds the first occurrence of ":" 
     			//in string thus giving you the index of where it is in the string
 
-    			// Now index can be -1, if lets say the string had no ":" at all in it i.e. no ":" is found. 
-    			//So check and account for it.
+    			//index == -1, if ":" is not found
     			if (index != -1) 
     			{
     			    name = line.substring(0 , index); //this will give name before ":"
@@ -683,19 +680,19 @@ public class Main extends Application {
     			file.createNewFile();
     		}
 
-    		//String to be displayed in the file
+    		//string to be displayed in the file
     		String content = playerName + ": " + score +"\n";
     		
     		//true is to append the content to file
         	FileWriter filewriter = new FileWriter(file,true);
         	
-        	//Write the content
+        	//write the content
         	filewriter.write(content);
         	
-        	//Flush the stream
+        	//flush the stream
         	filewriter.flush();
         	
-        	//Closing BufferedWriter Stream
+        	//close BufferedWriter Stream
         	filewriter.close();	//BufferedWriter close the underlying writer
        	}
     	catch(IOException e) {

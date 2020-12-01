@@ -26,23 +26,37 @@ public class Controller {
 	 * @since 1.9
 	 */
 	public void initialize() {
+		//add & set background image
 		background_img = new Image("file:src/p4_group_8_repo/iKogsKW_cropped.png");
 		background.setImage(background_img);
+		
+		//add & set start button image
 		start_img = new Image("file:src/p4_group_8_repo/play.png");
 		start.setImage(start_img);
+		
+		//add & set instruction image
 		howtoplay_img = new Image("file:src/p4_group_8_repo/howtoplay.png");
 		howtoplay.setImage(howtoplay_img);
+		
+		//add & set highscore button image
 		highscore_img = new Image("file:src/p4_group_8_repo/highscore.png");
 		highscore.setImage(highscore_img);
+		
+		//add & set text image
 		startIns_img = new Image("file:src/p4_group_8_repo/click.png");
 		startIns.setImage(startIns_img);
+		
+		//add & set sound image
 		soundOn_img = new Image("file:src/p4_group_8_repo/soundOn.png");
 		soundOff_img = new Image("file:src/p4_group_8_repo/soundOff.png");
 		sound.setImage(soundOff_img);
+		
+		//add & set pause/resume image
 		pause_img = new Image("file:src/p4_group_8_repo/pause.png");
 		resume_img = new Image("file:src/p4_group_8_repo/resume.png");
-		instruction_img = new Image("file:src/p4_group_8_repo/instruction.png");
 		
+		//add & set instruction button image
+		instruction_img = new Image("file:src/p4_group_8_repo/instruction.png");
 	}
 	
 	/**
@@ -70,7 +84,7 @@ public class Controller {
 		gameModel.setInsPauseGame(true);
 		instruction.setImage(null);
 		pause.setImage(null);
-		//sound.setImage(null);
+		sound.setImage(null);
 		gameModel.InstructionDialog();
 		if(gameModel.getAlertClose() && howtoplay.getImage() == null) {
 			if(pausing % 2 != 0)
@@ -116,7 +130,6 @@ public class Controller {
 	 */
 	@FXML
 	public void onPauseClicked() {
-		//pausing = 1;
 		pausing++;
 		if(pausing%2 == 0) {
 			pause.setImage(pause_img);
