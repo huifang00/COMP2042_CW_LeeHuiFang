@@ -66,7 +66,7 @@ public abstract class World extends Pane {
     				
     	});
     }
-
+    
 	/**
 	* This is the method to create animation and handle() method is called in every frame of the animation.
 	* This method save the object created/inherited from actor class to a list.

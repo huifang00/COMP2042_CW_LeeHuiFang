@@ -1,8 +1,6 @@
 package p4_group_8_repo.level;
 
 import p4_group_8_repo.Main;
-import p4_group_8_repo.actor.Animal;
-import p4_group_8_repo.actor.End;
 import p4_group_8_repo.actor.LevelImage;
 import p4_group_8_repo.backgroundfunction.MyStage;
 import p4_group_8_repo.actor.obstacle.Obstacle;
@@ -16,12 +14,9 @@ import p4_group_8_repo.actor.obstacle.ObstacleFactory;
 * @author  	Lee Hui Fang 20125427, hfyhl2
 * @since 	1.6
 */
-public class Level4 implements Level{
+public class Level4 extends Level{
 	
-	private Animal animal;
-	private End end1, end2, end3, end4, end5;
 	private LevelImage levelImage;
-	private int score = 0;
 	private MyStage background;
 	private ObstacleFactory obstacleFactory = new ObstacleFactory();
 	private Obstacle log1, log2, log3, log4, log5, log6, log7, log8,
@@ -37,12 +32,9 @@ public class Level4 implements Level{
 	 */
 	public Level4() {
 		this.background = Main.getMyStage();
-		this.animal = Main.getAnimal();
 		addLevelImage();
 		addLog();
 		addTurtle();
-		addEnd();
-		addAnimal();
 		addCarObstacle();
 		addTruckObstacle();
 		addSnake();
@@ -101,31 +93,6 @@ public class Level4 implements Level{
     }
     
     /**
-     * This is the method to add the image(s) of empty slot.
-     * @since 1.6
-     */
-    public void addEnd() {
-    	end1 = new End(13, 96, 60, 60);
-    	background.add(end1);
-    	end2 = new End(141, 96, 60, 60);
-    	background.add(end2);
-    	end3 = new End(141 + 141-13, 96, 60, 60);
-    	background.add(end3);
-    	end4 = new End(141 + 141-13+141-13+1, 96, 60, 60);
-    	background.add(end4);
-    	end5 = new End(141 + 141-13+141-13+141-13+3, 96, 60, 60);
-    	background.add(end5);
-    }
-    
-    /**
-     * This is the method to add the image of frog as the main character on the game interface of the application.
-     * @since 1.6
-    */
-    public void addAnimal() {
-    	background.add(animal);
-    }
-   
-    /**
      * This is the method to add the image(s) of car as obstacle(s).
      * @since 1.6
      */
@@ -174,22 +141,5 @@ public class Level4 implements Level{
 		background.add(snake3);
 	}
 
-    /**
-     * This is the method to set the score which player get for level 4.
-     * @param score The score which player get for level 4.
-     * @since 1.6
-     */
-    public void setScore(int score) {
-    	this.score = score;
-    }
-
-    /**
-     * This is the method to get the score of level 4 which player achieved.
-     * @return int This returns the score of level 4 which player achieved.
-     * @since 1.6
-     */
-    public int getScore() {
-    	return score;
-    }
 }
 

@@ -151,6 +151,7 @@ public class Main extends Application {
             	}
             	if(getPrintGame()){
             		Level.remove();
+            		Level.addEnd();
             		background.add(new Digit(0, 450, 10, 30, 30));
             		background.start();
             		animal.setPoints(0);	//display the score (digit image) as 0
@@ -177,7 +178,7 @@ public class Main extends Application {
 	            		level9 = levelFactory.getLevel(9);
 	            	else if(level == 10) 	//Level10
 	            		level10 = levelFactory.getLevel(10);
-	            	
+	            	background.add(animal);
 	            	
             	}
             	if (animal.changeScore()) {

@@ -23,7 +23,7 @@ public class MyStage extends World{
 	public MyStage(BorderPane root) {
 		super(root);
 	}
-	
+
 	private static MediaPlayer mediaPlayer;
 	@Override
 	

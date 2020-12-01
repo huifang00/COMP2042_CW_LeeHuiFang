@@ -237,7 +237,7 @@
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="1" name="AnimalTest" package="p4_group_8_repo.test" skipped="0" tests="13" time="0.938" timestamp="2020-11-29T07:28:01">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="1" name="AnimalTest" package="p4_group_8_repo.test" skipped="0" tests="13" time="0.923" timestamp="2020-12-01T05:48:23">
       <properties>
           <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
 
@@ -267,7 +267,7 @@
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.AnimalTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.AnimalTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher1204926069653951665.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit4984831481759331547.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.AnimalTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.AnimalTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher5984348098729487907.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit4455373609431680983.properties" />
 
           <property name="jdk.debug" value="release" />
 
@@ -277,7 +277,7 @@
 
           <property name="java.specification.vendor" value="Oracle Corporation" />
 
-          <property name="org.apache.tools.ant.taskdefs.optional.junit.AggregateTransformer0" value="C:\Users\huifa\AppData\Local\Temp\null1533989971" />
+          <property name="org.apache.tools.ant.taskdefs.optional.junit.AggregateTransformer0" value="C:\Users\huifa\AppData\Local\Temp\null1538601623" />
 
           <property name="java.version.date" value="2020-09-15" />
 
@@ -463,38 +463,38 @@
 
       </properties>
 
-      <testcase classname="p4_group_8_repo.test.AnimalTest" name="getWidthTest1" time="0.503" />
+      <testcase classname="p4_group_8_repo.test.AnimalTest" name="getWidthTest1" time="0.583" />
 
-      <testcase classname="p4_group_8_repo.test.AnimalTest" name="getWidthTest2" time="0.012" />
+      <testcase classname="p4_group_8_repo.test.AnimalTest" name="getWidthTest2" time="0.013" />
 
-      <testcase classname="p4_group_8_repo.test.AnimalTest" name="getHeightTest2" time="0.006" />
+      <testcase classname="p4_group_8_repo.test.AnimalTest" name="getHeightTest2" time="0.011" />
 
-      <testcase classname="p4_group_8_repo.test.AnimalTest" name="getIntersectObjectsTest" time="0.066" />
+      <testcase classname="p4_group_8_repo.test.AnimalTest" name="getIntersectObjectsTest" time="0.073" />
 
-      <testcase classname="p4_group_8_repo.test.AnimalTest" name="changeLifeTest" time="0.009" />
+      <testcase classname="p4_group_8_repo.test.AnimalTest" name="changeLifeTest" time="0.01" />
 
       <testcase classname="p4_group_8_repo.test.AnimalTest" name="getWorldTest" time="0.011" />
 
-      <testcase classname="p4_group_8_repo.test.AnimalTest" name="getHeightTest" time="0.01" />
+      <testcase classname="p4_group_8_repo.test.AnimalTest" name="getHeightTest" time="0.009" />
 
-      <testcase classname="p4_group_8_repo.test.AnimalTest" name="setgetPointsTest" time="0.016" />
+      <testcase classname="p4_group_8_repo.test.AnimalTest" name="setgetPointsTest" time="0.008" />
 
-      <testcase classname="p4_group_8_repo.test.AnimalTest" name="getStopTest1" time="0.015" />
+      <testcase classname="p4_group_8_repo.test.AnimalTest" name="getStopTest1" time="0.008" />
 
-      <testcase classname="p4_group_8_repo.test.AnimalTest" name="getStopTest2" time="0.014" />
+      <testcase classname="p4_group_8_repo.test.AnimalTest" name="getStopTest2" time="0.007" />
 
-      <testcase classname="p4_group_8_repo.test.AnimalTest" name="getIntersectObjectTest" time="0.12" />
+      <testcase classname="p4_group_8_repo.test.AnimalTest" name="getIntersectObjectTest" time="0.039" />
 
-      <testcase classname="p4_group_8_repo.test.AnimalTest" name="constructorTest_X" time="0.021" />
+      <testcase classname="p4_group_8_repo.test.AnimalTest" name="constructorTest_X" time="0.008" />
 
-      <testcase classname="p4_group_8_repo.test.AnimalTest" name="constructorTest_Y" time="0.006" />
+      <testcase classname="p4_group_8_repo.test.AnimalTest" name="constructorTest_Y" time="0.005" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="2" name="BackgroundImageTest" package="p4_group_8_repo.test" skipped="0" tests="2" time="0.963" timestamp="2020-11-29T07:28:03">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="2" name="BackgroundImageTest" package="p4_group_8_repo.test" skipped="0" tests="2" time="0.97" timestamp="2020-12-01T05:48:25">
       <properties>
           <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
 
@@ -524,7 +524,7 @@
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.BackgroundImageTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.BackgroundImageTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher12504172736637622699.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit422664758534704488.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.BackgroundImageTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.BackgroundImageTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher9702650083782261319.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit8985268652422374031.properties" />
 
           <property name="jdk.debug" value="release" />
 
@@ -534,7 +534,7 @@
 
           <property name="java.specification.vendor" value="Oracle Corporation" />
 
-          <property name="org.apache.tools.ant.taskdefs.optional.junit.AggregateTransformer0" value="C:\Users\huifa\AppData\Local\Temp\null1533989971" />
+          <property name="org.apache.tools.ant.taskdefs.optional.junit.AggregateTransformer0" value="C:\Users\huifa\AppData\Local\Temp\null1538601623" />
 
           <property name="java.version.date" value="2020-09-15" />
 
@@ -720,16 +720,16 @@
 
       </properties>
 
-      <testcase classname="p4_group_8_repo.test.BackgroundImageTest" name="getWidthTest" time="0.684" />
+      <testcase classname="p4_group_8_repo.test.BackgroundImageTest" name="getWidthTest" time="0.69" />
 
-      <testcase classname="p4_group_8_repo.test.BackgroundImageTest" name="getHeightTest" time="0.165" />
+      <testcase classname="p4_group_8_repo.test.BackgroundImageTest" name="getHeightTest" time="0.13" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="3" name="CarObstacleTest" package="p4_group_8_repo.test" skipped="0" tests="2" time="0.823" timestamp="2020-11-29T15:41:50">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="3" name="CarObstacleTest" package="p4_group_8_repo.test" skipped="0" tests="2" time="0.612" timestamp="2020-12-01T08:30:56">
       <properties>
           <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
 
@@ -759,240 +759,7 @@
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.CarObstacleTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.CarObstacleTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher15188990665998942540.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit3012076027197407546.properties" />
-
-          <property name="jdk.debug" value="release" />
-
-          <property name="env.ComSpec" value="C:\WINDOWS\system32\cmd.exe" />
-
-          <property name="eclipse.pdebuild.templates" value="C:\Users\huifa\eclipse\java-2020-09\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.pde.build_3.10.800.v20200410-1419\templates" />
-
-          <property name="java.specification.vendor" value="Oracle Corporation" />
-
-          <property name="java.version.date" value="2020-09-15" />
-
-          <property name="java.home" value="C:\Program Files\Java\jdk-15" />
-
-          <property name="env.ProgramFiles" value="C:\Program Files" />
-
-          <property name="basedir" value="C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang" />
-
-          <property name="file.separator" value="\" />
-
-          <property name="java.vm.compressedOopsMode" value="32-bit" />
-
-          <property name="line.separator" value="&#xd;&#xa;" />
-
-          <property name="env.PROMPT" value="$P$G" />
-
-          <property name="java.specification.name" value="Java Platform API Specification" />
-
-          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
-
-          <property name="env.LOCALAPPDATA" value="C:\Users\huifa\AppData\Local" />
-
-          <property name="env.USERDOMAIN_ROAMINGPROFILE" value="DESKTOP-GCDNCCL" />
-
-          <property name="env.PROCESSOR_REVISION" value="3a09" />
-
-          <property name="env.PSModulePath" value="C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules" />
-
-          <property name="user.script" value="" />
-
-          <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
-
-          <property name="env.PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" />
-
-          <property name="java.runtime.version" value="15+36-1562" />
-
-          <property name="user.name" value="huifang" />
-
-          <property name="env.ProgramW6432" value="C:\Program Files" />
-
-          <property name="env.DriverData" value="C:\Windows\System32\Drivers\DriverData" />
-
-          <property name="env.CommonProgramFiles" value="C:\Program Files\Common Files" />
-
-          <property name="env.PUBLIC" value="C:\Users\Public" />
-
-          <property name="file.encoding" value="Cp1252" />
-
-          <property name="env.COMPUTERNAME" value="DESKTOP-GCDNCCL" />
-
-          <property name="env.HOMEPATH" value="\Users\huifa" />
-
-          <property name="env.SystemDrive" value="C:" />
-
-          <property name="env.APPDATA" value="C:\Users\huifa\AppData\Roaming" />
-
-          <property name="env.IntelliJ IDEA Community Edition" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.2\bin;" />
-
-          <property name="env.ProgramData" value="C:\ProgramData" />
-
-          <property name="java.io.tmpdir" value="C:\Users\huifa\AppData\Local\Temp\" />
-
-          <property name="java.version" value="15" />
-
-          <property name="env.PROCESSOR_LEVEL" value="6" />
-
-          <property name="env.Path" value="C:/Program Files/Java/jdk-15/bin/server;C:/Program Files/Java/jdk-15/bin;C:\Program Files\Ant\apache-ant-1.10.9\bin;C:\Program Files\Java\jdk-15\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MATLAB\R2020b\runtime\win64;C:\Program Files\MATLAB\R2020b\bin;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\Program Files\Java\jdk-15\bin;C:\Users\huifa\AppData\Local\Microsoft\WindowsApps;C:\Users\huifa\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.2\bin;;C:\Users\huifa\Desktop\apache-ant-1.9.15-bin;;C:\Users\huifa\Desktop;" />
-
-          <property name="env.HOMEDRIVE" value="C:" />
-
-          <property name="env.TMP" value="C:\Users\huifa\AppData\Local\Temp" />
-
-          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
-
-          <property name="ant.home" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239" />
-
-          <property name="sun.os.patch.level" value="" />
-
-          <property name="junit.output.dir" value="junit" />
-
-          <property name="ant.version" value="Apache Ant(TM) version 1.10.8 compiled on May 10 2020" />
-
-          <property name="eclipse.pdebuild.scripts" value="C:\Users\huifa\eclipse\java-2020-09\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.pde.build_3.10.800.v20200410-1419\scripts" />
-
-          <property name="java.library.path" value="C:\Program Files\Java\jdk-15\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk-15/bin/server;C:/Program Files/Java/jdk-15/bin;C:\Program Files\Ant\apache-ant-1.10.9\bin;C:\Program Files\Java\jdk-15\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MATLAB\R2020b\runtime\win64;C:\Program Files\MATLAB\R2020b\bin;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\Program Files\Java\jdk-15\bin;C:\Users\huifa\AppData\Local\Microsoft\WindowsApps;C:\Users\huifa\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.2\bin;;C:\Users\huifa\Desktop\apache-ant-1.9.15-bin;;C:\Users\huifa\Desktop;;." />
-
-          <property name="java.vendor" value="Oracle Corporation" />
-
-          <property name="env.LOGONSERVER" value="\\DESKTOP-GCDNCCL" />
-
-          <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
-
-          <property name="java.class.path" value="C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\bin;C:\Program Files\Java\javafx-sdk-11.0.2\lib\javafx.base.jar;C:\Program Files\Java\javafx-sdk-11.0.2\lib\javafx.controls.jar;C:\Program Files\Java\javafx-sdk-11.0.2\lib\javafx.fxml.jar;C:\Program Files\Java\javafx-sdk-11.0.2\lib\javafx.graphics.jar;C:\Program Files\Java\javafx-sdk-11.0.2\lib\javafx.media.jar;C:\Program Files\Java\javafx-sdk-11.0.2\lib\javafx.swing.jar;C:\Program Files\Java\javafx-sdk-11.0.2\lib\javafx.web.jar;C:\Program Files\Java\javafx-sdk-11.0.2\lib\javafx-swt.jar;C:\Users\huifa\.p2\pool\plugins\org.junit_4.13.0.v20200204-1500.jar;C:\Users\huifa\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar;C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib\ant-launcher.jar;C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib\ant.jar;C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib\ant-junit.jar;C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib\ant-junit4.jar" />
-
-          <property name="source" value="14" />
-
-          <property name="java.vm.vendor" value="Oracle Corporation" />
-
-          <property name="env.PROCESSOR_ARCHITECTURE" value="AMD64" />
-
-          <property name="user.variant" value="" />
-
-          <property name="env.SystemRoot" value="C:\WINDOWS" />
-
-          <property name="java.vm.specification.version" value="15" />
-
-          <property name="os.name" value="Windows 10" />
-
-          <property name="ant.file.COMP2042_CW_LeeHuiFang" value="C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\build.xml" />
-
-          <property name="user.country" value="US" />
-
-          <property name="sun.java.launcher" value="SUN_STANDARD" />
-
-          <property name="env.USERDOMAIN" value="DESKTOP-GCDNCCL" />
-
-          <property name="sun.cpu.endian" value="little" />
-
-          <property name="user.home" value="C:\Users\huifa" />
-
-          <property name="user.language" value="en" />
-
-          <property name="eclipse.pdebuild.home" value="C:\Users\huifa\eclipse\java-2020-09\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.pde.build_3.10.800.v20200410-1419\." />
-
-          <property name="ant.java.version" value="15" />
-
-          <property name="env.ALLUSERSPROFILE" value="C:\ProgramData" />
-
-          <property name="env.SESSIONNAME" value="Console" />
-
-          <property name="env.ANT_HOME" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239" />
-
-          <property name="env.windir" value="C:\WINDOWS" />
-
-          <property name="ant.file" value="C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\build.xml" />
-
-          <property name="path.separator" value=";" />
-
-          <property name="os.version" value="10.0" />
-
-          <property name="env.CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files" />
-
-          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-
-          <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" />
-
-          <property name="ant.project.invoked-targets" value="Main,init,clean,cleanall,build-subprojects,build,build-project,build-refprojects,init-eclipse-compiler,compile,CarObstacleTest,DigitTest,EndTest,HighScoreTest,LevelFactoryTest,LevelImageTest,LifeTest,LogTest,MyStageTest,ObstacleFactoryTest,TruckObstacleTest,TurtleTest,WetTurtleTest,junitreport,runJunitTest,AnimalTest,BackgroundImageTest" />
-
-          <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
-
-          <property name="ECLIPSE_HOME" value="../../../../../../eclipse/java-2020-09/eclipse/" />
-
-          <property name="ant.file.type.COMP2042_CW_LeeHuiFang" value="file" />
-
-          <property name="ant.core.lib" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib\ant.jar" />
-
-          <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/" />
-
-          <property name="user.dir" value="C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang" />
-
-          <property name="os.arch" value="amd64" />
-
-          <property name="env.USERNAME" value="huifang" />
-
-          <property name="target" value="14" />
-
-          <property name="env.ProgramFiles(x86)" value="C:\Program Files (x86)" />
-
-          <property name="java.vm.info" value="mixed mode, sharing" />
-
-          <property name="java.vm.version" value="15+36-1562" />
-
-          <property name="env.FPS_BROWSER_USER_PROFILE_STRING" value="Default" />
-
-          <property name="env.TEMP" value="C:\Users\huifa\AppData\Local\Temp" />
-
-          <property name="java.class.version" value="59.0" />
-
-          <property name="env.OneDrive" value="C:\Users\huifa\OneDrive" />
-
-          <property name="ant.project.default-target" value="build" />
-
-      </properties>
-
-      <testcase classname="p4_group_8_repo.test.CarObstacleTest" name="constructorTest_X" time="0.702" />
-
-      <testcase classname="p4_group_8_repo.test.CarObstacleTest" name="constructorTest_Y" time="0.014" />
-
-      <system-out><![CDATA[]]></system-out>
-
-      <system-err><![CDATA[]]></system-err>
-
-  </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="4" name="DigitTest" package="p4_group_8_repo.test" skipped="0" tests="6" time="0.541" timestamp="2020-11-29T15:41:52">
-      <properties>
-          <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
-
-          <property name="env.NUMBER_OF_PROCESSORS" value="4" />
-
-          <property name="java.specification.version" value="15" />
-
-          <property name="env.USERPROFILE" value="C:\Users\huifa" />
-
-          <property name="ant.project.name" value="COMP2042_CW_LeeHuiFang" />
-
-          <property name="sun.cpu.isalist" value="amd64" />
-
-          <property name="sun.jnu.encoding" value="Cp1252" />
-
-          <property name="sun.arch.data.model" value="64" />
-
-          <property name="debuglevel" value="source,lines,vars" />
-
-          <property name="env.FPS_BROWSER_APP_PROFILE_STRING" value="Internet Explorer" />
-
-          <property name="java.vendor.url" value="https://java.oracle.com/" />
-
-          <property name="env.CommonProgramW6432" value="C:\Program Files\Common Files" />
-
-          <property name="env.OS" value="Windows_NT" />
-
-          <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
-
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.DigitTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.DigitTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher8025606132652840192.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit15988601481569610411.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.CarObstacleTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.CarObstacleTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher5906257709580123782.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit753307977683868714.properties" />
 
           <property name="jdk.debug" value="release" />
 
@@ -1186,11 +953,244 @@
 
       </properties>
 
-      <testcase classname="p4_group_8_repo.test.DigitTest" name="getWrongHeightTest" time="0.425" />
+      <testcase classname="p4_group_8_repo.test.CarObstacleTest" name="constructorTest_X" time="0.436" />
+
+      <testcase classname="p4_group_8_repo.test.CarObstacleTest" name="constructorTest_Y" time="0.011" />
+
+      <system-out><![CDATA[]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="4" name="DigitTest" package="p4_group_8_repo.test" skipped="0" tests="6" time="0.542" timestamp="2020-12-01T08:30:58">
+      <properties>
+          <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
+
+          <property name="env.NUMBER_OF_PROCESSORS" value="4" />
+
+          <property name="java.specification.version" value="15" />
+
+          <property name="env.USERPROFILE" value="C:\Users\huifa" />
+
+          <property name="ant.project.name" value="COMP2042_CW_LeeHuiFang" />
+
+          <property name="sun.cpu.isalist" value="amd64" />
+
+          <property name="sun.jnu.encoding" value="Cp1252" />
+
+          <property name="sun.arch.data.model" value="64" />
+
+          <property name="debuglevel" value="source,lines,vars" />
+
+          <property name="env.FPS_BROWSER_APP_PROFILE_STRING" value="Internet Explorer" />
+
+          <property name="java.vendor.url" value="https://java.oracle.com/" />
+
+          <property name="env.CommonProgramW6432" value="C:\Program Files\Common Files" />
+
+          <property name="env.OS" value="Windows_NT" />
+
+          <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.DigitTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.DigitTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher14455770392330956657.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit15232738166897590357.properties" />
+
+          <property name="jdk.debug" value="release" />
+
+          <property name="env.ComSpec" value="C:\WINDOWS\system32\cmd.exe" />
+
+          <property name="eclipse.pdebuild.templates" value="C:\Users\huifa\eclipse\java-2020-09\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.pde.build_3.10.800.v20200410-1419\templates" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="java.version.date" value="2020-09-15" />
+
+          <property name="java.home" value="C:\Program Files\Java\jdk-15" />
+
+          <property name="env.ProgramFiles" value="C:\Program Files" />
+
+          <property name="basedir" value="C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang" />
+
+          <property name="file.separator" value="\" />
+
+          <property name="java.vm.compressedOopsMode" value="32-bit" />
+
+          <property name="line.separator" value="&#xd;&#xa;" />
+
+          <property name="env.PROMPT" value="$P$G" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="env.LOCALAPPDATA" value="C:\Users\huifa\AppData\Local" />
+
+          <property name="env.USERDOMAIN_ROAMINGPROFILE" value="DESKTOP-GCDNCCL" />
+
+          <property name="env.PROCESSOR_REVISION" value="3a09" />
+
+          <property name="env.PSModulePath" value="C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules" />
+
+          <property name="user.script" value="" />
+
+          <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+
+          <property name="env.PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" />
+
+          <property name="java.runtime.version" value="15+36-1562" />
+
+          <property name="user.name" value="huifang" />
+
+          <property name="env.ProgramW6432" value="C:\Program Files" />
+
+          <property name="env.DriverData" value="C:\Windows\System32\Drivers\DriverData" />
+
+          <property name="env.CommonProgramFiles" value="C:\Program Files\Common Files" />
+
+          <property name="env.PUBLIC" value="C:\Users\Public" />
+
+          <property name="file.encoding" value="Cp1252" />
+
+          <property name="env.COMPUTERNAME" value="DESKTOP-GCDNCCL" />
+
+          <property name="env.HOMEPATH" value="\Users\huifa" />
+
+          <property name="env.SystemDrive" value="C:" />
+
+          <property name="env.APPDATA" value="C:\Users\huifa\AppData\Roaming" />
+
+          <property name="env.IntelliJ IDEA Community Edition" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.2\bin;" />
+
+          <property name="env.ProgramData" value="C:\ProgramData" />
+
+          <property name="java.io.tmpdir" value="C:\Users\huifa\AppData\Local\Temp\" />
+
+          <property name="java.version" value="15" />
+
+          <property name="env.PROCESSOR_LEVEL" value="6" />
+
+          <property name="env.Path" value="C:/Program Files/Java/jdk-15/bin/server;C:/Program Files/Java/jdk-15/bin;C:\Program Files\Ant\apache-ant-1.10.9\bin;C:\Program Files\Java\jdk-15\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MATLAB\R2020b\runtime\win64;C:\Program Files\MATLAB\R2020b\bin;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\Program Files\Java\jdk-15\bin;C:\Users\huifa\AppData\Local\Microsoft\WindowsApps;C:\Users\huifa\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.2\bin;;C:\Users\huifa\Desktop\apache-ant-1.9.15-bin;;C:\Users\huifa\Desktop;" />
+
+          <property name="env.HOMEDRIVE" value="C:" />
+
+          <property name="env.TMP" value="C:\Users\huifa\AppData\Local\Temp" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="ant.home" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239" />
+
+          <property name="sun.os.patch.level" value="" />
+
+          <property name="junit.output.dir" value="junit" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.10.8 compiled on May 10 2020" />
+
+          <property name="eclipse.pdebuild.scripts" value="C:\Users\huifa\eclipse\java-2020-09\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.pde.build_3.10.800.v20200410-1419\scripts" />
+
+          <property name="java.library.path" value="C:\Program Files\Java\jdk-15\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk-15/bin/server;C:/Program Files/Java/jdk-15/bin;C:\Program Files\Ant\apache-ant-1.10.9\bin;C:\Program Files\Java\jdk-15\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MATLAB\R2020b\runtime\win64;C:\Program Files\MATLAB\R2020b\bin;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\Program Files\Java\jdk-15\bin;C:\Users\huifa\AppData\Local\Microsoft\WindowsApps;C:\Users\huifa\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.2\bin;;C:\Users\huifa\Desktop\apache-ant-1.9.15-bin;;C:\Users\huifa\Desktop;;." />
+
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="env.LOGONSERVER" value="\\DESKTOP-GCDNCCL" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+
+          <property name="java.class.path" value="C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\bin;C:\Program Files\Java\javafx-sdk-11.0.2\lib\javafx.base.jar;C:\Program Files\Java\javafx-sdk-11.0.2\lib\javafx.controls.jar;C:\Program Files\Java\javafx-sdk-11.0.2\lib\javafx.fxml.jar;C:\Program Files\Java\javafx-sdk-11.0.2\lib\javafx.graphics.jar;C:\Program Files\Java\javafx-sdk-11.0.2\lib\javafx.media.jar;C:\Program Files\Java\javafx-sdk-11.0.2\lib\javafx.swing.jar;C:\Program Files\Java\javafx-sdk-11.0.2\lib\javafx.web.jar;C:\Program Files\Java\javafx-sdk-11.0.2\lib\javafx-swt.jar;C:\Users\huifa\.p2\pool\plugins\org.junit_4.13.0.v20200204-1500.jar;C:\Users\huifa\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar;C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib\ant-launcher.jar;C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib\ant.jar;C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib\ant-junit.jar;C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib\ant-junit4.jar" />
+
+          <property name="source" value="14" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="env.PROCESSOR_ARCHITECTURE" value="AMD64" />
+
+          <property name="user.variant" value="" />
+
+          <property name="env.SystemRoot" value="C:\WINDOWS" />
+
+          <property name="java.vm.specification.version" value="15" />
+
+          <property name="os.name" value="Windows 10" />
+
+          <property name="ant.file.COMP2042_CW_LeeHuiFang" value="C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\build.xml" />
+
+          <property name="user.country" value="US" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="env.USERDOMAIN" value="DESKTOP-GCDNCCL" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="user.home" value="C:\Users\huifa" />
+
+          <property name="user.language" value="en" />
+
+          <property name="eclipse.pdebuild.home" value="C:\Users\huifa\eclipse\java-2020-09\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.pde.build_3.10.800.v20200410-1419\." />
+
+          <property name="ant.java.version" value="15" />
+
+          <property name="env.ALLUSERSPROFILE" value="C:\ProgramData" />
+
+          <property name="env.SESSIONNAME" value="Console" />
+
+          <property name="env.ANT_HOME" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239" />
+
+          <property name="env.windir" value="C:\WINDOWS" />
+
+          <property name="ant.file" value="C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\build.xml" />
+
+          <property name="path.separator" value=";" />
+
+          <property name="os.version" value="10.0" />
+
+          <property name="env.CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" />
+
+          <property name="ant.project.invoked-targets" value="Main,init,clean,cleanall,build-subprojects,build,build-project,build-refprojects,init-eclipse-compiler,compile,CarObstacleTest,DigitTest,EndTest,HighScoreTest,LevelFactoryTest,LevelImageTest,LifeTest,LogTest,MyStageTest,ObstacleFactoryTest,TruckObstacleTest,TurtleTest,WetTurtleTest,junitreport,runJunitTest,AnimalTest,BackgroundImageTest" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+
+          <property name="ECLIPSE_HOME" value="../../../../../../eclipse/java-2020-09/eclipse/" />
+
+          <property name="ant.file.type.COMP2042_CW_LeeHuiFang" value="file" />
+
+          <property name="ant.core.lib" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib\ant.jar" />
+
+          <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/" />
+
+          <property name="user.dir" value="C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang" />
+
+          <property name="os.arch" value="amd64" />
+
+          <property name="env.USERNAME" value="huifang" />
+
+          <property name="target" value="14" />
+
+          <property name="env.ProgramFiles(x86)" value="C:\Program Files (x86)" />
+
+          <property name="java.vm.info" value="mixed mode, sharing" />
+
+          <property name="java.vm.version" value="15+36-1562" />
+
+          <property name="env.FPS_BROWSER_USER_PROFILE_STRING" value="Default" />
+
+          <property name="env.TEMP" value="C:\Users\huifa\AppData\Local\Temp" />
+
+          <property name="java.class.version" value="59.0" />
+
+          <property name="env.OneDrive" value="C:\Users\huifa\OneDrive" />
+
+          <property name="ant.project.default-target" value="build" />
+
+      </properties>
+
+      <testcase classname="p4_group_8_repo.test.DigitTest" name="getWrongHeightTest" time="0.414" />
 
       <testcase classname="p4_group_8_repo.test.DigitTest" name="getWidthTest" time="0.002" />
 
-      <testcase classname="p4_group_8_repo.test.DigitTest" name="getWrongWidthTest" time="0.001" />
+      <testcase classname="p4_group_8_repo.test.DigitTest" name="getWrongWidthTest" time="0.002" />
 
       <testcase classname="p4_group_8_repo.test.DigitTest" name="getHeightTest" time="0.002" />
 
@@ -1203,7 +1203,7 @@
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="5" name="EndTest" package="p4_group_8_repo.test" skipped="0" tests="4" time="0.533" timestamp="2020-11-29T15:41:54">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="5" name="EndTest" package="p4_group_8_repo.test" skipped="0" tests="4" time="0.524" timestamp="2020-12-01T08:30:59">
       <properties>
           <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
 
@@ -1233,7 +1233,7 @@
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.EndTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.EndTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher35633578175736426.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit5645758286422161698.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.EndTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.EndTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher9294611962400779789.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit14873125496433360469.properties" />
 
           <property name="jdk.debug" value="release" />
 
@@ -1427,11 +1427,11 @@
 
       </properties>
 
-      <testcase classname="p4_group_8_repo.test.EndTest" name="isActivatedTest" time="0.409" />
+      <testcase classname="p4_group_8_repo.test.EndTest" name="isActivatedTest" time="0.399" />
 
-      <testcase classname="p4_group_8_repo.test.EndTest" name="setEndTest" time="0.007" />
+      <testcase classname="p4_group_8_repo.test.EndTest" name="setEndTest" time="0.009" />
 
-      <testcase classname="p4_group_8_repo.test.EndTest" name="constructorTest_X" time="0.002" />
+      <testcase classname="p4_group_8_repo.test.EndTest" name="constructorTest_X" time="0.003" />
 
       <testcase classname="p4_group_8_repo.test.EndTest" name="constructorTest_Y" time="0.002" />
 
@@ -1440,7 +1440,7 @@
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="6" name="HighScoreTest" package="p4_group_8_repo.test" skipped="0" tests="4" time="0.618" timestamp="2020-11-29T15:41:55">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="6" name="HighScoreTest" package="p4_group_8_repo.test" skipped="0" tests="4" time="0.583" timestamp="2020-12-01T08:31:01">
       <properties>
           <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
 
@@ -1470,7 +1470,7 @@
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.HighScoreTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.HighScoreTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher14200625689410116817.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit5162656940753009986.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.HighScoreTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.HighScoreTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher14200508716026584594.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit890587990004851292.properties" />
 
           <property name="jdk.debug" value="release" />
 
@@ -1664,13 +1664,13 @@
 
       </properties>
 
-      <testcase classname="p4_group_8_repo.test.HighScoreTest" name="constructorTest_X1" time="0.489" />
+      <testcase classname="p4_group_8_repo.test.HighScoreTest" name="constructorTest_X1" time="0.45" />
 
       <testcase classname="p4_group_8_repo.test.HighScoreTest" name="constructorTest_X2" time="0.009" />
 
-      <testcase classname="p4_group_8_repo.test.HighScoreTest" name="constructorTest_Y1" time="0.005" />
+      <testcase classname="p4_group_8_repo.test.HighScoreTest" name="constructorTest_Y1" time="0.006" />
 
-      <testcase classname="p4_group_8_repo.test.HighScoreTest" name="constructorTest_Y2" time="0.006" />
+      <testcase classname="p4_group_8_repo.test.HighScoreTest" name="constructorTest_Y2" time="0.007" />
 
       <system-out><![CDATA[]]></system-out>
 
@@ -1924,7 +1924,7 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="8" name="LevelFactoryTest" package="p4_group_8_repo.test" skipped="0" tests="19" time="5.945" timestamp="2020-11-29T15:41:57">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="8" name="LevelFactoryTest" package="p4_group_8_repo.test" skipped="0" tests="19" time="5.842" timestamp="2020-12-01T08:31:03">
       <properties>
           <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
 
@@ -1954,7 +1954,7 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.LevelFactoryTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.LevelFactoryTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher8581737674190919289.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit14624265740232413160.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.LevelFactoryTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.LevelFactoryTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher1800137942559769795.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit12544638038679149007.properties" />
 
           <property name="jdk.debug" value="release" />
 
@@ -2148,41 +2148,41 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
       </properties>
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel10Test1" time="1.065" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel10Test1" time="1.02" />
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel10Test2" time="0.158" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel10Test2" time="0.136" />
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel2Test1" time="0.133" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel2Test1" time="0.132" />
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel2Test2" time="0.123" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel2Test2" time="0.131" />
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel3Test1" time="0.118" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel3Test1" time="0.128" />
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel3Test2" time="0.256" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel3Test2" time="0.26" />
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel4Test1" time="0.261" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel4Test1" time="0.254" />
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel4Test2" time="0.273" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel4Test2" time="0.261" />
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel5Test1" time="0.236" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel5Test1" time="0.237" />
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel5Test2" time="0.29" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel5Test2" time="0.283" />
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel6Test1" time="0.31" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel6Test1" time="0.293" />
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel6Test2" time="0.308" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel6Test2" time="0.328" />
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel7Test1" time="0.338" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel7Test1" time="0.385" />
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel7Test2" time="0.363" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel7Test2" time="0.377" />
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel8Test1" time="0.386" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel8Test1" time="0.4" />
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel8Test2" time="0.493" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel8Test2" time="0.348" />
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel9Test1" time="0.33" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel9Test1" time="0.34" />
 
-      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel9Test2" time="0.378" />
+      <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevel9Test2" time="0.382" />
 
       <testcase classname="p4_group_8_repo.test.LevelFactoryTest" name="getLevelNotExistTest" time="0.002" />
 
@@ -2191,7 +2191,7 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="9" name="LevelImageTest" package="p4_group_8_repo.test" skipped="0" tests="4" time="0.553" timestamp="2020-11-29T15:42:05">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="9" name="LevelImageTest" package="p4_group_8_repo.test" skipped="0" tests="4" time="0.541" timestamp="2020-12-01T08:31:10">
       <properties>
           <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
 
@@ -2221,7 +2221,7 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.LevelImageTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.LevelImageTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher768595096496440816.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit13720756563353072647.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.LevelImageTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.LevelImageTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher12456753392789508844.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit3153680910634547332.properties" />
 
           <property name="jdk.debug" value="release" />
 
@@ -2415,20 +2415,20 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
       </properties>
 
-      <testcase classname="p4_group_8_repo.test.LevelImageTest" name="constructorTest_X1" time="0.418" />
+      <testcase classname="p4_group_8_repo.test.LevelImageTest" name="constructorTest_X1" time="0.406" />
 
       <testcase classname="p4_group_8_repo.test.LevelImageTest" name="constructorTest_X2" time="0.007" />
 
-      <testcase classname="p4_group_8_repo.test.LevelImageTest" name="constructorTest_Y1" time="0.01" />
+      <testcase classname="p4_group_8_repo.test.LevelImageTest" name="constructorTest_Y1" time="0.009" />
 
-      <testcase classname="p4_group_8_repo.test.LevelImageTest" name="constructorTest_Y2" time="0.007" />
+      <testcase classname="p4_group_8_repo.test.LevelImageTest" name="constructorTest_Y2" time="0.011" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="10" name="LifeTest" package="p4_group_8_repo.test" skipped="0" tests="2" time="0.585" timestamp="2020-11-29T15:42:06">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="10" name="LifeTest" package="p4_group_8_repo.test" skipped="0" tests="2" time="0.551" timestamp="2020-12-01T08:31:12">
       <properties>
           <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
 
@@ -2458,7 +2458,7 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.LifeTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.LifeTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher4260166131366415096.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit5635912852964005600.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.LifeTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.LifeTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher7129027468467156844.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit4277860870874994682.properties" />
 
           <property name="jdk.debug" value="release" />
 
@@ -2652,16 +2652,16 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
       </properties>
 
-      <testcase classname="p4_group_8_repo.test.LifeTest" name="constructorTest_X" time="0.449" />
+      <testcase classname="p4_group_8_repo.test.LifeTest" name="constructorTest_X" time="0.424" />
 
-      <testcase classname="p4_group_8_repo.test.LifeTest" name="constructorTest_Y" time="0.019" />
+      <testcase classname="p4_group_8_repo.test.LifeTest" name="constructorTest_Y" time="0.02" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="11" name="LogTest" package="p4_group_8_repo.test" skipped="0" tests="3" time="0.522" timestamp="2020-11-29T15:42:08">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="11" name="LogTest" package="p4_group_8_repo.test" skipped="0" tests="3" time="0.503" timestamp="2020-12-01T08:31:14">
       <properties>
           <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
 
@@ -2691,7 +2691,7 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.LogTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.LogTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher15989374647852574388.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit13039643164277603948.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.LogTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.LogTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher4030949094470810016.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit16092676405708373821.properties" />
 
           <property name="jdk.debug" value="release" />
 
@@ -2885,7 +2885,7 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
       </properties>
 
-      <testcase classname="p4_group_8_repo.test.LogTest" name="getSpeedTest" time="0.41" />
+      <testcase classname="p4_group_8_repo.test.LogTest" name="getSpeedTest" time="0.386" />
 
       <testcase classname="p4_group_8_repo.test.LogTest" name="constructorTest_X" time="0.005" />
 
@@ -2896,7 +2896,7 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="12" name="MyStageTest" package="p4_group_8_repo.test" skipped="0" tests="3" time="0.587" timestamp="2020-11-29T15:42:10">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="12" name="MyStageTest" package="p4_group_8_repo.test" skipped="0" tests="3" time="0.59" timestamp="2020-12-01T08:31:15">
       <properties>
           <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
 
@@ -2926,7 +2926,7 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.MyStageTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.MyStageTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher7465250234518838905.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit7150934736772711191.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.MyStageTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.MyStageTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher15410542013694268627.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit11499776271174333806.properties" />
 
           <property name="jdk.debug" value="release" />
 
@@ -3120,18 +3120,18 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
       </properties>
 
-      <testcase classname="p4_group_8_repo.test.MyStageTest" name="getObjectsTest" time="0.453" />
+      <testcase classname="p4_group_8_repo.test.MyStageTest" name="getObjectsTest" time="0.458" />
 
-      <testcase classname="p4_group_8_repo.test.MyStageTest" name="addTest" time="0.013" />
+      <testcase classname="p4_group_8_repo.test.MyStageTest" name="addTest" time="0.011" />
 
-      <testcase classname="p4_group_8_repo.test.MyStageTest" name="removeTest" time="0.013" />
+      <testcase classname="p4_group_8_repo.test.MyStageTest" name="removeTest" time="0.011" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="13" name="ObstacleFactoryTest" package="p4_group_8_repo.test" skipped="0" tests="14" time="0.708" timestamp="2020-11-29T15:42:12">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="13" name="ObstacleFactoryTest" package="p4_group_8_repo.test" skipped="0" tests="14" time="0.777" timestamp="2020-12-01T08:31:17">
       <properties>
           <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
 
@@ -3161,7 +3161,7 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.ObstacleFactoryTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.ObstacleFactoryTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher13098943832579583868.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit12169016405451655746.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.ObstacleFactoryTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.ObstacleFactoryTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher11704965448552185437.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit11779295508415004834.properties" />
 
           <property name="jdk.debug" value="release" />
 
@@ -3355,33 +3355,33 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
       </properties>
 
-      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleStringNotExistTest" time="0.333" />
+      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleStringNotExistTest" time="0.373" />
 
-      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleTurtleTest1" time="0.095" />
+      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleTurtleTest1" time="0.112" />
 
-      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleTurtleTest2" time="0.011" />
+      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleTurtleTest2" time="0.014" />
 
-      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleTruckTest1" time="0.065" />
+      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleTruckTest1" time="0.067" />
 
-      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleTruckTest2" time="0.006" />
+      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleTruckTest2" time="0.004" />
 
-      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleLogTest1" time="0.002" />
+      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleLogTest1" time="0.003" />
 
-      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleLogTest2" time="0.003" />
+      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleLogTest2" time="0.005" />
 
       <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleNullTest" time="0.0" />
 
-      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleWetTurtleTest1" time="0.004" />
+      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleWetTurtleTest1" time="0.005" />
 
-      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleWetTurtleTest2" time="0.003" />
+      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleWetTurtleTest2" time="0.004" />
 
-      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleSnakeTest1" time="0.046" />
+      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleSnakeTest1" time="0.048" />
 
       <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleSnakeTest2" time="0.004" />
 
-      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleCarTest1" time="0.003" />
+      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleCarTest1" time="0.004" />
 
-      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleCarTest2" time="0.011" />
+      <testcase classname="p4_group_8_repo.test.ObstacleFactoryTest" name="getObstacleCarTest2" time="0.014" />
 
       <system-out><![CDATA[]]></system-out>
 
@@ -4376,7 +4376,7 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="18" name="TruckObstacleTest" package="p4_group_8_repo.test" skipped="0" tests="2" time="0.585" timestamp="2020-11-29T15:42:14">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="18" name="TruckObstacleTest" package="p4_group_8_repo.test" skipped="0" tests="2" time="0.63" timestamp="2020-12-01T08:31:19">
       <properties>
           <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
 
@@ -4406,7 +4406,7 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.TruckObstacleTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.TruckObstacleTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher13515960423276096324.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit16550939488010358288.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.TruckObstacleTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.TruckObstacleTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher8918293071375962297.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit6015187880592874485.properties" />
 
           <property name="jdk.debug" value="release" />
 
@@ -4600,16 +4600,16 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
       </properties>
 
-      <testcase classname="p4_group_8_repo.test.TruckObstacleTest" name="constructorTest_X" time="0.464" />
+      <testcase classname="p4_group_8_repo.test.TruckObstacleTest" name="constructorTest_X" time="0.508" />
 
-      <testcase classname="p4_group_8_repo.test.TruckObstacleTest" name="constructorTest_Y" time="0.014" />
+      <testcase classname="p4_group_8_repo.test.TruckObstacleTest" name="constructorTest_Y" time="0.018" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="19" name="TurtleTest" package="p4_group_8_repo.test" skipped="0" tests="3" time="0.661" timestamp="2020-11-29T15:42:15">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="19" name="TurtleTest" package="p4_group_8_repo.test" skipped="0" tests="3" time="0.546" timestamp="2020-12-01T08:31:21">
       <properties>
           <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
 
@@ -4639,7 +4639,7 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.TurtleTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.TurtleTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher1517487121049060429.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit12985561623346181291.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.TurtleTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.TurtleTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher17690063519403596237.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit3687157669468971305.properties" />
 
           <property name="jdk.debug" value="release" />
 
@@ -4833,18 +4833,18 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
       </properties>
 
-      <testcase classname="p4_group_8_repo.test.TurtleTest" name="getSpeedTest" time="0.53" />
+      <testcase classname="p4_group_8_repo.test.TurtleTest" name="getSpeedTest" time="0.417" />
 
-      <testcase classname="p4_group_8_repo.test.TurtleTest" name="constructorTest_X" time="0.007" />
+      <testcase classname="p4_group_8_repo.test.TurtleTest" name="constructorTest_X" time="0.009" />
 
-      <testcase classname="p4_group_8_repo.test.TurtleTest" name="constructorTest_Y" time="0.007" />
+      <testcase classname="p4_group_8_repo.test.TurtleTest" name="constructorTest_Y" time="0.009" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="20" name="WetTurtleTest" package="p4_group_8_repo.test" skipped="0" tests="3" time="0.555" timestamp="2020-11-29T15:42:17">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-GCDNCCL" id="20" name="WetTurtleTest" package="p4_group_8_repo.test" skipped="0" tests="3" time="0.554" timestamp="2020-12-01T08:31:23">
       <properties>
           <property name="ant.library.dir" value="C:\Users\huifa\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
 
@@ -4874,7 +4874,7 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.WetTurtleTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.WetTurtleTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher13250330994890918347.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit17409200183113265064.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner p4_group_8_repo.test.WetTurtleTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit\TEST-p4_group_8_repo.test.WetTurtleTest.xml crashfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junitvmwatcher10370965754484037126.properties propsfile=C:\Users\huifa\Desktop\Year2\Software Maintenance\CW\Assignment\COMP2042_CW_LeeHuiFang\junit9021332001773967247.properties" />
 
           <property name="jdk.debug" value="release" />
 
@@ -5068,11 +5068,11 @@ Caused by: java.lang.ClassNotFoundException: p4_group_8_repo.actor.mainfunction.
 
       </properties>
 
-      <testcase classname="p4_group_8_repo.test.WetTurtleTest" name="getSpeedTest" time="0.425" />
+      <testcase classname="p4_group_8_repo.test.WetTurtleTest" name="getSpeedTest" time="0.423" />
 
-      <testcase classname="p4_group_8_repo.test.WetTurtleTest" name="constructorTest_X" time="0.012" />
+      <testcase classname="p4_group_8_repo.test.WetTurtleTest" name="constructorTest_X" time="0.011" />
 
-      <testcase classname="p4_group_8_repo.test.WetTurtleTest" name="constructorTest_Y" time="0.011" />
+      <testcase classname="p4_group_8_repo.test.WetTurtleTest" name="constructorTest_Y" time="0.01" />
 
       <system-out><![CDATA[]]></system-out>
 
