@@ -20,20 +20,23 @@ import p4_group_8_repo.actor.obstacle.WetTurtle;
 public class Animal extends Actor {
 	private double width;
 	private double height;
-	private Image imgW1 ,imgA1, imgS1, imgD1, imgW2, imgA2, imgS2, imgD2;
-	private int points = 0;
-	private int end = 0;
-	private boolean second = false;
-	private boolean noMove = false;
 	private double movementY = 13.3333333*2;
 	private double movementX = 10.666666*2;
+	private double w = 800;
+	
+	private Image imgW1 ,imgA1, imgS1, imgD1, imgW2, imgA2, imgS2, imgD2;
+	
+	private int points = 0;
+	private int end = 0;
+	private int level = 0;
+	private int life = 3;
+	
+	private boolean second = false;
+	private boolean noMove = false;
 	private boolean carDeath = false;
 	private boolean waterDeath = false;
 	private boolean changeScore = false;
 	private int death = 0;
-	private double w = 800;
-	private int level = 0;
-	private int life = 3;
 	private boolean changeLife = false;
 	
 	/**

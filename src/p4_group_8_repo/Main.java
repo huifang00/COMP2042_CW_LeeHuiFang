@@ -41,27 +41,32 @@ import p4_group_8_repo.level.LevelFactory;
 * @since   	1.0
 */
 public class Main extends Application {
+	private BorderPane root;
+	private Controller control = new Controller();
 	private AnimationTimer timer;
 	private static MyStage background;
 	private static Animal animal = new Animal();
 	private Scene scene;	
-	private int level = 1;	//initialized the level to 1
-	private Level1 level1;
 	private Alert alert = new Alert(AlertType.NONE);
-	private boolean printGame;
 	private int highscore;
+	private boolean printGame;
 	private boolean nextLevel;
 	private String playerName;
+	//Score
 	private int score = 0;
 	private Digit digit;
 	private ArrayList<Digit> ArrayDigit = new ArrayList<Digit>();	//save the actor of Digit
-	private ArrayList<Life> ArrayLife = new ArrayList<Life>();	//save the actor of Life
+	
+	//Life
 	private Life lifeImg;
+	private ArrayList<Life> ArrayLife = new ArrayList<Life>();	//save the actor of Life
+	
+	//Level
+	private int level = 1;	//initialized the level to 1
+	private Level1 level1;
 	private LevelFactory levelFactory = new LevelFactory();
 	private Level level2, level3, level4, level5, level6, level7, level8, level9, level10;
 	private String levelmsg = "";	//variable to save the message of score for each level
-	private BorderPane root;
-	private Controller control = new Controller();
 	
 	/**
 	* This is the main method which run the whole application.

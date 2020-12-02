@@ -29,12 +29,14 @@ import javafx.stage.Stage;
  */
 public class GameModel {
 
-	private boolean InspauseGame = false;
+	private static Stage new_stage = new Stage();
+	
 	private int instructionPage = 1;
+	
+	private boolean InspauseGame = false;
 	private boolean gameplay = false;
 	private boolean resumeGame = false;
 	private boolean pauseGame = false;
-	private static Stage new_stage = new Stage();
 	private boolean alertClose = false;
 	private boolean sound = false;
 	
