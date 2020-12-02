@@ -181,7 +181,7 @@ public class Animal extends Actor {
 	}
 	
 	/**
-	* This is the method is to get the value whether the slot is fully occupied.
+	* This is the method to get the value whether the slot is fully occupied.
 	* @return boolean This returns the value whether the slot is fully occupied.
 	* @since 1.0
 	*/
@@ -218,7 +218,7 @@ public class Animal extends Actor {
 	}
 	
 	/**
-	* This is to set the current level.
+	* This method sets the current level.
 	* @param level The level the player has reached.
 	* @since 1.0.2
 	*/
@@ -258,7 +258,7 @@ public class Animal extends Actor {
 		this.life = life;
 	}
 	/**
-	* This is the method is to get the value whether to end the game depends on the life the frog has.
+	* This is the method to get the value whether to end the game depends on the life the frog has.
 	* @return boolean This returns the value whether the to end the game due to no life left.
 	* @since 1.0.3
 	*/

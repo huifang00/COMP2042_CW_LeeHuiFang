@@ -34,7 +34,6 @@ public class Level2 extends Level{
 		addLevelImage();
 		addLog();
 		addTurtle();
-		//addEnd();
 		addCarObstacle();
 		addTruckObstacle();
 	}
@@ -72,7 +71,7 @@ public class Level2 extends Level{
     }
     
 	/**
-	 * This is the method to add the image(s) of wet turtle.
+	 * This is the method to add the image(s) of turtle and wet turtle.
 	 * @since 1.1
 	 */
     public void addTurtle() {

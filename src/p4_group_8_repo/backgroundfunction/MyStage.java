@@ -8,7 +8,7 @@ import javafx.scene.media.MediaPlayer;
 
 /**
  * MyStage Class
- * Class play or stop the background music 
+ * Class play or stop the background music.
  * 
  * @author  Lee Hui Fang 20125427, hfyhl2
  * @since 	1.0
@@ -17,7 +17,7 @@ public class MyStage extends World{
 
 	/**
 	 * Constructor to invoke the super class constructor.
-	 * @param root The variable of Border Pane which is created using the Scene Builder.
+	 * @param root The variable of Border Pane which is created using the FXML(Scene Builder).
 	 * @since 1.0.1
 	 */
 	public MyStage(BorderPane root) {

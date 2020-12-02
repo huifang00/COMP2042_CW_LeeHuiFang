@@ -4,7 +4,7 @@ import javafx.scene.image.Image;
 
 /**
 * Log Class
-* Set the image(s) of log.
+* Set the image(s) and action(s) of log(s).
 * 
 *
 * @author  Lee Hui Fang 20125427, hfyhl2

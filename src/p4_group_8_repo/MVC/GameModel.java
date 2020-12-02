@@ -39,7 +39,7 @@ public class GameModel {
 	private boolean sound = false;
 	
 	/**
-	 * This method is get the value to play the game application.
+	 * This method gets the value to play the game application.
 	 * @return boolean This returns the value to play the game application.
 	 * @since 1.9
 	 */
@@ -48,7 +48,7 @@ public class GameModel {
 	}
 	
 	/**
-	 * This method is set the value to play the game application.
+	 * This method sets the value to play the game application.
 	 * @param gameplay The value to play the game application.
 	 * @since 1.9
 	 */
@@ -137,7 +137,7 @@ public class GameModel {
 	}
 	
 	/**
-	 * This method is get the value to resume the game application.
+	 * This method gets the value to resume the game application.
 	 * @return boolean This returns the value to resume the game application.
 	 * @since 1.9
 	 */
@@ -146,7 +146,7 @@ public class GameModel {
 	}
 
 	/**
-	 * This method is set the value to resume the game application.
+	 * This method sets the value to resume the game application.
 	 * @param resumeGame The value to resume the game application.
 	 * @since 1.9
 	 */
@@ -155,7 +155,7 @@ public class GameModel {
 	}
 	
 	/**
-	 * This method is get the value to pause the game application.
+	 * This method gets the value to pause the game application.
 	 * @return boolean This returns the value to pause the game application.
 	 * @since 1.9
 	 */
@@ -164,7 +164,7 @@ public class GameModel {
 	}
 
 	/**
-	 * This method is set the value to pause the game application.
+	 * This method sets the value to pause the game application.
 	 * @param pauseGame The value to pause the game application.
 	 * @since 1.9
 	 */
@@ -173,7 +173,7 @@ public class GameModel {
 	}
 
 	/**
-	 * This method is get the value to pause the game application.
+	 * This method gets the value to pause the game application.
 	 * @return boolean This returns the value to pause the game application.
 	 * @since 1.9
 	 */
@@ -182,7 +182,7 @@ public class GameModel {
 	}
 
 	/**
-	 * This method is set the value to pause the game application.
+	 * This method sets the value to pause the game application.
 	 * @param InspauseGame The value to pause the game application.
 	 * @since 1.9
 	 */
@@ -191,7 +191,7 @@ public class GameModel {
 	}
 	
 	/**
-	 * This method is to get the value for the status of sound button, whether is it clicked or not.
+	 * This method gets the value for the status of sound button, whether is it clicked or not.
 	 * @return boolean This returns the value of status of sound button.
 	 * @since 1.9
 	 */
@@ -200,7 +200,7 @@ public class GameModel {
 	}
 
 	/**
-	 * This method is to set the value when the sound button is clicked.
+	 * This method sets the value when the sound button is clicked.
 	 * @param sound	The value when the sound button is clicked.
 	 * @since 1.9
 	 */
@@ -305,7 +305,7 @@ public class GameModel {
 	}
 	
 	/**
-	 * Display the window which contains high score information.
+	 * This method displays the window which contains high score information.
 	 * @param top3 The string contains the information of top3 player(s).
 	 * @since 1.9
 	 */
@@ -348,7 +348,7 @@ public class GameModel {
     }
 
 	/**
-	 * This method is to get the stage created for displaying the highscore.
+	 * This method gets the stage created for displaying the highscore.
 	 * @return Stage This returns the Stage object which is created for displaying highscore.
 	 * @since 1.9
 	 */
@@ -357,7 +357,7 @@ public class GameModel {
 	}
 
 	/**
-	 * This method is to close/exit dialog.
+	 * This method closes/exits the dialog.
 	 * @since 1.9
 	 */
 	public void close() {

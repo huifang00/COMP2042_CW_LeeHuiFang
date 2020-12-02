@@ -43,7 +43,7 @@ public class Level1 extends Level{
 	}
 
 	/**
-	 * This method is to get the animal created.
+	 * This is the method to get the animal created.
 	 * @return Animal This returns the object created from Animal class.
 	 * @since 1.1
 	 */
@@ -84,7 +84,7 @@ public class Level1 extends Level{
     }
     
 	/**
-	 * This is the method to add the image(s) of wet turtle.
+	 * This is the method to add the image(s) of turtle and wet turtle.
 	 * @since 1.1
 	 */
     public void addTurtle() {

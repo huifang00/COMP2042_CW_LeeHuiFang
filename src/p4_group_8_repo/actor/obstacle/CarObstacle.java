@@ -4,7 +4,7 @@ import javafx.scene.image.Image;
 
 /**
 * CarObstacle Class
-* Set the image(s) of car as obstacle(s).
+* Set the image(s) and action(s) of car obstacle(s).
 * 
 *
 * @author  	Lee Hui Fang 20125427, hfyhl2

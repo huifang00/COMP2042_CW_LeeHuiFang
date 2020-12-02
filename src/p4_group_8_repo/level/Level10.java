@@ -69,7 +69,7 @@ public class Level10 extends Level{
     }
 
 	/**
-	 * This is the method to add the image(s) of wet turtle.
+	 * This is the method to add the image(s) of turtle and wet turtle.
 	 * @since 1.8
 	 */
     public void addTurtle() {

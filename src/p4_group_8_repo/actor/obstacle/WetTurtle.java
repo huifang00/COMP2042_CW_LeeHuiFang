@@ -4,7 +4,7 @@ import javafx.scene.image.Image;
 
 /**
 * WetTurtle Class
-* Set the image(s) of Wet turtle as obstacle(s).
+* Set the image(s) and action(s) of wet turtle(s).
 * 
 *
 * @author  Lee Hui Fang 20125427, hfyhl2

@@ -4,7 +4,7 @@ import javafx.scene.image.Image;
 
 /**
 * SnakeObstacle Class
-* Set the image(s) of snake as obstacle(s).
+* Set the image(s) and action(s) of snake(s).
 * 
 *
 * @author  	Lee Hui Fang 20125427, hfyhl2

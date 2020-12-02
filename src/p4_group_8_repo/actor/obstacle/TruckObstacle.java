@@ -4,7 +4,7 @@ import javafx.scene.image.Image;
 
 /**
 * TruckObstacle Class
-* Set the image(s) of truck as obstacle(s).
+* Set the image(s) and action(s) of truck obstacle(s).
 * 
 *
 * @author  	Lee Hui Fang 20125427, hfyhl2

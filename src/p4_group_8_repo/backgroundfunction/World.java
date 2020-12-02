@@ -24,7 +24,7 @@ public abstract class World extends Pane {
     
     /**
 	 * Constructor to pass in the value of Border Pane which is created using the Scene Builder.
-	 * This allows actor(s) can be added without using the Scene Builder such as for the function of game which is the backend.
+	 * This allows actor(s) to be added without using the Scene Builder such as for the function of game which is the backend.
 	 * @param root The variable of Border Pane which is created using the Scene Builder.
 	 * @since 1.0.1
 	 */
@@ -57,8 +57,8 @@ public abstract class World extends Pane {
     }
     
 	/**
-	* This is the method to create animation and handle() method is called in every frame of the animation.
-	* This method save the object created/inherited from actor class to a list.
+	* This is the method to create animation timer and handle() method is called in every frame of the animation.
+	* This method saves the object created/inherited from actor class to a list.
 	* @since 1.0
 	*/
     public void createTimer() {
@@ -111,7 +111,7 @@ public abstract class World extends Pane {
     }
 
     /**
-     * This is the method get the list of object(s) of actor class.
+     * This is the method to get the list of object(s) of actor class.
      * @param <A> The type of the actor class modeled by actor object.
      * @param cls The class object corresponding to Actor type.
      * @return A This returns the array which contains the list of object(s) of class extended from actor class. 

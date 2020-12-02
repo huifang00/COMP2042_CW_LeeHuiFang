@@ -28,7 +28,7 @@ public abstract class Actor extends ImageView{
 
     
     /**
-	* This is the method get width value.
+	* This is the method to get width value.
 	* @return double This returns the width of the node.
 	* @since 1.0
 	*/
@@ -37,7 +37,7 @@ public abstract class Actor extends ImageView{
     }
 
     /**
-	* This is the method get height value.
+	* This is the method to get height value.
 	* @return double This returns the height of the node.
 	* @since 1.0
 	*/
@@ -46,7 +46,7 @@ public abstract class Actor extends ImageView{
     }
 
     /**
-     * This is the method intersection occurs between more than 2 objects.
+     * This is the method for intersection occurs between more than 2 objects.
      * @param <A> The type of the actor class modeled by actor object.
      * @param cls The class object corresponding to Actor type.
      * @return A This returns the array which contains the list of object(s) of class extended from actor class. 

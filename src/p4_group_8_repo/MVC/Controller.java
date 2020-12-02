@@ -7,7 +7,7 @@ import javafx.scene.image.ImageView;
 /**
 * Controller Class
 * A controller for applying MVC pattern. 
-* This class is responsible for controlling the way of user interacts with the frogger application.
+* This class is responsible for controlling the way of user interacts with the game interface of frogger application.
 * 
 *
 * @author  	Lee Hui Fang 20125427, hfyhl2
@@ -156,7 +156,7 @@ public class Controller {
 	}
 	
 	/**
-	 * This methods get the object of GameModel which is created.
+	 * This method gets the object of GameModel which is created.
 	 * @return GameModel This returns the gamemodel which is created.
 	 * @since 1.9
 	 */
@@ -165,7 +165,7 @@ public class Controller {
 	}
 
 	/**
-	 * This methods return the value which indicates the pausing status.
+	 * This method returns the value which indicates the pausing status.
 	 * @return int This returns the value of pausing status.
 	 * @since 1.9
 	 */
@@ -174,7 +174,7 @@ public class Controller {
 	}
 	
 	/**
-	 * This methods get the value which indicated the sound playing status.
+	 * This method gets the value which indicated the sound playing status.
 	 * @return int This returns the value of sound playing status.
 	 */
 	public int getsoundOnOff() {
