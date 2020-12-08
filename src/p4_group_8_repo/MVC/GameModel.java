@@ -75,6 +75,9 @@ public class GameModel {
 		//add a custom icon
 		stage.getIcons().add(new Image(this.getClass().getResource("../smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
 		
+		//allow to resize the screen/window
+		stage.setResizable(true);
+		
 		//print Instruction
 		switch(instructionPage) {
 			case 1: instruction = "Help the frog \ud83d\udc38 to cross the traffic and river\n"
@@ -337,7 +340,7 @@ public class GameModel {
     	root.getChildren().addAll(title, content);
     	
     	//not allowed to resize the screen/window
-    	new_stage.setResizable(false);
+    	new_stage.setResizable(true);
     	
     	//add a custom icon
     	new_stage.getIcons().add(new Image(this.getClass().getResource("../smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));

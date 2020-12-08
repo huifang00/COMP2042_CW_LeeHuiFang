@@ -42,7 +42,7 @@ import p4_group_8_repo.level.LevelFactory;
 */
 public class Main extends Application {
 	private BorderPane root;
-	private Controller control = new Controller();
+	private static Controller control;
 	private AnimationTimer timer;
 	private static MyStage background;
 	private static Animal animal = new Animal();
@@ -52,6 +52,7 @@ public class Main extends Application {
 	private boolean printGame;
 	private boolean nextLevel;
 	private String playerName;
+	
 	//Score
 	private int score = 0;
 	private Digit digit;
@@ -120,6 +121,7 @@ public class Main extends Application {
 		}
 		
 		Main.setMyStage(root);
+		Main.setController();
 		
 		background.start();
 
@@ -190,7 +192,6 @@ public class Main extends Application {
             	}
             	if (animal.getStop()) {
             		setNumber(animal.getPoints());
-            		System.out.print("STOP:");
             		if(level == 1) {	//save the score in level1 class
             			level1.setScore(animal.getPoints());
             			score = score + level1.getScore();
@@ -248,6 +249,7 @@ public class Main extends Application {
         			setNextLevel(false);	//to prevent the next second on running this condition till the next alert box appear
         		}
             	else if (alert.getResult() == ButtonType.NO || level == 0){
+            		System.out.print("STOP:");
             		printEnd();		
             		if(!Controller.getMuted()) 
             			background.stopMusic();
@@ -259,6 +261,7 @@ public class Main extends Application {
             		setLife(animal.getLife());
             	}
             	if(animal.noLife()) {
+            		System.out.print("STOP:");
             		printGameOver(animal.getPoints());
             		if(!Controller.getMuted())
             			background.stopMusic();
@@ -686,7 +689,7 @@ public class Main extends Application {
     		}
 
     		//string to be displayed in the file
-    		String content = playerName + ": " + score +"\n";
+    		String content = playerName + ": " + score + "\n";
     		
     		//true is to append the content to file
         	FileWriter filewriter = new FileWriter(file,true);
@@ -732,5 +735,20 @@ public class Main extends Application {
      */
     public static void setMyStage(BorderPane root) {
     	Main.background = new MyStage(root);
+    }
+    
+    /**
+     * This is the method to get the controller which has access to the FXML.
+     * @return This returns the controller which has access to the FXML.
+     */
+    public static Controller getController() {
+    	return control;
+    }
+    
+    /**
+     * This is the method to set the controller which has access to the FXML.
+     */
+    public static void setController() {
+    	Main.control = new Controller();
     }
 }

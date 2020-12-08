@@ -2,6 +2,8 @@ package p4_group_8_repo.actor;
 
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
+import p4_group_8_repo.Main;
+import p4_group_8_repo.MVC.Controller;
 import p4_group_8_repo.actor.obstacle.CarObstacle;
 import p4_group_8_repo.actor.obstacle.Log;
 import p4_group_8_repo.actor.obstacle.Snake;
@@ -38,6 +40,9 @@ public class Animal extends Actor {
 	private boolean changeScore = false;
 	private int death = 0;
 	private boolean changeLife = false;
+	
+	private int time = 0;
+	private int sec = 0;
 	
 	/**
 	* Default constructor
@@ -162,8 +167,13 @@ public class Animal extends Actor {
 	*/
 	@Override
 	public void act(long now) {
+		//Game Timer
+		if(time == 60 || time == 0) {
+			Main.getController().setTime(sec++);
+			time = 1;
+		}
+		time++;
 		
-		// condition for the animal not to exceed the bound
 		if (getY()<0 || getY()>734) {
 			setX(300);
 			setY(679.8+movementY);
@@ -435,5 +445,5 @@ public class Animal extends Actor {
 	public void setNoMove(boolean noMove) {
 		this.noMove = noMove;
 	}
-	
+
 }

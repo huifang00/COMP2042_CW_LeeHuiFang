@@ -1,6 +1,7 @@
 package p4_group_8_repo.MVC;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -15,11 +16,13 @@ import javafx.scene.image.ImageView;
 */
 public class Controller {
 	@FXML private ImageView background, start, howtoplay, highscore, startIns, sound, pause, instruction;
+	@FXML private Label timer;
 	private Image background_img, start_img, howtoplay_img, highscore_img, startIns_img, instruction_img;
 	private static Image soundOn_img, soundOff_img, pause_img, resume_img;
 	private static int soundOnOff = 0;
 	private static int pausing = 0;
 	private static GameModel gameModel = new GameModel();
+	private static Label t;
 	
 	/**
 	 * This method is called when the FXML loader finish loading the FXML document.
@@ -73,6 +76,7 @@ public class Controller {
 		startIns.setImage(null);
 		pause.setImage(pause_img);
 		instruction.setImage(instruction_img);
+		setTimer(timer);
 	}
 	
 	/**
@@ -86,14 +90,16 @@ public class Controller {
 		pause.setImage(null);
 		sound.setImage(null);
 		gameModel.InstructionDialog();
-		if(gameModel.getAlertClose() && howtoplay.getImage() == null) {
+		if(gameModel.getAlertClose() && instruction.getImage() == null) {
 			if(pausing % 2 != 0)
 				pausing++;
-			pause.setImage(pause_img);
-			instruction.setImage(instruction_img);
-			if(getMuted())
+			if(howtoplay.getImage() == null) {
+				pause.setImage(pause_img);
+				instruction.setImage(instruction_img);
+			}
+			if(getMuted()) 
 				sound.setImage(soundOn_img);
-			else
+			else 
 				sound.setImage(soundOff_img);
 		}
 	}
@@ -179,6 +185,27 @@ public class Controller {
 	 */
 	public int getsoundOnOff() {
 		return soundOnOff;
+	}
+	
+	/**
+	 * This method assigns an object from FXML to another variable typed of Label.
+	 * @param timer This is the object from FXML.
+	 */
+	public static void setTimer(Label timer) {
+		t = timer;
+	}
+	
+	/**
+	 * This method set the timer in the application.
+	 * @param time The game timer in seconds.
+	 */
+	public void setTime(int time) {
+		String text;
+		if(time < 10)
+			text = "0" + String.valueOf(time);
+		else
+			text = String.valueOf(time);
+		t.setText("TIME: " + text);
 	}
 
 }

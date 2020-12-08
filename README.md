@@ -7,7 +7,6 @@ This project is about maintaining and extending on a classic retro game(Frogger)
 	<ol type="i">
 		<li>Edit the image link which is not existed.</li>
 		<li>Edit the point calculation system.</li>
-		eg. Step to an unavailable slot is not a successful step.
 	</ol>
 
 2. Create new method without affecting the main function so the code looks neater and less complicated.
@@ -53,9 +52,12 @@ This project is about maintaining and extending on a classic retro game(Frogger)
 
 16. Use JavaFX Scene Builder to deal with the interface.
 
-17. Create Junit tests to ensure that the classes or methods run without errors.
+17. Create Junit tests to ensure that the classes/methods run without errors.
 
 18. Create Maven file to build the project easily by adding the dependencies.
+	<ul>
+		<li>Maven Goals -> compile install javafx:run.</li>
+	</ul>
 
 ## Extension
 
@@ -63,15 +65,15 @@ This project is about maintaining and extending on a classic retro game(Frogger)
 
 2. Get the player name and set the limitations.
 	
-3. Create a life function, life is deducted if frog hits an obstacle/drowns.
+3. Create life function, life is deducted if frog hits an obstacle/drowns.
 
-4. Create function on displaying instruction, pause/resume game, mute/play background music.
+4. Create buttons to display instruction, pause/resume game, mute/play background music.
 	
 5. Display the score of previous level at the end of each level and ask whether to proceed to next level.
 
 6. Save the score and player name in a text file. 
 
-7. Display information needed on the interface.
+7. Create timer to count the time player used to complete/lose the game.
 
 ## Screenshot of Game
 <img src="./src/p4_group_8_repo/GameScreen1.png"><br/><br/>

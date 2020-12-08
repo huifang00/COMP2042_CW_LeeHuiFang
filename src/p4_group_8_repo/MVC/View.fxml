@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="p4_group_8_repo.MVC.Controller">
    <children>
@@ -13,5 +15,9 @@
       <ImageView fx:id="sound" fitHeight="30.0" fitWidth="30.0" layoutX="490.0" layoutY="10.0" onMouseClicked="#onSoundClicked" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="instruction" fitHeight="30.0" fitWidth="30.0" layoutX="525.0" layoutY="10.0" onMouseClicked="#onInstructionClicked" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="pause" fitHeight="30.0" fitWidth="30.0" layoutX="560.0" layoutY="10.0" onMouseClicked="#onPauseClicked" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="timer" layoutX="490.0" layoutY="50.0" prefHeight="20.0" prefWidth="100.0" textFill="#78ffff">
+         <font>
+            <Font name="Tw Cen MT" size="18.0" />
+         </font></Label>
    </children>
 </AnchorPane>
