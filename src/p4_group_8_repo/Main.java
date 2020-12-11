@@ -68,6 +68,7 @@ public class Main extends Application {
 	private LevelFactory levelFactory = new LevelFactory();
 	private Level level2, level3, level4, level5, level6, level7, level8, level9, level10;
 	private String levelmsg = "";	//variable to save the message of score for each level
+	private boolean onClose = false;
 	
 	/**
 	* This is the main method which run the whole application.
@@ -129,9 +130,17 @@ public class Main extends Application {
 		start();
 		
 		primaryStage.setOnCloseRequest(evt -> {
-			System.exit(0);
-    		if(control.getGameModel().getStage().isShowing()) {
-    			control.getGameModel().close();
+			onClose = printAlertonClose();
+			if(onClose) {
+				System.exit(0);
+				
+	    		if(control.getGameModel().getStage().isShowing()) {
+	    			control.getGameModel().close();
+				}
+			}
+			else {
+				evt.consume();
+				primaryStage.show();
 			}
     	});
 	}
@@ -536,7 +545,7 @@ public class Main extends Application {
 		alert.setContentText(levelmsg +"Highest Possible Score: " + highscore);
 		alert.show();
     }
- 
+    
     /**
      * This is the method to save the string to print the information after each round.
      * @param level The current level the player reached.
@@ -616,6 +625,30 @@ public class Main extends Application {
 				control.getGameModel().close();
 			}
 		});
+    }
+    
+    /**
+   	* This is the method to display the alert dialog to ensure if the player wants to close the application.
+   	* @return boolean This returns the value of the button clicked for closing the application.
+   	* @since 1.0.10
+   	*/
+    public boolean printAlertonClose() {
+    	Alert alertonClose = new Alert(AlertType.WARNING);
+    	alertonClose.setTitle("CLOSING...");
+    	alertonClose.setHeaderText("EXIT?");
+    	//get the stage
+   		Stage stage = (Stage) alertonClose.getDialogPane().getScene().getWindow();
+
+   		//add a custom icon
+   		stage.getIcons().add(new Image(this.getClass().getResource("smiiling-big-eyed-green-frog-clipart-6926.jpg").toString()));
+   	
+   		alertonClose.setContentText("NOTE: The score & name will not be saved!");
+   		alertonClose.showAndWait();
+   		
+   		if(alertonClose.getResult() == ButtonType.OK)
+   			return true;
+   		else
+   			return false;
     }
     
     /**
@@ -732,6 +765,7 @@ public class Main extends Application {
     /**
      * This is the method to set the background which is an object of MyStage.
      * @param root The value for the variable pane which want to create a stage for it.
+     * @since 1.0.8
      */
     public static void setMyStage(BorderPane root) {
     	Main.background = new MyStage(root);
@@ -740,6 +774,7 @@ public class Main extends Application {
     /**
      * This is the method to get the controller which has access to the FXML.
      * @return This returns the controller which has access to the FXML.
+     * @since 1.0.9
      */
     public static Controller getController() {
     	return control;
@@ -747,6 +782,7 @@ public class Main extends Application {
     
     /**
      * This is the method to set the controller which has access to the FXML.
+     * @since 1.0.9
      */
     public static void setController() {
     	Main.control = new Controller();

@@ -327,6 +327,7 @@ public class Animal extends Actor {
 				this.changeLife = true;
 				this.death = 0;	//reset to 0
 				setImage(death4);
+				setImage(imgW1);
 				noMove = false;
 				if (this.points>50) {
 					this.points-=50;
@@ -376,6 +377,7 @@ public class Animal extends Actor {
 				this.changeLife = true;
 				this.death = 0;
 				setImage(death5);
+				setImage(imgW1);
 				noMove = false;
 				if (this.points>50) {
 					this.points-=50;
@@ -400,14 +402,14 @@ public class Animal extends Actor {
 		else if (getIntersectingObjects(TruckObstacle.class).size() >= 1) {	//intersect with truck
 			this.carDeath = true;
 		}
-		if (getIntersectingObjects(Log.class).size() >= 1 && !noMove) {	//intersect with log
+		if (getIntersectingObjects(Log.class).size() >= 1) {	//intersect with log
 			speed = getIntersectingObjects(Log.class).get(0).getSpeed();
 			move (speed, 0);	//display as moving together with log
 			if (getIntersectingObjects(Snake.class).size() >= 1) {	//intersect with snake
 				this.waterDeath = true;
 			}
 		}
-		else if (getIntersectingObjects(Turtle.class).size() >= 1 && !noMove) {	//intersect with turtle
+		else if (getIntersectingObjects(Turtle.class).size() >= 1) {	//intersect with turtle
 			speed = getIntersectingObjects(Turtle.class).get(0).getSpeed();
 			move(speed, 0);	//display as moving together with turtle
 		}

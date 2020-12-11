@@ -75,6 +75,8 @@ This project is about maintaining and extending on a classic retro game(Frogger)
 
 7. Create timer to count the time player used to complete/lose the game.
 
+8. Display alert box if user accidentally close the application.
+
 ## Screenshot of Game
 <img src="./src/p4_group_8_repo/GameScreen1.png"><br/><br/>
 <img src="./src/p4_group_8_repo/GameScreen2.png" width="380" height="500"><br/><br/>
